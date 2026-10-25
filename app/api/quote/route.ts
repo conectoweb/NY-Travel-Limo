@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
+import { getDatabasePool } from "@/lib/db";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export const runtime = "nodejs";
@@ -186,6 +187,58 @@ export async function POST(request: Request) {
     console.error("Google reCAPTCHA verification for the quote request is unavailable.", error);
     return Response.json(
       { message: "We couldn't verify reCAPTCHA right now. Please try again or call 718-397-1333." },
+      { status: 503 },
+    );
+  }
+
+  let database;
+  try {
+    await getDatabasePool().execute(
+      `INSERT INTO quotes (
+        name,
+        email,
+        phone,
+        pickup_date,
+        pickup_time,
+        event_type,
+        vehicle,
+        passenger_count,
+        stop_count,
+        pickup_place,
+        dropoff_place,
+        service_hours,
+        instructions,
+        consent
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        name,
+        email,
+        phone,
+        pickupDate,
+        pickupTime,
+        eventType,
+        vehicle,
+        passengers,
+        stops,
+        pickupPlace,
+        dropoffPlace,
+        serviceHours,
+        instructions,
+        true,
+      ],
+    );
+  } catch (error) {
+    const databaseErrorCode = error &&
+      typeof error === "object" &&
+      "code" in error &&
+      typeof error.code === "string"
+      ? error.code
+      : "UNKNOWN";
+    console.error("Quote request could not be saved to the database.", {
+      code: databaseErrorCode,
+    });
+    return Response.json(
+      { message: "We couldn't save your quote request. Please try again or call 718-397-1333." },
       { status: 503 },
     );
   }

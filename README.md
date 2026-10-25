@@ -26,15 +26,15 @@ For a preview, no environment variables are required. If configuring Hostinger f
 
 ## MySQL and Hostinger setup
 
-Quote and reservation submissions use Resend and reCAPTCHA; these two forms do not require MySQL and do not store their submissions in a database. Configure the following database settings only if another enabled application feature requires the site's MySQL database:
+Quote submissions are validated with reCAPTCHA and the honeypot, saved to the private MySQL `quotes` table, and emailed with Resend. No public endpoint reads quote records. The separate reservation site is not connected to this website's database.
 
 1. Create a MySQL database and database user in hPanel. Grant the application user only the permissions needed by the site.
 2. Configure the environment variables in Hostinger's Node.js application settings, or copy `.env.example` to `.env.local` for local production testing. Do not commit `.env` files.
 3. Set `DB_HOST=127.0.0.1` for the local MySQL server on Hostinger, and set `DB_PORT`, `DB_USER`, `DB_PASSWORD` and `DB_NAME` to the values from hPanel.
-4. Run `database/migrations/001_create_quote_requests.sql` on a new database, then run migrations 002 and 004 in order. For an existing installation, apply any missing migrations in order.
+4. Run `database/migrations/005_create_quotes.sql` once to create the quote submission table. This table is separate from the legacy `quote_requests` table and does not require the earlier quote-request migrations.
 5. Set `APP_MODE=production` and `NEXT_PUBLIC_APP_MODE=production`, plus the required services below, before running `npm run build`. The two mode variables must both be set explicitly to production to enable the quote API. Point the domain to the deployed Node.js application and enable HTTPS.
 
-The Contact Us quote form posts to `/api/quote`, verifies its own reCAPTCHA token on the server and emails quote requests through Resend without storing submissions in MySQL. Configure `QUOTE_EMAIL`, `RESEND_API_KEY` and a sender address verified with Resend in `RESEND_FROM`. Reservation buttons, including the navigation and footer controls, open [reservation.nytravellimo.com](https://reservation.nytravellimo.com/); `/reservations` redirects there. Reservation processing and payment are handled by that separate platform, not by this website.
+The Contact Us quote form posts to `/api/quote`, validates the request, verifies its reCAPTCHA token and honeypot on the server, saves contact and trip details to MySQL, then emails the request through Resend. Only the server can write quote records; there is no public quote lookup endpoint. Do not add card numbers, CVV, expiration dates or other payment data to this form or table. Configure `QUOTE_EMAIL`, `RESEND_API_KEY` and a sender address verified with Resend in `RESEND_FROM`. Reservation buttons, including the navigation and footer controls, open [reservation.nytravellimo.com](https://reservation.nytravellimo.com/); `/reservations` redirects there. Reservation processing and payment are handled by that separate platform, not by this website.
 
 ### Google reCAPTCHA v2 Checkbox
 

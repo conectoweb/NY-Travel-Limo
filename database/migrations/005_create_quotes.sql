@@ -1,0 +1,22 @@
+CREATE TABLE quotes (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(254) NOT NULL,
+  phone VARCHAR(40) NOT NULL,
+  pickup_date DATE NULL,
+  pickup_time TIME NULL,
+  event_type VARCHAR(100) NULL,
+  vehicle VARCHAR(100) NULL,
+  passenger_count SMALLINT UNSIGNED NULL,
+  stop_count SMALLINT UNSIGNED NULL,
+  pickup_place VARCHAR(200) NULL,
+  dropoff_place VARCHAR(200) NULL,
+  service_hours SMALLINT UNSIGNED NULL,
+  instructions VARCHAR(3000) NULL,
+  consent TINYINT(1) NOT NULL,
+  status VARCHAR(32) NOT NULL DEFAULT 'new',
+  received_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY idx_quotes_received_at (received_at),
+  KEY idx_quotes_status_received_at (status, received_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
