@@ -10,6 +10,7 @@ import {
 } from "react";
 
 type RecaptchaApi = {
+  ready: (callback: () => void) => void;
   render: (
     container: HTMLElement,
     options: {
@@ -70,26 +71,38 @@ const RecaptchaCheckbox = forwardRef<
       return;
     }
 
-    try {
-      widgetIdRef.current = window.grecaptcha.render(containerRef.current, {
-        sitekey: siteKey,
-        callback: (token) => {
-          setCaptchaMessage("");
-          tokenCallbackRef.current(token);
-        },
-        "expired-callback": () => {
-          tokenCallbackRef.current("");
-          setCaptchaMessage("reCAPTCHA expired. Please check “I'm not a robot” again.");
-        },
-        "error-callback": () => {
-          tokenCallbackRef.current("");
-          setCaptchaMessage("reCAPTCHA could not be verified. Please retry the checkbox.");
-        },
-      });
-    } catch {
-      setScriptFailed(true);
-      setCaptchaMessage("reCAPTCHA could not be initialized. Please retry the checkbox.");
-    }
+    let cancelled = false;
+    const recaptcha = window.grecaptcha;
+    recaptcha.ready(() => {
+      const container = containerRef.current;
+      if (cancelled || !container || widgetIdRef.current !== null) return;
+
+      try {
+        widgetIdRef.current = recaptcha.render(container, {
+          sitekey: siteKey,
+          callback: (token) => {
+            setCaptchaMessage("");
+            tokenCallbackRef.current(token);
+          },
+          "expired-callback": () => {
+            tokenCallbackRef.current("");
+            setCaptchaMessage("reCAPTCHA expired. Please check “I'm not a robot” again.");
+          },
+          "error-callback": () => {
+            tokenCallbackRef.current("");
+            setCaptchaMessage("reCAPTCHA could not be verified. Please retry the checkbox.");
+          },
+        });
+      } catch (error) {
+        console.error("reCAPTCHA checkbox initialization failed.", error);
+        setScriptFailed(true);
+        setCaptchaMessage("reCAPTCHA could not be initialized. Please retry the checkbox.");
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, [scriptLoaded]);
 
   function retryCaptcha() {
