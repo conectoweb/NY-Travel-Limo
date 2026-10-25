@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import RecaptchaCheckbox, { type RecaptchaCheckboxHandle } from "@/components/RecaptchaCheckbox";
 
@@ -40,27 +40,37 @@ function Field({
 }
 
 export default function ContactForm() {
-  const [status, setStatus] = useState("");
-  const [statusType, setStatusType] = useState<"success" | "error" | "notice">("success");
+  const [dialog, setDialog] = useState<{ type: "success" | "error" | "notice"; message: string } | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState("");
   const recaptchaRef = useRef<RecaptchaCheckboxHandle>(null);
+  const dialogCloseRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!dialog) return;
+
+    dialogCloseRef.current?.focus();
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setDialog(null);
+    }
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [dialog]);
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("");
+    setDialog(null);
     if (isPreviewMode) {
-      setStatusType("notice");
-      setStatus("This form is in preview mode. Requests are disabled; nothing was sent or saved.");
+      setDialog({ type: "notice", message: "This form is in preview mode. Requests are disabled; nothing was sent or saved." });
       return;
     }
     setSubmitting(true);
     const form = event.currentTarget;
     if (!form.reportValidity()) {
+      setDialog({ type: "error", message: "Please complete the required fields and correct the highlighted information before submitting." });
       setSubmitting(false);
       return;
     }
-    setStatus("Submitting your request…");
-    setStatusType("success");
 
     const values = new FormData(form);
     const month = values.get("pickupMonth");
@@ -68,8 +78,7 @@ export default function ContactForm() {
     const year = values.get("pickupYear");
     const hasAnyDatePart = Boolean(month || day || year);
     if (hasAnyDatePart && !(month && day && year)) {
-      setStatusType("error");
-      setStatus("Enter the pickup month, day and year, or leave the entire date blank.");
+      setDialog({ type: "error", message: "Enter the pickup month, day and year, or leave the entire date blank." });
       setSubmitting(false);
       return;
     }
@@ -84,8 +93,7 @@ export default function ContactForm() {
         parsedDate.getMonth() !== dateMonth - 1 ||
         parsedDate.getDate() !== dateDay
       ) {
-        setStatusType("error");
-        setStatus("Enter a valid pickup date.");
+        setDialog({ type: "error", message: "Enter a valid pickup date." });
         setSubmitting(false);
         return;
       }
@@ -117,18 +125,15 @@ export default function ContactForm() {
       const result = await response.json() as { message?: string };
       if (!response.ok) {
         const message = result.message ?? "We couldn't submit your request. Please review the form and try again.";
-        setStatusType(response.status === 503 ? "notice" : "error");
-        setStatus(message);
+        setDialog({ type: response.status === 503 ? "notice" : "error", message });
         recaptchaRef.current?.reset();
         return;
       }
       form.reset();
       recaptchaRef.current?.reset();
-      setStatusType("success");
-      setStatus(result.message ?? "Thank you. Your transportation request was received.");
+      setDialog({ type: "success", message: result.message ?? "Thank you. Your transportation request was received." });
     } catch {
-      setStatusType("error");
-      setStatus("We couldn't reach the server. Please try again or call 718-397-1333.");
+      setDialog({ type: "error", message: "We couldn't reach the server. Please try again or call 718-397-1333." });
       recaptchaRef.current?.reset();
     } finally {
       setSubmitting(false);
@@ -136,6 +141,7 @@ export default function ContactForm() {
   }
 
   return (
+    <>
     <section aria-labelledby="contact-form-title" className="mt-12 overflow-hidden rounded-2xl border border-brand-text/10 bg-white shadow-[0_18px_55px_rgba(41,37,33,0.08)]">
       <div className="border-b border-brand-text/10 bg-brand-soft px-5 py-6 sm:px-8">
         <p className="eyebrow mb-2">Contact and transportation inquiry</p>
@@ -273,17 +279,9 @@ export default function ContactForm() {
           </label>
         </div>
 
-        {status && (
-          <p
-            aria-live="polite"
-            role={statusType === "error" ? "alert" : "status"}
-            className={`rounded-lg border p-4 text-sm font-semibold ${
-              statusType === "error"
-                ? "border-red-300 bg-red-50 text-red-900"
-                : "border-brand-primary/20 bg-brand-soft text-brand-accent"
-            }`}
-          >
-            {status}
+        {submitting && (
+          <p aria-live="polite" className="text-sm font-semibold text-brand-accent" role="status">
+            Submitting your request…
           </p>
         )}
 
@@ -303,5 +301,52 @@ export default function ContactForm() {
         </div>
       </form>
     </section>
+    {dialog && (
+      <div
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark/70 p-4 backdrop-blur-sm"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setDialog(null);
+        }}
+      >
+        <div
+          aria-describedby="contact-form-dialog-message"
+          aria-labelledby="contact-form-dialog-title"
+          aria-modal="true"
+          className="w-full max-w-md rounded-2xl border border-brand-text/10 bg-white p-6 shadow-2xl sm:p-8"
+          onKeyDown={(event) => {
+            if (event.key === "Tab") {
+              event.preventDefault();
+              dialogCloseRef.current?.focus();
+            }
+          }}
+          role={dialog.type === "error" ? "alertdialog" : "dialog"}
+        >
+          <div className={`flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold ${
+            dialog.type === "success"
+              ? "bg-brand-soft text-brand-primary"
+              : dialog.type === "error"
+                ? "bg-red-50 text-red-700"
+                : "bg-amber-50 text-amber-800"
+          }`} aria-hidden="true">
+            {dialog.type === "success" ? "✓" : dialog.type === "error" ? "!" : "i"}
+          </div>
+          <h2 className="mt-5 text-2xl font-bold text-brand-dark" id="contact-form-dialog-title">
+            {dialog.type === "success" ? "Message sent" : dialog.type === "error" ? "Unable to send" : "Please note"}
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-brand-muted" id="contact-form-dialog-message">
+            {dialog.message}
+          </p>
+          <button
+            className="mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-primary focus-visible:outline-offset-4"
+            onClick={() => setDialog(null)}
+            ref={dialogCloseRef}
+            type="button"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    )}
+    </>
   );
 }
