@@ -111,7 +111,7 @@ export default function ContactForm() {
           serviceHours: values.get("serviceHours"),
           instructions: values.get("instructions"),
           consent: values.get("consent") === "on",
-          companyWebsite: values.get("companyWebsite"),
+          qf_8a1d: values.get("qf_8a1d"),
         }),
       });
       const result = await response.json() as { message?: string };
@@ -175,7 +175,7 @@ export default function ContactForm() {
                 inputMode="tel"
                 autoComplete="tel"
                 maxLength={40}
-                pattern="[\+]?[0-9() .-]{7,40}"
+                pattern="\+?[0-9\(\) .\-]{7,40}"
                 title="Enter a valid phone number, including your country code if needed."
                 aria-describedby="phone-help"
                 className={controlClassName}
@@ -243,9 +243,17 @@ export default function ContactForm() {
           </div>
         </fieldset>
 
-        <div aria-hidden="true" className="absolute -left-[10000px] h-px w-px overflow-hidden">
-          <label htmlFor="companyWebsite">Leave this field empty</label>
-          <input id="companyWebsite" name="companyWebsite" tabIndex={-1} autoComplete="off" />
+        <div aria-hidden="true" className="pointer-events-none absolute -left-[10000px] h-px w-px overflow-hidden">
+          <label htmlFor="qf_8a1d">Leave this field empty</label>
+          <input
+            id="qf_8a1d"
+            name="qf_8a1d"
+            type="text"
+            tabIndex={-1}
+            autoComplete="new-password"
+            autoCapitalize="off"
+            spellCheck={false}
+          />
         </div>
 
         <div className="rounded-xl border border-brand-primary/15 bg-brand-soft/70 p-4 sm:p-5">

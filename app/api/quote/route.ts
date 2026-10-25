@@ -112,7 +112,7 @@ export async function POST(request: Request) {
   }
 
   const data = body as Record<string, unknown>;
-  if (typeof data.companyWebsite === "string" && data.companyWebsite.trim()) {
+  if (typeof data.qf_8a1d === "string" && data.qf_8a1d.trim()) {
     return Response.json({ message: "We couldn't accept this request." }, { status: 400 });
   }
 

@@ -117,7 +117,7 @@ export default function ReservationForm() {
             inputMode="tel"
             autoComplete="tel"
             maxLength={40}
-            pattern="[\+]?[0-9() .-]{7,40}"
+            pattern="\+?[0-9\(\) .\-]{7,40}"
             title="Enter a valid phone number, including your country code if needed."
             placeholder="Enter your phone number"
             className={fieldClassName}
