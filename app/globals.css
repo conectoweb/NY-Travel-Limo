@@ -61,7 +61,7 @@ summary {
 }
 
 .eyebrow {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.17em;

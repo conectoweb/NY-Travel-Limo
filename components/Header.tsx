@@ -5,18 +5,41 @@ import NavigationLinks from "@/components/NavigationLinks";
 
 const mobileNavigation = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Fleet", href: "/fleet" },
+  {
+    label: "Services",
+    href: "/services",
+    menu: [
+      { label: "Airport Transfers", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" },
+      { label: "Corporate Transportation", href: "/corporate-transportation-service-with-driver-in-new-york" },
+      { label: "Roadshow Transportation", href: "/roadshow-transportation-nyc" },
+      { label: "Cruise Terminal Transfers", href: "/cruise-terminal-transportation-services-in-new-york-with-driver" },
+      { label: "Wedding Transportation", href: "/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans" },
+      { label: "Hourly Transportation", href: "/transportation-by-hours-in-new-york" },
+      { label: "City Tours", href: "/new-york-city-tour-with-professional-chauffeurs" },
+      { label: "Point-to-Point Transportation", href: "/point-to-point-transportation-service-in-new-york" },
+      { label: "Wine Tours", href: "/wine-tours-transportation-service-from-new-york" },
+      { label: "Group Transportation", href: "/group-transportation-in-new-york-near-me" },
+    ],
+  },
+  {
+    label: "Fleet",
+    href: "/fleet",
+    menu: [
+      { label: "Sprinter Vans", href: "/sprinter-van-rental-with-driver-new-york-nyc" },
+      { label: "SUVs", href: "/luxury-suv-rental-nyc" },
+      { label: "Limousines", href: "/lincoln-stretch-limo-rental-nyc" },
+    ],
+  },
   { label: "Rates", href: "/rates" },
   { label: "Reservations", href: "/reservations" },
-  { label: "Blog", href: "/blog" },
-  { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
+  { label: "Blog", href: "/blog" },
+  { label: "Reservation Now", href: "/reservations", emphasized: true },
 ];
 
 export function QuoteLink({
   className = "",
-  label = "Request a Quote",
+  label = "Reservation Now",
 }: {
   className?: string;
   label?: string;
@@ -60,7 +83,7 @@ export default function Header() {
             />
           </a>
           <NavigationLinks />
-          <div className="hidden lg:block">
+          <div className="hidden shrink-0 lg:block">
             <QuoteLink />
           </div>
           <MobileMenu navigation={mobileNavigation} />

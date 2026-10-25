@@ -14,8 +14,7 @@ import Steps from "@/components/Steps";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Private Transportation in NYC | NY Travel Limo";
-  const description =
-    "Explore private transportation in NYC with a chauffeur service for airport transfers, business schedules, group travel and events. Compare Sprinter vans, SUVs and limousines.";
+  const description = "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
   const isPublicSite = await isPublicSiteRequest();
 
   return {
