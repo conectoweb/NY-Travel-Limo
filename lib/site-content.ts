@@ -43,6 +43,26 @@ export const fleetPages: DetailPage[] = [
           "Share your date, pickup and drop-off addresses, passenger count, luggage needs and any stops. For an hourly itinerary, include the time you expect to need the vehicle. Our team can use those details to help you request transportation that fits the trip.",
         ],
       },
+      {
+        heading: "Check passenger and luggage fit",
+        paragraphs: [
+          "Sprinter layouts vary, and the space available for luggage depends on the passenger configuration. Give the team a realistic passenger count and a rough bag count rather than relying on a general seat estimate.",
+          "For airport, cruise or event transportation, mention larger cases, equipment or items that need extra room. Confirm the exact vehicle configuration before completing a reservation.",
+        ],
+        bullets: [
+          "Number of adults and children traveling",
+          "Suitcases, carry-ons and oversized items",
+          "Pickup order for groups coming from different locations",
+          "Any mobility or boarding considerations to discuss",
+        ],
+      },
+      {
+        heading: "Popular Sprinter itineraries in New York",
+        paragraphs: [
+          "A van can help a group stay together for airport transfers, corporate schedules, wedding events, cruise terminal trips and private outings. Each itinerary has different timing and loading needs, so share the destinations in order and note any fixed arrival times.",
+          "If your day includes several locations, include expected waiting periods and the final drop-off. The reservation team can review the complete request and discuss the transportation plan.",
+        ],
+      },
     ],
     recommendedFleet: ["suv", "limousine"],
   },
@@ -74,6 +94,26 @@ export const fleetPages: DetailPage[] = [
           "Include the date and time, addresses, number of passengers, luggage and any timing considerations in your quote request. For an airport ride, provide your flight details and let us know whether you need pickup or drop-off service.",
         ],
       },
+      {
+        heading: "Plan for passengers, bags and the route",
+        paragraphs: [
+          "SUV passenger and luggage capacity depends on the specific vehicle and seating setup. Share the number of travelers and bags, including child seats or oversized luggage, so the team can discuss an appropriate option.",
+          "A direct airport transfer, business pickup and multi-stop day each require different timing. Include the pickup address, destination and any additional stops when you request a quote.",
+        ],
+        bullets: [
+          "Passenger count and approximate luggage",
+          "Flight or appointment timing where relevant",
+          "Return-trip details or intermediate stops",
+          "Any pickup notes that will help identify the location",
+        ],
+      },
+      {
+        heading: "Private SUV transportation for New York trips",
+        paragraphs: [
+          "An SUV may work for a private airport ride, a family trip or a smaller business itinerary. If your party or luggage needs more room, ask the team to compare SUV and Sprinter van options before finalizing the reservation.",
+          "Vehicle availability and configuration can change. Confirm the selected vehicle and the trip arrangements directly with NY Travel Limo.",
+        ],
+      },
     ],
     recommendedFleet: ["sprinter", "limousine"],
   },
@@ -103,6 +143,26 @@ export const fleetPages: DetailPage[] = [
         heading: "Coordinate the schedule in advance",
         paragraphs: [
           "Share your event date, itinerary and timing when you request a quote. If your plans include multiple pickups or stops, listing them up front helps the team understand the full transportation plan.",
+        ],
+      },
+      {
+        heading: "Choose the limousine around the occasion",
+        paragraphs: [
+          "The right arrangement depends on how many people are traveling, the locations involved and the role transportation plays in your event. Tell the team whether you need a single arrival, transfers between venues or a planned return ride.",
+          "Confirm the available vehicle, passenger capacity, pickup times and any service terms before completing your reservation. Do not assume a particular vehicle configuration until it is confirmed.",
+        ],
+        bullets: [
+          "Event date and requested pickup window",
+          "Venue and return addresses",
+          "Number of passengers for each ride",
+          "Stops, waiting periods and special timing notes",
+        ],
+      },
+      {
+        heading: "Make event transportation easier to coordinate",
+        paragraphs: [
+          "For a wedding or celebration, share one ordered schedule with the key addresses and the number of passengers at each pickup. Identify a contact person who can help clarify timing if the plan changes.",
+          "If several groups need rides, describe each group separately. The team can review the request and discuss vehicle availability and arrangements for the occasion.",
         ],
       },
     ],

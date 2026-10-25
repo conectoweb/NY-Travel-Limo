@@ -1,11 +1,16 @@
+import Image from "next/image";
 import { fleetOptions } from "@/lib/site-content";
+
+type FleetImages = Record<string, { src: string; alt: string }>;
 
 export default function FleetOptions({
   keys,
+  images,
   heading = "Choose the right vehicle for your trip",
   description = "From group transportation in a Mercedes-Benz Sprinter van to a private SUV or limousine, choose the option that fits your plans.",
 }: {
   keys?: readonly string[];
+  images?: FleetImages;
   heading?: string;
   description?: string;
 }) {
@@ -30,13 +35,24 @@ export default function FleetOptions({
         <ul className="grid gap-5 md:grid-cols-3">
           {options.map((option) => (
             <li
-              className={`service-card relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] sm:p-8 ${
+              className={`service-card group relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] sm:p-8 ${
                 option.key === "sprinter"
                   ? "border-brand-secondary border-x border-b border-x-brand-accent border-b-brand-accent bg-brand-accent text-white"
                   : "border-brand-primary border-x-brand-text/10 border-b-brand-text/10 bg-white text-brand-dark"
               }`}
               key={option.key}
             >
+              {images?.[option.key] && (
+                <div className="relative -mx-6 -mt-6 mb-6 h-52 overflow-hidden sm:-mx-8 sm:-mt-8 sm:h-60">
+                  <Image
+                    alt={images[option.key].alt}
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 767px) 100vw, 33vw"
+                    src={images[option.key].src}
+                  />
+                </div>
+              )}
               <p className={`eyebrow mb-4 ${option.key === "sprinter" ? "text-brand-secondary" : ""}`}>
                 {option.key === "sprinter"
                   ? "Featured vehicle"

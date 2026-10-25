@@ -1,4 +1,5 @@
 import type { DetailPage as DetailPageContent } from "@/lib/site-content";
+import Image from "next/image";
 import { QuoteLink } from "@/components/Header";
 import FleetOptions from "@/components/FleetOptions";
 import ServiceAreas from "@/components/ServiceAreas";
@@ -61,9 +62,25 @@ const relatedServiceSlugs: Record<string, string[]> = {
   ],
 };
 
+const fleetHeroImages: Record<string, { src: string; alt: string }> = {
+  "sprinter-van-rental-with-driver-new-york-nyc": {
+    src: "/images/services/Sprinter-Van-Rental-Rates.png",
+    alt: "Sprinter van for group transportation in New York",
+  },
+  "luxury-suv-rental-nyc": {
+    src: "/images/services/suv-transportation-6-passanger.png",
+    alt: "Private SUV transportation in New York",
+  },
+  "lincoln-stretch-limo-rental-nyc": {
+    src: "/images/services/limousines-transportation-7-passanger.webp",
+    alt: "Limousine transportation for a New York occasion",
+  },
+};
+
 export default function DetailPage({ page }: { page: DetailPageContent }) {
   const isContactPage = page.slug === "contact-us";
   const isFleetPage = fleetPages.some((fleetPage) => fleetPage.slug === page.slug);
+  const fleetHeroImage = fleetHeroImages[page.slug];
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
   const structuredData = isContactPage
@@ -126,9 +143,22 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
       <main>
         <section
           aria-labelledby="detail-title"
-          className="bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24"
+          className={`services-hero-enter relative isolate overflow-hidden bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24 ${fleetHeroImage ? "min-h-[34rem]" : ""}`}
         >
-          <div className="mx-auto max-w-content">
+          {fleetHeroImage && (
+            <>
+              <Image
+                alt={fleetHeroImage.alt}
+                className="absolute inset-0 z-0 object-cover object-center"
+                fill
+                priority
+                sizes="100vw"
+                src={fleetHeroImage.src}
+              />
+              <div aria-hidden="true" className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(9,79,89,0.72)_0%,rgba(9,79,89,0.48)_55%,rgba(41,37,33,0.2)_100%)]" />
+            </>
+          )}
+          <div className="relative z-20 mx-auto max-w-content">
             <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/65">
               <ol className="flex flex-wrap gap-2">
                 <li><a className="underline underline-offset-4 hover:text-white" href="/">Home</a></li>
@@ -166,7 +196,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
 
         <article className="section-pad bg-white">
           <div className="mx-auto max-w-4xl">
-            <div className="mt-12 space-y-12">
+            <div className="services-card-enter mt-12 space-y-12">
               {page.sections.map((section, index) => (
                 <section
                   aria-labelledby={`detail-section-${index + 1}`}

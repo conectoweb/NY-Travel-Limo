@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 import BlogPreview from "@/components/BlogPreview";
 import FAQ from "@/components/FAQ";
+import FeaturedVideo from "@/components/FeaturedVideo";
 import FinalCTA from "@/components/FinalCTA";
 import FleetOptions from "@/components/FleetOptions";
 import Footer from "@/components/Footer";
@@ -65,9 +66,15 @@ export default function HomePage() {
       <main>
         <Hero />
 
+        <FeaturedVideo />
         <FleetOptions
           heading="Room for the ride ahead."
           description="Explore our vehicle categories, with Mercedes-Benz Sprinter vans at the center of the experience."
+          images={{
+            sprinter: { src: "/images/services/Sprinter-Van-Rental-Rates-in-NYC.webp", alt: "Black Sprinter van ready for private group transportation" },
+            suv: { src: "/images/services/suv-transportation.png", alt: "Private SUV transportation vehicle" },
+            limousine: { src: "/images/services/limousines-transportation.png", alt: "Limousine ready for a New York special occasion" },
+          }}
         />
         <ServicesGrid />
         <Steps />

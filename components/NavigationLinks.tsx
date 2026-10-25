@@ -3,14 +3,12 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { fleetOptions, servicePages } from "@/lib/site-content";
-import { reservationUrl } from "@/lib/site-links";
 
 const navigation = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services", menu: servicePages.filter((page) => page.slug !== "contact-us") },
   { label: "Fleet", href: "/fleet", menu: fleetOptions.map((vehicle) => ({ title: vehicle.title, slug: vehicle.href.slice(1) })) },
   { label: "Rates", href: "/rates" },
-  { label: "Reservations", href: reservationUrl },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
 ];

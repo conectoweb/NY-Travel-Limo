@@ -11,6 +11,21 @@ const featuredServices = featuredServiceSlugs
   .map((slug) => services.find((service) => service.slug === slug))
   .filter((service) => service !== undefined);
 
+const featuredServiceImages: Record<string, { src: string; alt: string }> = {
+  "airport-transportation-services-in-nyc-with-professional-chauffeurs": {
+    src: "/images/services/Point-to-Point-Transportation-Service-in-New-York.webp",
+    alt: "Private chauffeur transportation in New York",
+  },
+  "corporate-transportation-service-with-driver-in-new-york": {
+    src: "/images/services/corporate-transportation-services-nyc.webp",
+    alt: "Group traveling beside a chauffeur-driven Sprinter van",
+  },
+  "group-transportation-in-new-york-near-me": {
+    src: "/images/services/sprinter-vans-rental.webp",
+    alt: "Mercedes-Benz Sprinter van for group transportation",
+  },
+};
+
 export default function ServicesGrid() {
   return (
     <section aria-labelledby="services-title" className="section-pad bg-brand-soft" id="services">
@@ -29,16 +44,16 @@ export default function ServicesGrid() {
           </a>
         </div>
 
-        <ul className="grid gap-5 lg:grid-cols-3">
+        <ul className="services-card-enter grid gap-5 lg:grid-cols-3">
           {featuredServices.map((service) => (
             <li className="service-card group overflow-hidden rounded-2xl border border-brand-text/10 bg-white shadow-[0_12px_35px_rgba(41,37,33,0.07)]" key={service.slug}>
               <a aria-label={`Explore ${service.title}`} className="relative block h-52 overflow-hidden bg-brand-accent sm:h-60" href={`/${service.slug}`}>
                 <Image
-                  alt="NY Travel Limo Mercedes-Benz Sprinter van in New York, shown as a temporary service image"
+                  alt={featuredServiceImages[service.slug]?.alt ?? service.title}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  src="/images/nyc-sprinter-van-hero.avif"
+                  src={featuredServiceImages[service.slug]?.src ?? "/images/services/private-transportation.webp"}
                 />
                 <span className="absolute bottom-4 left-4 rounded-full border border-white/30 bg-brand-accent/90 px-4 py-2 text-xs font-semibold text-white">
                   Private chauffeur service

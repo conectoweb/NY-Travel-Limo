@@ -1,6 +1,9 @@
 import Header, { QuoteLink } from "@/components/Header";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
+import FleetOptions from "@/components/FleetOptions";
+
+type ContentPageFleetImages = Record<string, { src: string; alt: string }>;
 
 export type ContentPageData = {
   title: string;
@@ -9,6 +12,10 @@ export type ContentPageData = {
   intro: string;
   sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
   links?: { label: string; href: string }[];
+  experienceYears?: number;
+  fleetImages?: ContentPageFleetImages;
+  fleetHeading?: string;
+  fleetDescription?: string;
 };
 
 export default function ContentPage({ page }: { page: ContentPageData }) {
@@ -32,6 +39,16 @@ export default function ContentPage({ page }: { page: ContentPageData }) {
             <p className="mt-6 max-w-3xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               {page.intro}
             </p>
+            {page.experienceYears && (
+              <div className="mt-8 inline-flex items-center gap-4 rounded-xl border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-sm">
+                <span className="font-display text-4xl font-extrabold leading-none text-brand-secondary">
+                  {page.experienceYears}+
+                </span>
+                <span className="max-w-40 text-sm font-semibold leading-5 text-white">
+                  years of transportation experience
+                </span>
+              </div>
+            )}
           </div>
         </header>
         <article className="section-pad bg-white">
@@ -69,6 +86,13 @@ export default function ContentPage({ page }: { page: ContentPageData }) {
             </div>
           </div>
         </article>
+        {page.fleetImages && (
+          <FleetOptions
+            images={page.fleetImages}
+            heading={page.fleetHeading ?? "Explore our fleet"}
+            description={page.fleetDescription}
+          />
+        )}
         <FinalCTA />
       </main>
       <Footer />

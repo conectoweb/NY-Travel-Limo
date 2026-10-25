@@ -32,7 +32,6 @@ const mobileNavigation = [
     ],
   },
   { label: "Rates", href: "/rates" },
-  { label: "Reservations", href: reservationUrl },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
   { label: "Reservation Now", href: reservationUrl, emphasized: true },
@@ -74,7 +73,7 @@ export function ReservationLink({
 
 export default function Header() {
   return (
-    <header className="relative z-30">
+    <header className="relative z-30" id="top">
       <div className="bg-brand-dark px-5 py-2 text-xs text-white sm:px-8">
         <div className="mx-auto flex max-w-content flex-col items-center justify-between gap-2 sm:flex-row">
           <p className="font-semibold text-white/85">

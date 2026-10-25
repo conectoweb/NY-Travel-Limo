@@ -6,6 +6,23 @@ import Reviews from "@/components/Reviews";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 
 const vanImage = "/images/nyc-sprinter-van-hero.avif";
+const vehicleImages = {
+  sprinter: {
+    src: "/images/services/sprinter-vans-rental.webp",
+    label: "Sprinter van",
+    alt: "Mercedes-Benz Sprinter van for group transportation",
+  },
+  suv: {
+    src: "/images/services/suv-transportation.png",
+    label: "Private SUV",
+    alt: "Private SUV for chauffeur-driven transportation",
+  },
+  limousine: {
+    src: "/images/services/limousines-transportation.png",
+    label: "Limousine",
+    alt: "Stretch limousine for special occasions",
+  },
+} as const;
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Sprinter Van Rental Rates in NYC | NY Travel Limo";
@@ -28,20 +45,29 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-function RateImage({ alt }: { alt: string }) {
+type RateVehicleImage = (typeof vehicleImages)[keyof typeof vehicleImages];
+
+function RateImage({ images }: { images: RateVehicleImage[] }) {
   return (
-    <div className="relative min-h-64 min-w-0 overflow-hidden rounded-xl bg-brand-accent sm:min-h-80">
-      <Image
-        src={vanImage}
-        alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover"
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/45 to-transparent" />
-      <span className="absolute bottom-4 left-4 rounded-full border border-white/60 bg-brand-dark/70 px-3 py-1 text-xs font-semibold text-white">
-        NY Travel Limo fleet
-      </span>
+    <div className={`grid min-h-64 min-w-0 overflow-hidden rounded-xl bg-brand-accent sm:min-h-80 ${images.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+      {images.map((image, index) => (
+        <div
+          className={`relative min-h-64 min-w-0 overflow-hidden sm:min-h-80 ${images.length === 3 && index === 2 ? "col-span-2" : ""}`}
+          key={image.label}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="(max-width: 768px) 100vw, 25vw"
+            className="object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
+          <span className="absolute bottom-4 left-3 rounded-full border border-white/60 bg-brand-dark/75 px-3 py-1 text-xs font-semibold text-white sm:left-4">
+            {image.label}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
@@ -51,7 +77,7 @@ function RateFeature({
   eyebrow,
   title,
   description,
-  alt,
+  images,
   reverse = false,
   children,
 }: {
@@ -59,14 +85,14 @@ function RateFeature({
   eyebrow: string;
   title: string;
   description: string;
-  alt: string;
+  images: RateVehicleImage[];
   reverse?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-24 border-b border-brand-text/10 py-12 last:border-b-0 sm:py-16">
       <div className={`grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-14 ${reverse ? "lg:[&>div:first-child]:order-2" : ""}`}>
-        <RateImage alt={alt} />
+        <RateImage images={images} />
         <div className="min-w-0">
           <p className="eyebrow mb-3">{eyebrow}</p>
           <h2 className="font-display text-3xl font-bold leading-tight text-brand-dark sm:text-4xl" id={`${id}-title`}>
@@ -203,7 +229,7 @@ export default function RatesPage() {
               eyebrow="March through November"
               title="Private Wine Tours"
               description="Private 10-hour Sprinter van wine tour. Taxes and gratuity are included. Contact us for pricing."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for private wine tour transportation"
+              images={[vehicleImages.sprinter]}
             >
               <p className="inline-flex rounded-lg border border-brand-secondary/60 bg-white px-4 py-3 text-lg font-bold text-brand-accent">
                 Contact us for pricing
@@ -215,7 +241,7 @@ export default function RatesPage() {
               eyebrow="JFK · LGA · EWR"
               title="Airport Transportation"
               description="Airport rates by pickup or destination airport and vehicle. Passenger ranges are shown as provided."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for airport transfer pricing"
+              images={[vehicleImages.suv, vehicleImages.sprinter]}
               reverse
             >
               <RateTable
@@ -236,7 +262,7 @@ export default function RatesPage() {
               eyebrow="Flexible private service"
               title="Hourly Rates"
               description="The Sprinter rate applies within the five boroughs. The 3-hour minimum is listed for Sprinter service only."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for hourly transportation pricing"
+              images={[vehicleImages.sprinter, vehicleImages.limousine, vehicleImages.suv]}
             >
               <RateTable
                 headers={["Vehicle", "Rate", "Minimum"]}
@@ -253,7 +279,7 @@ export default function RatesPage() {
               eyebrow="Within the five boroughs"
               title="Wedding Packages"
               description="Three-hour packages for wedding transportation, with the listed price for each additional hour."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for wedding transportation packages"
+              images={[vehicleImages.limousine, vehicleImages.sprinter]}
               reverse
             >
               <PackageList />
@@ -264,7 +290,7 @@ export default function RatesPage() {
               eyebrow="Within the five boroughs"
               title="Bachelor and Bachelorette Packages"
               description="Three-hour event packages for bachelor and bachelorette transportation."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for group celebration transportation"
+              images={[vehicleImages.limousine, vehicleImages.sprinter]}
             >
               <PackageList />
             </RateFeature>
@@ -274,7 +300,7 @@ export default function RatesPage() {
               eyebrow="Within the five boroughs"
               title="Sweet Sixteen Packages"
               description="Three-hour event packages for Sweet Sixteen transportation."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for Sweet Sixteen transportation"
+              images={[vehicleImages.limousine, vehicleImages.sprinter]}
               reverse
             >
               <PackageList />
@@ -285,7 +311,7 @@ export default function RatesPage() {
               eyebrow="Casino transportation"
               title="Atlantic City Casino"
               description="Sprinter van service for 1–14 passengers between New York and Atlantic City."
-              alt="NY Travel Limo Sprinter van shown as a temporary image for Atlantic City casino transportation"
+              images={[vehicleImages.sprinter]}
             >
               <RateTable
                 headers={["Trip", "Vehicle", "Passengers", "Rate"]}

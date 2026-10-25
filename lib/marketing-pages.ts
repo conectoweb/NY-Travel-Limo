@@ -25,19 +25,32 @@ export const marketingPages: Record<string, ContentPageData> = {
   },
   "about-us": {
     title: "About NY Travel Limo",
-    description: "Learn about NY Travel Limo's private chauffeur transportation services in New York.",
-    eyebrow: "About the service",
-    intro: "NY Travel Limo helps travelers arrange private, chauffeur-driven transportation in New York. The site describes available trip types and vehicle categories so customers can provide itinerary details when requesting a quote.",
+    description: "Get to know NY Travel Limo, with more than 26 years of transportation experience serving New York and surrounding areas.",
+    eyebrow: "Over 26 years of transportation experience",
+    intro: "For more than 26 years, NY Travel Limo has helped people get where they need to go with private transportation and professional drivers. From airport transfers and business schedules to weddings, city tours and group outings, we plan each ride around the people, places and timing that matter to you.",
     sections: [
       {
-        heading: "Transportation planned around your trip",
-        paragraphs: ["Service information covers airport transfers, business travel, roadshows, cruise terminals, weddings, hourly rides, city tours, point-to-point trips, wine tours and group transportation.", "Mercedes-Benz Sprinter vans are featured for group transportation, alongside SUV and limousine options. Confirm vehicle configuration and availability for your particular itinerary."],
+        heading: "Experience built around New York travel",
+        paragraphs: ["New York travel can mean airport pickups, tight business schedules, several stops in one day or coordinating a group across multiple locations. Our experience helps us understand the details that make a transportation plan practical: clear pickup information, realistic timing, passenger needs and the full route.", "We serve trips throughout New York City and surrounding areas, including Brooklyn, Manhattan, Queens, Long Island and New Jersey. Share your locations and schedule so we can review the request with you."],
       },
       {
-        heading: "Talk through your transportation needs",
-        paragraphs: ["Share your dates, locations, passenger count and relevant trip details through the reservation platform or contact the team by telephone."],
+        heading: "A vehicle for the way you travel",
+        paragraphs: ["Our fleet includes Mercedes-Benz Sprinter vans for group transportation, private SUVs and limousines for special occasions. The right choice depends on passenger count, luggage, itinerary and availability; our team can discuss the vehicle that best matches your plans.", "Whether you are arranging an airport transfer, cruise terminal ride, corporate trip, wedding, hourly service, city tour, wine tour or point-to-point journey, let us know what the day requires."],
+        bullets: ["Sprinter vans for group itineraries", "Private SUVs for airport and city travel", "Limousines for celebrations and events"],
+      },
+      {
+        heading: "Personal attention from the first request",
+        paragraphs: ["We believe a smoother ride starts with listening. Tell us your dates, pickup and drop-off locations, passenger and luggage count, stops and timing. We will review the details and help you understand the next steps for your quote and reservation."],
       },
     ],
+    experienceYears: 26,
+    fleetImages: {
+      sprinter: { src: "/images/services/sprinter-vans-rental.webp", alt: "Mercedes-Benz Sprinter van for group travel" },
+      suv: { src: "/images/services/suv-transportation.png", alt: "Private SUV for transportation in New York" },
+      limousine: { src: "/images/services/limousines-transportation.png", alt: "Limousine transportation for special occasions" },
+    },
+    fleetHeading: "Meet the fleet",
+    fleetDescription: "Explore our Sprinter vans, SUVs and limousines, then tell us about your itinerary so we can discuss the right fit.",
     links: [
       { label: "Browse transportation services", href: "/services" },
       { label: "Explore the fleet", href: "/fleet" },

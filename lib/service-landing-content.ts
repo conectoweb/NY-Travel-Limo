@@ -12,6 +12,8 @@ export type ServiceLandingContent = {
   midCtaDescription: string;
   faqs: { question: string; answer: string }[];
   imageAlt: string;
+  introImage: string;
+  introImageAlt: string;
   expectedImage: string;
 };
 
@@ -41,8 +43,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "What should I include for an airport arrival?", answer: "Share your travel date, airport, flight details, passenger and luggage count, destination and any pickup notes you already have." },
       { question: "Can a Sprinter van be used for an airport group?", answer: "Sprinter vans are a featured group option. Confirm the available configuration, passenger count and luggage fit for your particular ride." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for airport transportation",
-    expectedImage: "airport-transportation.jpg",
+    imageAlt: "Airport transportation image for a private New York trip",
+    introImage: "services/Sprinter Van Rental with Driver in New York NYC.avif",
+    introImageAlt: "Mercedes-Benz Sprinter van prepared for an airport transfer",
+    expectedImage: "services/airport-transportation.avif",
   },
   "corporate-transportation-service-with-driver-in-new-york": {
     introHeading: "Business transportation shaped around the schedule",
@@ -69,8 +73,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Which vehicle is suitable for a business team?", answer: "The choice depends on passenger count, luggage and itinerary. Sprinter vans are a featured group option; SUVs and limousines are also listed." },
       { question: "Can I request airport and office transfers together?", answer: "Include both airport and office locations, dates and timing so the complete transportation plan can be reviewed." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for corporate transportation",
-    expectedImage: "corporate-transportation.jpg",
+    imageAlt: "Private vehicle for corporate transportation in New York",
+    introImage: "services/corporate-transportation-services-nyc.webp",
+    introImageAlt: "Group gathered beside a Sprinter van for a special trip",
+    expectedImage: "services/corporate-transportation.avif",
   },
   "roadshow-transportation-nyc": {
     introHeading: "A multi-stop ride for a day of meetings",
@@ -97,8 +103,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Should the quote request include schedule changes?", answer: "Include any known timing constraints and explain which parts may change. Confirm final booking terms and coordination directly during reservation." },
       { question: "Is a Sprinter van available for a delegation?", answer: "Sprinter vans are among the listed group options. Confirm availability and passenger/luggage configuration for your dates." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for corporate roadshow transportation",
-    expectedImage: "corporate-roadshow.jpg",
+    imageAlt: "Private chauffeur transportation for a multi-stop roadshow",
+    introImage: "services/Sprinter-Van-Rental-in-New-York-City-with-Driver-NYC.png",
+    introImageAlt: "Chauffeur beside a Sprinter van in New York",
+    expectedImage: "services/roadshow-transportation-services-in-nyc.avif",
   },
   "cruise-terminal-transportation-services-in-new-york-with-driver": {
     introHeading: "Connect your hotel, airport and cruise terminal",
@@ -125,8 +133,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "What information is helpful for a return pickup?", answer: "Provide the terminal, cruise date, preferred pickup details, passenger count and the next destination." },
       { question: "Is a Sprinter van an option for cruise luggage?", answer: "Sprinter vans are listed as a group option. Confirm the exact passenger and luggage capacity for your party before booking." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for cruise terminal transportation",
-    expectedImage: "cruise-terminal-transportation.jpg",
+    imageAlt: "Cruise ship arriving at a passenger terminal",
+    introImage: "services/cruise-terminal-nyc.webp",
+    introImageAlt: "Private transportation for cruise terminal passengers",
+    expectedImage: "services/cruise-terminal-transportation.webp",
   },
   "luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans": {
     introHeading: "Bring the day's locations into one transportation plan",
@@ -153,8 +163,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Can a Sprinter van transport wedding guests?", answer: "Sprinter vans are a featured group option. Confirm passenger and luggage configuration for the guests and route you have planned." },
       { question: "When should I share the wedding schedule?", answer: "Share the dates, addresses and planned timing when requesting a quote, then confirm the final itinerary before the event." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for wedding transportation",
-    expectedImage: "wedding-transportation.jpg",
+    imageAlt: "Wedding transportation with a private chauffeur in New York",
+    introImage: "services/wedding-transportation-nyc.webp",
+    introImageAlt: "Vehicle for a wedding-day transportation itinerary",
+    expectedImage: "services/wedding-transportation-in-nyc.webp",
   },
   "transportation-by-hours-in-new-york": {
     introHeading: "Plan the ride around a block of time",
@@ -181,8 +193,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Can I adjust the itinerary?", answer: "Describe possible changes in your request and confirm any adjustments and applicable terms with the reservation team." },
       { question: "Are hourly rates published here?", answer: "No hourly prices are published on this page. Request a quote for your specific dates and itinerary." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for hourly transportation",
-    expectedImage: "hourly-transportation.jpg",
+    imageAlt: "Private transportation for a multi-stop hourly itinerary",
+    introImage: "services/hourly-transportation-planning.webp",
+    introImageAlt: "Private vehicle for hourly transportation and city stops",
+    expectedImage: "services/hourly-transportation-vehicle.webp",
   },
   "new-york-city-tour-with-professional-chauffeurs": {
     introHeading: "See the city through your own planned stops",
@@ -209,8 +223,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Can I make several sightseeing stops?", answer: "Yes, list each planned location and the time you expect to spend there so the route can be discussed." },
       { question: "Which vehicle can accommodate a tour group?", answer: "Sprinter vans are a featured group option. SUVs and limousines are also listed; confirm capacity and availability for your party." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for private city tours",
-    expectedImage: "new-york-city-tour.jpg",
+    imageAlt: "New York City tour transportation between planned stops",
+    introImage: "services/Point-to-Point-Transportation-ny.webp",
+    introImageAlt: "Private vehicle for exploring New York City",
+    expectedImage: "services/nyc-tours.webp",
   },
   "point-to-point-transportation-service-in-new-york": {
     introHeading: "A private ride between two addresses",
@@ -237,8 +253,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Can I request a return trip?", answer: "Include the return date, pickup location and timing in your request so both legs can be discussed." },
       { question: "How do I choose a vehicle?", answer: "Consider passenger count and luggage. The fleet includes Sprinter vans, SUVs and limousines; confirm the best fit with the reservation team." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for point-to-point transportation",
-    expectedImage: "point-to-point-transportation.jpg",
+    imageAlt: "Private vehicle for point-to-point transportation in New York",
+    introImage: "services/Point-to-Point-Transportation.webp",
+    introImageAlt: "Vehicle for a direct ride between New York destinations",
+    expectedImage: "services/point-to-point-transportation-nyc.webp",
   },
   "wine-tours-transportation-service-from-new-york": {
     introHeading: "Leave the driving plan out of your winery itinerary",
@@ -265,8 +283,10 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Does the service include tasting reservations?", answer: "The transportation information does not include winery reservations. Arrange visits directly with each destination and provide the times for your ride plan." },
       { question: "What should our group share?", answer: "Include date, pickup and return addresses, number of passengers, stops and estimated duration." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for wine tour transportation",
-    expectedImage: "wine-tour-transportation.jpg",
+    imageAlt: "Wine tour transportation for a New York day trip",
+    introImage: "services/Wine-Tours-Transportation-Service.webp",
+    introImageAlt: "Transportation for a wine tour itinerary",
+    expectedImage: "services/wine-tours.webp",
   },
   "group-transportation-in-new-york-near-me": {
     introHeading: "Keep your group on one shared itinerary",
@@ -293,7 +313,9 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
       { question: "Can the group be picked up at multiple locations?", answer: "Include each pickup address and the sequence in your request, then confirm the agreed route during reservation." },
       { question: "What if our luggage needs are significant?", answer: "Provide an estimate of bag count and size along with the passenger number so the vehicle fit can be checked." },
     ],
-    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for group transportation",
-    expectedImage: "group-transportation.jpg",
+    imageAlt: "Sprinter van for group transportation in New York",
+    introImage: "services/private-transportation.webp",
+    introImageAlt: "Private chauffeur transportation for a group itinerary",
+    expectedImage: "services/group-transportation.webp",
   },
 };

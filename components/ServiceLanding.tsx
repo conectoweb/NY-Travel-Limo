@@ -1,5 +1,3 @@
-import { existsSync } from "node:fs";
-import { join } from "node:path";
 import Image from "next/image";
 import type { DetailPage } from "@/lib/site-content";
 import type { ServiceLandingContent } from "@/lib/service-landing-content";
@@ -8,18 +6,31 @@ import FleetOptions from "@/components/FleetOptions";
 import FinalCTA from "@/components/FinalCTA";
 import { servicePages } from "@/lib/site-content";
 
-const temporaryServiceImage = "/images/nyc-sprinter-van-hero.avif";
-
 function BenefitCards({ items }: { items: ServiceLandingContent["benefits"] }) {
   return (
-    <ul className="mt-9 grid gap-4 md:grid-cols-3">
+    <ul className="services-card-enter mt-9 grid gap-4 md:grid-cols-3">
       {items.map((item, index) => (
         <li
-          className="service-card rounded-xl border border-brand-primary/10 bg-white p-6 shadow-[0_12px_35px_rgba(41,37,33,0.055)] sm:p-7"
+          className="service-card group rounded-xl border border-brand-primary/10 bg-white p-6 shadow-[0_12px_35px_rgba(41,37,33,0.055)] sm:p-7"
           key={item.title}
         >
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand-soft font-bold text-brand-accent">
-            {String(index + 1).padStart(2, "0")}
+          <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-brand-accent transition-transform duration-300 group-hover:scale-110">
+            {index === 0 ? (
+              <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7">
+                <path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" />
+                <circle cx="12" cy="10" r="2.2" />
+              </svg>
+            ) : index === 1 ? (
+              <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7">
+                <path d="M3 13.5h18l-1.5-5a2 2 0 0 0-1.9-1.4H6.4A2 2 0 0 0 4.5 8.5L3 13.5Z" />
+                <path d="M4 13.5v4h16v-4M7 17.5v2m10-2v2M6 10h12" />
+              </svg>
+            ) : (
+              <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.7">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.5 2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            )}
           </span>
           <h3 className="mt-5 text-xl font-bold text-brand-dark">{item.title}</h3>
           <p className="mt-3 text-sm leading-6 text-brand-muted">{item.description}</p>
@@ -86,10 +97,7 @@ export default function ServiceLanding({
   content: ServiceLandingContent;
 }) {
   const relatedServices = servicePages.filter((service) => service.slug !== page.slug && service.slug !== "contact-us");
-  const expectedImage = `/images/${content.expectedImage}`;
-  const serviceImage = existsSync(join(process.cwd(), "public", "images", content.expectedImage))
-    ? expectedImage
-    : temporaryServiceImage;
+  const serviceImage = `/images/${content.expectedImage}`;
 
   return (
     <main>
@@ -142,11 +150,11 @@ export default function ServiceLanding({
           </div>
           <div className="relative min-h-[17rem] overflow-hidden rounded-2xl bg-brand-dark shadow-[0_20px_50px_rgba(9,79,89,0.18)] sm:min-h-[23rem]">
             <Image
-              alt={content.imageAlt}
+              alt={content.introImageAlt}
               className="object-cover"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
-              src={serviceImage}
+              src={`/images/${content.introImage}`}
             />
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
             <p className="absolute bottom-5 left-5 rounded-full border border-white/25 bg-brand-dark/75 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm">

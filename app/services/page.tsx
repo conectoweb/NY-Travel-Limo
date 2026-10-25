@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import ServiceAreas from "@/components/ServiceAreas";
 import Steps from "@/components/Steps";
 import { servicePages } from "@/lib/site-content";
+import { serviceLandingContent } from "@/lib/service-landing-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -101,41 +102,44 @@ export default function ServicesPage() {
               </p>
             </div>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((service, index) => (
-                <li
-                  className="service-card group flex flex-col overflow-hidden rounded-xl border border-brand-text/10 bg-white shadow-[0_8px_30px_rgba(41,37,33,0.045)]"
-                  key={service.slug}
-                >
-                  <a aria-label={`Explore ${service.title}`} className="relative block h-44 overflow-hidden bg-brand-accent" href={`/${service.slug}`}>
-                    <Image
-                      alt="NY Travel Limo Sprinter van in New York, used as a temporary image for this service"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      src="/images/nyc-sprinter-van-hero.avif"
-                    />
-                    <span className="absolute bottom-3 left-3 rounded-full border border-white/30 bg-brand-accent/90 px-3 py-1.5 text-xs font-semibold text-white">
-                      SERVICE {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </a>
-                  <div className="flex flex-1 flex-col p-6 sm:p-7">
-                    <h3 className="text-xl font-bold leading-snug text-brand-dark">
-                      <a className="transition-colors hover:text-brand-primary" href={`/${service.slug}`}>
-                        {service.title}
-                      </a>
-                    </h3>
-                    <p className="mt-3 flex-1 text-sm leading-6 text-brand-muted">
-                      {service.description}
-                    </p>
-                    <a
-                      className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-accent underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-brand-primary"
-                      href={`/${service.slug}`}
-                    >
-                      Explore this service <span aria-hidden="true">↗</span>
+              {services.map((service, index) => {
+                const image = serviceLandingContent[service.slug];
+                return (
+                  <li
+                    className="service-card group flex flex-col overflow-hidden rounded-xl border border-brand-text/10 bg-white shadow-[0_8px_30px_rgba(41,37,33,0.045)]"
+                    key={service.slug}
+                  >
+                    <a aria-label={`Explore ${service.title}`} className="relative block h-44 overflow-hidden bg-brand-accent" href={`/${service.slug}`}>
+                      <Image
+                        alt={image?.imageAlt ?? service.title}
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        src={image ? `/images/${image.expectedImage}` : "/images/services/private-transportation.webp"}
+                      />
+                      <span className="absolute bottom-3 left-3 rounded-full border border-white/30 bg-brand-accent/90 px-3 py-1.5 text-xs font-semibold text-white">
+                        SERVICE {String(index + 1).padStart(2, "0")}
+                      </span>
                     </a>
-                  </div>
-                </li>
-              ))}
+                    <div className="flex flex-1 flex-col p-6 sm:p-7">
+                      <h3 className="text-xl font-bold leading-snug text-brand-dark">
+                        <a className="transition-colors hover:text-brand-primary" href={`/${service.slug}`}>
+                          {service.title}
+                        </a>
+                      </h3>
+                      <p className="mt-3 flex-1 text-sm leading-6 text-brand-muted">
+                        {service.description}
+                      </p>
+                      <a
+                        className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-accent underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-brand-primary"
+                        href={`/${service.slug}`}
+                      >
+                        Explore this service <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
