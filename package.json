@@ -11,7 +11,8 @@
     "mysql2": "^3.24.6",
     "next": "^15.5.28",
     "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react-dom": "19.1.1",
+    "resend": "^6.34.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",

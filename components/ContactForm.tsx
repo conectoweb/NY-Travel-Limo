@@ -96,7 +96,6 @@ export default function ContactForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          requestType: "contact",
           recaptchaToken,
           name: values.get("name"),
           email: values.get("email"),
@@ -146,7 +145,7 @@ export default function ContactForm() {
         <p className="mt-2 max-w-2xl text-sm leading-6 text-brand-muted">
           {isPreviewMode
             ? "Explore the contact form in preview mode. Submissions are disabled."
-            : "Complete the details below and the team can review your transportation request. Reservation requests are submitted on this website."}
+            : "Complete the details below and the team can review your quote request."}
         </p>
         {isPreviewMode && (
           <p className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-semibold leading-6 text-amber-950" role="status">
@@ -264,12 +263,7 @@ export default function ContactForm() {
               <span className="sr-only"> Required</span>
             </span>
           </label>
-          <p className="mt-3 text-xs leading-5 text-brand-muted">
-            Do not enter payment card information here. Payment methods can only be added in the Authorize.Net form on the reservation page.
-          </p>
         </div>
-
-        {!isPreviewMode && <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />}
 
         {status && (
           <p
@@ -284,6 +278,8 @@ export default function ContactForm() {
             {status}
           </p>
         )}
+
+        {!isPreviewMode && <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />}
 
         <div className="flex flex-col gap-3 border-t border-brand-text/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs leading-5 text-brand-muted">

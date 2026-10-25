@@ -14,7 +14,7 @@ export const marketingPages: Record<string, ContentPageData> = {
       },
       {
         heading: "Review the trip details before reserving",
-        paragraphs: ["Your final transportation arrangements, availability and applicable charges should be confirmed directly with our team. If you provide a payment method, it is entered in Authorize.Net's hosted form and is not charged when you submit a request."],
+        paragraphs: ["Your final transportation arrangements, availability and applicable charges should be confirmed directly with our team. The reservation request form does not collect payment information; our team will coordinate any payment separately after reviewing your request."],
       },
     ],
     links: [
@@ -52,7 +52,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     sections: [
       { heading: "Which vehicle should I choose?", paragraphs: ["Consider passenger count, luggage, trip type and planned stops. Sprinter vans are featured for groups; SUVs and limousines are also listed. Vehicle seating and luggage configuration vary, so confirm details before booking."], bullets: ["Sprinter vans: group itineraries", "SUVs: private trips and airport transportation", "Limousines: weddings and special occasions"] },
       { heading: "What information is needed for a quote?", paragraphs: ["Provide your travel date and time, pickup and destination, passenger count and itinerary. Include luggage and flight or terminal information where relevant."] },
-      { heading: "How can I reserve transportation?", paragraphs: ["Send your trip details through the reservation request form on this website. Submitting the form sends a request, not a confirmed booking. Our team will follow up to confirm availability, arrangements and secure payment."] },
+      { heading: "How can I reserve transportation?", paragraphs: ["Send your trip details through the reservation request form on this website. Submitting the form sends a request, not a confirmed booking. Our team will follow up to confirm availability and arrangements, and will coordinate any payment separately."] },
       { heading: "Can a vehicle wait or make multiple stops?", paragraphs: ["Include expected duration, stops and timing in your request. The reservation team can confirm the arrangements and terms for your itinerary."] },
     ],
     links: [
@@ -68,7 +68,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     intro: "This draft policy requires review and completion by the business before publication. It is not a legal compliance guarantee.",
     sections: [
       { heading: "Business and contact details", paragraphs: ["Legal business name: [[COMPLETE LEGAL BUSINESS NAME]]. Privacy contact: [[ADD PRIVACY CONTACT EMAIL OR ADDRESS]]. Applicable business address: [[CONFIRM BUSINESS ADDRESS]]."] },
-      { heading: "Information submitted through this website", paragraphs: ["The contact and reservation request forms collect a name, email address, phone number, consent and trip details needed to respond. Requests are stored in the website database and emailed to sales@nytravellimo.com through the site's email delivery provider. Google reCAPTCHA processes verification data when a visitor submits a form. If you choose to provide a payment method, card details are entered directly into Authorize.Net's hosted form; NY Travel Limo does not receive or store the card number, expiration date or CVV. The website stores only the Authorize.Net customer and payment profile identifiers with the reservation request. No charge is made when a request is submitted."] },
+      { heading: "Information submitted through this website", paragraphs: ["The Contact Us quote form and reservation request form collect a name, email address, phone number, consent and trip details needed to respond. Requests are emailed to sales@nytravellimo.com through the site's email delivery provider and are not stored in the website database. Google reCAPTCHA processes verification data when a visitor submits a form. Neither form collects or sends payment details."] },
       { heading: "Use, sharing and retention", paragraphs: ["The business must specify how submitted details are used, which service providers receive them, whether information is transferred, and the applicable retention periods: [[COMPLETE PURPOSES, RECIPIENTS, AND RETENTION DETAILS]]."] },
       { heading: "Privacy choices and questions", paragraphs: ["Add the applicable privacy rights, how people can make a request, verification requirements and response contact: [[COMPLETE PRIVACY REQUEST PROCESS]]. This policy should be reviewed for the jurisdictions where the business operates."] },
     ],
@@ -94,7 +94,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     intro: "This draft is a starting point and requires completion and review by the business. It does not replace the terms provided by the reservation platform or a legal review.",
     sections: [
       { heading: "Website information", paragraphs: ["Service descriptions are general information. Vehicle availability, configurations, itinerary details and charges must be confirmed through the reservation process."] },
-      { heading: "Reservations and payments", paragraphs: ["Use the website reservation request form to send trip details. Submitting a request does not confirm a booking or charge the payment method. Payment details, if provided, are entered directly into Authorize.Net's hosted form and stored by Authorize.Net as a tokenized profile. NY Travel Limo stores only the provider's customer and payment profile identifiers, never a full card number or CVV. Our team will follow up to confirm availability, arrangements and any payment."] },
+      { heading: "Reservations and payments", paragraphs: ["Use the website reservation request form to send trip details. Submitting a request does not confirm a booking or process a payment. The form does not collect payment details. Our team will follow up to confirm availability, arrangements and any payment."] },
       { heading: "Business details to complete", paragraphs: ["Legal business name: [[COMPLETE]]. Governing law and venue: [[BUSINESS/COUNSEL TO COMPLETE]]. Effective date: [[COMPLETE]]. Add any terms specific to use of this website: [[REVIEW AND COMPLETE]]."] },
     ],
     links: [{ label: "Privacy Policy", href: "/privacy-policy" }, { label: "Cookie Policy", href: "/cookie-policy" }],

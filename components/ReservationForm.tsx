@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import RecaptchaCheckbox, { type RecaptchaCheckboxHandle } from "@/components/RecaptchaCheckbox";
 
@@ -8,14 +8,6 @@ const fieldClassName =
   "mt-2 min-h-12 w-full rounded-lg border border-white/20 bg-white px-3 text-base font-normal text-brand-text shadow-sm placeholder:text-brand-muted focus:border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-secondary/40";
 
 const isPreviewMode = process.env.NEXT_PUBLIC_APP_MODE !== "production";
-
-declare global {
-  interface Window {
-    CommunicationHandler?: {
-      onReceiveCommunication: (message: { qstr: string; parent: string }) => void;
-    };
-  }
-}
 
 function ReservationField({
   label,
@@ -45,117 +37,29 @@ export default function ReservationForm() {
   const [statusType, setStatusType] = useState<"success" | "error" | "notice">("success");
   const [submitting, setSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState("");
-  const [hostedPageToken, setHostedPageToken] = useState("");
-  const [hostedFormAction, setHostedFormAction] = useState("");
-  const [hostedFrameHeight, setHostedFrameHeight] = useState(640);
-  const [paymentSession, setPaymentSession] = useState("");
-  const [paymentSaved, setPaymentSaved] = useState(false);
   const recaptchaRef = useRef<RecaptchaCheckboxHandle>(null);
-  const hostedFormRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    window.CommunicationHandler = {
-      onReceiveCommunication: ({ qstr }) => {
-        if (typeof qstr !== "string") return;
-        const message = qstr.replace(/^#/, "").replace(/^\?/, "");
-        const parameters = new URLSearchParams(message);
-        const action = parameters.get("action");
-        if (action === "successfulSave") {
-          setPaymentSaved(true);
-          setStatusType("success");
-          setStatus("Your payment method was saved securely by Authorize.Net. No charge has been made.");
-        } else if (action === "resizeWindow") {
-          const requestedHeight = Number(parameters.get("height"));
-          if (Number.isInteger(requestedHeight) && requestedHeight >= 350 && requestedHeight <= 1600) {
-            setHostedFrameHeight(requestedHeight);
-          }
-        } else if (action === "cancel") {
-          setPaymentSaved(false);
-          setStatusType("notice");
-          setStatus("Payment setup was cancelled. Save a payment method securely to continue.");
-        }
-      },
-    };
-    return () => {
-      delete window.CommunicationHandler;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (hostedPageToken) hostedFormRef.current?.submit();
-  }, [hostedPageToken]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("");
     if (isPreviewMode) {
       setStatusType("notice");
-      setStatus("This reservation form is in preview mode. Submissions, storage and payments are disabled.");
+      setStatus("This reservation form is in preview mode. Submissions are disabled.");
       return;
     }
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
 
     setSubmitting(true);
-    setStatus(paymentSession ? "Submitting your reservation request…" : "Preparing secure payment…");
+    setStatus("Submitting your reservation request…");
     setStatusType("success");
     const values = new FormData(form);
 
     try {
-      if (!paymentSession) {
-        const response = await fetch("/api/authorize-net/hosted-profile", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: values.get("name"),
-            email: values.get("email"),
-            recaptchaToken,
-            termsAccepted: values.get("termsAccepted") === "on",
-            companyWebsite: values.get("companyWebsite"),
-          }),
-        });
-        const result = await response.json() as {
-          message?: string;
-          token?: string;
-          action?: string;
-          session?: string;
-        };
-        if (!response.ok || !result.token || !result.action || !result.session) {
-          setStatusType(response.status === 503 ? "notice" : "error");
-          setStatus(result.message ?? "We couldn't open the secure payment form. Please try again or call 718-397-1333.");
-          recaptchaRef.current?.reset();
-          return;
-        }
-        const allowedActions = new Set([
-          "https://accept.authorize.net/customer/addPayment",
-          "https://test.authorize.net/customer/addPayment",
-        ]);
-        if (!allowedActions.has(result.action)) {
-          setStatusType("error");
-          setStatus("The secure payment form returned an invalid address. Please call 718-397-1333.");
-          recaptchaRef.current?.reset();
-          return;
-        }
-        setHostedFormAction(result.action);
-        setHostedFrameHeight(640);
-        setPaymentSession(result.session);
-        setHostedPageToken(result.token);
-        setStatusType("notice");
-        setStatus("Enter your card details in the secure Authorize.Net form. Save the payment method there, then submit your reservation request.");
-        return;
-      }
-
-      if (!paymentSaved) {
-        setStatusType("error");
-        setStatus("Save your payment method in the secure Authorize.Net form before submitting.");
-        return;
-      }
-
-      const response = await fetch("/api/quote", {
+      const response = await fetch("/api/reservation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          requestType: "reservation",
           recaptchaToken,
           name: values.get("name"),
           phone: values.get("phone"),
@@ -172,7 +76,6 @@ export default function ReservationForm() {
           instructions: values.get("instructions"),
           termsAccepted: values.get("termsAccepted") === "on",
           companyWebsite: values.get("companyWebsite"),
-          paymentSession,
         }),
       });
       const result = await response.json() as { message?: string };
@@ -180,21 +83,18 @@ export default function ReservationForm() {
         const message = result.message ?? "We couldn't submit your reservation request. Please try again or call 718-397-1333.";
         setStatusType(response.status === 503 ? "notice" : "error");
         setStatus(message);
+        recaptchaRef.current?.reset();
         return;
       }
 
       form.reset();
       recaptchaRef.current?.reset();
-      setHostedPageToken("");
-      setHostedFormAction("");
-      setPaymentSession("");
-      setPaymentSaved(false);
       setStatusType("success");
-      setStatus(result.message ?? "Thank you. Your reservation request has been received.");
+      setStatus(result.message ?? "Thank you. Your reservation request has been sent successfully.");
     } catch {
       setStatusType("error");
       setStatus("We couldn't reach the server. Please try again or call 718-397-1333.");
-      if (!paymentSession) recaptchaRef.current?.reset();
+      recaptchaRef.current?.reset();
     } finally {
       setSubmitting(false);
     }
@@ -206,7 +106,7 @@ export default function ReservationForm() {
       <fieldset className="space-y-5">
         <legend className="mb-5 text-xl font-bold text-white">Client Information</legend>
         <ReservationField label="First & Last Name" name="name" required>
-          <input id="name" name="name" required maxLength={100} autoComplete="name" placeholder="First & Last Name" readOnly={Boolean(paymentSession)} className={fieldClassName} />
+          <input id="name" name="name" required maxLength={100} autoComplete="name" placeholder="First & Last Name" className={fieldClassName} />
         </ReservationField>
         <ReservationField label="Phone Number" name="phone" required>
           <input
@@ -224,7 +124,7 @@ export default function ReservationForm() {
           />
         </ReservationField>
         <ReservationField label="Email" name="email" required>
-          <input id="email" name="email" required type="email" maxLength={254} autoComplete="email" placeholder="Email" readOnly={Boolean(paymentSession)} className={fieldClassName} />
+          <input id="email" name="email" required type="email" maxLength={254} autoComplete="email" placeholder="Email" className={fieldClassName} />
         </ReservationField>
       </fieldset>
 
@@ -271,38 +171,14 @@ export default function ReservationForm() {
 
       <fieldset className="space-y-3 border-t border-white/20 pt-6">
         <legend className="text-xl font-bold text-white">Payment Information</legend>
-        {isPreviewMode ? (
-          <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm leading-6 text-white/85" role="status">
-            Preview mode: payment setup is disabled. No card details are requested, sent or saved.
-          </p>
-        ) : (
-          <p className="text-sm leading-6 text-white/85">
-            Enter your payment method only in the secure Authorize.Net form below. Card details are sent directly to Authorize.Net, not to NY Travel Limo. Authorize.Net controls its hosted fields; card type is detected automatically and CVV is never stored. Your card will not be charged when you submit this reservation request.
-          </p>
-        )}
-        {!isPreviewMode && hostedPageToken && hostedFormAction ? (
-          <iframe
-            title="Secure Authorize.Net payment information form"
-            name="authorizeNetHostedProfile"
-            className="w-full rounded-lg border-0 bg-white"
-            referrerPolicy="strict-origin"
-            style={{ height: hostedFrameHeight }}
-          />
-        ) : !isPreviewMode ? (
-          <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm text-white/85">
-            Complete the required reservation details and reCAPTCHA, then continue to load the secure payment form.
-          </p>
-        ) : null}
-        {paymentSaved && (
-          <p className="text-sm font-semibold text-white" role="status">
-            Payment method saved securely. Only the Authorize.Net profile references will be associated with your request.
-          </p>
-        )}
+        <p className="text-sm leading-6 text-white/85">
+          This form does not collect or process payment information. Our team will coordinate any payment separately after reviewing your reservation request.
+        </p>
       </fieldset>
 
       <div aria-hidden="true" className="absolute -left-[10000px] h-px w-px overflow-hidden">
-        <label htmlFor="companyWebsite">Leave this field empty</label>
-        <input id="companyWebsite" name="companyWebsite" tabIndex={-1} autoComplete="off" />
+        <label htmlFor="reservationWebsite">Leave this field empty</label>
+        <input id="reservationWebsite" name="companyWebsite" tabIndex={-1} autoComplete="off" />
       </div>
 
       <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-white">
@@ -318,7 +194,7 @@ export default function ReservationForm() {
 
       {isPreviewMode && (
         <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm font-semibold leading-6 text-white" role="status">
-          Preview mode: this form is for display only. Reservation requests, storage and payments are disabled.
+          Preview mode: this form is for display only. Reservation requests are disabled.
         </p>
       )}
 
@@ -343,8 +219,7 @@ export default function ReservationForm() {
           isPreviewMode ||
           submitting ||
           !recaptchaToken ||
-          !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
-          (Boolean(paymentSession) && !paymentSaved)
+          !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
         }
         type="submit"
         className="inline-flex min-h-14 w-full items-center justify-center rounded-2xl bg-brand-secondary px-8 py-3 text-base font-bold text-brand-accent shadow-sm transition hover:bg-white disabled:cursor-wait disabled:opacity-60"
@@ -353,30 +228,18 @@ export default function ReservationForm() {
           ? "Sending disabled in preview"
           : submitting
           ? "Please wait…"
-          : paymentSession
-            ? "Submit Reservation Request"
-            : "Continue to Secure Payment"}
+          : "Submit Reservation Request"}
       </button>
 
       <div className="border-t border-white/20 pt-5 text-xs leading-5 text-white/75">
         <p className="font-bold text-brand-secondary">Important</p>
         <p className="mt-2">
           {isPreviewMode
-            ? "This preview does not send or store a reservation request and does not load or store payment information."
-            : "Submitting this form sends a reservation request only. It does not confirm a booking or charge your card. The payment method is stored by Authorize.Net for the team to coordinate any payment after confirming availability and arrangements."}
+            ? "This preview does not send or store a reservation request."
+            : "Submitting this form sends a reservation request only. It does not confirm a booking or request or process payment information. The team will follow up to confirm availability and arrangements."}
         </p>
       </div>
     </form>
-    {!isPreviewMode && <form
-      ref={hostedFormRef}
-      action={hostedFormAction}
-      method="post"
-      target="authorizeNetHostedProfile"
-      aria-hidden="true"
-      className="hidden"
-    >
-      <input type="hidden" name="token" value={hostedPageToken} />
-    </form>}
     </>
   );
 }

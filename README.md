@@ -26,7 +26,7 @@ For a preview, no environment variables are required. If configuring Hostinger f
 
 ## MySQL and Hostinger setup
 
-The following configuration is needed only to enable production submissions:
+Quote and reservation submissions use Resend and reCAPTCHA; these two forms do not require MySQL and do not store their submissions in a database. Configure the following database settings only if another enabled application feature requires the site's MySQL database:
 
 1. Create a MySQL database and database user in hPanel. Grant the application user only the permissions needed by the site.
 2. Configure the environment variables in Hostinger's Node.js application settings, or copy `.env.example` to `.env.local` for local production testing. Do not commit `.env` files.
@@ -34,13 +34,13 @@ The following configuration is needed only to enable production submissions:
 4. Run `database/migrations/001_create_quote_requests.sql` on a new database, then run migrations 002 and 004 in order. For an existing installation, apply any missing migrations in order.
 5. Set `APP_MODE=production` and `NEXT_PUBLIC_APP_MODE=production`, plus the required services below, before running `npm run build`. The two mode variables must both be set explicitly to production to enable form or payment APIs. Point the domain to the deployed Node.js application and enable HTTPS.
 
-The application creates a reusable MySQL connection pool on the server only. Quote requests store name, email, phone, consent, and the submitted pickup date/time, service, vehicle choice, passenger and stop counts, pickup/drop-off places, service hours, special instructions and server-generated timestamp. Contact and reservation requests are emailed to `sales@nytravellimo.com` through Resend. Production requires `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `RESEND_API_KEY` and a verified `RESEND_FROM_EMAIL`.
+The Contact Us quote form posts to `/api/quote`; the reservation form posts separately to `/api/reservation`. Each verifies its own reCAPTCHA token on the server and emails only the submitted request details through Resend without storing submissions in MySQL. Configure `RESERVATION_EMAIL=sales@nytravellimo.com`, `RESEND_API_KEY`, and a sender address verified with Resend in `RESEND_FROM`. The quote form has no payment fields or instructions. The reservation form does not collect payment credentials; payment arrangements are handled separately after the team reviews the request.
 
 ### Authorize.Net secure payment profiles
 
-The reservation form uses Authorize.Net's hosted customer-profile form. The card fields are served by Authorize.Net in an iframe; this site does not receive or store card numbers, expiration dates or CVVs. The provider controls the exact fields and layout, and identifies the card type from the number; CVV is never stored. Authorize.Net stores the payment method and NY Travel Limo stores only the provider's customer-profile and payment-profile IDs with the reservation. Submitting the form does not charge the card or confirm the booking. The team reviews the request and coordinates any later payment.
+The reservation request form does not collect or process payment information. The remaining Authorize.Net integration is separate from that form. If enabling a separate hosted payment flow, use Authorize.Net's provider-hosted fields; never collect or email complete card details in this application.
 
-Before enabling the form, activate Authorize.Net and configure its credentials as server-only environment variables in Hostinger. Use sandbox credentials and `AUTHORIZE_NET_ENVIRONMENT=sandbox` for testing, then switch to live credentials and `production` for launch. Generate a random session secret of at least 32 characters. Set `AUTHORIZE_NET_SITE_URL` to the HTTPS site origin used by the hosted-form iframe communicator, without a trailing path. Apply `database/migrations/004_add_authorize_net_profile_ids.sql` to existing databases. Never add provider credentials to client code or commit them.
+These credentials are not required for the reservation request form. If a separate hosted payment flow is enabled in the future, configure its credentials as server-only environment variables in Hostinger. Use sandbox credentials and `AUTHORIZE_NET_ENVIRONMENT=sandbox` for testing, then switch to live credentials and `production` for launch. Generate a random session secret of at least 32 characters. Set `AUTHORIZE_NET_SITE_URL` to the HTTPS site origin used by the hosted-form iframe communicator, without a trailing path. Never add provider credentials to client code or commit them.
 
 ### Google reCAPTCHA v2 Checkbox
 
@@ -65,14 +65,15 @@ No variables are required for preview. Production requires both mode variables s
 | `DB_PASSWORD` | **Production required.** Database password; keep it in Hostinger environment settings |
 | `DB_NAME` | **Production required.** Database name |
 | `RESEND_API_KEY` | **Production required.** Resend API key, configured as a secret in the hosting environment |
-| `RESEND_FROM_EMAIL` | **Production required.** Sender address verified with Resend |
+| `RESERVATION_EMAIL` | **Production required.** Reservation notification recipient; set to `sales@nytravellimo.com` |
+| `RESEND_FROM` | **Production required.** Sender identity verified with Resend |
 | `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | **Production required.** Google reCAPTCHA v2 Checkbox site key |
 | `RECAPTCHA_SECRET_KEY` | **Production required.** Google reCAPTCHA v2 secret key; server only, never expose to browser code |
-| `AUTHORIZE_NET_API_LOGIN_ID` | **Production required for reservation payments.** Authorize.Net API Login ID; server only |
-| `AUTHORIZE_NET_TRANSACTION_KEY` | **Production required for reservation payments.** Authorize.Net Transaction Key; server only |
-| `AUTHORIZE_NET_ENVIRONMENT` | **Production required for reservation payments.** `sandbox` for testing or `production` for live service |
-| `AUTHORIZE_NET_SESSION_SECRET` | **Production required for reservation payments.** Random server-only secret of at least 32 characters used to sign short-lived payment setup sessions |
-| `AUTHORIZE_NET_SITE_URL` | **Production required for reservation payments.** HTTPS origin of this website, used for the hosted payment iframe communicator |
+| `AUTHORIZE_NET_API_LOGIN_ID` | Optional, server-only credential for a separately enabled Authorize.Net payment flow |
+| `AUTHORIZE_NET_TRANSACTION_KEY` | Optional, server-only credential for a separately enabled Authorize.Net payment flow |
+| `AUTHORIZE_NET_ENVIRONMENT` | Optional. `sandbox` for testing or `production` for a separate live payment flow |
+| `AUTHORIZE_NET_SESSION_SECRET` | Optional server-only secret of at least 32 characters for a separate hosted payment flow |
+| `AUTHORIZE_NET_SITE_URL` | Optional HTTPS origin for the separate hosted payment iframe communicator |
 
 ## SEO and test domain
 
