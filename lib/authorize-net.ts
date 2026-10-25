@@ -3,7 +3,6 @@ import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 
 const sessionLifetimeMs = 20 * 60 * 1000;
 
-type AuthorizeNetEnvironment = "sandbox" | "production";
 type AuthorizeNetResponse = Record<string, unknown>;
 
 function getConfiguration() {
@@ -24,7 +23,7 @@ function getConfiguration() {
     !transactionKey ||
     !sessionSecret ||
     sessionSecret.length < 32 ||
-    (environment !== "sandbox" && environment !== "production") ||
+    environment !== "sandbox" ||
     !validSiteUrl ||
     validSiteUrl.protocol !== "https:" ||
     validSiteUrl.username ||
@@ -36,25 +35,21 @@ function getConfiguration() {
     return null;
   }
 
-  const apiUrl = environment === "production"
-    ? "https://api.authorize.net/xml/v1/request.api"
-    : "https://apitest.authorize.net/xml/v1/request.api";
-  const hostedBaseUrl = environment === "production"
-    ? "https://accept.authorize.net"
-    : "https://test.authorize.net";
+  const apiUrl = "https://apitest.authorize.net/xml/v1/request.api";
+  const hostedBaseUrl = "https://test.authorize.net";
 
   return {
     loginId,
     transactionKey,
     sessionSecret,
-    environment: environment as AuthorizeNetEnvironment,
+    environment,
     siteUrl: validSiteUrl.origin,
     apiUrl,
     hostedBaseUrl,
   };
 }
 
-export function isAuthorizeNetConfigured(): boolean {
+export function isAuthorizeNetSandboxConfigured(): boolean {
   return getConfiguration() !== null;
 }
 
@@ -166,12 +161,13 @@ export async function createHostedPaymentProfile(
         description: `NY Travel Limo reservation for ${name.slice(0, 80)}`,
         email,
       },
-      validationMode: configuration.environment === "production" ? "liveMode" : "testMode",
+      validationMode: "testMode",
     },
   });
   if (!messagesAreSuccessful(profileResponse)) {
     throw new Error("Authorize.Net could not create a customer profile.");
   }
+
   const profileId = profileResponse.customerProfileId;
   if (typeof profileId !== "string" && typeof profileId !== "number") {
     throw new Error("Authorize.Net did not return a customer profile ID.");
@@ -252,5 +248,57 @@ export async function verifyHostedPaymentProfile(
   return {
     customerProfileId,
     paymentProfileId: String(paymentProfileId),
+  };
+}
+
+export async function runSandboxProfileCharge(
+  session: string,
+  email: string,
+  result: "approved" | "declined",
+): Promise<{ approved: boolean; responseCode: string | null } | null> {
+  const profile = await verifyHostedPaymentProfile(session, email);
+  if (!profile) return null;
+
+  const response = await callAuthorizeNet({
+    createTransactionRequest: {
+      transactionRequest: {
+        transactionType: "authCaptureTransaction",
+        amount: "1.00",
+        profile: {
+          customerProfileId: profile.customerProfileId,
+          paymentProfile: {
+            paymentProfileId: profile.paymentProfileId,
+          },
+        },
+        billTo: {
+          firstName: "Sandbox",
+          lastName: "Test",
+          address: "100 Test Street",
+          city: "Test City",
+          state: "NY",
+          zip: result === "declined" ? "46282" : "10001",
+          country: "USA",
+        },
+        order: {
+          invoiceNumber: randomUUID().replaceAll("-", "").slice(0, 20),
+          description: `NY Travel Limo Sandbox ${result} test`,
+        },
+      },
+    },
+  });
+
+  const transactionResponse = "transactionResponse" in response &&
+    response.transactionResponse !== null &&
+    typeof response.transactionResponse === "object"
+    ? response.transactionResponse
+    : null;
+  const responseCode = transactionResponse && "responseCode" in transactionResponse &&
+    (typeof transactionResponse.responseCode === "string" || typeof transactionResponse.responseCode === "number")
+    ? String(transactionResponse.responseCode)
+    : null;
+
+  return {
+    approved: responseCode === "1",
+    responseCode,
   };
 }

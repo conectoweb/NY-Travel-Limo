@@ -34,13 +34,20 @@ Quote and reservation submissions use Resend and reCAPTCHA; these two forms do n
 4. Run `database/migrations/001_create_quote_requests.sql` on a new database, then run migrations 002 and 004 in order. For an existing installation, apply any missing migrations in order.
 5. Set `APP_MODE=production` and `NEXT_PUBLIC_APP_MODE=production`, plus the required services below, before running `npm run build`. The two mode variables must both be set explicitly to production to enable form or payment APIs. Point the domain to the deployed Node.js application and enable HTTPS.
 
-The Contact Us quote form posts to `/api/quote`; the reservation form posts separately to `/api/reservation`. Each verifies its own reCAPTCHA token on the server and emails only the submitted request details through Resend without storing submissions in MySQL. Configure `QUOTE_EMAIL` for quote notifications and `RESERVATION_EMAIL=sales@nytravellimo.com` for reservation notifications, plus `RESEND_API_KEY` and a sender address verified with Resend in `RESEND_FROM`. The quote form has no payment fields or instructions. The reservation form does not collect payment credentials; payment arrangements are handled separately after the team reviews the request.
+The Contact Us quote form posts to `/api/quote`; the reservation form posts separately to `/api/reservation`. Each verifies its own reCAPTCHA token on the server and emails only the submitted request details through Resend without storing submissions in MySQL. Configure `QUOTE_EMAIL` for quote notifications and `RESERVATION_EMAIL=sales@nytravellimo.com` for reservation notifications, plus `RESEND_API_KEY` and a sender address verified with Resend in `RESEND_FROM`. The quote form has no payment fields or instructions. Reservation uses Authorize.Net's hosted Sandbox form for payment-method testing; card data is entered directly with Authorize.Net and is not sent to this website or in email.
 
 ### Authorize.Net secure payment profiles
 
-The reservation request form does not collect or process payment information. The remaining Authorize.Net integration is separate from that form. If enabling a separate hosted payment flow, use Authorize.Net's provider-hosted fields; never collect or email complete card details in this application.
+Only the Reservation form uses Authorize.Net. The payment form is hosted by Authorize.Net in Sandbox and creates a Customer Profile. Card number, CVV and expiration are never collected by the application, sent to Resend, or stored in this site's database. The two optional test buttons submit fixed $1.00 Sandbox transactions against the saved profile; there is no live payment endpoint or configurable amount. Sandbox charge testing is disabled unless the server environment is exactly `sandbox`.
 
-These credentials are not required for the reservation request form. If a separate hosted payment flow is enabled in the future, configure its credentials as server-only environment variables in Hostinger. Use sandbox credentials and `AUTHORIZE_NET_ENVIRONMENT=sandbox` for testing, then switch to live credentials and `production` for launch. Generate a random session secret of at least 32 characters. Set `AUTHORIZE_NET_SITE_URL` to the HTTPS site origin used by the hosted-form iframe communicator, without a trailing path. Never add provider credentials to client code or commit them.
+In Hostinger, configure these exact Authorize.Net Sandbox variables on the server:
+
+- `AUTHORIZE_NET_API_LOGIN_ID` and `AUTHORIZE_NET_TRANSACTION_KEY`: Sandbox credentials only.
+- `AUTHORIZE_NET_ENVIRONMENT=sandbox`: required; the application rejects any other value and always calls the Authorize.Net Sandbox API/hosted form.
+- `AUTHORIZE_NET_SESSION_SECRET`: generate a unique random secret of at least 32 characters.
+- `AUTHORIZE_NET_SITE_URL`: the deployed HTTPS site origin used by the hosted-form iframe communicator, with no path (for example, `https://example.com`).
+
+Keep all Authorize.Net credentials and the session secret server-side. Do not change these to live credentials or configure a production Authorize.Net endpoint. After adding the variables, rebuild/restart the Node.js application. In Reservation, submit the trip form and reCAPTCHA to open the provider-hosted form, save a Sandbox payment method, then complete reCAPTCHA again to send the reservation and/or test a charge. The signed temporary session expires after 20 minutes, so complete the Sandbox tests shortly after saving the profile. The approved test uses postal code `10001`; the official Sandbox declined-transaction postal code `46282` is used for the declined test. See the [Authorize.Net Sandbox testing guide](https://developer.authorize.net/hello_world/testing_guide.html) for current test data. These tests require a valid hosted Sandbox payment profile and cannot be executed with live card details.
 
 ### Google reCAPTCHA v2 Checkbox
 
@@ -70,11 +77,11 @@ No variables are required for preview. Production requires both mode variables s
 | `RESEND_FROM` | **Production required.** Sender identity verified with Resend |
 | `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | **Production required.** Google reCAPTCHA v2 Checkbox site key |
 | `RECAPTCHA_SECRET_KEY` | **Production required.** Google reCAPTCHA v2 secret key; server only, never expose to browser code |
-| `AUTHORIZE_NET_API_LOGIN_ID` | Optional, server-only credential for a separately enabled Authorize.Net payment flow |
-| `AUTHORIZE_NET_TRANSACTION_KEY` | Optional, server-only credential for a separately enabled Authorize.Net payment flow |
-| `AUTHORIZE_NET_ENVIRONMENT` | Optional. `sandbox` for testing or `production` for a separate live payment flow |
-| `AUTHORIZE_NET_SESSION_SECRET` | Optional server-only secret of at least 32 characters for a separate hosted payment flow |
-| `AUTHORIZE_NET_SITE_URL` | Optional HTTPS origin for the separate hosted payment iframe communicator |
+| `AUTHORIZE_NET_API_LOGIN_ID` | **Reservation required.** Authorize.Net Sandbox API Login ID; server only |
+| `AUTHORIZE_NET_TRANSACTION_KEY` | **Reservation required.** Authorize.Net Sandbox Transaction Key; server only |
+| `AUTHORIZE_NET_ENVIRONMENT` | **Reservation required.** Must be exactly `sandbox`; production mode is not supported |
+| `AUTHORIZE_NET_SESSION_SECRET` | **Reservation required.** Unique server-only session signing secret, at least 32 characters |
+| `AUTHORIZE_NET_SITE_URL` | **Reservation required.** Deployed HTTPS origin for the hosted payment iframe communicator |
 
 ## SEO and test domain
 

@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { isAuthorizeNetSandboxConfigured, verifyHostedPaymentProfile } from "@/lib/authorize-net";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 
@@ -131,6 +132,7 @@ export async function POST(request: Request) {
     : integer(data.stops, 0, 999);
   const instructions = optionalText(data.instructions, 3000);
   const recaptchaToken = requiredText(data.recaptchaToken, 4096);
+  const paymentSession = requiredText(data.paymentSession, 2048);
   if (
     !name || name.length < 2 ||
     !phone || !/^\+?[0-9() .-]{7,40}$/.test(phone) ||
@@ -146,7 +148,8 @@ export async function POST(request: Request) {
     (stops === null && data.stops !== "" && data.stops !== null && data.stops !== undefined) ||
     instructions === undefined ||
     data.termsAccepted !== true ||
-    !recaptchaToken
+    !recaptchaToken ||
+    !paymentSession
   ) {
     return Response.json(
       { message: "Check the required fields and provide valid trip information before submitting." },
@@ -159,8 +162,8 @@ export async function POST(request: Request) {
   const sender = process.env.RESEND_FROM?.trim();
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
   const secretKey = process.env.RECAPTCHA_SECRET_KEY?.trim();
-  if (!apiKey || !recipient || !sender || !siteKey || !secretKey) {
-    console.error("Reservation request rejected because Resend or reCAPTCHA environment variables are missing.");
+  if (!apiKey || !recipient || !sender || !siteKey || !secretKey || !isAuthorizeNetSandboxConfigured()) {
+    console.error("Reservation request rejected because Resend, reCAPTCHA or Authorize.Net Sandbox configuration is incomplete.");
     return Response.json(
       { message: "Online reservation submissions are temporarily unavailable. Please call 718-397-1333." },
       { status: 503 },
@@ -186,6 +189,22 @@ export async function POST(request: Request) {
     console.error("Google reCAPTCHA verification for the reservation is unavailable.", error);
     return Response.json(
       { message: "We couldn't verify reCAPTCHA right now. Please try again or call 718-397-1333." },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const paymentProfile = await verifyHostedPaymentProfile(paymentSession, email);
+    if (!paymentProfile) {
+      return Response.json(
+        { message: "Save your payment method in the secure Authorize.Net Sandbox form before submitting the reservation." },
+        { status: 400 },
+      );
+    }
+  } catch (error) {
+    console.error("Authorize.Net Sandbox profile verification for the reservation is unavailable.", error);
+    return Response.json(
+      { message: "Secure payment profile verification is temporarily unavailable. Please try again." },
       { status: 503 },
     );
   }

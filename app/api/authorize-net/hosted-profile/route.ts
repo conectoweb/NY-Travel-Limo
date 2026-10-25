@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createHostedPaymentProfile, isAuthorizeNetConfigured } from "@/lib/authorize-net";
+import { createHostedPaymentProfile, isAuthorizeNetSandboxConfigured } from "@/lib/authorize-net";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export const runtime = "nodejs";
@@ -128,8 +128,8 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!isAuthorizeNetConfigured()) {
-    console.error("Secure payment profile setup is unavailable because Authorize.Net is not configured.");
+  if (!isAuthorizeNetSandboxConfigured()) {
+    console.error("Secure payment profile setup is unavailable because Authorize.Net Sandbox is not configured.");
     return NextResponse.json(
       { message: "Secure payment setup is not available yet. Please try again later or call 718-397-1333." },
       { status: 503 },
