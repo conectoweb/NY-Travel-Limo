@@ -123,7 +123,7 @@ export const servicePages: DetailPage[] = [
       {
         heading: "Request a transportation quote",
         paragraphs: [
-          "Use our online reservation request form to provide your trip details. You can also call us to talk through transportation for an airport transfer, business itinerary, group trip, wedding or special event.",
+          "Use the Contact Us quote form to share your trip details, or open our reservation platform to arrange an airport transfer, business itinerary, group trip, wedding or special event.",
         ],
         bullets: [
           "718-397-1333",

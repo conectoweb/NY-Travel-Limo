@@ -5,7 +5,6 @@ export const pageLinks = [
   { label: "Services directory", href: "/services" },
   { label: "Fleet", href: "/fleet" },
   { label: "Rates", href: "/rates" },
-  { label: "Reservations", href: "/reservations" },
   { label: "About Us", href: "/about-us" },
   { label: "Frequently Asked Questions", href: "/frequently-asked-questions" },
   { label: "Gallery", href: "/gallery" },

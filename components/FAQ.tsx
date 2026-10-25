@@ -33,8 +33,8 @@ const questions = [
   {
     question: "How do I request a quote?",
     answer:
-      "Use the reservation request form and provide your trip date, pickup and drop-off locations, passenger count and transportation needs.",
-    link: "/reservations",
+      "Use the Contact Us quote form and provide your trip date, pickup and drop-off locations, passenger count and transportation needs.",
+    link: "/contact-us",
     linkLabel: "Request a Quote",
   },
 ];

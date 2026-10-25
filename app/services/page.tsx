@@ -75,7 +75,7 @@ export default function ServicesPage() {
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <a
                 className="inline-flex min-h-14 items-center justify-center rounded-full bg-brand-secondary px-8 py-3 text-base font-bold text-brand-accent transition-colors hover:bg-brand-accent hover:text-brand-secondary"
-                href="/reservations"
+                href="/contact-us"
               >
                 Request a Quote <span aria-hidden="true" className="ml-2">↗</span>
               </a>

@@ -1,6 +1,6 @@
 import { PhoneLinks } from "@/components/PhoneLinks";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
-import { QuoteLink } from "@/components/Header";
+import { ReservationLink } from "@/components/Header";
 
 const exploreLinks = [
   { label: "Sprinter Vans", href: "/sprinter-van-rental-with-driver-new-york-nyc" },
@@ -86,7 +86,7 @@ export default function Footer() {
             Contact
           </h2>
           <PhoneLinks compact />
-          <QuoteLink className="mt-5" />
+          <ReservationLink className="mt-5" />
         </div>
       </div>
       <div className="border-t border-white/15 px-5 py-5 sm:px-8">

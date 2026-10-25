@@ -14,7 +14,7 @@ export const marketingPages: Record<string, ContentPageData> = {
       },
       {
         heading: "Review the trip details before reserving",
-        paragraphs: ["Your final transportation arrangements, availability and applicable charges should be confirmed directly with our team. The reservation request form does not collect payment information; our team will coordinate any payment separately after reviewing your request."],
+        paragraphs: ["Your final transportation arrangements, availability and applicable charges should be confirmed directly with our team. Use the separate reservation platform for reservation processing; Contact Us is available for quote inquiries."],
       },
     ],
     links: [
@@ -35,7 +35,7 @@ export const marketingPages: Record<string, ContentPageData> = {
       },
       {
         heading: "Talk through your transportation needs",
-        paragraphs: ["Share your dates, locations, passenger count and relevant trip details through the reservation link or contact the team by telephone."],
+        paragraphs: ["Share your dates, locations, passenger count and relevant trip details through the reservation platform or contact the team by telephone."],
       },
     ],
     links: [
@@ -52,11 +52,11 @@ export const marketingPages: Record<string, ContentPageData> = {
     sections: [
       { heading: "Which vehicle should I choose?", paragraphs: ["Consider passenger count, luggage, trip type and planned stops. Sprinter vans are featured for groups; SUVs and limousines are also listed. Vehicle seating and luggage configuration vary, so confirm details before booking."], bullets: ["Sprinter vans: group itineraries", "SUVs: private trips and airport transportation", "Limousines: weddings and special occasions"] },
       { heading: "What information is needed for a quote?", paragraphs: ["Provide your travel date and time, pickup and destination, passenger count and itinerary. Include luggage and flight or terminal information where relevant."] },
-      { heading: "How can I reserve transportation?", paragraphs: ["Send your trip details through the reservation request form on this website. Submitting the form sends a request, not a confirmed booking. Our team will follow up to confirm availability and arrangements, and will coordinate any payment separately."] },
+      { heading: "How can I reserve transportation?", paragraphs: ["Use a Reservation link to open the separate reservation platform. For a quote inquiry, submit the Contact Us form on this website."] },
       { heading: "Can a vehicle wait or make multiple stops?", paragraphs: ["Include expected duration, stops and timing in your request. The reservation team can confirm the arrangements and terms for your itinerary."] },
     ],
     links: [
-      { label: "Request a quote", href: "/reservations" },
+      { label: "Request a quote", href: "/contact-us" },
       { label: "Airport transportation", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" },
       { label: "Group transportation", href: "/group-transportation-in-new-york-near-me" },
     ],
@@ -68,7 +68,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     intro: "This draft policy requires review and completion by the business before publication. It is not a legal compliance guarantee.",
     sections: [
       { heading: "Business and contact details", paragraphs: ["Legal business name: [[COMPLETE LEGAL BUSINESS NAME]]. Privacy contact: [[ADD PRIVACY CONTACT EMAIL OR ADDRESS]]. Applicable business address: [[CONFIRM BUSINESS ADDRESS]]."] },
-      { heading: "Information submitted through this website", paragraphs: ["The Contact Us quote form and reservation request form collect a name, email address, phone number, consent and trip details needed to respond. Requests are emailed to sales@nytravellimo.com through the site's email delivery provider and are not stored in the website database. Google reCAPTCHA processes verification data when a visitor submits a form. Neither form collects or sends payment details."] },
+      { heading: "Information submitted through this website", paragraphs: ["The Contact Us quote form collects a name, email address, phone number, consent and trip details needed to respond. Quote requests are emailed through the site's email delivery provider and are not stored in the website database. Google reCAPTCHA processes verification data when a visitor submits a quote form. Reservation links open a separate platform; review its privacy notice for information about its data processing."] },
       { heading: "Use, sharing and retention", paragraphs: ["The business must specify how submitted details are used, which service providers receive them, whether information is transferred, and the applicable retention periods: [[COMPLETE PURPOSES, RECIPIENTS, AND RETENTION DETAILS]]."] },
       { heading: "Privacy choices and questions", paragraphs: ["Add the applicable privacy rights, how people can make a request, verification requirements and response contact: [[COMPLETE PRIVACY REQUEST PROCESS]]. This policy should be reviewed for the jurisdictions where the business operates."] },
     ],
@@ -81,7 +81,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     intro: "The site stores your cookie choice in local browser storage so it can remember your preferences. No analytics or advertising tags are currently included in this project. The business should confirm this policy before publication.",
     sections: [
       { heading: "Essential storage", paragraphs: ["Essential storage remembers your consent choice and is needed to apply that choice. It does not require an optional analytics or advertising category."] },
-      { heading: "Optional technologies", paragraphs: ["Analytics and advertising technologies are not configured in the current project. Google reCAPTCHA is used to protect contact and reservation forms and may process browser or device data under Google's policies. Review applicable disclosure and consent requirements before launch. Update this policy if other technologies are added."] },
+      { heading: "Optional technologies", paragraphs: ["Analytics and advertising technologies are not configured in the current project. Google reCAPTCHA is used to protect the Contact Us quote form and may process browser or device data under Google's policies. Reservation links open a separate platform that may use its own technologies. Review applicable disclosure and consent requirements before launch. Update this policy if other technologies are added."] },
       { heading: "Change your preferences", paragraphs: ["Use the Cookie settings control in the footer to reopen the consent choices. Your preference is stored in this browser and can be changed or withdrawn there."] },
       { heading: "Business-specific details", paragraphs: ["Complete any legally required cookie disclosures, service-provider names, retention periods and contact information before publication: [[BUSINESS TO REVIEW AND COMPLETE]]."] },
     ],
@@ -94,7 +94,7 @@ export const marketingPages: Record<string, ContentPageData> = {
     intro: "This draft is a starting point and requires completion and review by the business. It does not replace the terms provided by the reservation platform or a legal review.",
     sections: [
       { heading: "Website information", paragraphs: ["Service descriptions are general information. Vehicle availability, configurations, itinerary details and charges must be confirmed through the reservation process."] },
-      { heading: "Reservations and payments", paragraphs: ["Use the website reservation request form to send trip details. Submitting a request does not confirm a booking or process a payment. The form does not collect payment details. Our team will follow up to confirm availability, arrangements and any payment."] },
+      { heading: "Reservations and payments", paragraphs: ["Reservation links on this website open a separate reservation platform. Its booking, payment and service terms apply to activity on that platform. Contact NY Travel Limo for questions about arrangements."] },
       { heading: "Business details to complete", paragraphs: ["Legal business name: [[COMPLETE]]. Governing law and venue: [[BUSINESS/COUNSEL TO COMPLETE]]. Effective date: [[COMPLETE]]. Add any terms specific to use of this website: [[REVIEW AND COMPLETE]]."] },
     ],
     links: [{ label: "Privacy Policy", href: "/privacy-policy" }, { label: "Cookie Policy", href: "/cookie-policy" }],

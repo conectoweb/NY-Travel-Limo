@@ -7,7 +7,6 @@ const publicPages = [
   "/services",
   "/fleet",
   "/rates",
-  "/reservations",
   "/about-us",
   "/frequently-asked-questions",
   "/gallery",

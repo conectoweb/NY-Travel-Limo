@@ -2,6 +2,7 @@ import Image from "next/image";
 import { PhoneLinks } from "@/components/PhoneLinks";
 import MobileMenu from "@/components/MobileMenu";
 import NavigationLinks from "@/components/NavigationLinks";
+import { reservationUrl } from "@/lib/site-links";
 
 const mobileNavigation = [
   { label: "Home", href: "/" },
@@ -31,13 +32,30 @@ const mobileNavigation = [
     ],
   },
   { label: "Rates", href: "/rates" },
-  { label: "Reservations", href: "/reservations" },
+  { label: "Reservations", href: reservationUrl },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
-  { label: "Reservation Now", href: "/reservations", emphasized: true },
+  { label: "Reservation Now", href: reservationUrl, emphasized: true },
 ];
 
 export function QuoteLink({
+  className = "",
+  label = "Request a Quote",
+}: {
+  className?: string;
+  label?: string;
+}) {
+  return (
+    <a
+      className={`inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-brand-secondary px-7 py-3 text-sm font-bold text-brand-accent shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-accent hover:text-brand-secondary hover:shadow-md ${className}`}
+      href="/contact-us"
+    >
+      {label} <span aria-hidden="true">↗</span>
+    </a>
+  );
+}
+
+export function ReservationLink({
   className = "",
   label = "Reservation Now",
 }: {
@@ -47,7 +65,7 @@ export function QuoteLink({
   return (
     <a
       className={`inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-brand-secondary px-7 py-3 text-sm font-bold text-brand-accent shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-accent hover:text-brand-secondary hover:shadow-md ${className}`}
-      href="/reservations"
+      href={reservationUrl}
     >
       {label} <span aria-hidden="true">↗</span>
     </a>
@@ -84,7 +102,7 @@ export default function Header() {
           </a>
           <NavigationLinks />
           <div className="hidden shrink-0 lg:block">
-            <QuoteLink />
+            <ReservationLink />
           </div>
           <MobileMenu navigation={mobileNavigation} />
         </div>

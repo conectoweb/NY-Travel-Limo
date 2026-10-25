@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import Header, { QuoteLink } from "@/components/Header";
+import Header, { QuoteLink, ReservationLink } from "@/components/Header";
 import Reviews from "@/components/Reviews";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 
@@ -343,7 +343,7 @@ export default function RatesPage() {
               <p className="mt-3 max-w-2xl text-base leading-7 text-white/80">Share your itinerary with NY Travel Limo to request a personalized quote.</p>
             </div>
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-              <QuoteLink label="Reserve Today" />
+              <ReservationLink label="Reserve Today" />
               <QuoteLink className="border border-white/60 bg-transparent text-white hover:bg-white hover:text-brand-accent" label="Get a Quote" />
             </div>
           </div>
