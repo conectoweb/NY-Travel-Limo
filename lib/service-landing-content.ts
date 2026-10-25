@@ -1,0 +1,299 @@
+export type ServiceLandingContent = {
+  introHeading: string;
+  audienceHeading: string;
+  audience: string;
+  benefits: { title: string; description: string }[];
+  steps: { title: string; description: string }[];
+  journeyHeading: string;
+  journey: string[];
+  planningHeading: string;
+  planningTips: string[];
+  midCtaHeading: string;
+  midCtaDescription: string;
+  faqs: { question: string; answer: string }[];
+  imageAlt: string;
+  expectedImage: string;
+};
+
+export const serviceLandingContent: Record<string, ServiceLandingContent> = {
+  "airport-transportation-services-in-nyc-with-professional-chauffeurs": {
+    introHeading: "Start with a clear airport pickup plan",
+    audienceHeading: "For arrivals, departures and connections",
+    audience: "A private airport transportation service in NYC can help individuals, families, business travelers and groups coordinate rides between New York City and JFK, LaGuardia or Newark. For NYC airport transportation, share the airport, pickup location, destination, schedule, passenger count and luggage.",
+    benefits: [
+      { title: "One itinerary to share", description: "Provide your airport, addresses and timing together so the requested ride reflects the trip you are planning." },
+      { title: "Vehicle options for the party", description: "Compare a Sprinter van, SUV or limousine using your passenger and luggage count." },
+      { title: "Arrival details in context", description: "Include airline and flight information with your request so pickup arrangements can be discussed." },
+    ],
+    steps: [
+      { title: "Share your flight and locations", description: "Add the airport, travel date, flight information where relevant, addresses, passenger count and bags." },
+      { title: "Review the proposed ride", description: "Confirm the vehicle category, pickup instructions and trip details through the reservation process." },
+      { title: "Complete the reservation", description: "Continue on the reservation website for booking details and any next steps." },
+    ],
+    journeyHeading: "Details that help plan an airport ride",
+    journey: ["For an arrival, identify the airport and share the flight details available to you.", "For a departure, provide the pickup address and the time you need to reach the terminal.", "If the ride includes a hotel, cruise terminal or extra stop, include each location in order."],
+    planningHeading: "Before you request a quote",
+    planningTips: ["Check that you have the correct airport: JFK, LaGuardia (LGA) or Newark (EWR).", "Estimate the number of travelers and bags, including larger luggage.", "Share special pickup instructions or an additional stop in the itinerary."],
+    midCtaHeading: "Airport trip on the calendar?",
+    midCtaDescription: "Send the flight, location and luggage details with your quote request to discuss the right vehicle for your ride.",
+    faqs: [
+      { question: "Which New York airports are listed for service?", answer: "Airport transportation information covers JFK, LaGuardia and Newark. Confirm the exact pickup and destination when requesting your quote." },
+      { question: "What should I include for an airport arrival?", answer: "Share your travel date, airport, flight details, passenger and luggage count, destination and any pickup notes you already have." },
+      { question: "Can a Sprinter van be used for an airport group?", answer: "Sprinter vans are a featured group option. Confirm the available configuration, passenger count and luggage fit for your particular ride." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for airport transportation",
+    expectedImage: "airport-transportation.jpg",
+  },
+  "corporate-transportation-service-with-driver-in-new-york": {
+    introHeading: "Business transportation shaped around the schedule",
+    audienceHeading: "For executives, visitors and working teams",
+    audience: "Corporate transportation in New York can connect an airport, hotel, office, meeting venue or company event. Whether you need an executive car service in NYC or transportation for a working team, a clear schedule helps the reservation team understand whether you need a direct ride, return transportation or several stops.",
+    benefits: [
+      { title: "Plan around meeting times", description: "Share locations and appointment timing in one itinerary rather than describing only the first trip." },
+      { title: "Choose for the group size", description: "Consider an SUV for a private ride or a Sprinter van when colleagues are traveling together." },
+      { title: "Include the whole business day", description: "Mention return trips, event locations and anticipated stops when requesting a quote." },
+    ],
+    steps: [
+      { title: "Outline the schedule", description: "List dates, pickup times, addresses, meeting stops, passenger count and a trip contact." },
+      { title: "Discuss vehicle fit", description: "Compare the available Sprinter van, SUV or limousine option for the people and luggage traveling." },
+      { title: "Confirm your itinerary", description: "Review proposed transportation and reservation details through the booking process." },
+    ],
+    journeyHeading: "Keep the business itinerary easy to follow",
+    journey: ["Put meeting addresses in the order you expect to visit them.", "Include appointment start times and any known waiting periods.", "Tell the team whether the ride is one-way, round-trip or planned for multiple stops."],
+    planningHeading: "A useful checklist for business travel",
+    planningTips: ["Provide the travel date and a reliable trip contact.", "Separate each passenger pickup or meeting address in the itinerary.", "If timing may change, explain the schedule constraints when requesting a quote."],
+    midCtaHeading: "Have a meeting schedule to coordinate?",
+    midCtaDescription: "Share the full sequence of locations to request a quote for your business itinerary.",
+    faqs: [
+      { question: "Can corporate transportation include multiple meetings?", answer: "You can include multiple addresses and appointment times in your request. Confirm the final routing and schedule through the reservation process." },
+      { question: "Which vehicle is suitable for a business team?", answer: "The choice depends on passenger count, luggage and itinerary. Sprinter vans are a featured group option; SUVs and limousines are also listed." },
+      { question: "Can I request airport and office transfers together?", answer: "Include both airport and office locations, dates and timing so the complete transportation plan can be reviewed." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for corporate transportation",
+    expectedImage: "corporate-transportation.jpg",
+  },
+  "roadshow-transportation-nyc": {
+    introHeading: "A multi-stop ride for a day of meetings",
+    audienceHeading: "For investor meetings and packed business days",
+    audience: "Financial roadshow transportation in New York often involves several appointments at different addresses with limited time between them. Organize the route before you request corporate roadshow transportation so the full schedule can be reviewed as one itinerary.",
+    benefits: [
+      { title: "Route in appointment order", description: "Give the team the sequence of meeting locations and scheduled arrival times." },
+      { title: "Vehicle based on the delegation", description: "Choose an option to discuss using the number of travelers, luggage and day's plan." },
+      { title: "Time context for each stop", description: "Note expected wait periods or fixed meeting windows where known." },
+    ],
+    steps: [
+      { title: "Build the stop list", description: "Collect each meeting address, appointment time and expected duration." },
+      { title: "Send the full request", description: "Add passenger count, dates, first pickup and any timing or coordination notes." },
+      { title: "Review the proposed plan", description: "Confirm the vehicle and itinerary details through the reservation process." },
+    ],
+    journeyHeading: "What to map for a roadshow",
+    journey: ["Start with the first pickup and the first scheduled meeting.", "Add every destination in sequence, with the appointment time at each stop.", "Include the final destination and any return transfer the group needs."],
+    planningHeading: "Prepare before the meeting day",
+    planningTips: ["Check that the itinerary contains complete street addresses.", "Flag appointments with fixed arrival times or limited access windows.", "Choose a vehicle after considering the group and any materials traveling with them."],
+    midCtaHeading: "Turn the meeting list into a ride plan",
+    midCtaDescription: "Send the ordered schedule and timing details when requesting corporate roadshow transportation.",
+    faqs: [
+      { question: "Can a roadshow request include the full day's schedule?", answer: "Yes. Provide all known meeting addresses, times, expected waits and final destination in your quote request." },
+      { question: "Should the quote request include schedule changes?", answer: "Include any known timing constraints and explain which parts may change. Confirm final booking terms and coordination directly during reservation." },
+      { question: "Is a Sprinter van available for a delegation?", answer: "Sprinter vans are among the listed group options. Confirm availability and passenger/luggage configuration for your dates." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for corporate roadshow transportation",
+    expectedImage: "corporate-roadshow.jpg",
+  },
+  "cruise-terminal-transportation-services-in-new-york-with-driver": {
+    introHeading: "Connect your hotel, airport and cruise terminal",
+    audienceHeading: "For embarkation days and the return trip",
+    audience: "NYC cruise port transportation may connect a hotel, airport, cruise terminal and several travelers with luggage. Share your sailing date, terminal and addresses so your request describes the complete private cruise transportation itinerary.",
+    benefits: [
+      { title: "Connect travel segments", description: "Describe a hotel-to-terminal ride, airport connection or transfer after disembarkation." },
+      { title: "Plan for party and bags", description: "Include passenger count and luggage needs when considering a vehicle category." },
+      { title: "Share terminal specifics", description: "Name the terminal and provide the timing details available for your sailing." },
+    ],
+    steps: [
+      { title: "Gather cruise details", description: "Note the sailing date, terminal, pickup location and preferred time." },
+      { title: "Describe your group", description: "Include passengers, luggage and any hotel or airport connections." },
+      { title: "Confirm pickup arrangements", description: "Review the proposed vehicle, meeting location and schedule through the reservation process." },
+    ],
+    journeyHeading: "Coordinate the port transfer",
+    journey: ["For departure, allow the request to reflect your planned pickup and terminal arrival.", "For a return, provide the terminal and your next destination.", "If several people or separate addresses are involved, list them clearly."],
+    planningHeading: "Before your sailing date",
+    planningTips: ["Check the terminal name and address provided with your cruise information.", "Account for the number and size of suitcases.", "Share cruise timing and relevant pickup instructions; confirm the final meeting point before travel."],
+    midCtaHeading: "Cruise dates confirmed?",
+    midCtaDescription: "Request transportation with your terminal, sailing date, passenger count and luggage details.",
+    faqs: [
+      { question: "Can I travel between an airport and cruise terminal?", answer: "Include both the airport and terminal locations, travel time and passenger/luggage details in your quote request." },
+      { question: "What information is helpful for a return pickup?", answer: "Provide the terminal, cruise date, preferred pickup details, passenger count and the next destination." },
+      { question: "Is a Sprinter van an option for cruise luggage?", answer: "Sprinter vans are listed as a group option. Confirm the exact passenger and luggage capacity for your party before booking." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for cruise terminal transportation",
+    expectedImage: "cruise-terminal-transportation.jpg",
+  },
+  "luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans": {
+    introHeading: "Bring the day's locations into one transportation plan",
+    audienceHeading: "For couples, wedding parties and guests",
+    audience: "NYC wedding transportation can connect getting-ready locations, a ceremony, photos, a reception and hotels. List who needs a ride and when each group should move so your wedding transportation service request reflects the day.",
+    benefits: [
+      { title: "Coordinate different groups", description: "Describe rides for the couple, wedding party and guests separately where schedules differ." },
+      { title: "Connect venues and hotels", description: "Include ceremony, photo, reception and return destinations in the order planned." },
+      { title: "Compare vehicle categories", description: "Consider a limousine for a special arrival or a Sprinter van for group movement; confirm fit and availability." },
+    ],
+    steps: [
+      { title: "Draft the event timeline", description: "Collect ceremony and reception times, locations and pickup windows." },
+      { title: "Count travelers for each ride", description: "Separate passenger groups and note luggage or special items." },
+      { title: "Review the transportation plan", description: "Confirm the selected vehicles, stops and schedule as part of your reservation." },
+    ],
+    journeyHeading: "Give every ride a place in the timeline",
+    journey: ["List when the couple and wedding party need to arrive.", "Add transfers between ceremony, photo locations and reception.", "Include guest or hotel rides and any planned late return transportation."],
+    planningHeading: "Wedding-day details to organize",
+    planningTips: ["Use one line per pickup with a time, address and passenger group.", "Identify a day-of contact for itinerary questions.", "Share any schedule dependencies and confirm every pickup before the event."],
+    midCtaHeading: "Planning more than one wedding ride?",
+    midCtaDescription: "Send the event timeline and passenger groups together to discuss transportation across the day.",
+    faqs: [
+      { question: "Can a wedding itinerary include several venues?", answer: "Include each venue, pickup time and stop in your quote request. Confirm the agreed routing and schedule through the reservation process." },
+      { question: "Can a Sprinter van transport wedding guests?", answer: "Sprinter vans are a featured group option. Confirm passenger and luggage configuration for the guests and route you have planned." },
+      { question: "When should I share the wedding schedule?", answer: "Share the dates, addresses and planned timing when requesting a quote, then confirm the final itinerary before the event." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for wedding transportation",
+    expectedImage: "wedding-transportation.jpg",
+  },
+  "transportation-by-hours-in-new-york": {
+    introHeading: "Plan the ride around a block of time",
+    audienceHeading: "For itineraries with more than one stop",
+    audience: "Hourly transportation in NYC may suit a day of meetings, shopping, a private outing or event travel with several destinations. Provide the start time, expected duration and stops to discuss an hourly car service with a chauffeur by the hour in New York.",
+    benefits: [
+      { title: "One itinerary for several stops", description: "Share destinations in order instead of planning each leg separately." },
+      { title: "Describe your expected timing", description: "Include the approximate start and number of hours you expect to need." },
+      { title: "Choose around your party", description: "Discuss vehicle categories according to passenger count, luggage and the schedule." },
+    ],
+    steps: [
+      { title: "Set the start and duration", description: "Provide the pickup address, desired start time and estimated hours." },
+      { title: "List the stops", description: "Add destinations, expected wait periods and any return location." },
+      { title: "Confirm the requested service", description: "Review availability, booking terms and itinerary details through the reservation process." },
+    ],
+    journeyHeading: "Make a flexible route understandable",
+    journey: ["Identify where the chauffeur-driven trip should begin and end.", "Order the planned destinations and note where timing is uncertain.", "Tell the team whether the schedule is expected to finish at the starting point."],
+    planningHeading: "Before choosing an hourly ride",
+    planningTips: ["Estimate the period you need; avoid leaving the itinerary open-ended.", "Include scheduled events or appointments with fixed start times.", "Ask about applicable service terms and any minimum booking requirements during reservation."],
+    midCtaHeading: "Have a day with several stops?",
+    midCtaDescription: "Share your start time, estimated duration and destinations to discuss an hourly ride.",
+    faqs: [
+      { question: "What details are needed for hourly transportation?", answer: "Provide the start location and time, estimated duration, stops, passenger count and desired return location." },
+      { question: "Can I adjust the itinerary?", answer: "Describe possible changes in your request and confirm any adjustments and applicable terms with the reservation team." },
+      { question: "Are hourly rates published here?", answer: "No hourly prices are published on this page. Request a quote for your specific dates and itinerary." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for hourly transportation",
+    expectedImage: "hourly-transportation.jpg",
+  },
+  "new-york-city-tour-with-professional-chauffeurs": {
+    introHeading: "See the city through your own planned stops",
+    audienceHeading: "For visitors, families and private groups",
+    audience: "A private sightseeing tour in NYC can connect the landmarks, museums, shopping or dining stops you want to include. Choose the places, then share a realistic route and available time to plan a New York private city tour with a driver.",
+    benefits: [
+      { title: "Choose your destinations", description: "Build a route around your interests rather than a fixed list of stops." },
+      { title: "Include time at each place", description: "Note which locations are brief drop-offs and where you expect to spend more time." },
+      { title: "Travel together", description: "Consider a Sprinter van for a group or compare SUV and limousine options for your party." },
+    ],
+    steps: [
+      { title: "Pick the places to visit", description: "List landmarks, museums, neighborhoods or other destinations in order." },
+      { title: "Set a practical timeframe", description: "Include the planned start, approximate duration and any fixed reservations." },
+      { title: "Discuss the vehicle and route", description: "Share passenger and luggage needs and confirm the agreed tour itinerary when reserving." },
+    ],
+    journeyHeading: "Build a route that leaves room to explore",
+    journey: ["Group nearby destinations when arranging the order of stops.", "Account for time outside the vehicle at museums, dining or shopping.", "Add the pickup and final drop-off location to complete the plan."],
+    planningHeading: "A little preparation goes a long way",
+    planningTips: ["Prioritize the stops that matter most if your schedule is limited.", "Include timed tickets or restaurant reservations in the request.", "Allow room for the time between destinations and confirm the planned duration."],
+    midCtaHeading: "Already have a list of places?",
+    midCtaDescription: "Share your stops and available time to request a quote for a private New York City tour.",
+    faqs: [
+      { question: "Can I choose my own city tour stops?", answer: "Provide your preferred destinations and route when requesting a quote. Confirm the final itinerary and duration during reservation." },
+      { question: "Can I make several sightseeing stops?", answer: "Yes, list each planned location and the time you expect to spend there so the route can be discussed." },
+      { question: "Which vehicle can accommodate a tour group?", answer: "Sprinter vans are a featured group option. SUVs and limousines are also listed; confirm capacity and availability for your party." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for private city tours",
+    expectedImage: "new-york-city-tour.jpg",
+  },
+  "point-to-point-transportation-service-in-new-york": {
+    introHeading: "A private ride between two addresses",
+    audienceHeading: "For direct trips across the city and beyond",
+    audience: "Point-to-point car service in NYC suits a defined pickup and destination: a hotel and venue, a home and office, or another direct trip. If you need additional stops, include them so your private point-to-point transportation request is clear.",
+    benefits: [
+      { title: "A defined start and finish", description: "Share both addresses and preferred pickup time for a direct ride." },
+      { title: "Trip details up front", description: "Include passenger count and luggage so the vehicle options can be considered." },
+      { title: "Room to note an extra stop", description: "Add any intermediate destination or return leg to your request." },
+    ],
+    steps: [
+      { title: "Enter the pickup and destination", description: "Provide full addresses and date/time for the trip." },
+      { title: "Add passenger and luggage details", description: "Mention the number of people and bags, plus any extra stops." },
+      { title: "Review and confirm", description: "Check the vehicle and route details through the reservation process." },
+    ],
+    journeyHeading: "What happens between pickup and drop-off",
+    journey: ["Specify the address where your ride begins.", "List any intermediate stops in travel order.", "Identify the final destination and whether you also need a return trip."],
+    planningHeading: "Keep a direct ride request precise",
+    planningTips: ["Use complete street addresses rather than a neighborhood name alone.", "Include building, terminal or entrance details when relevant.", "Mention luggage, passengers and special timing in the same request."],
+    midCtaHeading: "Know your pickup and destination?",
+    midCtaDescription: "Submit the two addresses and trip details to request a quote for a private direct ride.",
+    faqs: [
+      { question: "Can I add a stop to a point-to-point ride?", answer: "Yes. List every stop in order and confirm the route details as part of the reservation." },
+      { question: "Can I request a return trip?", answer: "Include the return date, pickup location and timing in your request so both legs can be discussed." },
+      { question: "How do I choose a vehicle?", answer: "Consider passenger count and luggage. The fleet includes Sprinter vans, SUVs and limousines; confirm the best fit with the reservation team." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for point-to-point transportation",
+    expectedImage: "point-to-point-transportation.jpg",
+  },
+  "wine-tours-transportation-service-from-new-york": {
+    introHeading: "Leave the driving plan out of your winery itinerary",
+    audienceHeading: "For private outings and small groups",
+    audience: "Long Island wine tour transportation from NYC may include several winery stops and a return trip. Share your preferred destinations, approximate visit times and group size to discuss private winery transportation with a driver.",
+    benefits: [
+      { title: "A route with multiple destinations", description: "List wineries and other stops in the order you plan to visit." },
+      { title: "Group vehicle options", description: "Consider a Sprinter van for a group and confirm passenger/luggage fit." },
+      { title: "Plan the return leg", description: "Include where and when you expect to return to New York." },
+    ],
+    steps: [
+      { title: "Choose your winery stops", description: "Share destination names or addresses and any reservations or tasting times." },
+      { title: "Set the day’s timing", description: "Provide pickup time, expected duration, passenger count and return location." },
+      { title: "Review the itinerary", description: "Confirm the vehicle, route and arrangements through the reservation process." },
+    ],
+    journeyHeading: "Coordinate the day from pickup to return",
+    journey: ["Start with the New York pickup location and preferred departure time.", "Order winery visits and any meal or other stops in the itinerary.", "Include the final return location and the time you expect to finish."],
+    planningHeading: "Before you plan your wine tour",
+    planningTips: ["Confirm each winery’s location and visit timing yourself.", "Keep the planned stop list realistic for your estimated travel time.", "Share reservations and accessibility or luggage considerations when requesting a quote."],
+    midCtaHeading: "Have your winery route in mind?",
+    midCtaDescription: "Send the stops, date and return plan to discuss private wine tour transportation from New York.",
+    faqs: [
+      { question: "Can I include multiple wineries in a tour?", answer: "List each destination and any planned visit times in your request. Confirm the final schedule and route through the reservation process." },
+      { question: "Does the service include tasting reservations?", answer: "The transportation information does not include winery reservations. Arrange visits directly with each destination and provide the times for your ride plan." },
+      { question: "What should our group share?", answer: "Include date, pickup and return addresses, number of passengers, stops and estimated duration." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for wine tour transportation",
+    expectedImage: "wine-tour-transportation.jpg",
+  },
+  "group-transportation-in-new-york-near-me": {
+    introHeading: "Keep your group on one shared itinerary",
+    audienceHeading: "For families, teams and event parties",
+    audience: "Private group transportation in NYC helps coordinate several travelers around a shared schedule. Start with passenger and luggage counts, then list pickup locations, destinations and fixed arrival times to plan group transportation in New York.",
+    benefits: [
+      { title: "Coordinate the same route", description: "Share one itinerary for group pickups, stops and the final destination." },
+      { title: "Consider a Sprinter van", description: "Sprinter vans are featured for groups; confirm the exact seating and luggage fit." },
+      { title: "Plan for different trip types", description: "Describe whether the ride is for an airport, cruise, business event, wedding or outing." },
+    ],
+    steps: [
+      { title: "Count the travelers and bags", description: "Estimate everyone joining the ride and their luggage requirements." },
+      { title: "Set the shared itinerary", description: "List pickup points, stops, addresses and arrival times in order." },
+      { title: "Confirm the vehicle fit", description: "Discuss configuration and availability for your dates before completing a reservation." },
+    ],
+    journeyHeading: "Make group pickups easier to understand",
+    journey: ["Identify whether everyone boards at one location or several.", "Put each pickup and destination in the order needed.", "Note event or flight times that affect when the group should arrive."],
+    planningHeading: "Group travel details to gather",
+    planningTips: ["Use a confirmed passenger count and include children where relevant.", "Estimate the number and size of bags, not just the people.", "If several pickup addresses are involved, list a contact or group lead for coordination."],
+    midCtaHeading: "Traveling with a group?",
+    midCtaDescription: "Send the passenger count, luggage needs and shared itinerary to request a quote.",
+    faqs: [
+      { question: "How many passengers can a Sprinter van carry?", answer: "Configurations vary. The site features Sprinter options for 10 to 14 passengers; confirm the exact vehicle capacity and luggage fit for your group." },
+      { question: "Can the group be picked up at multiple locations?", answer: "Include each pickup address and the sequence in your request, then confirm the agreed route during reservation." },
+      { question: "What if our luggage needs are significant?", answer: "Provide an estimate of bag count and size along with the passenger number so the vehicle fit can be checked." },
+    ],
+    imageAlt: "Black Sprinter van on a New York City street, used as a temporary image for group transportation",
+    expectedImage: "group-transportation.jpg",
+  },
+};

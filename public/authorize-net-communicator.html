@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secure payment communication</title>
+    <script>
+      (() => {
+        const allowedOrigins = new Set([
+          "https://accept.authorize.net",
+          "https://test.authorize.net",
+        ]);
+        function forward(message) {
+          if (
+            message &&
+            window.parent &&
+            window.parent.parent &&
+            window.parent.parent.CommunicationHandler &&
+            window.parent.parent.CommunicationHandler.onReceiveCommunication
+          ) {
+            window.parent.parent.CommunicationHandler.onReceiveCommunication({
+              qstr: message,
+              parent: document.referrer,
+            });
+          }
+        }
+        window.addEventListener("message", (event) => {
+          if (allowedOrigins.has(event.origin)) forward(event.data);
+        });
+        if (window.location.hash.length > 1) {
+          forward(window.location.hash.substring(1));
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
