@@ -155,12 +155,12 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const recipient = process.env.RESERVATION_EMAIL?.trim();
+  const recipient = process.env.QUOTE_EMAIL?.trim();
   const sender = process.env.RESEND_FROM?.trim();
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
   const secretKey = process.env.RECAPTCHA_SECRET_KEY?.trim();
   if (!apiKey || !recipient || !sender || !siteKey || !secretKey) {
-    console.error("Quote request rejected because Resend or reCAPTCHA environment variables are missing.");
+    console.error("Quote request rejected because Resend, quote recipient or reCAPTCHA environment variables are missing.");
     return Response.json(
       { message: "Online quote requests are temporarily unavailable. Please call 718-397-1333." },
       { status: 503 },

@@ -34,7 +34,7 @@ Quote and reservation submissions use Resend and reCAPTCHA; these two forms do n
 4. Run `database/migrations/001_create_quote_requests.sql` on a new database, then run migrations 002 and 004 in order. For an existing installation, apply any missing migrations in order.
 5. Set `APP_MODE=production` and `NEXT_PUBLIC_APP_MODE=production`, plus the required services below, before running `npm run build`. The two mode variables must both be set explicitly to production to enable form or payment APIs. Point the domain to the deployed Node.js application and enable HTTPS.
 
-The Contact Us quote form posts to `/api/quote`; the reservation form posts separately to `/api/reservation`. Each verifies its own reCAPTCHA token on the server and emails only the submitted request details through Resend without storing submissions in MySQL. Configure `RESERVATION_EMAIL=sales@nytravellimo.com`, `RESEND_API_KEY`, and a sender address verified with Resend in `RESEND_FROM`. The quote form has no payment fields or instructions. The reservation form does not collect payment credentials; payment arrangements are handled separately after the team reviews the request.
+The Contact Us quote form posts to `/api/quote`; the reservation form posts separately to `/api/reservation`. Each verifies its own reCAPTCHA token on the server and emails only the submitted request details through Resend without storing submissions in MySQL. Configure `QUOTE_EMAIL` for quote notifications and `RESERVATION_EMAIL=sales@nytravellimo.com` for reservation notifications, plus `RESEND_API_KEY` and a sender address verified with Resend in `RESEND_FROM`. The quote form has no payment fields or instructions. The reservation form does not collect payment credentials; payment arrangements are handled separately after the team reviews the request.
 
 ### Authorize.Net secure payment profiles
 
@@ -65,6 +65,7 @@ No variables are required for preview. Production requires both mode variables s
 | `DB_PASSWORD` | **Production required.** Database password; keep it in Hostinger environment settings |
 | `DB_NAME` | **Production required.** Database name |
 | `RESEND_API_KEY` | **Production required.** Resend API key, configured as a secret in the hosting environment |
+| `QUOTE_EMAIL` | **Production required.** Recipient for Contact Us quote notifications; set to the temporary test mailbox or intended quote inbox |
 | `RESERVATION_EMAIL` | **Production required.** Reservation notification recipient; set to `sales@nytravellimo.com` |
 | `RESEND_FROM` | **Production required.** Sender identity verified with Resend |
 | `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | **Production required.** Google reCAPTCHA v2 Checkbox site key |
