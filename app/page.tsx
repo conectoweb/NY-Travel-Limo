@@ -43,6 +43,7 @@ export default function HomePage() {
     "@type": "LocalBusiness",
     name: "NY Travel Limo",
     url: "https://www.nytravellimo.com/",
+    hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
     telephone: ["+1-718-397-1333", "+1-516-256-2892"],
     address: {
       "@type": "PostalAddress",

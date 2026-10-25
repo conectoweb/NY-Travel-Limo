@@ -89,6 +89,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
         "@type": "LocalBusiness",
         name: "NY Travel Limo",
         url: "https://www.nytravellimo.com/contact-us",
+        hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
         telephone: ["+1-718-397-1333", "+1-516-256-2892"],
         address: {
           "@type": "PostalAddress",
@@ -209,7 +210,37 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                     {section.heading}
                   </h2>
                   <div className="mt-4 space-y-4 text-base leading-7 text-brand-muted">
-                    {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                    {section.paragraphs.map((paragraph) => {
+                      const address = "358 W 56th St, Suite 4D, New York, NY 10019";
+                      if (isContactPage && paragraph.includes(address)) {
+                        const [beforeAddress, afterAddress] = paragraph.split(address);
+                        return (
+                          <p key={paragraph}>
+                            {beforeAddress}
+                            <a
+                              className="font-semibold text-brand-accent underline decoration-brand-secondary underline-offset-4 hover:text-brand-primary"
+                              href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                            >
+                              {address}
+                            </a>
+                            {afterAddress}
+                          </p>
+                        );
+                      }
+                      return <p key={paragraph}>{paragraph}</p>;
+                    })}
+                    {isContactPage && section.heading === "Visit our New York office" && (
+                      <a
+                        className="text-link inline-flex min-h-11 items-center"
+                        href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Get directions on Google Maps <span aria-hidden="true" className="ml-2">↗</span>
+                      </a>
+                    )}
                   </div>
                   {section.bullets && (
                     <ul className="mt-5 grid gap-3 sm:grid-cols-2">
