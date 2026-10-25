@@ -46,6 +46,13 @@ function getRateLimitResponse(request: Request): NextResponse | null {
 }
 
 export async function POST(request: Request) {
+  if (process.env.APP_MODE !== "production") {
+    return NextResponse.json(
+      { message: "This form is in preview mode. Payment setup is disabled." },
+      { status: 503 },
+    );
+  }
+
   const limited = getRateLimitResponse(request);
   if (limited) return limited;
 

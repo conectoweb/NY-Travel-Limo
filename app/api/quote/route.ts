@@ -90,6 +90,13 @@ function validDate(value: string | null): string | null | undefined {
 }
 
 export async function POST(request: Request) {
+  if (process.env.APP_MODE !== "production") {
+    return NextResponse.json(
+      { message: "This form is in preview mode. Requests are disabled and nothing was sent or saved." },
+      { status: 503 },
+    );
+  }
+
   const limited = rateLimitResponse(request);
   if (limited) return limited;
 

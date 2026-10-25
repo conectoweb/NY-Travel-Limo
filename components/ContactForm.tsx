@@ -4,6 +4,8 @@ import { FormEvent, useRef, useState } from "react";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import RecaptchaCheckbox, { type RecaptchaCheckboxHandle } from "@/components/RecaptchaCheckbox";
 
+const isPreviewMode = process.env.NEXT_PUBLIC_APP_MODE !== "production";
+
 const months = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
@@ -46,6 +48,11 @@ export default function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("");
+    if (isPreviewMode) {
+      setStatusType("notice");
+      setStatus("This form is in preview mode. Requests are disabled; nothing was sent or saved.");
+      return;
+    }
     setSubmitting(true);
     const form = event.currentTarget;
     if (!form.reportValidity()) {
@@ -137,8 +144,15 @@ export default function ContactForm() {
           Tell us about your trip
         </h2>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-brand-muted">
-          Complete the details below and the team can review your transportation request. Reservation requests are submitted on this website.
+          {isPreviewMode
+            ? "Explore the contact form in preview mode. Submissions are disabled."
+            : "Complete the details below and the team can review your transportation request. Reservation requests are submitted on this website."}
         </p>
+        {isPreviewMode && (
+          <p className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-semibold leading-6 text-amber-950" role="status">
+            Preview mode: this form is for display only. Sending and saving requests are disabled.
+          </p>
+        )}
       </div>
 
       <form aria-busy={submitting} className="space-y-8 p-5 sm:p-8" onSubmit={handleSubmit} noValidate>
@@ -255,7 +269,7 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />
+        {!isPreviewMode && <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />}
 
         {status && (
           <p
@@ -276,11 +290,11 @@ export default function ContactForm() {
             Required fields are marked <span className="font-bold text-brand-primary">*</span>.
           </p>
           <button
-            disabled={submitting || !recaptchaToken || !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            disabled={isPreviewMode || submitting || !recaptchaToken || !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
             type="submit"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-brand-secondary px-9 py-3 text-base font-bold text-brand-accent shadow-sm transition hover:bg-brand-accent hover:text-brand-secondary focus-visible:outline-offset-4 disabled:cursor-wait disabled:opacity-60 sm:w-auto"
           >
-            {submitting ? "Submitting…" : "Submit Request"}
+            {isPreviewMode ? "Sending disabled in preview" : submitting ? "Submitting…" : "Submit Request"}
           </button>
         </div>
       </form>

@@ -7,6 +7,8 @@ import RecaptchaCheckbox, { type RecaptchaCheckboxHandle } from "@/components/Re
 const fieldClassName =
   "mt-2 min-h-12 w-full rounded-lg border border-white/20 bg-white px-3 text-base font-normal text-brand-text shadow-sm placeholder:text-brand-muted focus:border-brand-secondary focus:outline-none focus:ring-2 focus:ring-brand-secondary/40";
 
+const isPreviewMode = process.env.NEXT_PUBLIC_APP_MODE !== "production";
+
 declare global {
   interface Window {
     CommunicationHandler?: {
@@ -86,6 +88,11 @@ export default function ReservationForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("");
+    if (isPreviewMode) {
+      setStatusType("notice");
+      setStatus("This reservation form is in preview mode. Submissions, storage and payments are disabled.");
+      return;
+    }
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
 
@@ -264,10 +271,16 @@ export default function ReservationForm() {
 
       <fieldset className="space-y-3 border-t border-white/20 pt-6">
         <legend className="text-xl font-bold text-white">Payment Information</legend>
-        <p className="text-sm leading-6 text-white/85">
-          Enter your payment method only in the secure Authorize.Net form below. Card details are sent directly to Authorize.Net, not to NY Travel Limo. Authorize.Net controls its hosted fields; card type is detected automatically and CVV is never stored. Your card will not be charged when you submit this reservation request.
-        </p>
-        {hostedPageToken && hostedFormAction ? (
+        {isPreviewMode ? (
+          <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm leading-6 text-white/85" role="status">
+            Preview mode: payment setup is disabled. No card details are requested, sent or saved.
+          </p>
+        ) : (
+          <p className="text-sm leading-6 text-white/85">
+            Enter your payment method only in the secure Authorize.Net form below. Card details are sent directly to Authorize.Net, not to NY Travel Limo. Authorize.Net controls its hosted fields; card type is detected automatically and CVV is never stored. Your card will not be charged when you submit this reservation request.
+          </p>
+        )}
+        {!isPreviewMode && hostedPageToken && hostedFormAction ? (
           <iframe
             title="Secure Authorize.Net payment information form"
             name="authorizeNetHostedProfile"
@@ -275,11 +288,11 @@ export default function ReservationForm() {
             referrerPolicy="strict-origin"
             style={{ height: hostedFrameHeight }}
           />
-        ) : (
+        ) : !isPreviewMode ? (
           <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm text-white/85">
             Complete the required reservation details and reCAPTCHA, then continue to load the secure payment form.
           </p>
-        )}
+        ) : null}
         {paymentSaved && (
           <p className="text-sm font-semibold text-white" role="status">
             Payment method saved securely. Only the Authorize.Net profile references will be associated with your request.
@@ -301,7 +314,13 @@ export default function ReservationForm() {
         </span>
       </label>
 
-      <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />
+      {!isPreviewMode && <RecaptchaCheckbox ref={recaptchaRef} onTokenChange={setRecaptchaToken} />}
+
+      {isPreviewMode && (
+        <p className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-sm font-semibold leading-6 text-white" role="status">
+          Preview mode: this form is for display only. Reservation requests, storage and payments are disabled.
+        </p>
+      )}
 
       {status && (
         <p
@@ -321,6 +340,7 @@ export default function ReservationForm() {
 
       <button
         disabled={
+          isPreviewMode ||
           submitting ||
           !recaptchaToken ||
           !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
@@ -329,7 +349,9 @@ export default function ReservationForm() {
         type="submit"
         className="inline-flex min-h-14 w-full items-center justify-center rounded-2xl bg-brand-secondary px-8 py-3 text-base font-bold text-brand-accent shadow-sm transition hover:bg-white disabled:cursor-wait disabled:opacity-60"
       >
-        {submitting
+        {isPreviewMode
+          ? "Sending disabled in preview"
+          : submitting
           ? "Please wait…"
           : paymentSession
             ? "Submit Reservation Request"
@@ -339,11 +361,13 @@ export default function ReservationForm() {
       <div className="border-t border-white/20 pt-5 text-xs leading-5 text-white/75">
         <p className="font-bold text-brand-secondary">Important</p>
         <p className="mt-2">
-          Submitting this form sends a reservation request only. It does not confirm a booking or charge your card. The payment method is stored by Authorize.Net for the team to coordinate any payment after confirming availability and arrangements.
+          {isPreviewMode
+            ? "This preview does not send or store a reservation request and does not load or store payment information."
+            : "Submitting this form sends a reservation request only. It does not confirm a booking or charge your card. The payment method is stored by Authorize.Net for the team to coordinate any payment after confirming availability and arrangements."}
         </p>
       </div>
     </form>
-    <form
+    {!isPreviewMode && <form
       ref={hostedFormRef}
       action={hostedFormAction}
       method="post"
@@ -352,7 +376,7 @@ export default function ReservationForm() {
       className="hidden"
     >
       <input type="hidden" name="token" value={hostedPageToken} />
-    </form>
+    </form>}
     </>
   );
 }
