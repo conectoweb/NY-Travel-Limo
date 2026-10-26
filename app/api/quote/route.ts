@@ -191,7 +191,6 @@ export async function POST(request: Request) {
     );
   }
 
-  let database;
   try {
     await getDatabasePool().execute(
       `INSERT INTO quotes (

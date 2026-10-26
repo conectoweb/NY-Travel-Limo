@@ -1,4 +1,4 @@
-CREATE TABLE quotes (
+CREATE TABLE IF NOT EXISTS quotes (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(254) NOT NULL,
@@ -12,11 +12,9 @@ CREATE TABLE quotes (
   pickup_place VARCHAR(200) NULL,
   dropoff_place VARCHAR(200) NULL,
   service_hours SMALLINT UNSIGNED NULL,
-  instructions VARCHAR(3000) NULL,
-  consent TINYINT(1) NOT NULL,
-  status VARCHAR(32) NOT NULL DEFAULT 'new',
-  received_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id),
-  KEY idx_quotes_received_at (received_at),
-  KEY idx_quotes_status_received_at (status, received_at)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  instructions TEXT NULL,
+  consent TINYINT(1) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  status VARCHAR(20) NOT NULL DEFAULT 'new',
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
