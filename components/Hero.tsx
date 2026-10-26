@@ -43,12 +43,6 @@ export default function Hero() {
               className="min-h-14 px-7"
               label="Request a Quote"
             />
-            <a
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/55 px-7 py-3 text-sm font-bold text-white transition-colors hover:border-brand-secondary hover:text-brand-secondary"
-              href="tel:7183971333"
-            >
-             718-397-1333
-            </a>
           </div>
         </div>
         <TrustSignals />

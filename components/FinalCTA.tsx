@@ -26,12 +26,6 @@ export default function FinalCTA({
         </div>
         <div className="flex shrink-0 flex-col items-stretch gap-3 sm:flex-row md:flex-col lg:flex-row">
           <QuoteLink className="min-h-12" label="Request a Quote" />
-          <a
-            className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary px-6 py-3 text-sm font-bold text-brand-accent transition-colors hover:bg-brand-accent hover:text-brand-secondary"
-            href="tel:7183971333"
-          >
-           718-397-1333
-          </a>
         </div>
       </div>
     </section>

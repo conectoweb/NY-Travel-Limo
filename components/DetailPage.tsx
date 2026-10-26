@@ -62,6 +62,8 @@ const relatedServiceSlugs: Record<string, string[]> = {
   ],
 };
 
+const sprinterVideoSlug = "sprinter-van-rental-with-driver-new-york-nyc";
+
 const fleetHeroImages: Record<string, { src: string; alt: string }> = {
   "sprinter-van-rental-with-driver-new-york-nyc": {
     src: "/images/services/Sprinter-Van-Rental-Rates.png",
@@ -185,15 +187,27 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
-              <a
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/55 px-7 py-3 text-sm font-bold text-white transition-colors hover:border-brand-secondary hover:text-brand-secondary"
-                href="tel:7183971333"
-              >
-               718-397-1333
-              </a>
             </div>
           </div>
         </section>
+
+        {page.slug === sprinterVideoSlug && (
+          <section aria-label="Sprinter van video" className="bg-white px-5 pt-10 sm:px-8 sm:pt-14">
+            <div className="mx-auto max-w-4xl">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl bg-brand-dark shadow-lg">
+                <iframe
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  src="https://www.youtube.com/embed/bvVhjvuMQyk?start=14&autoplay=0&rel=0"
+                  title="NY Travel Limo Mercedes-Benz Sprinter van with driver in New York City"
+                />
+              </div>
+            </div>
+          </section>
+        )}
 
         <article className="section-pad bg-white">
           <div className="mx-auto max-w-4xl">

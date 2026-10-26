@@ -80,12 +80,6 @@ export default function ServicesPage() {
               >
                 Request a Quote <span aria-hidden="true" className="ml-2">↗</span>
               </a>
-              <a
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/65 px-7 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-secondary hover:text-brand-secondary"
-                href="tel:7183971333"
-              >
-                718-397-1333
-              </a>
             </div>
           </div>
         </section>

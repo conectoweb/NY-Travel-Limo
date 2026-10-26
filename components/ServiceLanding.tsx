@@ -77,12 +77,6 @@ function MidPageCTA({ content }: { content: ServiceLandingContent }) {
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
           <QuoteLink className="min-h-12" label="Request a Quote" />
-          <a
-            className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/55 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-brand-secondary hover:text-brand-secondary"
-            href="tel:7183971333"
-          >
-            718-397-1333
-          </a>
         </div>
       </div>
     </section>
@@ -129,9 +123,6 @@ export default function ServiceLanding({
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">{page.intro}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
-              <a className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-bold text-white transition-colors hover:border-brand-secondary hover:text-brand-secondary" href="tel:7183971333">
-                718-397-1333
-              </a>
             </div>
             <p className="mt-6 text-xs font-medium tracking-wide text-white/65">
               Sprinter vans · SUVs · Limousines
