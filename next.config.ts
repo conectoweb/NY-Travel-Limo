@@ -25,6 +25,24 @@ const nextConfig: NextConfig = {
         destination: "/sprinter-van-rental-with-driver-new-york-nyc",
         statusCode: 301,
       },
+      {
+        // Brooklyn Sprinter page → main Sprinter van page.
+        source: "/sprinter-van-rental-brooklyn-nyc-with-driver",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old 14-passenger van page → current Sprinter van service page.
+        source: "/14-passenger-van-rental-with-driver-in-new-york-nyc",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old party van rental page → current group transportation page.
+        source: "/party-vans-for-rent-with-driver-in-new-york",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
     ];
   },
 };
