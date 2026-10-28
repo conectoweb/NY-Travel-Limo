@@ -186,8 +186,8 @@ export const servicePages: DetailPage[] = [
           "Use the Contact Us quote form to share your trip details, or open our reservation platform to arrange an airport transfer, business itinerary, group trip, wedding or special event.",
         ],
         bullets: [
-          "718-397-1333",
           "516-256-2892",
+          "718-397-1333",
         ],
       },
       {

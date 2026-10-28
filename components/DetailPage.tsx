@@ -92,7 +92,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
         name: "NY Travel Limo",
         url: "https://www.nytravellimo.com/contact-us",
         hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
-        telephone: ["+1-718-397-1333", "+1-516-256-2892"],
+        telephone: ["+1-516-256-2892", "+1-718-397-1333"],
         address: {
           "@type": "PostalAddress",
           streetAddress: "358 W 56th St, Suite 4D",

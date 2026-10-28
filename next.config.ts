@@ -18,6 +18,13 @@ const nextConfig: NextConfig = {
         destination: "/transportation-by-hours-in-new-york",
         statusCode: 301,
       },
+      {
+        // Old WordPress URL (with /nylimo/ prefix) → equivalent fleet page.
+        // Query strings are preserved automatically by Next.js.
+        source: "/nylimo/sprinter-van-rental-with-driver-new-york-nyc",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
     ];
   },
 };

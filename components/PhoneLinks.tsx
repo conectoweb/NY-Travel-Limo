@@ -1,6 +1,6 @@
 const phoneNumbers = [
-  { label: "718-397-1333", href: "tel:7183971333" },
   { label: "516-256-2892", href: "tel:5162562892" },
+  { label: "718-397-1333", href: "tel:7183971333" },
 ];
 
 export function PhoneLinks({ compact = false }: { compact?: boolean }) {
