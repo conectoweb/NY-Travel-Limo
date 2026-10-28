@@ -66,7 +66,7 @@ No variables are required for preview. Production requires both mode variables s
 
 ## SEO and test domain
 
-Canonical URLs and the public sitemap are emitted only for `nytravellimo.com` and `www.nytravellimo.com`. Other hosts receive `noindex` metadata and an empty sitemap. Preserve the existing service and article slugs when editing content. The previous `/hourly-transportation-nyc` path permanently redirects to `/transportation-by-hours-in-new-york`.
+`https://www.nytravellimo.com` is the canonical primary domain: `siteUrl`, canonical tags, Open Graph URLs and the sitemap all use it. Requests to the apex `nytravellimo.com` are permanently redirected (301) to the same path on `www`, preserving query strings. Canonical URLs and the public sitemap are emitted only for `nytravellimo.com` and `www.nytravellimo.com`. Other hosts receive `noindex` metadata and an empty sitemap. Preserve the existing service and article slugs when editing content. The previous `/hourly-transportation-nyc` path permanently redirects to `/transportation-by-hours-in-new-york`.
 
 ## Legal and privacy review before launch
 
