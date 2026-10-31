@@ -56,7 +56,7 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
-        // Old sweet sixteen transportation page → current homepage.
+        // Old limousine transportation page → current Lincoln Stretch Limo page.
         source: "/nylimo/limousine-services-new-york",
         destination: "/lincoln-stretch-limo-rental-nyc",
         statusCode: 301,
