@@ -31,16 +31,17 @@ export const fleetPages: DetailPage[] = [
           "A 14-passenger van rental in NYC may suit a group that needs one coordinated pickup or shared trips between venues. Sprinter configurations vary, so confirm passenger and luggage fit when requesting your quote.",
         ],
         bullets: [
-          "Airport transportation to and from JFK, LaGuardia and Newark",
-          "Corporate meetings, roadshows and business events",
-          "Wedding parties, celebrations and private group outings",
-          "Cruise terminal transfers and New York sightseeing",
+          "Airport transportation to and from [JFK, LaGuardia and Newark](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
+          "Corporate meetings, [roadshows](/roadshow-transportation-nyc) and [business events](/corporate-transportation-service-with-driver-in-new-york)",
+          "Wedding parties, [celebrations](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans) and private [group outings](/group-transportation-in-new-york-near-me)",
+          "Dignified [funeral family transportation](/funeral-transportation-services-nyc-dignified-professional) across all five NYC boroughs",
+          "Cruise terminal transfers to [Manhattan and Brooklyn ports](/cruise-terminal-transportation-services-in-new-york-with-driver)",
         ],
       },
       {
         heading: "How to plan your Sprinter ride",
         paragraphs: [
-          "Share your date, pickup and drop-off addresses, passenger count, luggage needs and any stops. For an hourly itinerary, include the time you expect to need the vehicle. Our team can use those details to help you request transportation that fits the trip.",
+          "Share your date, pickup and drop-off addresses, passenger count, luggage needs and any stops. For an [hourly transportation charter](/transportation-by-hours-in-new-york), include the time you expect to need the vehicle. Our team can use those details to help you request transportation that fits the trip.",
         ],
       },
       {
@@ -79,13 +80,13 @@ export const fleetPages: DetailPage[] = [
         heading: "SUV transportation for everyday plans and special trips",
         paragraphs: [
           "Choose a private SUV when you want a dedicated ride for your itinerary, whether that means a direct transfer, a day of meetings or a pickup after a flight. Your chauffeur and pickup plan are arranged around the trip details you provide.",
-          "Traveling with a larger party or extra bags? Let us know before booking. We can help compare SUV transportation with a Sprinter van or another vehicle option.",
+          "Traveling with a larger party or extra bags? Let us know before booking. We can help compare SUV transportation with a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) or [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc).",
         ],
         bullets: [
-          "Airport pickups and drop-offs",
-          "Corporate and executive transportation",
-          "Private point-to-point rides",
-          "Family travel and special occasions",
+          "[Airport pickups and drop-offs](/airport-transportation-services-in-nyc-with-professional-chauffeurs) at JFK, LGA, and EWR",
+          "[Corporate and executive transportation](/corporate-transportation-service-with-driver-in-new-york) across NYC",
+          "[Private point-to-point rides](/point-to-point-transportation-service-in-new-york) between hotels, offices, and venues",
+          "Family travel, [funeral transportation](/funeral-transportation-services-nyc-dignified-professional) and special occasions",
         ],
       },
       {
@@ -133,16 +134,16 @@ export const fleetPages: DetailPage[] = [
           "Vehicle availability and seating arrangements can vary. Please confirm the vehicle, passenger count and any special requests with our team before completing your reservation.",
         ],
         bullets: [
-          "Wedding-day and reception transportation",
+          "[Wedding-day and reception transportation](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
           "Anniversaries, birthdays and milestone celebrations",
-          "Proms, formal events and evenings out",
-          "Private transportation between venues",
+          "Proms, formal galas and [hourly limousine rides](/transportation-by-hours-in-new-york)",
+          "[Private point-to-point transportation](/point-to-point-transportation-service-in-new-york) between NYC venues",
         ],
       },
       {
         heading: "Coordinate the schedule in advance",
         paragraphs: [
-          "Share your event date, itinerary and timing when you request a quote. If your plans include multiple pickups or stops, listing them up front helps the team understand the full transportation plan.",
+          "Share your event date, itinerary and timing when you request a quote. If your group is larger than 10 passengers, explore our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for unified travel.",
         ],
       },
       {
@@ -212,7 +213,7 @@ export const servicePages: DetailPage[] = [
         heading: "Airport rides planned around your trip",
         paragraphs: [
           "Tell us which airport you are using, where you are going, when you need the ride and how many people and bags are traveling. For arrivals, include your flight information and preferred pickup details in your request.",
-          "Traveling with a group or extra luggage? A Sprinter van may be a convenient option. SUV and limousine transportation are also available for different trip needs; ask our team to help you compare.",
+          "Traveling with a group or extra luggage? A [Mercedes-Benz Sprinter van rental](/sprinter-van-rental-with-driver-new-york-nyc) is our premier group option. [Chauffeured luxury SUVs](/luxury-suv-rental-nyc) and [private limousines](/lincoln-stretch-limo-rental-nyc) are also available; ask our team to help you compare. Connecting to a sailing? Ask about our [cruise terminal transfers in New York](/cruise-terminal-transportation-services-in-new-york-with-driver).",
         ],
         bullets: ["John F. Kennedy International Airport (JFK)", "LaGuardia Airport (LGA)", "Newark Liberty International Airport (EWR)"],
       },
@@ -238,9 +239,14 @@ export const servicePages: DetailPage[] = [
         heading: "Transportation that follows your business itinerary",
         paragraphs: [
           "Plan a direct transfer between the airport, hotel and office, or share a schedule with multiple meetings and event locations. Let us know whether you need a one-way ride, a return trip or a vehicle for a longer period.",
-          "For a team traveling together, consider a Sprinter van. SUVs and limousines can suit other executive, client or event transportation needs.",
+          "For a team traveling together, consider a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc). [Executive luxury SUVs](/luxury-suv-rental-nyc) and [limousines](/lincoln-stretch-limo-rental-nyc) can suit client and leadership transportation needs.",
         ],
-        bullets: ["Airport and hotel transfers", "Meetings and client transportation", "Corporate events and group travel", "Multi-stop business itineraries"],
+        bullets: [
+          "[Airport and hotel transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
+          "Meetings and executive client transportation",
+          "Corporate events and [group transportation](/group-transportation-in-new-york-near-me)",
+          "Multi-stop business itineraries and [financial roadshows](/roadshow-transportation-nyc)",
+        ],
       },
       {
         heading: "Make the request easy to coordinate",
@@ -316,9 +322,14 @@ export const servicePages: DetailPage[] = [
         heading: "Plan rides for the whole wedding day",
         paragraphs: [
           "Start with a list of who needs transportation, when each group should be picked up and where they need to go. Include any gap between the ceremony and reception, photo stops or late-night return trips.",
-          "A Sprinter van can be useful for moving a group together, while SUVs and limousines offer other options for couples, families and special arrivals. Confirm the vehicle and passenger arrangements for each part of the day.",
+          "A [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) is ideal for moving a [wedding group](/group-transportation-in-new-york-near-me) together, while [private luxury SUVs](/luxury-suv-rental-nyc) and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) offer elegant options for couples, families and grand arrivals. Consider booking [hourly transportation](/transportation-by-hours-in-new-york) so your chauffeurs remain on standby.",
         ],
-        bullets: ["Couple and wedding party transportation", "Guest shuttles between selected locations", "Hotel and venue transfers", "Limousine transportation for a special occasion"],
+        bullets: [
+          "Couple and wedding party arrivals in a [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc)",
+          "Guest transfers and shuttles in [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc)",
+          "Hotel, photo shoot and venue [point-to-point transfers](/point-to-point-transportation-service-in-new-york)",
+          "Dedicated late-night return transportation for guests",
+        ],
       },
       {
         heading: "Share the schedule before the big day",
@@ -449,19 +460,97 @@ export const servicePages: DetailPage[] = [
         heading: "One transportation plan for your group",
         paragraphs: [
           "Group trips can include several pickups, luggage and fixed arrival times. Share the complete schedule and passenger count so the team can review the trip as a whole.",
-          "Sprinter vans are a featured option for group transportation. Passenger and luggage configurations vary, so confirm that the available vehicle suits your group before completing a reservation.",
+          "[Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are our premier option for group transportation. If your plans require multiple stops across the day, ask about our [hourly chauffeur charter service](/transportation-by-hours-in-new-york).",
         ],
         bullets: [
-          "Airport and cruise terminal transfers",
-          "Corporate meetings and events",
-          "Wedding parties and celebrations",
-          "Private sightseeing and group outings",
+          "[Airport](/airport-transportation-services-in-nyc-with-professional-chauffeurs) and [cruise terminal transfers](/cruise-terminal-transportation-services-in-new-york-with-driver)",
+          "[Corporate meetings and business events](/corporate-transportation-service-with-driver-in-new-york)",
+          "[Wedding parties and celebration guest shuttles](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
+          "Dignified [funeral transportation services for families](/funeral-transportation-services-nyc-dignified-professional)",
+          "[Private NYC sightseeing tours](/new-york-city-tour-with-professional-chauffeurs) and group outings",
         ],
       },
       {
         heading: "Share the details that shape the ride",
         paragraphs: [
           "Include the travel date, pickup and drop-off addresses, number of passengers, luggage needs, stops and timing. If your plans include multiple vehicles or pickup locations, describe each one in your request.",
+        ],
+      },
+    ],
+    recommendedFleet: ["sprinter", "suv", "limousine"],
+  },
+  {
+    slug: "funeral-transportation-services-nyc-dignified-professional",
+    title: "Funeral Transportation Services in NYC",
+    description:
+      "Dignified, professional funeral transportation in NYC across all 5 boroughs. Chauffeur-driven Mercedes Sprinter vans, SUVs and limousines for family and friends.",
+    eyebrow: "Dignified Family & Guest Chauffeur Service",
+    intro:
+      "Compassionate, punctual and respectful chauffeur-driven transportation for families, relatives and friends during times of remembrance. NY Travel Limo provides luxury [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [private SUVs](/luxury-suv-rental-nyc) and [elegant limousines](/lincoln-stretch-limo-rental-nyc) across Manhattan, Brooklyn, Queens, The Bronx and Staten Island. Every vehicle is rented strictly with a dedicated, professional chauffeur to ensure your family travels together in comfort, privacy and peace of mind.",
+    sections: [
+      {
+        heading: "Chauffeured passenger transportation for family, relatives and guests",
+        paragraphs: [
+          "Navigating New York City traffic, coordinating multiple cars and searching for parking near funeral homes or cemeteries adds unnecessary strain to an emotionally demanding day. Our dedicated passenger transportation service offers a calm, private and respectful environment so your family can focus on remembering and honoring your loved one.",
+          "Please note that NY Travel Limo provides passenger transportation exclusively for family members, relatives and attendees. We do not provide hearse services, casket transport or mortuary management; our sole commitment is to provide compassionate, seamless and dignified mobility for the living family and friends throughout all services.",
+        ],
+        bullets: [
+          "Pickups from private residences, hotels or [NYC airport arrivals](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
+          "[Direct transfers](/point-to-point-transportation-service-in-new-york) between funeral homes, memorial chapels and houses of worship",
+          "Procession-aligned travel to cemeteries, crematoriums and memorial parks",
+          "Dedicated return transportation to repasts, receptions or family homes",
+        ],
+      },
+      {
+        heading: "Exclusively chauffeur-driven rentals — no bare vehicle rentals",
+        paragraphs: [
+          "Every vehicle in our fleet is rented exclusively with an experienced, licensed professional chauffeur. We do not offer self-drive or bare vehicle rentals under any circumstances. When you reserve with NY Travel Limo, you receive a full white-glove chauffeur service where every detail—from route navigation and bridge crossings to curbside assistance and waiting periods—is handled with the utmost discretion and courtesy.",
+          "Your chauffeur arrives impeccably dressed in professional dark attire, understands the solemn nature of the day, and remains on standby to ensure older family members and guests are assisted with comfort and care.",
+        ],
+      },
+      {
+        heading: "Mercedes-Benz Sprinter vans: Keeping the family together",
+        paragraphs: [
+          "Separating family members across multiple cabs or rideshare vehicles can lead to route confusion, split arrivals and unwanted stress. Our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc)—seating 10 to 14 passengers—are our most recommended and requested option for funeral [group transportation in NYC](/group-transportation-in-new-york-near-me).",
+          "With standing headroom for effortless boarding, tinted privacy glass, quiet climate-controlled cabins and plush seating, a Sprinter van allows immediate and extended family to share a supportive, private space throughout the entire day.",
+        ],
+        bullets: [
+          "10- to 14-passenger configurations keeping extended families together",
+          "High-roof walk-in design for comfortable access, especially for senior family members",
+          "Tinted privacy glass for a peaceful, secluded cabin atmosphere",
+          "Generous rear cargo room for flowers, personal effects and memorial programs",
+        ],
+      },
+      {
+        heading: "Luxury SUVs and limousines for intimate family accompaniment",
+        paragraphs: [
+          "For immediate family members seeking private, serene transportation, our [executive SUVs](/luxury-suv-rental-nyc) (accommodating up to 6 passengers) provide refined comfort, quiet interiors and discreet travel.",
+          "Traditional [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) are also available for formal family arrivals, offering classic elegance and dedicated chauffeur accompaniment.",
+        ],
+        bullets: [
+          "[Executive SUVs](/luxury-suv-rental-nyc) for immediate family and private, comfortable transit",
+          "[Stretch limousines](/lincoln-stretch-limo-rental-nyc) for formal, traditional memorial arrivals",
+          "[Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for unified group and extended family travel",
+        ],
+      },
+      {
+        heading: "Complete five-borough NYC coverage and tri-state cemeteries",
+        paragraphs: [
+          "We operate across all five boroughs of New York City: Manhattan, Brooklyn, Queens, The Bronx and Staten Island. We also regularly serve memorial parks, cemeteries and crematoriums throughout Long Island (Nassau and Suffolk counties), Westchester County and Northern New Jersey.",
+          "Whether your schedule begins with residential pickups in Queens, continues to a funeral chapel in Manhattan, moves to a cemetery in Brooklyn or Staten Island, and concludes with a repast in The Bronx, our dispatch team builds realistic travel buffers to ensure uninterrupted punctuality.",
+        ],
+        bullets: [
+          "Manhattan funeral chapels, historic churches and memorial venues",
+          "Brooklyn and Queens cemeteries, funeral homes and visitation centers",
+          "The Bronx and Staten Island memorial venues and chapels",
+          "Tri-state cemetery connections across Long Island, Westchester and New Jersey",
+        ],
+      },
+      {
+        heading: "How to organize your family's funeral transportation",
+        paragraphs: [
+          "To request a quote, share the date, pickup addresses for family members, scheduled service and cemetery times, and the repast or reception location. Because funeral services often require waiting periods between viewing, chapel services and interment, we recommend booking an [hourly transportation charter](/transportation-by-hours-in-new-york) so your vehicle and chauffeur remain exclusively dedicated to your party throughout the day.",
+          "Designating a family coordinator or point of contact allows our reservation and dispatch team to communicate seamlessly on the day of service.",
         ],
       },
     ],
@@ -519,20 +608,20 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Choose a Sprinter van for group travel",
         paragraphs: [
-          "A chauffeur-driven Mercedes-Benz Sprinter van is a strong option to consider when several people need to travel together. It can make coordination easier for airport transfers, business itineraries, weddings, cruise trips and group outings.",
+          "A chauffeur-driven [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) is a premier option when several people need to travel together. It makes coordination seamless for [airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs), [corporate meetings](/corporate-transportation-service-with-driver-in-new-york), [wedding celebrations](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans), [funeral family transportation](/funeral-transportation-services-nyc-dignified-professional), [cruise port connections](/cruise-terminal-transportation-services-in-new-york-with-driver) and [private group outings](/group-transportation-in-new-york-near-me).",
           "Passenger and luggage configurations can differ, so share your group size and bag count before confirming a vehicle.",
         ],
       },
       {
         heading: "Choose an SUV for a private ride",
         paragraphs: [
-          "An SUV may suit a traveler, couple or family looking for private transportation between an airport, hotel, meeting or event. Let the team know how many people and bags are traveling to check that it fits your needs.",
+          "An [executive luxury SUV](/luxury-suv-rental-nyc) suits an individual, couple or small family looking for [private point-to-point transportation](/point-to-point-transportation-service-in-new-york) between an airport, hotel, meeting or private event.",
         ],
       },
       {
         heading: "Choose a limousine for a special occasion",
         paragraphs: [
-          "A limousine can make sense when the ride is part of a wedding, celebration, formal event or evening out. Share the event schedule, pickup locations and passenger count so the transportation plan matches the occasion.",
+          "A [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc) makes sense when the journey is part of a [wedding day](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans), milestone anniversary, formal gala or [hourly evening charter](/transportation-by-hours-in-new-york).",
         ],
       },
       {
@@ -568,13 +657,13 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Account for passengers and bags",
         paragraphs: [
-          "Include the number of travelers and approximate luggage needs. Groups may want to consider a Sprinter van; SUVs are another private option. Confirm the vehicle configuration with the provider before booking.",
+          "Include the number of travelers and approximate luggage needs. Groups can explore our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc); [private luxury SUVs](/luxury-suv-rental-nyc) are another popular choice. Connecting to a cruise? Check our [cruise terminal transportation in NYC](/cruise-terminal-transportation-services-in-new-york-with-driver).",
         ],
       },
       {
         heading: "Request your quote early",
         paragraphs: [
-          "Send the travel date, time, locations and any extra stops when requesting a quote. For airport transportation in New York, NY Travel Limo can discuss private chauffeur options for your itinerary.",
+          "Send the travel date, time, locations and any extra stops when requesting a quote. For private [airport transportation in NYC](/airport-transportation-services-in-nyc-with-professional-chauffeurs), NY Travel Limo provides experienced chauffeurs dedicated to your arrival or departure.",
         ],
       },
     ],
@@ -592,7 +681,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Start with your passenger and luggage count",
         paragraphs: [
-          "Write down how many people are traveling and how many bags or other items they expect to bring. A Sprinter van is a featured choice for group transportation, but you should confirm the vehicle's passenger and luggage configuration for your specific group.",
+          "Write down how many people are traveling and how many bags or other items they expect to bring. A [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) is a featured choice for [group transportation in NYC](/group-transportation-in-new-york-near-me), but you should confirm the vehicle's passenger and luggage configuration for your specific group.",
         ],
       },
       {
@@ -604,7 +693,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Match the vehicle to the occasion",
         paragraphs: [
-          "Sprinter vans can help keep a group together. An SUV may be a better fit for a smaller private ride, while a limousine can suit a wedding or celebration. Ask about available options when you request your quote.",
+          "[Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are the ideal vehicle to keep families together for [funeral transportation services in NYC](/funeral-transportation-services-nyc-dignified-professional) or [wedding celebrations](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans). A [private SUV](/luxury-suv-rental-nyc) may suit smaller groups, while a [stretch limousine](/lincoln-stretch-limo-rental-nyc) adds classic ceremony elegance. For multiple stops throughout the day, explore our [hourly transportation charter](/transportation-by-hours-in-new-york).",
         ],
       },
       {

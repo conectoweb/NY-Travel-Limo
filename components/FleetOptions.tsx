@@ -35,11 +35,10 @@ export default function FleetOptions({
         <ul className="grid gap-5 md:grid-cols-3">
           {options.map((option) => (
             <li
-              className={`service-card group relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] sm:p-8 ${
-                option.key === "sprinter"
-                  ? "border-brand-secondary border-x border-b border-x-brand-accent border-b-brand-accent bg-brand-accent text-white"
-                  : "border-brand-primary border-x-brand-text/10 border-b-brand-text/10 bg-white text-brand-dark"
-              }`}
+              className={`service-card group relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] sm:p-8 ${option.key === "sprinter"
+                ? "border-brand-secondary border-x border-b border-x-brand-accent border-b-brand-accent bg-brand-accent text-white"
+                : "border-brand-primary border-x-brand-text/10 border-b-brand-text/10 bg-white text-brand-dark"
+                }`}
               key={option.key}
             >
               {images?.[option.key] && (
@@ -62,19 +61,22 @@ export default function FleetOptions({
               </p>
               <h3 className="text-2xl font-bold leading-tight">{option.title}</h3>
               <p
-                className={`mt-4 flex-1 text-sm leading-6 ${
-                  option.key === "sprinter" ? "text-white/75" : "text-brand-muted"
-                }`}
+                className={`mt-4 flex-1 text-sm leading-6 ${option.key === "sprinter" ? "text-white/75" : "text-brand-muted"
+                  }`}
               >
                 {option.description}
               </p>
               <a
-                className={`mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-bold underline decoration-brand-secondary decoration-2 underline-offset-4 ${
+                className={
                   option.key === "sprinter" ? "text-white" : "text-brand-accent"
-                }`}
+                }
                 href={option.href}
               >
-                Explore {option.key === "sprinter" ? "Sprinter Vans" : option.title}
+                {option.key === "sprinter"
+                  ? "Explore Mercedes-Benz Sprinter Vans"
+                  : option.key === "suv"
+                    ? "Explore Private Luxury SUVs"
+                    : "Explore Lincoln Stretch Limousines"}
                 <span aria-hidden="true">↗</span>
               </a>
             </li>

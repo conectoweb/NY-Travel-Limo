@@ -34,8 +34,13 @@ export default function Hero() {
           </h1>
           <p className="mt-7 max-w-[43rem] text-base leading-7 text-white/85 sm:text-lg sm:leading-[2.1rem]">
             Arrange a private transportation service in NYC around your itinerary, whether you need
-            an airport transfer, business transportation, a group ride or a special-event trip.
-            Choose from Mercedes-Benz Sprinter vans, private SUVs and limousines, then confirm
+            an <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/airport-transportation-services-in-nyc-with-professional-chauffeurs">airport transfer</a>,{" "}
+            <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/corporate-transportation-service-with-driver-in-new-york">business transportation</a>, a{" "}
+            <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/group-transportation-in-new-york-near-me">group ride</a> or a{" "}
+            <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/funeral-transportation-services-nyc-dignified-professional">family memorial trip</a>.
+            Choose from <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/sprinter-van-rental-with-driver-new-york-nyc">Mercedes-Benz Sprinter vans</a>,{" "}
+            <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/luxury-suv-rental-nyc">private SUVs</a> and{" "}
+            <a className="underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary transition-colors" href="/lincoln-stretch-limo-rental-nyc">limousines</a>, then confirm
             passenger and luggage fit for your trip.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">

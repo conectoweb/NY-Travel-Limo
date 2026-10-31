@@ -2,24 +2,35 @@ import { PhoneLinks } from "@/components/PhoneLinks";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import { ReservationLink } from "@/components/Header";
 
-const exploreLinks = [
-  { label: "Sprinter Vans", href: "/sprinter-van-rental-with-driver-new-york-nyc" },
-  { label: "SUVs", href: "/luxury-suv-rental-nyc" },
-  { label: "Limousines", href: "/lincoln-stretch-limo-rental-nyc" },
-  { label: "Airport Transportation", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" },
+const fleetLinks = [
+  { label: "Sprinter Van Rental NYC", href: "/sprinter-van-rental-with-driver-new-york-nyc" },
+  { label: "Luxury SUV Rental NYC", href: "/luxury-suv-rental-nyc" },
+  { label: "Lincoln Stretch Limousines", href: "/lincoln-stretch-limo-rental-nyc" },
+  { label: "Hourly Chauffeur Service", href: "/transportation-by-hours-in-new-york" },
+  { label: "Group Transportation NYC", href: "/group-transportation-in-new-york-near-me" },
+  { label: "Explore Our Fleet", href: "/fleet" },
+];
+
+const serviceLinks = [
+  { label: "Funeral Transportation", href: "/funeral-transportation-services-nyc-dignified-professional" },
+  { label: "Airport Transportation NYC", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" },
   { label: "Corporate Transportation", href: "/corporate-transportation-service-with-driver-in-new-york" },
+  { label: "Wedding Transportation", href: "/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans" },
   { label: "Corporate Roadshows", href: "/roadshow-transportation-nyc" },
-  { label: "Services", href: "/services" },
-  { label: "Fleet", href: "/fleet" },
+  { label: "Cruise Terminal Transfers", href: "/cruise-terminal-transportation-services-in-new-york-with-driver" },
+  { label: "Private NYC City Tours", href: "/new-york-city-tour-with-professional-chauffeurs" },
+  { label: "Point-to-Point Rides", href: "/point-to-point-transportation-service-in-new-york" },
+  { label: "Long Island Wine Tours", href: "/wine-tours-transportation-service-from-new-york" },
+  { label: "All NYC Services", href: "/services" },
 ];
 
 const companyLinks = [
-  { label: "Rates", href: "/rates" },
-  { label: "About Us", href: "/about-us" },
+  { label: "Rates & Packages", href: "/rates" },
+  { label: "About NY Travel Limo", href: "/about-us" },
   { label: "Frequently Asked Questions", href: "/frequently-asked-questions" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact Us", href: "/contact-us" },
+  { label: "Fleet Gallery", href: "/gallery" },
+  { label: "Travel Guides & Blog", href: "/blog" },
+  { label: "Contact Us & Quote", href: "/contact-us" },
 ];
 
 const socialLinks = [
@@ -78,7 +89,7 @@ function SocialIcon({ name }: { name: (typeof socialLinks)[number]["icon"] }) {
 export default function Footer() {
   return (
     <footer className="border-t-4 border-brand-secondary bg-brand-dark text-white" id="contact">
-      <div className="mx-auto grid max-w-content items-start gap-x-8 gap-y-10 px-5 pb-12 pt-14 sm:px-8 sm:pb-14 sm:pt-16 md:grid-cols-2 lg:grid-cols-[1.05fr_1.8fr_0.9fr_1fr] lg:gap-x-10">
+      <div className="mx-auto grid max-w-content items-start gap-x-8 gap-y-10 px-5 pb-12 pt-14 sm:px-8 sm:pb-14 sm:pt-16 md:grid-cols-2 lg:grid-cols-[1fr_2.2fr_0.9fr_1fr] lg:gap-x-10">
         <div>
           <a aria-label="NY Travel Limo home" href="/">
             <span className="font-display text-3xl font-bold">NY Travel <span className="text-brand-secondary">Limo</span></span>
@@ -105,13 +116,27 @@ export default function Footer() {
             ))}
           </nav>
         </div>
-        <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-x-5 gap-y-8 sm:gap-x-8">
+        <nav aria-label="Footer navigation" className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-3">
           <div>
             <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-secondary">
-              Explore
+              Our Fleet
             </h2>
-            <ul className="space-y-3 text-sm text-white/80">
-              {exploreLinks.map((link) => (
+            <ul className="space-y-2.5 text-xs text-white/80">
+              {fleetLinks.map((link) => (
+                <li key={link.href}>
+                  <a className="transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-secondary">
+              NYC Services
+            </h2>
+            <ul className="space-y-2.5 text-xs text-white/80">
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <a className="transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary" href={link.href}>
                     {link.label}
@@ -124,7 +149,7 @@ export default function Footer() {
             <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-secondary">
               Company
             </h2>
-            <ul className="space-y-3 text-sm text-white/80">
+            <ul className="space-y-2.5 text-xs text-white/80">
               {companyLinks.map((link) => (
                 <li key={link.href}>
                   <a className="transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary" href={link.href}>

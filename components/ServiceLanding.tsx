@@ -5,6 +5,7 @@ import { QuoteLink } from "@/components/Header";
 import FleetOptions from "@/components/FleetOptions";
 import FinalCTA from "@/components/FinalCTA";
 import { servicePages } from "@/lib/site-content";
+import FormattedText from "@/components/FormattedText";
 
 function BenefitCards({ items }: { items: ServiceLandingContent["benefits"] }) {
   return (
@@ -57,7 +58,9 @@ function ServiceFAQs({ items }: { items: ServiceLandingContent["faqs"] }) {
                 {item.question}
                 <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">{item.answer}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                <FormattedText text={item.answer} />
+              </p>
             </details>
           ))}
         </div>
@@ -86,11 +89,26 @@ function MidPageCTA({ content }: { content: ServiceLandingContent }) {
 export default function ServiceLanding({
   page,
   content,
+  relatedSlugs,
 }: {
   page: DetailPage;
   content: ServiceLandingContent;
+  relatedSlugs?: string[];
 }) {
-  const relatedServices = servicePages.filter((service) => service.slug !== page.slug && service.slug !== "contact-us");
+  const contextualServices =
+    relatedSlugs && relatedSlugs.length > 0
+      ? relatedSlugs
+          .map((slug) => servicePages.find((service) => service.slug === slug))
+          .filter((service): service is (typeof servicePages)[number] => service !== undefined)
+      : [];
+
+  const fallbackServices = servicePages.filter(
+    (service) => service.slug !== page.slug && service.slug !== "contact-us"
+  );
+
+  const relatedServices =
+    contextualServices.length > 0 ? contextualServices : fallbackServices;
+
   const serviceImage = `/images/${content.expectedImage}`;
 
   return (
@@ -120,12 +138,17 @@ export default function ServiceLanding({
             <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl" id="detail-title">
               {page.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">{page.intro}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+              <FormattedText
+                text={page.intro}
+                className="font-semibold text-brand-secondary underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs"
+              />
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
             </div>
             <p className="mt-6 text-xs font-medium tracking-wide text-white/65">
-              Sprinter vans · SUVs · Limousines
+              <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/sprinter-van-rental-with-driver-new-york-nyc">Sprinter vans</a> · <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/luxury-suv-rental-nyc">SUVs</a> · <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/lincoln-stretch-limo-rental-nyc">Limousines</a>
             </p>
           </div>
         </div>
@@ -137,7 +160,9 @@ export default function ServiceLanding({
           <div>
             <p className="eyebrow mb-4">{content.audienceHeading}</p>
             <h2 className="section-heading text-3xl sm:text-5xl" id="service-intro-title">{content.introHeading}</h2>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-brand-muted">{content.audience}</p>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-brand-muted">
+              <FormattedText text={content.audience} />
+            </p>
           </div>
           <div className="relative min-h-[17rem] overflow-hidden rounded-2xl bg-brand-dark shadow-[0_20px_50px_rgba(9,79,89,0.18)] sm:min-h-[23rem]">
             <Image
@@ -193,13 +218,19 @@ export default function ServiceLanding({
               <h2 className="section-heading text-3xl sm:text-4xl" id={`detail-section-${index + 1}`}>{section.heading}</h2>
             </div>
             <div className="space-y-4 text-base leading-7 text-brand-muted">
-              {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>
+                  <FormattedText text={paragraph} />
+                </p>
+              ))}
               {section.bullets && (
                 <ul className="space-y-3 pt-2">
                   {section.bullets.map((item) => (
                     <li className="flex gap-3 text-sm leading-6 text-brand-dark" key={item}>
                       <span aria-hidden="true" className="mt-0.5 font-bold text-brand-primary">✓</span>
-                      <span>{item}</span>
+                      <span>
+                        <FormattedText text={item} />
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -220,7 +251,9 @@ export default function ServiceLanding({
               <li className="relative py-1 pl-8 pb-7 last:pb-0" key={item}>
                 <span aria-hidden="true" className="absolute -left-[0.4rem] top-2 h-3 w-3 rounded-full border-2 border-white bg-brand-primary shadow-[0_0_0_1px_rgba(46,115,110,0.3)]" />
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-primary">Step {index + 1}</span>
-                <p className="mt-2 text-base leading-7 text-brand-muted">{item}</p>
+                <p className="mt-2 text-base leading-7 text-brand-muted">
+                  <FormattedText text={item} />
+                </p>
               </li>
             ))}
           </ol>
@@ -237,7 +270,9 @@ export default function ServiceLanding({
             {content.planningTips.map((tip) => (
               <li className="flex gap-3 text-sm leading-6 text-brand-text" key={tip}>
                 <span aria-hidden="true" className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-soft font-bold text-brand-primary">✓</span>
-                <span>{tip}</span>
+                <span>
+                  <FormattedText text={tip} />
+                </span>
               </li>
             ))}
           </ul>
@@ -247,7 +282,7 @@ export default function ServiceLanding({
       <FleetOptions
         keys={page.recommendedFleet}
         heading="Choose a vehicle for your itinerary"
-        description="Compare the existing Sprinter van, SUV and limousine options. Share passenger and luggage details to confirm vehicle fit and availability."
+        description="Compare our chauffeur-driven Sprinter vans, SUVs and limousines. Share passenger and luggage details to confirm vehicle fit and availability."
       />
 
       <MidPageCTA content={content} />
@@ -258,22 +293,47 @@ export default function ServiceLanding({
         <div className="mx-auto max-w-content">
           <p className="eyebrow mb-4">Keep planning</p>
           <h2 className="section-heading text-3xl sm:text-4xl" id="related-services-title">Related transportation services</h2>
-          <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {relatedServices.slice(0, 3).map((service, index) => (
-              <li className="service-card rounded-lg border border-brand-text/10 p-5" key={service.slug}>
+              <li className="service-card rounded-lg border border-brand-text/10 p-5 shadow-sm transition hover:shadow-md" key={service.slug}>
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">Related service {index + 1}</span>
                 <a className="mt-3 block font-bold leading-6 text-brand-dark hover:text-brand-primary" href={`/${service.slug}`}>
                   {service.title} <span aria-hidden="true">↗</span>
                 </a>
                 <p className="mt-2 text-sm leading-6 text-brand-muted">{service.description}</p>
+                <a
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-brand-primary hover:decoration-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 rounded-xs"
+                  href={`/${service.slug}`}
+                >
+                  Book {service.title} <span aria-hidden="true">→</span>
+                </a>
               </li>
             ))}
             <li className="service-card rounded-lg border border-brand-primary/20 bg-brand-soft p-5">
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">Explore the fleet</span>
-              <a className="mt-3 block font-bold leading-6 text-brand-dark hover:text-brand-primary" href="/fleet">
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">Explore our fleet</span>
+              <a className="mt-3 block font-bold leading-6 text-brand-dark transition-colors hover:text-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 rounded-xs" href="/fleet">
                 Compare Sprinter vans, SUVs and limousines <span aria-hidden="true">↗</span>
               </a>
-              <p className="mt-2 text-sm leading-6 text-brand-muted">Review the existing vehicle categories and share your passenger and luggage needs.</p>
+              <p className="mt-2 text-sm leading-6 text-brand-muted">
+                Review vehicle options and discover the best fit for your group:
+              </p>
+              <ul className="mt-3 space-y-1.5 text-xs font-semibold">
+                <li>
+                  <a className="text-brand-accent underline decoration-brand-secondary underline-offset-4 transition-colors hover:text-brand-primary hover:decoration-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 rounded-xs" href="/sprinter-van-rental-with-driver-new-york-nyc">
+                    Mercedes-Benz Sprinter Vans (10–14 pass) ↗
+                  </a>
+                </li>
+                <li>
+                  <a className="text-brand-accent underline decoration-brand-secondary underline-offset-4 transition-colors hover:text-brand-primary hover:decoration-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 rounded-xs" href="/luxury-suv-rental-nyc">
+                    Chauffeured Luxury SUVs (1–6 pass) ↗
+                  </a>
+                </li>
+                <li>
+                  <a className="text-brand-accent underline decoration-brand-secondary underline-offset-4 transition-colors hover:text-brand-primary hover:decoration-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 rounded-xs" href="/lincoln-stretch-limo-rental-nyc">
+                    Lincoln Stretch Limousines (up to 10 pass) ↗
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

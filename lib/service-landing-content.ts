@@ -291,7 +291,7 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
   "group-transportation-in-new-york-near-me": {
     introHeading: "Keep your group on one shared itinerary",
     audienceHeading: "For families, teams and event parties",
-    audience: "Private group transportation in NYC helps coordinate several travelers around a shared schedule. Start with passenger and luggage counts, then list pickup locations, destinations and fixed arrival times to plan group transportation in New York.",
+    audience: "Private group transportation in NYC helps coordinate several travelers around a shared schedule. Whether arranging [wedding guest shuttles](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans), dignified [funeral family travel](/funeral-transportation-services-nyc-dignified-professional), [corporate team transportation](/corporate-transportation-service-with-driver-in-new-york) or [NYC airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs), our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) keep your party together.",
     benefits: [
       { title: "Coordinate the same route", description: "Share one itinerary for group pickups, stops and the final destination." },
       { title: "Consider a Sprinter van", description: "Sprinter vans are featured for groups; confirm the exact seating and luggage fit." },
@@ -317,5 +317,93 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
     introImage: "services/private-transportation.webp",
     introImageAlt: "Private chauffeur transportation for a group itinerary",
     expectedImage: "services/group-transportation.webp",
+  },
+  "funeral-transportation-services-nyc-dignified-professional": {
+    introHeading: "Dignified, stress-free transportation for grieving families",
+    audienceHeading: "Serving families across Manhattan, Brooklyn, Queens, The Bronx & Staten Island",
+    audience:
+      "During a difficult time of loss, coordinating family travel logistics should be the least of your concerns. NY Travel Limo provides respectful, chauffeur-driven passenger transportation for families, relatives and memorial guests across all five NYC boroughs. Choose from our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [private luxury SUVs](/luxury-suv-rental-nyc) and [stretch limousines](/lincoln-stretch-limo-rental-nyc). Please note: we specialize exclusively in passenger comfort and [group transportation in NYC](/group-transportation-in-new-york-near-me); we do not transport caskets or manage mortuary services. Every vehicle is rented strictly with an experienced, professional chauffeur—no bare vehicle rentals are provided.",
+    benefits: [
+      {
+        title: "Keep the Family Together",
+        description:
+          "Our Mercedes-Benz Sprinter vans accommodate 10 to 14 passengers, providing a quiet, private sanctuary where family members can comfort one another throughout the day.",
+      },
+      {
+        title: "Professional Chauffeur Included",
+        description:
+          "All vehicles are rented strictly with an experienced, licensed chauffeur. We handle NYC traffic, bridges, tolls and cemetery parking so your family never has to worry.",
+      },
+      {
+        title: "Full 5-Borough NYC Coverage",
+        description:
+          "Prompt, dignified service across Manhattan, Brooklyn, Queens, The Bronx and Staten Island, as well as suburban tri-state memorial parks and cemeteries.",
+      },
+    ],
+    steps: [
+      {
+        title: "Share your family itinerary",
+        description:
+          "Provide the date, pickup addresses for family members, service times, funeral chapel, church, cemetery and repast location.",
+      },
+      {
+        title: "Select your chauffeured vehicle",
+        description:
+          "Choose our featured 10–14 passenger Sprinter vans to keep the family together, an executive SUV for immediate family or an elegant limousine.",
+      },
+      {
+        title: "Rely on compassionate service",
+        description:
+          "Your professional chauffeur arrives early in formal dark attire, assists family members and remains dedicated throughout the service.",
+      },
+    ],
+    journeyHeading: "Respectful coordination for every part of the memorial day",
+    journey: [
+      "Timely morning pickups at private residences or hotels across the five boroughs.",
+      "Dignified arrival at the funeral home, chapel or house of worship for viewing and services.",
+      "Procession-aligned or direct escort to the cemetery, mausoleum or memorial park for interment.",
+      "Comfortable, unhurried transit to the family repast gathering, luncheon reception or return home.",
+    ],
+    planningHeading: "Helpful considerations for funeral transportation",
+    planningTips: [
+      "Confirm the total passenger count to reserve the appropriate 10–14 passenger Mercedes Sprinter van or executive SUV.",
+      "List all stops in sequence—residence, chapel, church, cemetery and repast—with estimated service times.",
+      "Book an hourly charter package so your chauffeur remains patiently on standby during all proceedings.",
+      "Remember that our service is dedicated exclusively to chauffeured passenger transport for family and friends; casket arrangements are handled by your funeral director.",
+    ],
+    midCtaHeading: "Need to arrange family funeral transportation in NYC?",
+    midCtaDescription:
+      "Share your family's schedule or speak with our team 24/7 at (718) 397-1333 to receive an immediate, respectful quote for chauffeured Sprinter vans, SUVs or limousines.",
+    faqs: [
+      {
+        question: "Is a chauffeur included with the vehicle rental?",
+        answer:
+          "Yes, without exception. All vehicles at NY Travel Limo are rented strictly with a licensed, experienced, professional chauffeur. We do not provide self-drive or bare vehicle rentals under any circumstances. Your chauffeur manages all driving, routing, tolls and curbside assistance.",
+      },
+      {
+        question: "Do you handle the casket or provide hearse / mortuary services?",
+        answer:
+          "No. NY Travel Limo specializes exclusively in passenger transportation for family members, relatives and attendees. We do not provide hearse services, casket transport or funeral director duties. We work seamlessly alongside your chosen funeral home's procession and schedule.",
+      },
+      {
+        question: "Why are Mercedes-Benz Sprinter vans recommended for funerals?",
+        answer:
+          "Our 10- to 14-passenger [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are our most recommended choice for funeral transportation because they allow the entire family to travel together in quiet comfort and unity. They feature high ceilings for easy walk-in entry (ideal for elderly relatives), tinted privacy windows and ample cargo room for flowers and personal belongings. For smaller immediate families, we also provide [executive SUVs](/luxury-suv-rental-nyc) and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc).",
+      },
+      {
+        question: "Do you operate in all five boroughs of New York City?",
+        answer:
+          "Yes. We serve all five NYC boroughs—Manhattan, Brooklyn, Queens, The Bronx and Staten Island—as well as cemeteries and funeral homes throughout Long Island, Westchester and New Jersey.",
+      },
+      {
+        question: "Can the vehicle and chauffeur remain on standby throughout the day?",
+        answer:
+          "Yes. We offer dedicated [hourly transportation charter packages](/transportation-by-hours-in-new-york) so your vehicle and chauffeur remain exclusively on-site during the viewing, religious service, cemetery interment and repast gathering.",
+      },
+    ],
+    imageAlt: "Chauffeur-driven Mercedes-Benz Sprinter van for dignified funeral family transportation in NYC",
+    introImage: "services/Sprinter-Van-Rental-in-New-York-City-with-Driver-NYC.png",
+    introImageAlt: "Professional chauffeur standing beside a Mercedes-Benz Sprinter van in New York City",
+    expectedImage: "services/sprinter-vans-rental.webp",
   },
 };

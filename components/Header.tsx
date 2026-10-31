@@ -20,6 +20,7 @@ const mobileNavigation = [
       { label: "Point-to-Point Transportation", href: "/point-to-point-transportation-service-in-new-york" },
       { label: "Wine Tours", href: "/wine-tours-transportation-service-from-new-york" },
       { label: "Group Transportation", href: "/group-transportation-in-new-york-near-me" },
+      { label: "Funeral Transportation", href: "/funeral-transportation-services-nyc-dignified-professional" },
     ],
   },
   {

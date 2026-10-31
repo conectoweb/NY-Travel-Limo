@@ -8,6 +8,7 @@ import ContactForm from "@/components/ContactForm";
 import FinalCTA from "@/components/FinalCTA";
 import ServiceLanding from "@/components/ServiceLanding";
 import { serviceLandingContent } from "@/lib/service-landing-content";
+import FormattedText from "@/components/FormattedText";
 
 const relatedServiceSlugs: Record<string, string[]> = {
   "airport-transportation-services-in-nyc-with-professional-chauffeurs": [
@@ -56,9 +57,14 @@ const relatedServiceSlugs: Record<string, string[]> = {
     "transportation-by-hours-in-new-york",
   ],
   "group-transportation-in-new-york-near-me": [
+    "funeral-transportation-services-nyc-dignified-professional",
     "airport-transportation-services-in-nyc-with-professional-chauffeurs",
-    "cruise-terminal-transportation-services-in-new-york-with-driver",
     "luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans",
+  ],
+  "funeral-transportation-services-nyc-dignified-professional": [
+    "group-transportation-in-new-york-near-me",
+    "transportation-by-hours-in-new-york",
+    "point-to-point-transportation-service-in-new-york",
   ],
 };
 
@@ -85,6 +91,15 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
   const fleetHeroImage = fleetHeroImages[page.slug];
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
+  const businessAddress = {
+    "@type": "PostalAddress",
+    streetAddress: "358 W 56th St, Suite 4D",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10019",
+    addressCountry: "US",
+  };
+
   const structuredData = isContactPage
     ? {
         "@context": "https://schema.org",
@@ -93,14 +108,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
         url: "https://www.nytravellimo.com/contact-us",
         hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
         telephone: ["+1-516-256-2892", "+1-718-397-1333"],
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "358 W 56th St, Suite 4D",
-          addressLocality: "New York",
-          addressRegion: "NY",
-          postalCode: "10019",
-          addressCountry: "US",
-        },
+        address: businessAddress,
       }
     : {
         "@context": "https://schema.org",
@@ -111,7 +119,9 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
           "@type": "LocalBusiness",
           name: "NY Travel Limo",
           url: "https://www.nytravellimo.com/",
-          telephone: "+1-718-397-1333",
+          hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
+          telephone: ["+1-516-256-2892", "+1-718-397-1333"],
+          address: businessAddress,
         },
         areaServed: [
           { "@type": "City", name: "New York City" },
@@ -130,7 +140,11 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
-        <ServiceLanding page={page} content={serviceLanding} />
+        <ServiceLanding
+          page={page}
+          content={serviceLanding}
+          relatedSlugs={relatedServiceSlugs[page.slug]}
+        />
       </>
     );
   }
@@ -243,7 +257,11 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                           </p>
                         );
                       }
-                      return <p key={paragraph}>{paragraph}</p>;
+                      return (
+                        <p key={paragraph}>
+                          <FormattedText text={paragraph} />
+                        </p>
+                      );
                     })}
                     {isContactPage && section.heading === "Visit our New York office" && (
                       <a
@@ -261,7 +279,9 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                       {section.bullets.map((item) => (
                         <li className="flex gap-3 text-sm leading-6 text-brand-dark" key={item}>
                           <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
-                          {item}
+                          <span>
+                            <FormattedText text={item} />
+                          </span>
                         </li>
                       ))}
                     </ul>

@@ -71,7 +71,7 @@ export default function ServicesGrid() {
                   className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-brand-accent underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-brand-primary"
                   href={`/${service.slug}`}
                 >
-                  Explore service <span aria-hidden="true">↗</span>
+                  Explore {service.title} <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </li>

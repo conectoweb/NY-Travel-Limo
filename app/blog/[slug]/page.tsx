@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header, { QuoteLink } from "@/components/Header";
 import { blogArticles, findBlogArticle } from "@/lib/site-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import FormattedText from "@/components/FormattedText";
 
 export function generateStaticParams() {
   return blogArticles.map((article) => ({ slug: article.slug }));
@@ -128,11 +129,19 @@ export default async function BlogArticlePage({
                       {section.heading}
                     </h2>
                     <div className="mt-4 space-y-4 text-base leading-7 text-brand-muted">
-                      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                      {section.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>
+                          <FormattedText text={paragraph} />
+                        </p>
+                      ))}
                     </div>
                     {section.bullets && (
                       <ul className="mt-5 list-inside list-disc space-y-2 text-base leading-7 text-brand-muted">
-                        {section.bullets.map((item) => <li key={item}>{item}</li>)}
+                        {section.bullets.map((item) => (
+                          <li key={item}>
+                            <FormattedText text={item} />
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </section>

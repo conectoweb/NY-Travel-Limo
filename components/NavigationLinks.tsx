@@ -24,6 +24,7 @@ const serviceLabels: Record<string, string> = {
   "point-to-point-transportation-service-in-new-york": "Point-to-Point Transportation",
   "wine-tours-transportation-service-from-new-york": "Wine Tour Transportation",
   "group-transportation-in-new-york-near-me": "Group Transportation",
+  "funeral-transportation-services-nyc-dignified-professional": "Funeral Transportation",
 };
 
 export default function NavigationLinks() {

@@ -160,6 +160,7 @@ const relatedServices = [
   { label: "Roadshow transportation", href: "/roadshow-transportation-nyc" },
   { label: "Prom and night out limousines", href: "/lincoln-stretch-limo-rental-nyc" },
   { label: "Hourly van rentals", href: "/transportation-by-hours-in-new-york" },
+  { label: "Funeral transportation", href: "/funeral-transportation-services-nyc-dignified-professional" },
 ];
 
 export default function RatesPage() {
@@ -231,9 +232,12 @@ export default function RatesPage() {
               description="Private 10-hour Sprinter van wine tour. Taxes and gratuity are included. Contact us for pricing."
               images={[vehicleImages.sprinter]}
             >
-              <p className="inline-flex rounded-lg border border-brand-secondary/60 bg-white px-4 py-3 text-lg font-bold text-brand-accent">
-                Contact us for pricing
-              </p>
+              <a
+                href="/contact-us"
+                className="inline-flex items-center gap-2 rounded-lg border border-brand-secondary/60 bg-white px-5 py-3 text-lg font-bold text-brand-accent shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-primary hover:bg-brand-accent hover:text-brand-secondary hover:shadow-md"
+              >
+                Contact Us for Pricing <span aria-hidden="true">↗</span>
+              </a>
             </RateFeature>
 
             <RateFeature

@@ -43,6 +43,18 @@ const nextConfig: NextConfig = {
         destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       },
+      {
+        // Old brewery tours page → current wine tours transportation page.
+        source: "/brewery-tours-transportation-service-from-new-york",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        // Old sweet sixteen transportation page → current homepage.
+        source: "/sweet-sixteen-transportation-in-new-york",
+        destination: "/",
+        statusCode: 301,
+      },
     ];
   },
 };
