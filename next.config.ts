@@ -55,6 +55,12 @@ const nextConfig: NextConfig = {
         destination: "/",
         statusCode: 301,
       },
+      {
+        // Old sweet sixteen transportation page → current homepage.
+        source: "/nylimo/limousine-services-new-york",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301,
+      },
     ];
   },
 };
