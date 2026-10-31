@@ -61,6 +61,12 @@ const nextConfig: NextConfig = {
         destination: "/lincoln-stretch-limo-rental-nyc",
         statusCode: 301,
       },
+      {
+        // Old brooklyn Sprinter van transportation page → current Sprinter van service page.
+        source: "/sprinter-van-rental-with-driver-in-brooklyn-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
     ];
   },
 };
