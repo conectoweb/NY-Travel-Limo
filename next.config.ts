@@ -44,15 +44,15 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
-        // Old brewery tours page → current wine tours transportation page.
+        // Brewery Tours → página de transporte grupal.
         source: "/brewery-tours-transportation-service-from-new-york",
-        destination: "/wine-tours-transportation-service-from-new-york",
+        destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       },
       {
-        // Old sweet sixteen transportation page → current homepage.
+        // Sweet Sixteen → página de transporte grupal.
         source: "/sweet-sixteen-transportation-in-new-york",
-        destination: "/",
+        destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       },
       {
@@ -65,6 +65,102 @@ const nextConfig: NextConfig = {
         // Old brooklyn Sprinter van transportation page → current Sprinter van service page.
         source: "/sprinter-van-rental-with-driver-in-brooklyn-new-york",
         destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old NYLimo homepage → current homepage.
+        source: "/nylimo",
+        destination: "/",
+        statusCode: 301,
+      },
+      {
+        // Old Mercedes-Benz Sprinter van page → current Sprinter van service page.
+        source: "/mercedes-benz-sprinter-van-rental-in-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old NYLimo fleet page → current fleet page.
+        source: "/nylimo/fleet",
+        destination: "/fleet",
+        statusCode: 301,
+      },
+      {
+        // Old fleet.htm page → current fleet page.
+        source: "/fleet.htm",
+        destination: "/fleet",
+        statusCode: 301,
+      },
+      {
+        // Old Sprinter van page → current Sprinter van service page.
+        source: "/vehicles/sprinter",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old chauffeured limousine rental service page → current Lincoln Stretch Limo page.
+        source: "/chauffeured-limousine-rental-service-ny",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old rates page.
+        source: "/package-rate",
+        destination: "/rates",
+        statusCode: 301,
+      },
+      {
+        // Old quote page.
+        source: "/quote",
+        destination: "/contact-us",
+        statusCode: 301,
+      },
+      {
+        // Old wine tour package rate page.
+        source: "/packages/wine-tour---10-hours",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        // Old six-passenger SUV page.
+        source: "/luxury-6-passenger-suv-rental-nyc",
+        destination: "/luxury-suv-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        // Old Atlantic City limousine page.
+        source: "/nylimo/limousine-service-atlantic-city",
+        destination: "/luxury-casino-transportation-service-to-atlantic-city",
+        statusCode: 301,
+      },
+      {
+        // Old funeral page → current funeral landing page.
+        source: "/funeral-transportation-services-nyc",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+
+        source: "/funeral-transport-solutions-in-queens-nyc",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+        // Old family transportation for funeral services page.
+        source: "/family-transportation-funeral-services-manhattan",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+        // Old funeral transfer services page in Bronx.
+        source: "/funeral-transfer-services-bronx",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+        // Old memorial transportation services page in Brooklyn.
+        source: "/memorial-transportation-services-brooklyn",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
         statusCode: 301,
       },
     ];
