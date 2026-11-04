@@ -15,9 +15,9 @@ import Steps from "@/components/Steps";
 import WeddingEventSpotlight from "@/components/WeddingEventSpotlight";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Book Private Transportation in NYC | NY Travel Limo";
+  const title = "Book Private Transportation in NYC";
   const description =
-    "Book private NYC transportation with professional chauffeurs. Transfers to JFK, LGA & EWR airports. Request a quote or call +1 516-256-2892 today!";
+    "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
   const isPublicSite = await isPublicSiteRequest();
 
   return {

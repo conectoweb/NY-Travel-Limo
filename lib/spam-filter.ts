@@ -25,3 +25,4 @@ export function containsSpam(text: unknown): boolean {
   if (!trimmed) return false;
   return spamPatterns.some((pattern) => pattern.test(trimmed));
 }
+
