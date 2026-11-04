@@ -162,11 +162,21 @@ export default function Footer() {
         </nav>
         <div>
           <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-secondary">
-            Service Areas
+            Our Location
           </h2>
-          <p className="text-sm leading-6 text-white/80">
-            Private chauffeur service across Manhattan, Brooklyn, Queens, Bronx, Staten Island, New Jersey, and JFK, LGA &amp; EWR airports.
-          </p>
+          <address className="not-italic text-sm leading-6 text-white/80">
+            <a
+              className="inline-block transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
+              href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View NY Travel Limo location on Google Maps (opens in new tab)"
+            >
+              <span>358 W 56th St. Suite 4D</span>
+              <br />
+              <span>New York, NY 10019</span>
+            </a>
+          </address>
           <a
             className="mt-3 inline-block text-sm font-semibold text-white/80 underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary"
             href="/contact-us"
