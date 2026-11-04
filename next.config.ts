@@ -163,6 +163,12 @@ const nextConfig: NextConfig = {
         destination: "/funeral-transportation-services-nyc-dignified-professional",
         statusCode: 301,
       },
+      {
+        // Old night out transportation page in NYC using Mercedes Sprinter vans.
+        source: "/night-out-transportation-in-nyc-mercedes-sprinter-vans",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
     ];
   },
 };

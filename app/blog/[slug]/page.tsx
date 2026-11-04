@@ -24,13 +24,14 @@ export async function generateMetadata({
 
   const url = `${siteUrl}/blog/${article.slug}`;
   const isPublicSite = await isPublicSiteRequest();
+  const pageTitle = article.seoTitle || `${article.title} | NY Travel Limo`;
 
   return {
-    title: `${article.title} | NY Travel Limo`,
+    title: pageTitle,
     description: article.description,
     alternates: isPublicSite ? { canonical: url } : undefined,
     openGraph: {
-      title: `${article.title} | NY Travel Limo`,
+      title: pageTitle,
       description: article.description,
       type: "article",
       url: isPublicSite ? url : undefined,
@@ -71,11 +72,13 @@ export default async function BlogArticlePage({
     },
     mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
   };
-  const relatedLink = article.slug.includes("airport")
-    ? { label: "Private airport transportation in New York", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" }
-    : article.slug.includes("group")
-      ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
-      : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
+  const relatedLink = article.slug.includes("wine")
+    ? { label: "Wine tour transportation from NYC to regional vineyards", href: "/wine-tours-transportation-service-from-new-york" }
+    : article.slug.includes("airport")
+      ? { label: "Private airport transportation in New York", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" }
+      : article.slug.includes("group")
+        ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
+        : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
 
   return (
     <>
@@ -135,6 +138,36 @@ export default async function BlogArticlePage({
                         </p>
                       ))}
                     </div>
+                    {section.table && (
+                      <div className="mt-6 overflow-x-auto rounded-lg border border-brand-text/15">
+                        <table className="w-full min-w-full divide-y divide-brand-text/10 text-left text-sm">
+                          <thead className="bg-brand-soft">
+                            <tr>
+                              {section.table.headers.map((header) => (
+                                <th
+                                  key={header}
+                                  className="px-4 py-3 font-bold text-brand-dark"
+                                  scope="col"
+                                >
+                                  {header}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-brand-text/10 bg-white">
+                            {section.table.rows.map((row, rIdx) => (
+                              <tr key={rIdx} className="transition-colors hover:bg-brand-soft/40">
+                                {row.map((cell, cIdx) => (
+                                  <td key={cIdx} className="px-4 py-3 text-brand-muted align-top">
+                                    <FormattedText text={cell} />
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
                     {section.bullets && (
                       <ul className="mt-5 list-inside list-disc space-y-2 text-base leading-7 text-brand-muted">
                         {section.bullets.map((item) => (
