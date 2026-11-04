@@ -2,6 +2,7 @@ import { Resend } from "resend";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import { getDatabasePool } from "@/lib/db";
 import { verifyRecaptcha } from "@/lib/recaptcha";
+import { containsSpam, SPAM_ERROR_MESSAGE } from "@/lib/spam-filter";
 
 export const runtime = "nodejs";
 
@@ -152,6 +153,13 @@ export async function POST(request: Request) {
     return Response.json(
       { message: "Check your details, consent and trip information before submitting the quote request." },
       { status: 400 },
+    );
+  }
+
+  if (containsSpam(instructions)) {
+    return Response.json(
+      { message: SPAM_ERROR_MESSAGE },
+      { status: 422 },
     );
   }
 

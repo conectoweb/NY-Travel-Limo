@@ -12,10 +12,12 @@ import Reviews from "@/components/Reviews";
 import ServiceAreas from "@/components/ServiceAreas";
 import ServicesGrid from "@/components/ServicesGrid";
 import Steps from "@/components/Steps";
+import WeddingEventSpotlight from "@/components/WeddingEventSpotlight";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Private Transportation in NYC | NY Travel Limo";
-  const description = "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
+  const title = "Book Private Transportation in NYC | NY Travel Limo";
+  const description =
+    "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
   const isPublicSite = await isPublicSiteRequest();
 
   return {
@@ -40,19 +42,21 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   const businessStructuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Organization",
     name: "NY Travel Limo",
     url: "https://www.nytravellimo.com/",
-    hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
-    telephone: ["+1-516-256-2892", "+1-718-397-1333"],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "358 W 56th St, Suite 4D",
-      addressLocality: "New York",
-      addressRegion: "NY",
-      postalCode: "10019",
-      addressCountry: "US",
-    },
+    telephone: "+1-516-256-2892",
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Manhattan, New York" },
+      { "@type": "AdministrativeArea", name: "Brooklyn, New York" },
+      { "@type": "AdministrativeArea", name: "Queens, New York" },
+      { "@type": "AdministrativeArea", name: "Bronx, New York" },
+      { "@type": "AdministrativeArea", name: "Staten Island, New York" },
+      { "@type": "AdministrativeArea", name: "New Jersey" },
+      { "@type": "Place", name: "John F. Kennedy International Airport (JFK)" },
+      { "@type": "Place", name: "LaGuardia Airport (LGA)" },
+      { "@type": "Place", name: "Newark Liberty International Airport (EWR)" },
+    ],
   };
 
   return (
@@ -69,8 +73,8 @@ export default function HomePage() {
 
         <FeaturedVideo />
         <FleetOptions
-          heading="Room for the ride ahead."
-          description="Explore our vehicle categories, with Mercedes-Benz Sprinter vans at the center of the experience."
+          heading="Chauffeur-Driven Mercedes-Benz Sprinter Van Rental in NYC"
+          description="Reserve executive 10- to 14-passenger Sprinter vans with licensed professional drivers for corporate itineraries, airport travel, and group events."
           images={{
             sprinter: { src: "/images/services/Sprinter-Van-Rental-Rates-in-NYC.webp", alt: "Black Sprinter van ready for private group transportation" },
             suv: { src: "/images/services/suv-transportation.png", alt: "Private SUV transportation vehicle" },
@@ -78,6 +82,7 @@ export default function HomePage() {
           }}
         />
         <ServicesGrid />
+        <WeddingEventSpotlight />
         <Steps />
         <ServiceAreas />
         <Reviews />

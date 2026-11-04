@@ -17,12 +17,12 @@ export type DetailPage = {
 export const fleetPages: DetailPage[] = [
   {
     slug: "sprinter-van-rental-with-driver-new-york-nyc",
-    title: "Sprinter Van Rental with Driver in NYC",
+    title: "NYC Sprinter Van Rental with Chauffeur",
     description:
-      "Request a Mercedes-Benz Sprinter van rental in NYC with a driver for airport, business and group trips. Ask about 10- to 14-passenger configurations and Brooklyn pickups.",
+      "Rent a luxury Mercedes Sprinter van with a chauffeur in NYC. Ideal for corporate travel, executive meetings & private groups. Request a custom quote today!",
     eyebrow: "Featured group transportation",
     intro:
-      "Arrange a Sprinter van rental in NYC with a professional driver for airport transfers, business travel, events or group outings. Mercedes-Benz Sprinter configurations for 10 to 14 passengers are a featured option; confirm the exact seating and luggage fit for your itinerary. Brooklyn Sprinter van service can also be discussed when you share your pickup address.",
+      "Reserve a luxury Mercedes-Benz Sprinter van rental in NYC with a professional, licensed chauffeur. Ideal for corporate roadshows, executive delegations, airport transfers, and private celebrations across Manhattan, Brooklyn, Queens, Bronx, Staten Island, and New Jersey. Confirm 10- to 14-passenger layouts and luggage requirements with our team today.",
     sections: [
       {
         heading: "Mercedes Sprinter rental for New York group travel",
@@ -192,9 +192,9 @@ export const servicePages: DetailPage[] = [
         ],
       },
       {
-        heading: "Visit our New York office",
+        heading: "Online and Phone Reservations",
         paragraphs: [
-          "NY Travel Limo is located at 358 W 56th St, Suite 4D, New York, NY 10019. Please contact us before visiting to confirm arrangements.",
+          "NY Travel Limo provides private chauffeur transportation throughout New York City and New Jersey. We do not accommodate walk-in visits; all quotes, reservations, and customer consultations are handled seamlessly online or by calling +1 516-256-2892.",
         ],
       },
     ],
@@ -202,25 +202,36 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "airport-transportation-services-in-nyc-with-professional-chauffeurs",
-    title: "Airport Transportation in NYC",
+    title: "JFK & EWR Airport Limo & Car Service",
     description:
-      "Arrange NYC airport transportation to or from JFK, LaGuardia or Newark with a private chauffeur. Share your flight, pickup, destination and luggage details.",
-    eyebrow: "Airport transfers",
+      "Book private JFK, LGA & EWR airport transfers with professional chauffeurs. Luxury Sprinter vans, SUVs & limos. Call +1 516-256-2892 or request a quote!",
+    eyebrow: "Airport chauffeur service",
     intro:
-      "Plan private airport transportation in NYC to or from JFK, LaGuardia and Newark. NY Travel Limo helps individuals, families, business travelers and groups organize a New York airport transportation service around flight details, pickup locations, passengers and luggage.",
+      "Reserve private airport limo and car service in NYC for JFK, LaGuardia (LGA), and Newark Liberty (EWR). NY Travel Limo coordinates punctual curbside pickups and airport transfers with professional, licensed chauffeurs operating luxury Mercedes-Benz Sprinter vans, private SUVs, and stretch limousines. Provide your flight details to request your personalized airport quote.",
     sections: [
       {
-        heading: "Airport rides planned around your trip",
+        heading: "Airport transfers planned around your flight schedule",
         paragraphs: [
-          "Tell us which airport you are using, where you are going, when you need the ride and how many people and bags are traveling. For arrivals, include your flight information and preferred pickup details in your request.",
-          "Traveling with a group or extra luggage? A [Mercedes-Benz Sprinter van rental](/sprinter-van-rental-with-driver-new-york-nyc) is our premier group option. [Chauffeured luxury SUVs](/luxury-suv-rental-nyc) and [private limousines](/lincoln-stretch-limo-rental-nyc) are also available; ask our team to help you compare. Connecting to a sailing? Ask about our [cruise terminal transfers in New York](/cruise-terminal-transportation-services-in-new-york-with-driver).",
+          "Whether arriving on an international flight at JFK or departing for business through Newark (EWR) or LaGuardia (LGA), NY Travel Limo delivers dependable, private airport transfers across all five NYC boroughs and New Jersey. Your dedicated chauffeur handles city traffic, bridge crossings, and terminal access so you can travel without stress.",
+          "Traveling with colleagues or substantial luggage? Our [Mercedes-Benz Sprinter van rental](/sprinter-van-rental-with-driver-new-york-nyc) accommodates 10 to 14 passengers with ample cargo space. [Private executive SUVs](/luxury-suv-rental-nyc) and [stretch limousines](/lincoln-stretch-limo-rental-nyc) provide sophisticated options for individuals and executive parties. Connecting to a cruise? Inquire about our [cruise terminal transfers in New York](/cruise-terminal-transportation-services-in-new-york-with-driver).",
         ],
-        bullets: ["John F. Kennedy International Airport (JFK)", "LaGuardia Airport (LGA)", "Newark Liberty International Airport (EWR)"],
+        bullets: [
+          "John F. Kennedy International Airport (JFK)",
+          "LaGuardia Airport (LGA)",
+          "Newark Liberty International Airport (EWR)",
+        ],
       },
       {
-        heading: "What to include in your quote request",
+        heading: "Flight details, wait times, and pickup coordination",
         paragraphs: [
-          "Provide your travel date, flight details, pickup and destination addresses, passenger count and luggage needs. Add any child-seat request or additional stop so the team can review your full itinerary.",
+          "To coordinate your airport transfer smoothly, please include your airline name, flight number, and scheduled landing or departure time in your [online quote request](/contact-us). This information allows our dispatch team to organize your chauffeur's arrival schedule around your flight.",
+          "Please note: while our chauffeurs coordinate pickup timing around your scheduled itinerary, exact complimentary waiting periods (grace periods) and live automated flight-tracking policies are subject to confirmation. Clients should confirm specific wait time policies directly with our reservation team when finalizing their booking.",
+        ],
+      },
+      {
+        heading: "What to include in your airport quote request",
+        paragraphs: [
+          "Provide your travel date, airline and flight numbers, terminal details, destination address, total passenger count, and number of bags. If you need multiple stops, child seats, or a return airport pickup, include those details so our team can provide an all-inclusive quote.",
         ],
       },
     ],
