@@ -11,6 +11,11 @@ import { serviceLandingContent } from "@/lib/service-landing-content";
 import FormattedText from "@/components/FormattedText";
 
 const relatedServiceSlugs: Record<string, string[]> = {
+  "sprinter-van-rental-with-driver-new-york-nyc": [
+    "airport-transportation-services-in-nyc-with-professional-chauffeurs",
+    "corporate-transportation-service-with-driver-in-new-york",
+    "group-transportation-in-new-york-near-me",
+  ],
   "airport-transportation-services-in-nyc-with-professional-chauffeurs": [
     "cruise-terminal-transportation-services-in-new-york-with-driver",
     "point-to-point-transportation-service-in-new-york",
@@ -91,24 +96,27 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
   const fleetHeroImage = fleetHeroImages[page.slug];
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
-  const businessAddress = {
-    "@type": "PostalAddress",
-    streetAddress: "358 W 56th St, Suite 4D",
-    addressLocality: "New York",
-    addressRegion: "NY",
-    postalCode: "10019",
-    addressCountry: "US",
-  };
+
+  const areaServedList = [
+    { "@type": "AdministrativeArea", name: "Manhattan, New York" },
+    { "@type": "AdministrativeArea", name: "Brooklyn, New York" },
+    { "@type": "AdministrativeArea", name: "Queens, New York" },
+    { "@type": "AdministrativeArea", name: "Bronx, New York" },
+    { "@type": "AdministrativeArea", name: "Staten Island, New York" },
+    { "@type": "AdministrativeArea", name: "New Jersey" },
+    { "@type": "Place", name: "John F. Kennedy International Airport (JFK)" },
+    { "@type": "Place", name: "LaGuardia Airport (LGA)" },
+    { "@type": "Place", name: "Newark Liberty International Airport (EWR)" },
+  ];
 
   const structuredData = isContactPage
     ? {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "Organization",
         name: "NY Travel Limo",
         url: "https://www.nytravellimo.com/contact-us",
-        hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
-        telephone: ["+1-516-256-2892", "+1-718-397-1333"],
-        address: businessAddress,
+        telephone: "+1-516-256-2892",
+        areaServed: areaServedList,
       }
     : {
         "@context": "https://schema.org",
@@ -116,18 +124,12 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
         name: page.title,
         description: page.description,
         provider: {
-          "@type": "LocalBusiness",
+          "@type": "Organization",
           name: "NY Travel Limo",
           url: "https://www.nytravellimo.com/",
-          hasMap: "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8",
-          telephone: ["+1-516-256-2892", "+1-718-397-1333"],
-          address: businessAddress,
+          telephone: "+1-516-256-2892",
         },
-        areaServed: [
-          { "@type": "City", name: "New York City" },
-          { "@type": "AdministrativeArea", name: "New York" },
-          { "@type": "AdministrativeArea", name: "New Jersey" },
-        ],
+        areaServed: areaServedList,
       };
 
   const serviceLanding = serviceLandingContent[page.slug];
@@ -238,41 +240,11 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                     {section.heading}
                   </h2>
                   <div className="mt-4 space-y-4 text-base leading-7 text-brand-muted">
-                    {section.paragraphs.map((paragraph) => {
-                      const address = "358 W 56th St, Suite 4D, New York, NY 10019";
-                      if (isContactPage && paragraph.includes(address)) {
-                        const [beforeAddress, afterAddress] = paragraph.split(address);
-                        return (
-                          <p key={paragraph}>
-                            {beforeAddress}
-                            <a
-                              className="font-semibold text-brand-accent underline decoration-brand-secondary underline-offset-4 hover:text-brand-primary"
-                              href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            >
-                              {address}
-                            </a>
-                            {afterAddress}
-                          </p>
-                        );
-                      }
-                      return (
-                        <p key={paragraph}>
-                          <FormattedText text={paragraph} />
-                        </p>
-                      );
-                    })}
-                    {isContactPage && section.heading === "Visit our New York office" && (
-                      <a
-                        className="text-link inline-flex min-h-11 items-center"
-                        href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        Get directions on Google Maps <span aria-hidden="true" className="ml-2">↗</span>
-                      </a>
-                    )}
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>
+                        <FormattedText text={paragraph} />
+                      </p>
+                    ))}
                   </div>
                   {section.bullets && (
                     <ul className="mt-5 grid gap-3 sm:grid-cols-2">

@@ -162,20 +162,11 @@ export default function Footer() {
         </nav>
         <div>
           <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-secondary">
-            Our location
+            Service Areas
           </h2>
-          <address className="text-sm not-italic leading-6 text-white/80">
-            <a
-              className="underline decoration-brand-secondary underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
-              href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              358 W 56th St, Suite 4D
-              <br />
-              New York, NY 10019
-            </a>
-          </address>
+          <p className="text-sm leading-6 text-white/80">
+            Private chauffeur service across Manhattan, Brooklyn, Queens, Bronx, Staten Island, New Jersey, and JFK, LGA &amp; EWR airports.
+          </p>
           <a
             className="mt-3 inline-block text-sm font-semibold text-white/80 underline decoration-brand-secondary underline-offset-4 hover:text-brand-secondary"
             href="/contact-us"

@@ -32,12 +32,14 @@ export default function ServicesGrid() {
       <div className="mx-auto max-w-content">
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="eyebrow mb-4">NYC transportation services</p>
-            <h2 className="section-heading" id="services-title">The right ride for what brings you to New York.</h2>
+            <p className="eyebrow mb-4">NYC airport &amp; chauffeur services</p>
+            <h2 className="section-heading" id="services-title">
+              Private Airport Transfers to JFK, LGA, and EWR
+            </h2>
           </div>
           <p className="max-w-sm text-sm leading-6 text-brand-muted">
-            From private airport transportation to business schedules and group travel, explore
-            service options shaped around your itinerary.
+            Reliable private airport transportation, executive roadshows, and coordinated group travel
+            tailored to your exact New York itinerary.
           </p>
           <a className="text-link text-sm" href="/services">
             Explore all services

@@ -3,6 +3,7 @@
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import { eventTypes, vehicleOptions } from "@/lib/contact-form-options";
 import RecaptchaCheckbox, { type RecaptchaCheckboxHandle } from "@/components/RecaptchaCheckbox";
+import { containsSpam, SPAM_ERROR_MESSAGE } from "@/lib/spam-filter";
 
 const isPreviewMode = process.env.NEXT_PUBLIC_APP_MODE !== "production";
 
@@ -75,6 +76,11 @@ function validateForm(form: HTMLFormElement): ValidationErrors {
         errors.pickupDay = `Enter a day from 1 to ${maxDay} for the selected month.`;
       }
     }
+  }
+
+  const instructionsElement = form.elements.namedItem("instructions");
+  if (instructionsElement instanceof HTMLTextAreaElement && containsSpam(instructionsElement.value)) {
+    errors.instructions = SPAM_ERROR_MESSAGE;
   }
 
   return errors;

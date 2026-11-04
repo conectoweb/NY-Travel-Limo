@@ -18,30 +18,153 @@ export type ServiceLandingContent = {
 };
 
 export const serviceLandingContent: Record<string, ServiceLandingContent> = {
-  "airport-transportation-services-in-nyc-with-professional-chauffeurs": {
-    introHeading: "Start with a clear airport pickup plan",
-    audienceHeading: "For arrivals, departures and connections",
-    audience: "A private airport transportation service in NYC can help individuals, families, business travelers and groups coordinate rides between New York City and JFK, LaGuardia or Newark. For NYC airport transportation, share the airport, pickup location, destination, schedule, passenger count and luggage.",
+  "sprinter-van-rental-with-driver-new-york-nyc": {
+    introHeading: "Premium Group and Corporate Chauffeur Transportation in NYC",
+    audienceHeading: "For Corporate Teams, Delegations & Private Group Travel",
+    audience:
+      "NY Travel Limo provides luxury [Mercedes-Benz Sprinter van rentals](/sprinter-van-rental-with-driver-new-york-nyc) across New York City and New Jersey, operated exclusively by professional, licensed chauffeurs. Whether coordinating executive roadshows, corporate conferences, group airport transfers to JFK, LGA, or EWR, or guest shuttles for celebrations, our high-roof Sprinter vans deliver an uncompromising blend of comfort, elegance, and reliability.",
     benefits: [
-      { title: "One itinerary to share", description: "Provide your airport, addresses and timing together so the requested ride reflects the trip you are planning." },
-      { title: "Vehicle options for the party", description: "Compare a Sprinter van, SUV or limousine using your passenger and luggage count." },
-      { title: "Arrival details in context", description: "Include airline and flight information with your request so pickup arrangements can be discussed." },
+      {
+        title: "Executive Group Comfort",
+        description:
+          "High-roof luxury cabins accommodating 10 to 14 passengers with premium leather seating, climate control, charging ports, and dedicated luggage capacity.",
+      },
+      {
+        title: "Licensed Professional Chauffeur",
+        description:
+          "Eliminate NYC traffic, parking, and bridge navigation stress with a dedicated, licensed driver focused strictly on your schedule and safety.",
+      },
+      {
+        title: "Seamless Corporate Logistics",
+        description:
+          "Consolidate multiple rides into a single cohesive vehicle for financial roadshows, meetings, hotel transfers, and corporate events across NYC.",
+      },
     ],
     steps: [
-      { title: "Share your flight and locations", description: "Add the airport, travel date, flight information where relevant, addresses, passenger count and bags." },
-      { title: "Review the proposed ride", description: "Confirm the vehicle category, pickup instructions and trip details through the reservation process." },
-      { title: "Complete the reservation", description: "Continue on the reservation website for booking details and any next steps." },
+      {
+        title: "Share Your Group Schedule",
+        description:
+          "Provide your travel date, passenger count, luggage volume, and pickup locations across New York City or New Jersey in our [online quote form](/contact-us).",
+      },
+      {
+        title: "Review Vehicle & Configuration",
+        description:
+          "Confirm passenger seating, baggage capacity, and any customized stops or hourly charter requirements with our dispatch team.",
+      },
+      {
+        title: "Confirm Your Reservation",
+        description:
+          "Receive clear all-inclusive pricing and complete your private chauffeur booking with 24/7 dispatch support.",
+      },
     ],
-    journeyHeading: "Details that help plan an airport ride",
-    journey: ["For an arrival, identify the airport and share the flight details available to you.", "For a departure, provide the pickup address and the time you need to reach the terminal.", "If the ride includes a hotel, cruise terminal or extra stop, include each location in order."],
-    planningHeading: "Before you request a quote",
-    planningTips: ["Check that you have the correct airport: JFK, LaGuardia (LGA) or Newark (EWR).", "Estimate the number of travelers and bags, including larger luggage.", "Share special pickup instructions or an additional stop in the itinerary."],
-    midCtaHeading: "Airport trip on the calendar?",
-    midCtaDescription: "Send the flight, location and luggage details with your quote request to discuss the right vehicle for your ride.",
+    journeyHeading: "Popular NYC Sprinter Van Itineraries",
+    journey: [
+      "Executive roadshows and investor conferences connecting Wall Street, Midtown Manhattan, and regional corporate campuses.",
+      "Coordinated group airport transfers to JFK, LaGuardia, and Newark Liberty with dedicated luggage handling.",
+      "VIP shuttles for weddings, galas, and private family gatherings across all five NYC boroughs and New Jersey venues.",
+      "Dedicated hourly charters for client entertainment, corporate site visits, and private New York excursions.",
+    ],
+    planningHeading: "Tips for Booking a Sprinter Van in NYC",
+    planningTips: [
+      "Confirm both your passenger count and luggage volume so we can ensure the optimal seating configuration.",
+      "List multi-stop itineraries in sequential order with scheduled arrival times and anticipated waiting periods.",
+      "Book an hourly charter if your schedule requires vehicle standby between meetings or venue events.",
+    ],
+    midCtaHeading: "Planning Group or Executive Travel in NYC?",
+    midCtaDescription:
+      "Request a customized quote today for private chauffeur-driven Mercedes-Benz Sprinter van service tailored to your itinerary.",
     faqs: [
-      { question: "Which New York airports are listed for service?", answer: "Airport transportation information covers JFK, LaGuardia and Newark. Confirm the exact pickup and destination when requesting your quote." },
-      { question: "What should I include for an airport arrival?", answer: "Share your travel date, airport, flight details, passenger and luggage count, destination and any pickup notes you already have." },
-      { question: "Can a Sprinter van be used for an airport group?", answer: "Sprinter vans are a featured group option. Confirm the available configuration, passenger count and luggage fit for your particular ride." },
+      {
+        question: "How many passengers and luggage items fit in your Sprinter vans?",
+        answer:
+          "Our Mercedes-Benz Sprinter vans comfortably accommodate 10 to 14 passengers depending on seating layout, with ample dedicated cargo space for full-size suitcases, carry-ons, and equipment. Share your passenger and baggage count when requesting a quote to confirm the best configuration.",
+      },
+      {
+        question: "Can we hire a Sprinter van with a chauffeur for full-day corporate itineraries?",
+        answer:
+          "Yes. We offer flexible hourly charters and multi-stop business itineraries throughout Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and New Jersey. Your dedicated chauffeur remains on call throughout your schedule to accommodate meetings, roadshows, and events.",
+      },
+      {
+        question: "Are your Sprinter vans available as self-drive rentals?",
+        answer:
+          "No. All vehicles at NY Travel Limo are rented strictly with an experienced, licensed professional chauffeur. We do not provide self-drive or bare vehicle rentals under any circumstances, ensuring supreme safety, discretion, and reliability.",
+      },
+    ],
+    imageAlt: "Mercedes-Benz Sprinter van for executive group transportation in New York City",
+    introImage: "services/Sprinter Van Rental with Driver in New York NYC.avif",
+    introImageAlt: "Luxury Mercedes-Benz Sprinter van on a New York City avenue",
+    expectedImage: "services/Sprinter-Van-Rental-Rates-in-NYC.webp",
+  },
+  "airport-transportation-services-in-nyc-with-professional-chauffeurs": {
+    introHeading: "Punctual Private Airport Transfers for JFK, LGA & EWR",
+    audienceHeading: "For Executive Travelers, Families & Traveling Groups",
+    audience:
+      "NY Travel Limo provides premier private airport limo and car service connecting New York City, New Jersey, and the tri-state area with John F. Kennedy International (JFK), LaGuardia (LGA), and Newark Liberty (EWR). Experience private curbside pickups, licensed professional chauffeurs, and dedicated fleet options including [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [luxury SUVs](/luxury-suv-rental-nyc), and [stretch limousines](/lincoln-stretch-limo-rental-nyc).",
+    benefits: [
+      {
+        title: "Punctual Curbside & Terminal Pickups",
+        description:
+          "Coordinate direct, stress-free transfers to and from JFK, LGA, and EWR with chauffeurs who monitor routing and traffic.",
+      },
+      {
+        title: "Fleet Sized for Your Luggage",
+        description:
+          "Select spacious 10- to 14-passenger Sprinter vans or executive SUVs with generous cargo room for all luggage.",
+      },
+      {
+        title: "Flight Details Coordinated",
+        description:
+          "Provide airline and flight numbers in your request so our dispatch team can schedule your pickup around your flight schedule.",
+      },
+    ],
+    steps: [
+      {
+        title: "Submit Flight & Travel Details",
+        description:
+          "Include your airport (JFK, LGA, or EWR), flight number, airline, travel date, passenger count, luggage, and destination in our [quote form](/contact-us).",
+      },
+      {
+        title: "Select Vehicle & Review Terms",
+        description:
+          "Choose between an executive SUV, Sprinter van, or limousine, and confirm pickup instructions with our team.",
+      },
+      {
+        title: "Confirm Your Airport Transfer",
+        description:
+          "Receive your confirmed booking with 24/7 direct dispatch contact for worry-free airport travel.",
+      },
+    ],
+    journeyHeading: "Airport Pickup Coordination & Timing",
+    journey: [
+      "For arrivals: provide your airline, flight number, and arrival terminal so pickup logistics can be organized in advance.",
+      "For departures: specify your pickup location and required terminal arrival time, accounting for peak NYC traffic.",
+      "For multi-stop itineraries: connect airport arrivals directly with Manhattan hotels, business meetings, or cruise terminals.",
+    ],
+    planningHeading: "Important Airport Travel Details",
+    planningTips: [
+      "Double-check your airport: John F. Kennedy (JFK), LaGuardia (LGA), or Newark Liberty (EWR).",
+      "Confirm flight numbers and scheduled arrival times when submitting your request.",
+      "Note that specific complimentary waiting times (grace periods) and live flight-tracking policies should be confirmed directly with NY Travel Limo when booking.",
+    ],
+    midCtaHeading: "Ready to Book Your NYC Airport Transfer?",
+    midCtaDescription:
+      "Share your flight and destination details to request an upfront quote for private airport transportation in NYC.",
+    faqs: [
+      {
+        question: "Which airports in the New York metropolitan area do you serve?",
+        answer:
+          "We provide private chauffeur-driven airport transportation to and from John F. Kennedy International Airport (JFK), Newark Liberty International Airport (EWR), and LaGuardia Airport (LGA), connecting all five NYC boroughs and New Jersey.",
+      },
+      {
+        question: "How are airport arrival pickups, wait times, and flight details coordinated?",
+        answer:
+          "When requesting a quote, please provide your airline, flight number, and scheduled arrival time. Your chauffeur coordinates pickup timing around your flight itinerary. Please note that specific complimentary waiting periods (grace periods) and automated live flight-tracking policies are subject to confirmation with our reservation team.",
+      },
+      {
+        question: "Which vehicles are available for airport transfers with luggage?",
+        answer:
+          "We offer luxury Mercedes-Benz Sprinter vans (comfortably seating 10 to 14 passengers with generous cargo space), private executive SUVs for individuals and families with bags, and Lincoln stretch limousines for VIP travel. Confirm your passenger and baggage count when booking.",
+      },
     ],
     imageAlt: "Airport transportation image for a private New York trip",
     introImage: "services/Sprinter Van Rental with Driver in New York NYC.avif",

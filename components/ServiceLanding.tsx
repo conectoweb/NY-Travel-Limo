@@ -155,6 +155,24 @@ export default function ServiceLanding({
         <span aria-hidden="true" className="absolute bottom-0 right-8 hidden h-24 w-px bg-brand-secondary/80 lg:block" />
       </section>
 
+      {page.slug === "sprinter-van-rental-with-driver-new-york-nyc" && (
+        <section aria-label="Sprinter van video" className="bg-white px-5 pt-10 sm:px-8 sm:pt-14">
+          <div className="mx-auto max-w-4xl">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl bg-brand-dark shadow-lg">
+              <iframe
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/bvVhjvuMQyk?start=14&autoplay=0&rel=0"
+                title="NY Travel Limo Mercedes-Benz Sprinter van with driver in New York City"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       <section aria-labelledby="service-intro-title" className="section-pad overflow-hidden bg-white">
         <div className="mx-auto grid max-w-content gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
           <div>
