@@ -27,27 +27,30 @@ export default function Reviews() {
   return (
     <section
       aria-labelledby="reviews-title"
-      className="section-pad border-t border-brand-text/10 bg-brand-soft"
+      className="border-t border-brand-text/10 bg-brand-soft px-5 pt-8 pb-3 sm:px-8 sm:pt-9 sm:pb-4 md:pt-10 md:pb-4"
       id="reviews"
     >
       <div className="mx-auto max-w-content">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
-          <div>
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-text/15 bg-white px-3.5 py-1 text-xs font-semibold text-brand-dark shadow-2xs">
-              <GoogleIcon className="h-4 w-4" />
+        <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center md:gap-8">
+          <div className="max-w-2xl">
+            <div className="mb-2.5 inline-flex items-center gap-2 rounded-full border border-brand-text/15 bg-white px-3 py-1 text-xs font-semibold text-brand-dark shadow-2xs">
+              <GoogleIcon className="h-3.5 w-3.5" />
               <span>Google Maps Reviews</span>
             </div>
-            <h2 className="section-heading" id="reviews-title">
+            <h2
+              className="font-display text-2xl font-bold tracking-tight text-brand-dark sm:text-3xl"
+              id="reviews-title"
+            >
               Reviews from NY Travel Limo clients
             </h2>
-            <p className="mt-3 max-w-xl text-base leading-7 text-brand-muted">
+            <p className="mt-2 text-sm leading-relaxed text-brand-muted sm:text-base">
               Read customer feedback on our Google Maps business profile.
             </p>
           </div>
 
-          <div className="shrink-0">
+          <div className="w-full shrink-0 sm:w-auto">
             <a
-              className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-brand-accent bg-brand-accent px-7 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-brand-accent bg-brand-accent px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary sm:w-auto"
               href={googleMapsProfileUrl}
               rel="noopener noreferrer"
               target="_blank"
