@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { BlogArticle } from "@/lib/site-content";
+import Link from "next/link";
 
 function readingTime(article: BlogArticle): number {
   const articleText = [
@@ -72,12 +73,27 @@ export default function BlogCard({ article }: { article: BlogArticle }) {
             </svg>
             {readingTime(article)} min read
           </span>
-          <span className="inline-flex items-center gap-2 text-brand-secondary transition-transform group-hover:translate-x-1">
+          <Link
+            href={`/blog/${article.slug}`}
+            aria-label={`Read ${article.title}`}
+            className="group inline-flex items-center gap-2 text-brand-secondary transition-transform hover:translate-x-1"
+          >
             Read article
-            <svg aria-hidden="true" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-              <path d="M5 12h14m-6-6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            >
+              <path
+                d="M5 12h14m-6-6 6 6-6 6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
-          </span>
+          </Link>
         </div>
       </div>
     </article>
