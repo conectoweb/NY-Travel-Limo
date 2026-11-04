@@ -15,7 +15,7 @@ import Steps from "@/components/Steps";
 import WeddingEventSpotlight from "@/components/WeddingEventSpotlight";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Book Private Transportation in NYC";
+  const title = "Book Private Transportation in NYC | NY Travel Limo";
   const description =
     "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
   const isPublicSite = await isPublicSiteRequest();
