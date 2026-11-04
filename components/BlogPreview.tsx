@@ -14,7 +14,7 @@ export default function BlogPreview() {
           </div>
           <a className="text-link text-sm" href="/blog">Explore all articles</a>
         </div>
-        <ul className="grid gap-5 md:grid-cols-3">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {blogArticles.map((article) => (
             <li key={article.slug}><BlogCard article={article} /></li>
           ))}

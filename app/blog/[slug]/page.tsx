@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header, { QuoteLink } from "@/components/Header";
 import { blogArticles, findBlogArticle } from "@/lib/site-content";
-import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { siteUrl } from "@/lib/seo";
 import FormattedText from "@/components/FormattedText";
 
 export function generateStaticParams() {
@@ -23,21 +24,33 @@ export async function generateMetadata({
   }
 
   const url = `${siteUrl}/blog/${article.slug}`;
-  const isPublicSite = await isPublicSiteRequest();
   const pageTitle = article.seoTitle || `${article.title} | NY Travel Limo`;
 
   return {
     title: pageTitle,
     description: article.description,
-    alternates: isPublicSite ? { canonical: url } : undefined,
+    alternates: {
+      canonical: url,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
       title: pageTitle,
       description: article.description,
       type: "article",
-      url: isPublicSite ? url : undefined,
+      url,
       images: [{
-        url: "/images/nyc-sprinter-van-hero.avif",
-        alt: "Sprinter van for private transportation in New York",
+        url: article.image?.src ?? "/images/nyc-sprinter-van-hero.avif",
+        alt: article.image?.alt ?? article.title,
       }],
       publishedTime: article.updated,
       modifiedTime: article.updated,
@@ -147,6 +160,18 @@ export default async function BlogArticlePage({
           </header>
           <div className="section-pad bg-white">
             <div className="mx-auto max-w-3xl">
+              {article.image && (
+                <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-xl border border-brand-secondary/30 bg-brand-dark shadow-[0_12px_35px_rgba(9,79,89,0.12)]">
+                  <Image
+                    src={article.image.src}
+                    alt={article.image.alt}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <div className="space-y-10">
                 {article.sections.map((section, index) => (
                   <section aria-labelledby={`article-section-${index + 1}`} key={section.heading}>
