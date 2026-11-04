@@ -175,6 +175,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/:slug",
         statusCode: 301,
       },
+      {
+        // Old airport limousine service page with .html extension.
+        source: "/airport-limousine-service-new-york.html",
+        destination: "/airport-limousine-service-new-york",
+        statusCode: 301,
+      },
     ];
   },
 };

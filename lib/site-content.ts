@@ -11,6 +11,7 @@ export type ContentSection = {
 export type DetailPage = {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   eyebrow: string;
   intro: string;
@@ -382,25 +383,61 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "new-york-city-tour-with-professional-chauffeurs",
-    title: "Private City Tour NYC with a Chauffeur",
+    title: "Private Holiday Transportation in New York City",
+    seoTitle: "NYC Holiday Transportation | NY Travel Limo",
     description:
-      "Plan a private sightseeing tour in NYC with a driver between your chosen New York landmarks, neighborhoods, museums, dining and shopping stops.",
-    eyebrow: "Explore New York",
+      "Plan holiday travel in NYC with a private chauffeur for airport transfers, Christmas lights, corporate events and New Year’s Eve. Request a quote.",
+    eyebrow: "NYC Holiday Chauffeur Service",
     intro:
-      "Plan a private city tour in NYC with chauffeur transportation between the landmarks, neighborhoods and stops you want to visit. Share your route and available time to discuss a New York private sightseeing tour.",
+      "Private holiday transportation in New York City with professional, licensed chauffeurs. Plan seamless travel from November 2026 through January 2027 for Thanksgiving airport transfers, Christmas lights tours, corporate holiday parties, New Year’s Eve celebrations, and winter family itineraries. Choose from luxury [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [private SUVs](/luxury-suv-rental-nyc), and [stretch limousines](/lincoln-stretch-limo-rental-nyc).",
     sections: [
       {
-        heading: "Choose the stops that matter to you",
+        heading: "Holiday airport transfers to JFK, LGA, and EWR",
         paragraphs: [
-          "A private ride lets you organize your day around your preferred locations and timing. Share your starting point, destinations, expected duration and any stops where you would like time to explore.",
-          "Traveling with family or a group? A Sprinter van may suit a shared itinerary. SUVs and limousines are additional options for private sightseeing transportation.",
+          "Navigating New York airports during Thanksgiving week, Christmas, and New Year’s is notoriously demanding. Skip crowded taxi queues, transit transfers, and rideshare surge pricing with coordinated [private airport transportation](/airport-transportation-services-in-nyc-with-professional-chauffeurs) to John F. Kennedy (JFK), LaGuardia (LGA), and Newark Liberty (EWR).",
+          "Your licensed chauffeur coordinates curbside arrival based on your scheduled flight times, providing attentive luggage assistance and direct transfers to your home, hotel, or winter venue. For extended families or corporate delegations traveling with winter coats, gifts, and heavy baggage, our 10- to 14-passenger [Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) offer generous cargo room and spacious seating.",
         ],
-        bullets: ["Manhattan landmarks and neighborhoods", "Museum, dining and shopping stops", "Private group sightseeing", "Custom pickup and drop-off plans"],
+        bullets: [
+          "Direct holiday transfers to and from JFK, LGA, and Newark (EWR)",
+          "Flight timing coordination and curbside terminal pickup",
+          "Generous luggage capacity for winter bags, gifts, and family gear",
+          "Heated, spacious luxury cabins across our [entire private fleet](/fleet)",
+        ],
       },
       {
-        heading: "What to include when you book",
+        heading: "NYC Christmas lights, Dyker Heights & holiday window tours",
         paragraphs: [
-          "Provide your date, pickup location, approximate duration, passenger count and the places you want to visit. The quote request is the right time to discuss timing, wait periods and the vehicle that best fits your day.",
+          "Experience New York City's world-famous holiday magic from the warmth and comfort of a private chauffeured vehicle. Design a customized sightseeing route to admire the dazzling residential displays of Dyker Heights in Brooklyn, the iconic Fifth Avenue department store holiday windows, Central Park South, and the festive avenues of Manhattan.",
+          "Planning to see the world-famous Christmas tree? According to [Rockefeller Center](https://www.rockefellercenter.com), the 2026 Rockefeller Center Christmas Tree arrives on Saturday, November 7, 2026, lights up during the official ceremony on Wednesday, December 2, 2026, and remains on display through mid-January 2027. Please note that dense holiday pedestrian crowds, NYPD street closures, and seasonal gridlock alert days can impact vehicular access; your chauffeur will select the safest and closest permissible drop-off and pickup points along your route.",
+        ],
+        bullets: [
+          "Dyker Heights Christmas lights residential displays in Brooklyn",
+          "Fifth Avenue luxury department store holiday window displays",
+          "Rockefeller Center tree viewing and Midtown holiday sights",
+          "Door-to-door warmth without walking long distances in winter chill",
+        ],
+      },
+      {
+        heading: "Corporate holiday parties, team galas, and group events",
+        paragraphs: [
+          "Celebrate the year-end season safely and stylishly. Whether hosting an executive dinner in Midtown, an end-of-year company gala in Lower Manhattan, or a team celebration across Brooklyn, our group chauffeur service guarantees punctual, coordinated transportation for your entire organization.",
+          "Renting a [Mercedes-Benz Sprinter van with driver](/sprinter-van-rental-with-driver-new-york-nyc) allows colleagues to travel together comfortably, eliminating the logistical friction of coordinating separate rides or relying on public transit late at night. For leadership and client hosting, our [executive luxury SUVs](/luxury-suv-rental-nyc) deliver quiet, refined privacy.",
+        ],
+      },
+      {
+        heading: "New Year’s Eve private transportation in NYC",
+        paragraphs: [
+          "Ring in 2027 without the frustration of post-midnight street hails, crowded subways, or exorbitant rideshare surges. NY Travel Limo offers pre-arranged private chauffeur service for New Year’s Eve dinners, ballroom galas, private gatherings, and venue transfers across Manhattan, Brooklyn, Queens, and New Jersey.",
+          "Because New Year’s Eve involves heavy traffic restrictions—especially surrounding Times Square and Midtown Manhattan—booking your vehicle well in advance is essential. We work closely with you to establish realistic pickup windows, designated meeting zones, and safe return travel.",
+        ],
+      },
+      {
+        heading: "How to request a quote and reserve holiday transportation",
+        paragraphs: [
+          "Demand for private chauffeur transportation peaks sharply between November and January. We recommend booking early to secure your preferred vehicle category and schedule.",
+          "Step 1: Submit your trip details using our [online quote form](/contact-us) or call our dispatch team directly at [+1 516-256-2892](tel:5162562892) or [718-397-1333](tel:7183971333). Include your date, estimated pickup time, addresses, passenger count, luggage requirements, and any special stops.",
+          "Step 2: Our reservation team reviews your route and provides an upfront, transparent quote reflecting your custom itinerary.",
+          "Step 3: Confirm your reservation. You will receive complete booking confirmation details so you can enjoy your holiday season with peace of mind.",
         ],
       },
     ],

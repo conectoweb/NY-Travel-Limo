@@ -80,6 +80,12 @@ function MidPageCTA({ content }: { content: ServiceLandingContent }) {
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
           <QuoteLink className="min-h-12" label="Request a Quote" />
+          <a
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 text-sm font-bold text-white transition hover:bg-white hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
+            href="tel:5162562892"
+          >
+            Call (516) 256-2892
+          </a>
         </div>
       </div>
     </section>
@@ -144,8 +150,17 @@ export default function ServiceLanding({
                 className="font-semibold text-brand-secondary underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs"
               />
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
               <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
+              <a
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 text-base font-bold text-white backdrop-blur-xs transition hover:bg-white hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
+                href="tel:5162562892"
+              >
+                <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>Call (516) 256-2892</span>
+              </a>
             </div>
             <p className="mt-6 text-xs font-medium tracking-wide text-white/65">
               <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/sprinter-van-rental-with-driver-new-york-nyc">Sprinter vans</a> · <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/luxury-suv-rental-nyc">SUVs</a> · <a className="text-white underline underline-offset-4 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs" href="/lincoln-stretch-limo-rental-nyc">Limousines</a>

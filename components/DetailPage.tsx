@@ -47,9 +47,9 @@ const relatedServiceSlugs: Record<string, string[]> = {
     "wine-tours-transportation-service-from-new-york",
   ],
   "new-york-city-tour-with-professional-chauffeurs": [
+    "airport-transportation-services-in-nyc-with-professional-chauffeurs",
+    "group-transportation-in-new-york-near-me",
     "transportation-by-hours-in-new-york",
-    "wine-tours-transportation-service-from-new-york",
-    "point-to-point-transportation-service-in-new-york",
   ],
   "point-to-point-transportation-service-in-new-york": [
     "airport-transportation-services-in-nyc-with-professional-chauffeurs",
