@@ -322,33 +322,90 @@ export const serviceLandingContent: Record<string, ServiceLandingContent> = {
     expectedImage: "services/hourly-transportation-vehicle.webp",
   },
   "new-york-city-tour-with-professional-chauffeurs": {
-    introHeading: "See the city through your own planned stops",
-    audienceHeading: "For visitors, families and private groups",
-    audience: "A private sightseeing tour in NYC can connect the landmarks, museums, shopping or dining stops you want to include. Choose the places, then share a realistic route and available time to plan a New York private city tour with a driver.",
+    introHeading: "Celebrate the season with dependable, private holiday chauffeur travel",
+    audienceHeading: "For families, holiday visitors & corporate groups",
+    audience:
+      "Make your New York City holiday travel effortless from November 2026 through January 2027. Whether you need reliable airport transfers for Thanksgiving, a festive evening exploring Dyker Heights and Fifth Avenue Christmas lights, or coordinated transportation for a corporate holiday party and New Year's Eve, NY Travel Limo provides luxury chauffeur service tailored to your winter itinerary.",
     benefits: [
-      { title: "Choose your destinations", description: "Build a route around your interests rather than a fixed list of stops." },
-      { title: "Include time at each place", description: "Note which locations are brief drop-offs and where you expect to spend more time." },
-      { title: "Travel together", description: "Consider a Sprinter van for a group or compare SUV and limousine options for your party." },
+      {
+        title: "Punctual Holiday Travel",
+        description:
+          "Avoid the stress of winter traffic, subway delays, and rideshare surge pricing with a dedicated chauffeur committed to your schedule.",
+      },
+      {
+        title: "Warmth & Group Comfort",
+        description:
+          "Travel together in heated luxury cabins—from executive SUVs for couples to high-roof Sprinter vans for 10 to 14 passengers.",
+      },
+      {
+        title: "Curated Custom Itineraries",
+        description:
+          "Choose your destinations freely, from Rockefeller Center and Dyker Heights lights to Midtown holiday galas and airport departures.",
+      },
     ],
     steps: [
-      { title: "Pick the places to visit", description: "List landmarks, museums, neighborhoods or other destinations in order." },
-      { title: "Set a practical timeframe", description: "Include the planned start, approximate duration and any fixed reservations." },
-      { title: "Discuss the vehicle and route", description: "Share passenger and luggage needs and confirm the agreed tour itinerary when reserving." },
+      {
+        title: "Share Your Holiday Schedule",
+        description:
+          "Provide your date, pickup location, stops, passenger count, and luggage needs via our [online quote form](/contact-us) or call [+1 516-256-2892](tel:5162562892).",
+      },
+      {
+        title: "Select Your Vehicle",
+        description:
+          "Compare luxury Sprinter vans, private SUVs, and stretch limousines based on your party size, comfort preferences, and luggage.",
+      },
+      {
+        title: "Confirm Your Reservation",
+        description:
+          "Receive clear confirmation details and travel with confidence knowing your private chauffeur is reserved for the holidays.",
+      },
     ],
-    journeyHeading: "Build a route that leaves room to explore",
-    journey: ["Group nearby destinations when arranging the order of stops.", "Account for time outside the vehicle at museums, dining or shopping.", "Add the pickup and final drop-off location to complete the plan."],
-    planningHeading: "A little preparation goes a long way",
-    planningTips: ["Prioritize the stops that matter most if your schedule is limited.", "Include timed tickets or restaurant reservations in the request.", "Allow room for the time between destinations and confirm the planned duration."],
-    midCtaHeading: "Already have a list of places?",
-    midCtaDescription: "Share your stops and available time to request a quote for a private New York City tour.",
+    journeyHeading: "Smooth winter travel through holiday traffic",
+    journey: [
+      "Your chauffeur arrives punctually at your residence, hotel, or airport terminal in a pre-warmed, sanitized luxury vehicle.",
+      "Relax as your driver navigates holiday traffic, bridge crossings, and designated pickup zones near seasonal attractions.",
+      "Enjoy your planned celebrations, holiday dinners, or flights with guaranteed, reliable return transportation.",
+    ],
+    planningHeading: "Tips for planning holiday transportation in NYC",
+    planningTips: [
+      "Reserve early: Holiday demand from Thanksgiving through New Year's Eve peaks rapidly across all vehicle categories.",
+      "Account for Gridlock Alert days: Midtown traffic and NYPD security perimeters around Rockefeller Center and Times Square can extend drive times.",
+      "Confirm group and luggage volume: Winter coats, holiday shopping, and luggage take extra space; consider a Sprinter van for parties of 6 or more with baggage.",
+      "Plan meeting locations in advance: Crowded holiday sights may require meeting your chauffeur on designated cross streets rather than congested avenues.",
+    ],
+    midCtaHeading: "Ready to arrange your NYC holiday transportation?",
+    midCtaDescription:
+      "Request your personalized quote today or call our dispatch team directly at +1 516-256-2892 for holiday travel between November 2026 and January 2027.",
     faqs: [
-      { question: "Can I choose my own city tour stops?", answer: "Provide your preferred destinations and route when requesting a quote. Confirm the final itinerary and duration during reservation." },
-      { question: "Can I make several sightseeing stops?", answer: "Yes, list each planned location and the time you expect to spend there so the route can be discussed." },
-      { question: "Which vehicle can accommodate a tour group?", answer: "Sprinter vans are a featured group option. SUVs and limousines are also listed; confirm capacity and availability for your party." },
+      {
+        question: "When should I book transportation for the holidays in NYC?",
+        answer:
+          "Because November, December, and early January are the busiest travel months in New York, we strongly recommend booking as early as possible. Key dates—including Thanksgiving Eve, Christmas week, and New Year's Eve—frequently reach capacity weeks in advance.",
+      },
+      {
+        question: "Can we plan a custom Christmas lights tour route?",
+        answer:
+          "Yes. You can customize your itinerary to include Dyker Heights in Brooklyn, the Rockefeller Center Christmas tree (lighting December 2, 2026), Fifth Avenue holiday displays, and Central Park. Share your desired stops when requesting a quote so we can organize realistic timing.",
+      },
+      {
+        question: "How do holiday airport transfers work during winter storms or peak delays?",
+        answer:
+          "We coordinate private pickups to and from JFK, LaGuardia (LGA), and Newark (EWR). When requesting your quote, provide your airline and flight number so our dispatch team can align your pickup with scheduled arrival times. Please allow extra travel time during winter weather and peak holiday traffic.",
+      },
+      {
+        question: "Which vehicles are available for holiday group travel?",
+        answer:
+          "Our fleet includes [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for 10 to 14 passengers with ample luggage room, [executive luxury SUVs](/luxury-suv-rental-nyc) for up to 6 passengers, and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) for up to 10 passengers. Review our [fleet page](/fleet) to compare options.",
+      },
+      {
+        question: "Are rates and availability confirmed instantly online?",
+        answer:
+          "No rates are charged or confirmed without personal review. Every quote request is evaluated by our reservation team based on exact dates, vehicle selection, itinerary duration, and seasonal availability to provide transparent, all-inclusive pricing.",
+      },
     ],
-    imageAlt: "New York City tour transportation between planned stops",
+    imageAlt: "Private holiday transportation and sightseeing in New York City",
     introImage: "services/Point-to-Point-Transportation-ny.webp",
-    introImageAlt: "Private vehicle for exploring New York City",
+    introImageAlt: "Luxury chauffeur vehicle ready for New York holiday travel",
     expectedImage: "services/nyc-tours.webp",
   },
   "point-to-point-transportation-service-in-new-york": {

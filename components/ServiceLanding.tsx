@@ -80,6 +80,12 @@ function MidPageCTA({ content }: { content: ServiceLandingContent }) {
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
           <QuoteLink className="min-h-12" label="Request a Quote" />
+          <a
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 text-sm font-bold text-white transition hover:bg-white hover:text-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
+            href="tel:5162562892"
+          >
+            Call (516) 256-2892
+          </a>
         </div>
       </div>
     </section>
@@ -144,7 +150,7 @@ export default function ServiceLanding({
                 className="font-semibold text-brand-secondary underline decoration-brand-secondary decoration-2 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-xs"
               />
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
               <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
             </div>
             <p className="mt-6 text-xs font-medium tracking-wide text-white/65">

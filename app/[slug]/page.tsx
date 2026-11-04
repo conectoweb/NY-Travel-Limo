@@ -24,13 +24,14 @@ export async function generateMetadata({
 
   const url = `${siteUrl}/${page.slug}`;
   const isPublicSite = await isPublicSiteRequest();
+  const pageTitle = page.seoTitle || `${page.title} | NY Travel Limo`;
 
   return {
-    title: `${page.title} | NY Travel Limo`,
+    title: pageTitle,
     description: page.description,
     alternates: isPublicSite ? { canonical: url } : undefined,
     openGraph: {
-      title: `${page.title} | NY Travel Limo`,
+      title: pageTitle,
       description: page.description,
       type: "website",
       url: isPublicSite ? url : undefined,

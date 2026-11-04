@@ -6,9 +6,14 @@ function readingTime(article: BlogArticle): number {
     article.title,
     article.description,
     article.intro,
-    ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? [])]),
+    ...article.sections.flatMap((section) => [
+      section.heading,
+      ...section.paragraphs,
+      ...(section.bullets ?? []),
+      ...(section.table ? [...section.table.headers, ...section.table.rows.flat()] : []),
+    ]),
   ].join(" ");
-  return Math.max(1, Math.ceil(articleText.trim().split(/\s+/).length / 200));
+  return Math.max(1, Math.ceil(articleText.trim().split(/\s+/).filter(Boolean).length / 200));
 }
 
 function updatedDate(date: string): string {
@@ -30,8 +35,8 @@ export default function BlogCard({ article }: { article: BlogArticle }) {
         tabIndex={-1}
       >
         <Image
-          src="/images/nyc-sprinter-van-hero.avif"
-          alt="Chauffeur-driven Sprinter van for private transportation in New York City"
+          src={article.image?.src ?? "/images/nyc-sprinter-van-hero.avif"}
+          alt={article.image?.alt ?? article.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"

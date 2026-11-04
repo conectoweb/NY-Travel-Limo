@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header, { QuoteLink } from "@/components/Header";
 import { blogArticles, findBlogArticle } from "@/lib/site-content";
-import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { siteUrl } from "@/lib/seo";
 import FormattedText from "@/components/FormattedText";
 
 export function generateStaticParams() {
@@ -23,20 +24,33 @@ export async function generateMetadata({
   }
 
   const url = `${siteUrl}/blog/${article.slug}`;
-  const isPublicSite = await isPublicSiteRequest();
+  const pageTitle = article.seoTitle || `${article.title} | NY Travel Limo`;
 
   return {
-    title: `${article.title} | NY Travel Limo`,
+    title: pageTitle,
     description: article.description,
-    alternates: isPublicSite ? { canonical: url } : undefined,
+    alternates: {
+      canonical: url,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
-      title: `${article.title} | NY Travel Limo`,
+      title: pageTitle,
       description: article.description,
       type: "article",
-      url: isPublicSite ? url : undefined,
+      url,
       images: [{
-        url: "/images/nyc-sprinter-van-hero.avif",
-        alt: "Sprinter van for private transportation in New York",
+        url: article.image?.src ?? "/images/nyc-sprinter-van-hero.avif",
+        alt: article.image?.alt ?? article.title,
       }],
       publishedTime: article.updated,
       modifiedTime: article.updated,
@@ -56,8 +70,7 @@ export default async function BlogArticlePage({
     notFound();
   }
 
-  const structuredData = {
-    "@context": "https://schema.org",
+  const articleSchema = {
     "@type": "Article",
     headline: article.title,
     description: article.description,
@@ -71,11 +84,39 @@ export default async function BlogArticlePage({
     },
     mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
   };
-  const relatedLink = article.slug.includes("airport")
-    ? { label: "Private airport transportation in New York", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" }
-    : article.slug.includes("group")
-      ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
-      : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
+
+  const itemListSchema =
+    article.items && article.items.length > 0
+      ? {
+          "@type": "ItemList",
+          name: article.title,
+          description: article.description,
+          numberOfItems: article.items.length,
+          itemListElement: article.items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            url: item.url,
+          })),
+        }
+      : null;
+
+  const structuredData = itemListSchema
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [articleSchema, itemListSchema],
+      }
+    : {
+        "@context": "https://schema.org",
+        ...articleSchema,
+      };
+  const relatedLink = article.slug.includes("wine")
+    ? { label: "Wine tour transportation from NYC to regional vineyards", href: "/wine-tours-transportation-service-from-new-york" }
+    : article.slug.includes("airport")
+      ? { label: "Private airport transportation in New York", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" }
+      : article.slug.includes("group")
+        ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
+        : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
 
   return (
     <>
@@ -119,6 +160,18 @@ export default async function BlogArticlePage({
           </header>
           <div className="section-pad bg-white">
             <div className="mx-auto max-w-3xl">
+              {article.image && (
+                <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-xl border border-brand-secondary/30 bg-brand-dark shadow-[0_12px_35px_rgba(9,79,89,0.12)]">
+                  <Image
+                    src={article.image.src}
+                    alt={article.image.alt}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <div className="space-y-10">
                 {article.sections.map((section, index) => (
                   <section aria-labelledby={`article-section-${index + 1}`} key={section.heading}>
@@ -135,6 +188,36 @@ export default async function BlogArticlePage({
                         </p>
                       ))}
                     </div>
+                    {section.table && (
+                      <div className="mt-6 overflow-x-auto rounded-lg border border-brand-text/15">
+                        <table className="w-full min-w-full divide-y divide-brand-text/10 text-left text-sm">
+                          <thead className="bg-brand-soft">
+                            <tr>
+                              {section.table.headers.map((header) => (
+                                <th
+                                  key={header}
+                                  className="px-4 py-3 font-bold text-brand-dark"
+                                  scope="col"
+                                >
+                                  {header}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-brand-text/10 bg-white">
+                            {section.table.rows.map((row, rIdx) => (
+                              <tr key={rIdx} className="transition-colors hover:bg-brand-soft/40">
+                                {row.map((cell, cIdx) => (
+                                  <td key={cIdx} className="px-4 py-3 text-brand-muted align-top">
+                                    <FormattedText text={cell} />
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
                     {section.bullets && (
                       <ul className="mt-5 list-inside list-disc space-y-2 text-base leading-7 text-brand-muted">
                         {section.bullets.map((item) => (

@@ -163,6 +163,24 @@ const nextConfig: NextConfig = {
         destination: "/funeral-transportation-services-nyc-dignified-professional",
         statusCode: 301,
       },
+      {
+        // Old night out transportation page in NYC using Mercedes Sprinter vans.
+        source: "/night-out-transportation-in-nyc-mercedes-sprinter-vans",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        // Legacy WordPress post URL structure (/post/:slug) to current blog guide path.
+        source: "/post/:slug",
+        destination: "/blog/:slug",
+        statusCode: 301,
+      },
+      {
+        // Old airport limousine service page with .html extension.
+        source: "/airport-limousine-service-new-york.html",
+        destination: "/airport-limousine-service-new-york",
+        statusCode: 301,
+      },
     ];
   },
 };

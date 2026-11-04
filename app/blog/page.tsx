@@ -3,26 +3,36 @@ import BlogCard from "@/components/BlogCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { blogArticles } from "@/lib/site-content";
-import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { siteUrl } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "New York Travel Guides | NY Travel Limo";
   const description =
     "Practical guides to choosing a vehicle, planning airport transfers and arranging group transportation in New York.";
-  const isPublicSite = await isPublicSiteRequest();
 
   return {
     title,
     description,
-    alternates: isPublicSite ? { canonical: `${siteUrl}/blog` } : undefined,
+    alternates: { canonical: `${siteUrl}/blog` },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
     openGraph: {
       title,
       description,
       type: "website",
-      url: isPublicSite ? `${siteUrl}/blog` : undefined,
+      url: `${siteUrl}/blog`,
       images: [{
-        url: "/images/nyc-sprinter-van-hero.avif",
-        alt: "Sprinter van for private transportation in New York",
+        url: "/images/services/ny-travel-limo-fleet.png",
+        alt: "NY Travel Limo private transportation guides and vehicle fleet in New York",
       }],
     },
   };
@@ -58,7 +68,7 @@ export default function BlogPage() {
               <p className="eyebrow mb-4">Travel planning</p>
               <h2 className="section-heading" id="articles-title">Explore our latest articles</h2>
             </div>
-            <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
               {blogArticles.map((article) => (
                 <li key={article.slug}><BlogCard article={article} /></li>
               ))}
