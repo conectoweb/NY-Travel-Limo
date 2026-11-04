@@ -57,8 +57,7 @@ export default async function BlogArticlePage({
     notFound();
   }
 
-  const structuredData = {
-    "@context": "https://schema.org",
+  const articleSchema = {
     "@type": "Article",
     headline: article.title,
     description: article.description,
@@ -72,6 +71,32 @@ export default async function BlogArticlePage({
     },
     mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
   };
+
+  const itemListSchema =
+    article.items && article.items.length > 0
+      ? {
+          "@type": "ItemList",
+          name: article.title,
+          description: article.description,
+          numberOfItems: article.items.length,
+          itemListElement: article.items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            url: item.url,
+          })),
+        }
+      : null;
+
+  const structuredData = itemListSchema
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [articleSchema, itemListSchema],
+      }
+    : {
+        "@context": "https://schema.org",
+        ...articleSchema,
+      };
   const relatedLink = article.slug.includes("wine")
     ? { label: "Wine tour transportation from NYC to regional vineyards", href: "/wine-tours-transportation-service-from-new-york" }
     : article.slug.includes("airport")

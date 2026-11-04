@@ -443,7 +443,7 @@ export const servicePages: DetailPage[] = [
       {
         heading: "Plan the route before your wine tour",
         paragraphs: [
-          "List the wineries or other destinations you plan to visit, along with pickup and return locations. If you are still building the itinerary, provide the places and timing you know so far.",
+          "List the wineries or other destinations you plan to visit, along with pickup and return locations. If you are still building your itinerary, explore our curated guide to the [10 best wine tasting tours from New York City](/blog/the-10-best-wine-tasting-tours-in-new-york) for verified tasting room highlights, travel times and booking guidelines across Long Island and the Hudson Valley.",
           "A Sprinter van is a featured option for group transportation. SUVs and limousines may also be considered depending on your party size and occasion; confirm availability and fit when requesting a quote.",
         ],
         bullets: [
@@ -451,6 +451,7 @@ export const servicePages: DetailPage[] = [
           "A planned route with multiple stops",
           "Group transportation for a private outing",
           "Vehicle selection based on passengers and luggage",
+          "Travel guide: [10 Best Wine Tasting Tours from NYC](/blog/the-10-best-wine-tasting-tours-in-new-york)",
         ],
       },
       {
@@ -483,6 +484,7 @@ export const servicePages: DetailPage[] = [
           "[Wedding parties and celebration guest shuttles](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
           "Dignified [funeral transportation services for families](/funeral-transportation-services-nyc-dignified-professional)",
           "[Private NYC sightseeing tours](/new-york-city-tour-with-professional-chauffeurs) and group outings",
+          "Private [wine tours and tasting room excursions](/wine-tours-transportation-service-from-new-york) (see our guide to the [10 best wine tasting tours from NYC](/blog/the-10-best-wine-tasting-tours-in-new-york))",
         ],
       },
       {
@@ -599,6 +601,11 @@ export const fleetOptions = [
   },
 ] as const;
 
+export type BlogArticleItem = {
+  name: string;
+  url: string;
+};
+
 export type BlogArticle = {
   slug: string;
   title: string;
@@ -608,6 +615,7 @@ export type BlogArticle = {
   updated: string;
   intro: string;
   sections: ContentSection[];
+  items?: BlogArticleItem[];
 };
 
 export const blogArticles: BlogArticle[] = [
@@ -729,12 +737,24 @@ export const blogArticles: BlogArticle[] = [
     category: "Day trips & wine tours",
     updated: "2026-11-04",
     intro:
-      "Planning a wine tasting trip from New York City gives travelers a welcome escape from urban streets into historic countryside vineyards and ocean-cooled maritime estates. Whether you are organizing an executive team retreat, a milestone celebration, or a couple's weekend away, New York State offers distinct American Viticultural Areas (AVAs) within reach of the five boroughs. This guide covers the most rewarding wine regions accessible from NYC—including Long Island's North Fork, the scenic Hudson Valley, and the upstate Finger Lakes—and highlights 10 verified wine experiences, from historic guided underground cellar tours to private estate tastings and self-guided regional trails.",
+      "Finding the best wine tasting in New York begins with deciding what kind of journey you want: a breezy afternoon exploring maritime tasting room destinations along Long Island's North Fork, a historic excursion through the Hudson Valley, or an immersive weekend escape into upstate wine country. New York State offers distinct American Viticultural Areas (AVAs) within reach of New York City, featuring world-class wine experiences for every wine lover. This guide covers the most rewarding wine regions accessible from NYC and highlights 10 verified wine tours, estate tastings, and regional craft trails to help you plan an unforgettable trip.",
+    items: [
+      { name: "Paumanok Vineyards", url: "https://www.paumanok.com" },
+      { name: "Macari Vineyards", url: "https://macariwines.com" },
+      { name: "Bedell Cellars", url: "https://www.bedellcellars.com" },
+      { name: "Sparkling Pointe", url: "https://sparklingpointe.com" },
+      { name: "Kontokosta Winery", url: "https://www.kontokostawinery.com" },
+      { name: "Brotherhood, America's Oldest Winery", url: "https://brotherhood-winery.com" },
+      { name: "Millbrook Vineyards & Winery", url: "https://www.millbrookwine.com" },
+      { name: "Benmarl Winery", url: "https://benmarl.com" },
+      { name: "Shawangunk Wine Trail", url: "https://shawangunkwinetrail.com" },
+      { name: "Seneca Lake Wine Trail", url: "https://senecalakewine.com" },
+    ],
     sections: [
       {
         heading: "Tour Options: Guided Cellar Tours vs. Independent Winery Tastings",
         paragraphs: [
-          "Before choosing your route, it is helpful to understand the difference between an organized guided tour and an independent estate tasting. A guided tour typically pairs structured itineraries with an on-site educator who escorts your group through historic barrel cellars, crush pads, and production facilities (such as the famed underground cellar tour at Brotherhood Winery in the Hudson Valley). These tours provide deep educational context into regional viticulture, barrel aging, and estate history before concluding with a structured tasting flight.",
+          "Whether you are seeking the best wine tasting in New York for an executive corporate retreat, a milestone anniversary, or a relaxed weekend outing with friends, understanding the difference between an organized guided tour and an independent tasting room visit ensures a seamless itinerary. A guided tour typically pairs structured itineraries with an on-site educator who escorts your group through historic barrel cellars, crush pads, and production facilities (such as the famed underground cellar tour at Brotherhood Winery in the Hudson Valley). These tours provide deep educational context into regional viticulture, barrel aging, and estate history before concluding with a structured tasting flight.",
           "By contrast, an independent tasting or self-guided wine trail allows you to book private tasting appointments directly with individual wineries. At estates like Macari or Paumanok on the North Fork, guests reserve dedicated outdoor pavilions, covered verandas, or tasting bars to sample curated flights paired with local cheeses and charcuterie. Travelers who prefer total flexibility often combine two or three neighboring vineyards into a custom self-guided trail. Because tastings and guided experiences fill up quickly on peak weekends, securing your tasting slots in advance is strongly recommended.",
         ],
       },
@@ -834,7 +854,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "9. Shawangunk Wine Trail (Hudson Valley)",
         paragraphs: [
-          "For travelers who prefer exploring a dynamic craft trail rather than a single estate, the Shawangunk Wine Trail connects 13 member producers across an 80-mile route nestled between the Shawangunk Mountains and the Hudson River. The trail encompasses Orange and Ulster Counties, linking historic wineries (such as Brotherhood and Benmarl) with boutique modern producers like Whitecliff Vineyard, Warwick Valley Winery, and Magnanini Farm Winery.",
+          "For travelers who prefer exploring a dynamic craft trail rather than a single estate, the Shawangunk Wine Trail connects 13 member producers across an 80-mile route nestled between the Shawangunk Mountains and the Hudson River. The trail encompasses Orange and Ulster Counties, linking historic wineries (such as Brotherhood and Benmarl) with modern craft destinations like City Winery Hudson Valley in Montgomery, Whitecliff Vineyard, Warwick Valley Winery, and Magnanini Farm Winery.",
           "What makes it distinct: The trail offers incredible variety in a compact geographical corridor. Within a short drive, visitors can sample crisp limestone-terroir Seyval Blanc at Whitecliff, craft hard ciders in Warwick, and estate reds in Marlboro, all framed by dramatic mountain cliffs and orchard valleys.",
           "Best for: Groups wanting a flexible, multi-stop day trip that combines wine, artisanal cider, and craft spirits.",
           "Official source & booking note: Explore trail maps and individual member directories on the [Shawangunk Wine Trail official website](https://shawangunkwinetrail.com). Because this is a self-guided route, confirm individual tasting hours and vehicle policies with each destination on your route.",
@@ -852,7 +872,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Planning Your Trip: Transportation, Logistics, and Responsible Touring",
         paragraphs: [
-          "A successful wine tasting outing from New York City requires thoughtful preparation. Country roads across Long Island and the Hudson Valley are scenic but demanding, and tasting room policies differ widely across estates.",
+          "Elevating your wine tasting experience while keeping everyone safe requires thoughtful preparation. Country roads across Long Island and the Hudson Valley are scenic but demanding, and tasting room policies differ widely across estates.",
         ],
         bullets: [
           "Limit your itinerary to two or three wineries: Scheduling four or five stops inevitably leads to rushed tastings, sensory fatigue, and highway delays on routes like the Long Island Expressway or the New York State Thruway. Allowing 90 minutes to two hours per winery ensures a relaxed, enjoyable pace.",

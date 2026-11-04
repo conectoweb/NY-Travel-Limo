@@ -169,6 +169,12 @@ const nextConfig: NextConfig = {
         destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       },
+      {
+        // Legacy WordPress post URL structure (/post/:slug) to current blog guide path.
+        source: "/post/:slug",
+        destination: "/blog/:slug",
+        statusCode: 301,
+      },
     ];
   },
 };
