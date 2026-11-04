@@ -1,22 +1,4 @@
-import Image from "next/image";
-import { getGoogleReviews, GOOGLE_MAPS_PROFILE_URL } from "@/lib/google-reviews";
-
-function StarRating({ rating }: { rating: number }) {
-  const fullStars = Math.min(5, Math.max(1, Math.round(rating)));
-  return (
-    <div aria-label={`${rating} out of 5 stars`} className="flex items-center gap-1 text-[#e7711b]">
-      {Array.from({ length: 5 }).map((_, index) => (
-        <span
-          aria-hidden="true"
-          className={`text-base ${index < fullStars ? "text-amber-500" : "text-gray-300"}`}
-          key={index}
-        >
-          ★
-        </span>
-      ))}
-    </div>
-  );
-}
+const googleMapsProfileUrl = "https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8";
 
 function GoogleIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
@@ -41,11 +23,7 @@ function GoogleIcon({ className = "h-5 w-5" }: { className?: string }) {
   );
 }
 
-export default async function Reviews() {
-  const data = await getGoogleReviews();
-  const hasLiveReviews = data.reviews.length > 0;
-  const profileUrl = data.googleMapsUrl || GOOGLE_MAPS_PROFILE_URL;
-
+export default function Reviews() {
   return (
     <section
       aria-labelledby="reviews-title"
@@ -53,25 +31,24 @@ export default async function Reviews() {
       id="reviews"
     >
       <div className="mx-auto max-w-content">
-        <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
           <div>
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-text/15 bg-white px-3.5 py-1 text-xs font-semibold text-brand-dark shadow-2xs">
               <GoogleIcon className="h-4 w-4" />
               <span>Google Maps Reviews</span>
             </div>
             <h2 className="section-heading" id="reviews-title">
-              Client reviews on Google Maps.
+              Reviews from NY Travel Limo clients
             </h2>
             <p className="mt-3 max-w-xl text-base leading-7 text-brand-muted">
-              Authentic feedback from passengers, corporate travelers, and families who rely on NY Travel
-              Limo for chauffeur-driven transportation across NYC and New Jersey.
+              Read customer feedback on our Google Maps business profile.
             </p>
           </div>
 
-          <div className="flex flex-col items-start gap-3 sm:items-end">
+          <div className="shrink-0">
             <a
-              className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-brand-accent bg-brand-accent px-6 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-              href={profileUrl}
+              className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-brand-accent bg-brand-accent px-7 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+              href={googleMapsProfileUrl}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -79,112 +56,8 @@ export default async function Reviews() {
               <span>Read all reviews on Google</span>
               <span aria-hidden="true">↗</span>
             </a>
-            <span className="text-xs text-brand-muted">Opens official Google Maps business profile</span>
           </div>
         </div>
-
-        {hasLiveReviews ? (
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {data.reviews.map((review, index) => (
-              <div
-                className="flex flex-col justify-between rounded-2xl border border-brand-text/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-                key={`${review.author_name}-${index}`}
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-3">
-                    <StarRating rating={review.rating} />
-                    {review.relative_time_description && (
-                      <span className="text-xs text-brand-muted">
-                        {review.relative_time_description}
-                      </span>
-                    )}
-                  </div>
-                  <blockquote className="mt-4 text-sm leading-6 text-brand-dark">
-                    “{review.text}”
-                  </blockquote>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-brand-text/10 pt-4">
-                  <div className="flex items-center gap-2.5">
-                    {review.profile_photo_url ? (
-                      <div className="relative h-8 w-8 overflow-hidden rounded-full bg-brand-soft">
-                        <Image
-                          alt={review.author_name}
-                          className="object-cover"
-                          fill
-                          sizes="32px"
-                          src={review.profile_photo_url}
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-primary/10 text-xs font-bold text-brand-primary">
-                        {review.author_name.charAt(0)}
-                      </div>
-                    )}
-                    <div>
-                      {review.author_url ? (
-                        <a
-                          className="text-xs font-bold text-brand-dark underline decoration-brand-secondary decoration-2 underline-offset-2 hover:text-brand-primary"
-                          href={review.author_url}
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {review.author_name}
-                        </a>
-                      ) : (
-                        <span className="text-xs font-bold text-brand-dark">
-                          {review.author_name}
-                        </span>
-                      )}
-                      <p className="text-[10px] text-brand-muted">Verified Google User</p>
-                    </div>
-                  </div>
-                  <GoogleIcon className="h-4 w-4 opacity-70" />
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-2xl border border-brand-primary/20 bg-white p-8 text-center sm:p-12">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-soft shadow-inner">
-              <GoogleIcon className="h-7 w-7" />
-            </div>
-            <h3 className="mt-4 text-xl font-bold text-brand-dark sm:text-2xl">
-              See what our clients say on Google Maps
-            </h3>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-brand-muted">
-              We take pride in delivering punctual, professional chauffeur transportation across all five
-              NYC boroughs and New Jersey. Visit our Google Maps profile to read authentic reviews from
-              passengers, corporate roadshows, airport transfers, and private group events.
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <a
-                className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full bg-brand-secondary px-8 py-3 text-sm font-bold text-brand-accent shadow-sm transition hover:bg-brand-accent hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
-                href={profileUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <GoogleIcon className="h-4 w-4" />
-                <span>Read all reviews on Google</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-6 border-t border-brand-text/10 pt-6 text-xs text-brand-muted">
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
-                Verified Google Business Profile
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
-                Real traveler experiences
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
-                24/7 dedicated dispatch
-              </span>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
