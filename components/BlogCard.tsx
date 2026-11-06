@@ -48,7 +48,7 @@ export default function BlogCard({ article }: { article: BlogArticle }) {
           <div className="flex min-w-0 items-center gap-2">
             <Image
               src="/images/Logo NY Travel Limo.png"
-              alt=""
+              alt="Logo NY Travel Limo"
               aria-hidden="true"
               width={92}
               height={24}
