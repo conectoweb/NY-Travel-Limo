@@ -181,6 +181,12 @@ const nextConfig: NextConfig = {
         destination: "/airport-limousine-service-new-york",
         statusCode: 301,
       },
+      {
+        // Old pick-up and drop-off service page in NYC using Mercedes Sprinter vans.
+        source: "/pick-up-drop-off-service-in-nyc-mercedes-sprinter-vans",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301 
+      }
     ];
   },
 };

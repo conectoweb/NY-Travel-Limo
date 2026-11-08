@@ -390,7 +390,7 @@ export default function ContactForm() {
             type="submit"
             className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-brand-secondary px-9 py-3 text-base font-bold text-brand-accent shadow-sm transition hover:bg-brand-accent hover:text-brand-secondary focus-visible:outline-offset-4 disabled:cursor-wait disabled:opacity-60 sm:w-auto"
           >
-            {isPreviewMode ? "Check Form" : submitting ? "Submitting…" : "Submit Request"}
+            {isPreviewMode ? "Check Form" : submitting ? "Submitting…" : "Request a Quote"}
           </button>
         </div>
       </form>
