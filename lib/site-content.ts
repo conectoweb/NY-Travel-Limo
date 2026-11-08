@@ -199,7 +199,7 @@ export const servicePages: DetailPage[] = [
       {
         heading: "Online and Phone Reservations",
         paragraphs: [
-          "NY Travel Limo provides private chauffeur transportation throughout New York City and New Jersey. We do not accommodate walk-in visits; all quotes, reservations, and customer consultations are handled seamlessly online or by calling +1 516-256-2892.",
+          "NY Travel Limo provides private chauffeur transportation throughout New York City and New Jersey. All quotes, reservations, and customer consultations are handled seamlessly online or by calling +1 516-256-2892.",
         ],
       },
     ],
