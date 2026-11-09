@@ -186,6 +186,36 @@ const nextConfig: NextConfig = {
         source: "/pick-up-drop-off-service-in-nyc-mercedes-sprinter-vans",
         destination: "/sprinter-van-rental-with-driver-new-york-nyc",
         statusCode: 301 
+      },
+      {
+        // Old bachelorette transportation page in NYC using luxury Sprinter vans and party buses.
+        source: "/bachelorette-transportation-in-nyc-luxury-sprinter-vans-party-buses",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301 
+      },
+      {
+        // Old bachelorette transportation page in NYC using luxury Sprinter vans and party buses.
+        source: "/faq",
+        destination: "/frequently-asked-questions",
+        statusCode: 301 
+      },
+      {
+        // Old JFK airporter shuttle page in NYC.
+        source: "/jfk-airporter-shuttle-nyc",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301 
+      },
+      {
+        // Old terms page.
+        source: "/terms",
+        destination: "/terms-and-conditions",
+        statusCode: 301 
+      },
+      {
+        // Old airport limousine service page in New York.
+        source: "/airport-limousine-service-new-york",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301 
       }
     ];
   },
