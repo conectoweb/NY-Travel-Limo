@@ -210,6 +210,12 @@ const nextConfig: NextConfig = {
         source: "/terms",
         destination: "/terms-and-conditions",
         statusCode: 301 
+      },
+      {
+        // Old airport limousine service page in New York.
+        source: "/airport-limousine-service-new-york",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301 
       }
     ];
   },
