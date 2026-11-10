@@ -2,6 +2,7 @@ import Header, { QuoteLink } from "@/components/Header";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import FleetOptions from "@/components/FleetOptions";
+import FormattedText from "@/components/FormattedText";
 
 type ContentPageFleetImages = Record<string, { src: string; alt: string }>;
 
@@ -60,11 +61,19 @@ export default function ContentPage({ page }: { page: ContentPageData }) {
                     {section.heading}
                   </h2>
                   <div className="mt-4 space-y-4 text-base leading-7 text-brand-muted">
-                    {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>
+                        <FormattedText text={paragraph} />
+                      </p>
+                    ))}
                   </div>
                   {section.bullets && (
                     <ul className="mt-5 list-inside list-disc space-y-2 text-base leading-7 text-brand-muted">
-                      {section.bullets.map((item) => <li key={item}>{item}</li>)}
+                      {section.bullets.map((item) => (
+                        <li key={item}>
+                          <FormattedText text={item} />
+                        </li>
+                      ))}
                     </ul>
                   )}
                 </section>
