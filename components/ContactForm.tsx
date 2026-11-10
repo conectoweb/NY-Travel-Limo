@@ -37,15 +37,49 @@ function validateForm(form: HTMLFormElement): ValidationErrors {
     if (!control.name || control.name === "qf_8a1d" || control.validity.valid) continue;
 
     if (control.validity.valueMissing) {
-      errors[control.name] = control.name === "consent"
-        ? "Please agree before submitting your request."
-        : "This field is required.";
+      if (control.name === "consent") {
+        errors[control.name] = "Please agree before submitting your request.";
+      } else if (control.name === "name") {
+        errors.name = "Enter your first and last name.";
+      } else if (control.name === "email") {
+        errors.email = "Enter your email address.";
+      } else if (control.name === "phone") {
+        errors.phone = "Enter your phone number.";
+      } else if (control.name === "pickupMonth") {
+        errors.pickupMonth = "Select a pickup month.";
+      } else if (control.name === "pickupDay") {
+        errors.pickupDay = "Enter a pickup day.";
+      } else if (control.name === "pickupYear") {
+        errors.pickupYear = "Enter the four-digit pickup year.";
+      } else if (control.name === "pickupTime") {
+        errors.pickupTime = "Enter a pickup time.";
+      } else if (control.name === "eventType") {
+        errors.eventType = "Select an event type.";
+      } else if (control.name === "vehicle") {
+        errors.vehicle = "Select a preferred vehicle.";
+      } else if (control.name === "passengers") {
+        errors.passengers = "Enter the number of passengers.";
+      } else if (control.name === "stops") {
+        errors.stops = "Enter additional stops (0 if none).";
+      } else if (control.name === "serviceHours") {
+        errors.serviceHours = "Enter the estimated service hours.";
+      } else if (control.name === "pickupPlace") {
+        errors.pickupPlace = "Enter the pickup address or location.";
+      } else if (control.name === "dropoffPlace") {
+        errors.dropoffPlace = "Enter the dropoff address or destination.";
+      } else if (control.name === "instructions") {
+        errors.instructions = "Enter your trip details or special instructions.";
+      } else {
+        errors[control.name] = "This field is required.";
+      }
     } else if (control.validity.typeMismatch && control.name === "email") {
       errors.email = "Enter a complete email address, such as name@example.com.";
     } else if (control.validity.patternMismatch && control.name === "phone") {
       errors.phone = "Enter a valid phone number, including your country code if needed.";
     } else if (control.validity.tooShort && control.name === "name") {
       errors.name = "Enter your first and last name.";
+    } else if (control.validity.tooShort && control.name === "instructions") {
+      errors.instructions = "Please provide more details about your trip (at least 5 characters).";
     } else if (control.validity.badInput && control.name === "pickupTime") {
       errors.pickupTime = "Enter a valid pickup time.";
     } else if (control.validity.rangeUnderflow || control.validity.rangeOverflow) {
@@ -59,28 +93,77 @@ function validateForm(form: HTMLFormElement): ValidationErrors {
     }
   }
 
-  const monthValue = (form.elements.namedItem("pickupMonth") as HTMLSelectElement).value;
-  const dayValue = (form.elements.namedItem("pickupDay") as HTMLInputElement).value;
-  const yearValue = (form.elements.namedItem("pickupYear") as HTMLInputElement).value;
-  if (monthValue || dayValue || yearValue) {
-    if (!monthValue) errors.pickupMonth = "Select a month.";
-    if (!dayValue) errors.pickupDay = "Enter a day.";
-    if (!yearValue) errors.pickupYear = "Enter a four-digit year.";
+  const monthElement = form.elements.namedItem("pickupMonth") as HTMLSelectElement | null;
+  const dayElement = form.elements.namedItem("pickupDay") as HTMLInputElement | null;
+  const yearElement = form.elements.namedItem("pickupYear") as HTMLInputElement | null;
+  const monthValue = monthElement?.value ?? "";
+  const dayValue = dayElement?.value ?? "";
+  const yearValue = yearElement?.value ?? "";
 
-    if (monthValue && dayValue && yearValue && /^\d{4}$/.test(yearValue)) {
-      const month = Number(monthValue);
-      const day = Number(dayValue);
-      const year = Number(yearValue);
-      const maxDay = getDaysInMonth(year, month);
-      if (!Number.isInteger(day) || day < 1 || day > maxDay) {
-        errors.pickupDay = `Enter a day from 1 to ${maxDay} for the selected month.`;
-      }
+  if (!monthValue) errors.pickupMonth = "Select a pickup month.";
+  if (!dayValue) errors.pickupDay = "Enter a pickup day.";
+  if (!yearValue) errors.pickupYear = "Enter a four-digit pickup year.";
+
+  if (monthValue && dayValue && yearValue && /^\d{4}$/.test(yearValue)) {
+    const month = Number(monthValue);
+    const day = Number(dayValue);
+    const year = Number(yearValue);
+    const maxDay = getDaysInMonth(year, month);
+    if (!Number.isInteger(day) || day < 1 || day > maxDay) {
+      errors.pickupDay = `Enter a day from 1 to ${maxDay} for the selected month.`;
     }
   }
 
+  const timeElement = form.elements.namedItem("pickupTime") as HTMLInputElement | null;
+  if (!timeElement?.value) {
+    errors.pickupTime = "Enter a pickup time.";
+  }
+
+  const eventTypeElement = form.elements.namedItem("eventType") as HTMLSelectElement | null;
+  if (!eventTypeElement?.value) {
+    errors.eventType = "Select an event type.";
+  }
+
+  const vehicleElement = form.elements.namedItem("vehicle") as HTMLSelectElement | null;
+  if (!vehicleElement?.value) {
+    errors.vehicle = "Select a preferred vehicle.";
+  }
+
+  const passengersElement = form.elements.namedItem("passengers") as HTMLInputElement | null;
+  if (!passengersElement?.value) {
+    errors.passengers = "Enter the number of passengers.";
+  }
+
+  const stopsElement = form.elements.namedItem("stops") as HTMLInputElement | null;
+  if (stopsElement?.value === "" || stopsElement?.value === undefined) {
+    errors.stops = "Enter additional stops (0 if none).";
+  }
+
+  const serviceHoursElement = form.elements.namedItem("serviceHours") as HTMLInputElement | null;
+  if (!serviceHoursElement?.value) {
+    errors.serviceHours = "Enter the estimated service hours.";
+  }
+
+  const pickupPlaceElement = form.elements.namedItem("pickupPlace") as HTMLInputElement | null;
+  if (!pickupPlaceElement?.value || pickupPlaceElement.value.trim().length < 3) {
+    errors.pickupPlace = "Enter the pickup address, airport, or hotel.";
+  }
+
+  const dropoffPlaceElement = form.elements.namedItem("dropoffPlace") as HTMLInputElement | null;
+  if (!dropoffPlaceElement?.value || dropoffPlaceElement.value.trim().length < 3) {
+    errors.dropoffPlace = "Enter the destination address, airport, or venue.";
+  }
+
   const instructionsElement = form.elements.namedItem("instructions");
-  if (instructionsElement instanceof HTMLTextAreaElement && containsSpam(instructionsElement.value)) {
-    errors.instructions = SPAM_ERROR_MESSAGE;
+  if (instructionsElement instanceof HTMLTextAreaElement) {
+    const val = instructionsElement.value.trim();
+    if (!val) {
+      errors.instructions = "Enter your trip details or special instructions.";
+    } else if (val.length < 5) {
+      errors.instructions = "Please provide more details about your trip (at least 5 characters).";
+    } else if (containsSpam(val)) {
+      errors.instructions = SPAM_ERROR_MESSAGE;
+    }
   }
 
   return errors;
@@ -287,55 +370,60 @@ export default function ContactForm() {
           </legend>
           <div className="mt-5 grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <div className="sm:col-span-2 lg:col-span-3">
-              <span className="block text-sm font-semibold text-brand-dark">Pick up Date</span>
+              <span className="block text-sm font-semibold text-brand-dark">
+                Pick up Date
+                <span aria-hidden="true" className="ml-1 text-brand-primary">*</span>
+                <span className="sr-only"> (required)</span>
+              </span>
               <div className="mt-2 grid min-w-0 grid-cols-3 gap-3">
-                <label className="sr-only" htmlFor="pickupMonth">Pick up month</label>
-                <select id="pickupMonth" name="pickupMonth" aria-invalid={Boolean(errors.pickupMonth)} aria-describedby={errors.pickupMonth ? "pickupMonth-error" : undefined} className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupMonth ? "border-red-600 ring-1 ring-red-600" : ""}`} defaultValue="">
+                <label className="sr-only" htmlFor="pickupMonth">Pick up month (required)</label>
+                <select id="pickupMonth" name="pickupMonth" required aria-invalid={Boolean(errors.pickupMonth)} aria-describedby={errors.pickupMonth ? "pickupMonth-error" : undefined} className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupMonth ? "border-red-600 ring-1 ring-red-600" : ""}`} defaultValue="">
                   <option value="">Month</option>
                   {months.map((month, index) => <option key={month} value={index + 1}>{month}</option>)}
                 </select>
-                <label className="sr-only" htmlFor="pickupDay">Pick up day</label>
-                <input id="pickupDay" name="pickupDay" type="number" min="1" max={maxPickupDay} step="1" inputMode="numeric" className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupDay ? "border-red-600 ring-1 ring-red-600" : ""}`} placeholder="Day" aria-label="Pick up day" aria-invalid={Boolean(errors.pickupDay)} aria-describedby={errors.pickupDay ? "pickupDay-error" : undefined} />
-                <input id="pickupYear" name="pickupYear" type="text" inputMode="numeric" pattern="[0-9]{4}" maxLength={4} className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupYear ? "border-red-600 ring-1 ring-red-600" : ""}`} placeholder="Year" aria-label="Pick up year" aria-invalid={Boolean(errors.pickupYear)} aria-describedby={errors.pickupYear ? "pickupYear-error" : undefined} />
+                <label className="sr-only" htmlFor="pickupDay">Pick up day (required)</label>
+                <input id="pickupDay" name="pickupDay" required type="number" min="1" max={maxPickupDay} step="1" inputMode="numeric" className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupDay ? "border-red-600 ring-1 ring-red-600" : ""}`} placeholder="Day" aria-label="Pick up day" aria-invalid={Boolean(errors.pickupDay)} aria-describedby={errors.pickupDay ? "pickupDay-error" : undefined} />
+                <label className="sr-only" htmlFor="pickupYear">Pick up year (required)</label>
+                <input id="pickupYear" name="pickupYear" required type="text" inputMode="numeric" pattern="[0-9]{4}" maxLength={4} className={`${controlClassName.replace("mt-2 ", "")} ${errors.pickupYear ? "border-red-600 ring-1 ring-red-600" : ""}`} placeholder="Year" aria-label="Pick up year" aria-invalid={Boolean(errors.pickupYear)} aria-describedby={errors.pickupYear ? "pickupYear-error" : undefined} />
               </div>
               {errors.pickupMonth && <p className="mt-1 text-sm font-medium text-red-700" id="pickupMonth-error">{errors.pickupMonth}</p>}
               {errors.pickupDay && <p className="mt-1 text-sm font-medium text-red-700" id="pickupDay-error">{errors.pickupDay}</p>}
               {errors.pickupYear && <p className="mt-1 text-sm font-medium text-red-700" id="pickupYear-error">{errors.pickupYear}</p>}
-              <p className="mt-1 text-xs text-brand-muted">Optional. If you enter a date, select a month, day and year.</p>
+              <p className="mt-1 text-xs text-brand-muted">Select your scheduled pickup date (month, day, and four-digit year).</p>
             </div>
 
-            <Field label="Pick up Time" name="pickupTime" error={errors.pickupTime}>
-              <input id="pickupTime" name="pickupTime" type="time" aria-invalid={Boolean(errors.pickupTime)} aria-describedby={errors.pickupTime ? "pickupTime-error" : undefined} className={`${controlClassName} ${errors.pickupTime ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Pick up Time" name="pickupTime" required error={errors.pickupTime}>
+              <input id="pickupTime" name="pickupTime" required type="time" aria-invalid={Boolean(errors.pickupTime)} aria-describedby={errors.pickupTime ? "pickupTime-error" : undefined} className={`${controlClassName} ${errors.pickupTime ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Event Type" name="eventType" error={errors.eventType}>
-              <select id="eventType" name="eventType" defaultValue="" aria-invalid={Boolean(errors.eventType)} aria-describedby={errors.eventType ? "eventType-error" : undefined} className={`${controlClassName} ${errors.eventType ? "border-red-600 ring-1 ring-red-600" : ""}`}>
+            <Field label="Event Type" name="eventType" required error={errors.eventType}>
+              <select id="eventType" name="eventType" required defaultValue="" aria-invalid={Boolean(errors.eventType)} aria-describedby={errors.eventType ? "eventType-error" : undefined} className={`${controlClassName} ${errors.eventType ? "border-red-600 ring-1 ring-red-600" : ""}`}>
                 <option value="">Select One</option>
                 {eventTypes.map((eventType) => <option key={eventType} value={eventType}>{eventType}</option>)}
               </select>
             </Field>
-            <Field label="Select Vehicle" name="vehicle" error={errors.vehicle}>
-              <select id="vehicle" name="vehicle" defaultValue="" aria-invalid={Boolean(errors.vehicle)} aria-describedby={errors.vehicle ? "vehicle-error" : undefined} className={`${controlClassName} ${errors.vehicle ? "border-red-600 ring-1 ring-red-600" : ""}`}>
+            <Field label="Select Vehicle" name="vehicle" required error={errors.vehicle}>
+              <select id="vehicle" name="vehicle" required defaultValue="" aria-invalid={Boolean(errors.vehicle)} aria-describedby={errors.vehicle ? "vehicle-error" : undefined} className={`${controlClassName} ${errors.vehicle ? "border-red-600 ring-1 ring-red-600" : ""}`}>
                 <option value="">Select a vehicle</option>
                 {vehicleOptions.map((vehicle) => <option key={vehicle} value={vehicle}>{vehicle}</option>)}
               </select>
             </Field>
-            <Field label="Number of Passengers" name="passengers" error={errors.passengers}>
-              <input id="passengers" name="passengers" type="number" min="1" max="999" step="1" inputMode="numeric" aria-invalid={Boolean(errors.passengers)} aria-describedby={errors.passengers ? "passengers-error" : undefined} className={`${controlClassName} ${errors.passengers ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Number of Passengers" name="passengers" required error={errors.passengers}>
+              <input id="passengers" name="passengers" required type="number" min="1" max="999" step="1" inputMode="numeric" aria-invalid={Boolean(errors.passengers)} aria-describedby={errors.passengers ? "passengers-error" : undefined} className={`${controlClassName} ${errors.passengers ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Add stop" name="stops" error={errors.stops}>
-              <input id="stops" name="stops" type="number" min="0" max="999" step="1" inputMode="numeric" aria-invalid={Boolean(errors.stops)} aria-describedby={errors.stops ? "stops-error" : undefined} className={`${controlClassName} ${errors.stops ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Additional Stops" name="stops" required error={errors.stops}>
+              <input id="stops" name="stops" required type="number" min="0" max="999" step="1" defaultValue="0" inputMode="numeric" aria-invalid={Boolean(errors.stops)} aria-describedby={errors.stops ? "stops-error" : undefined} className={`${controlClassName} ${errors.stops ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Service Hours" name="serviceHours" error={errors.serviceHours}>
-              <input id="serviceHours" name="serviceHours" type="number" min="1" max="999" step="1" inputMode="numeric" aria-invalid={Boolean(errors.serviceHours)} aria-describedby={errors.serviceHours ? "serviceHours-error" : undefined} className={`${controlClassName} ${errors.serviceHours ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Service Hours" name="serviceHours" required error={errors.serviceHours}>
+              <input id="serviceHours" name="serviceHours" required type="number" min="1" max="999" step="1" inputMode="numeric" aria-invalid={Boolean(errors.serviceHours)} aria-describedby={errors.serviceHours ? "serviceHours-error" : undefined} className={`${controlClassName} ${errors.serviceHours ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Pick up Place" name="pickupPlace" className="sm:col-span-2 lg:col-span-3" error={errors.pickupPlace}>
-              <input id="pickupPlace" name="pickupPlace" maxLength={200} autoComplete="street-address" aria-invalid={Boolean(errors.pickupPlace)} aria-describedby={errors.pickupPlace ? "pickupPlace-error" : undefined} className={`${controlClassName} ${errors.pickupPlace ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Pick up Place" name="pickupPlace" required className="sm:col-span-2 lg:col-span-3" error={errors.pickupPlace}>
+              <input id="pickupPlace" name="pickupPlace" required minLength={3} maxLength={200} autoComplete="street-address" placeholder="e.g. JFK Terminal 4, or hotel address" aria-invalid={Boolean(errors.pickupPlace)} aria-describedby={errors.pickupPlace ? "pickupPlace-error" : undefined} className={`${controlClassName} ${errors.pickupPlace ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Drop off Place" name="dropoffPlace" className="sm:col-span-2 lg:col-span-3" error={errors.dropoffPlace}>
-              <input id="dropoffPlace" name="dropoffPlace" maxLength={200} aria-invalid={Boolean(errors.dropoffPlace)} aria-describedby={errors.dropoffPlace ? "dropoffPlace-error" : undefined} className={`${controlClassName} ${errors.dropoffPlace ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Drop off Place" name="dropoffPlace" required className="sm:col-span-2 lg:col-span-3" error={errors.dropoffPlace}>
+              <input id="dropoffPlace" name="dropoffPlace" required minLength={3} maxLength={200} placeholder="e.g. Midtown Manhattan hotel or destination address" aria-invalid={Boolean(errors.dropoffPlace)} aria-describedby={errors.dropoffPlace ? "dropoffPlace-error" : undefined} className={`${controlClassName} ${errors.dropoffPlace ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
-            <Field label="Question / Special Instructions" name="instructions" className="sm:col-span-2 lg:col-span-3" error={errors.instructions}>
-              <textarea id="instructions" name="instructions" rows={5} maxLength={3000} aria-invalid={Boolean(errors.instructions)} aria-describedby={errors.instructions ? "instructions-error" : undefined} className={`${controlClassName} min-h-32 py-3 ${errors.instructions ? "border-red-600 ring-1 ring-red-600" : ""}`} />
+            <Field label="Question / Special Instructions" name="instructions" required className="sm:col-span-2 lg:col-span-3" error={errors.instructions}>
+              <textarea id="instructions" name="instructions" required minLength={5} rows={5} maxLength={3000} placeholder="Provide flight numbers, luggage details, special requirements, or route instructions." aria-invalid={Boolean(errors.instructions)} aria-describedby={errors.instructions ? "instructions-error" : undefined} className={`${controlClassName} min-h-32 py-3 ${errors.instructions ? "border-red-600 ring-1 ring-red-600" : ""}`} />
             </Field>
           </div>
         </fieldset>
@@ -383,7 +471,7 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-3 border-t border-brand-text/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs leading-5 text-brand-muted">
-            Required fields are marked <span className="font-bold text-brand-primary">*</span>.
+            Required fields are marked <span className="font-bold text-brand-primary">*</span>. All fields are mandatory to provide an accurate quote.
           </p>
           <button
             disabled={submitting || (!isPreviewMode && (!recaptchaToken || !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY))}

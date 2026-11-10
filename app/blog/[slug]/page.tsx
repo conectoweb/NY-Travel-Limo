@@ -114,9 +114,11 @@ export default async function BlogArticlePage({
     ? { label: "Wine tour transportation from NYC to regional vineyards", href: "/wine-tours-transportation-service-from-new-york" }
     : article.slug.includes("airport")
       ? { label: "Private airport transportation in New York", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" }
-      : article.slug.includes("group")
-        ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
-        : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
+      : article.slug.includes("sprinter")
+        ? { label: "Sprinter van rental with driver in New York NYC", href: "/sprinter-van-rental-with-driver-new-york-nyc" }
+        : article.slug.includes("group")
+          ? { label: "Private group transportation in New York", href: "/group-transportation-in-new-york-near-me" }
+          : { label: "Compare Sprinter vans, SUVs and limousines", href: "/fleet" };
 
   return (
     <>

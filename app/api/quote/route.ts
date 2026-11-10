@@ -121,37 +121,37 @@ export async function POST(request: Request) {
   const name = requiredText(data.name, 100);
   const email = requiredText(data.email, 254);
   const phone = requiredText(data.phone, 40);
-  const pickupDate = optionalText(data.pickupDate, 10);
-  const pickupTime = optionalText(data.pickupTime, 5);
-  const eventType = optionalText(data.eventType, 100);
-  const vehicle = optionalText(data.vehicle, 100);
+  const pickupDate = requiredText(data.pickupDate, 10);
+  const pickupTime = requiredText(data.pickupTime, 5);
+  const eventType = requiredText(data.eventType, 100);
+  const vehicle = requiredText(data.vehicle, 100);
   const passengers = optionalInteger(data.passengers, 1, 999);
   const stops = optionalInteger(data.stops, 0, 999);
-  const pickupPlace = optionalText(data.pickupPlace, 200);
-  const dropoffPlace = optionalText(data.dropoffPlace, 200);
+  const pickupPlace = requiredText(data.pickupPlace, 200);
+  const dropoffPlace = requiredText(data.dropoffPlace, 200);
   const serviceHours = optionalInteger(data.serviceHours, 1, 999);
-  const instructions = optionalText(data.instructions, 3000);
+  const instructions = requiredText(data.instructions, 3000);
   const recaptchaToken = requiredText(data.recaptchaToken, 4096);
 
   if (
     !name || name.length < 2 ||
     !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     !phone || !/^\+?[0-9() .-]{7,40}$/.test(phone) ||
+    !pickupDate || !validDate(pickupDate) ||
+    !pickupTime || !/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(pickupTime) ||
+    !eventType || !allowedEventTypes.has(eventType) ||
+    !vehicle || !allowedVehicles.has(vehicle) ||
+    passengers === undefined || passengers === null ||
+    stops === undefined || stops === null ||
+    !pickupPlace || pickupPlace.length < 3 ||
+    !dropoffPlace || dropoffPlace.length < 3 ||
+    serviceHours === undefined || serviceHours === null ||
+    !instructions || instructions.length < 5 ||
     data.consent !== true ||
-    (pickupDate !== null && (pickupDate === undefined || !validDate(pickupDate))) ||
-    (pickupTime !== null && (pickupTime === undefined || !/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(pickupTime))) ||
-    eventType === undefined || (eventType !== null && !allowedEventTypes.has(eventType)) ||
-    vehicle === undefined || (vehicle !== null && !allowedVehicles.has(vehicle)) ||
-    passengers === undefined ||
-    stops === undefined ||
-    pickupPlace === undefined ||
-    dropoffPlace === undefined ||
-    serviceHours === undefined ||
-    instructions === undefined ||
     !recaptchaToken
   ) {
     return Response.json(
-      { message: "Check your details, consent and trip information before submitting the quote request." },
+      { message: "All fields are required. Please complete all trip details and consent before submitting." },
       { status: 400 },
     );
   }
