@@ -19,6 +19,12 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
+        // Direct root request for Sprinter van rental cost guide → canonical blog URL
+        source: "/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        destination: "/blog/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        statusCode: 301,
+      },
+      {
         // Old WordPress URL (with /nylimo/ prefix) → equivalent fleet page.
         // Query strings are preserved automatically by Next.js.
         source: "/nylimo/sprinter-van-rental-with-driver-new-york-nyc",
