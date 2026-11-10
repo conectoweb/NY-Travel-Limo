@@ -6,11 +6,18 @@ import GalleryExperience from "@/components/GalleryExperience";
 import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(
+  const base = await pageMetadata(
     "/gallery",
     "NY Travel Limo Gallery",
     "Explore NY Travel Limo Sprinter vans, special event transportation, NYC and Brooklyn vehicles, and a featured van tour video."
   );
+
+  return {
+    ...base,
+    alternates: {
+      canonical: "/gallery",
+    },
+  };
 }
 
 export default function GalleryPage() {

@@ -4,11 +4,18 @@ import { pageLinks } from "@/app/sitemap-page-data";
 import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(
+  const base = await pageMetadata(
     "/sitemap",
     "Website Sitemap | NY Travel Limo",
     "Browse NY Travel Limo service, fleet, travel guide and information pages."
   );
+
+  return {
+    ...base,
+    alternates: {
+      canonical: "/sitemap",
+    },
+  };
 }
 
 export default function SitemapPage() {

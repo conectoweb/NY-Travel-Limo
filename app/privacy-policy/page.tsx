@@ -5,7 +5,14 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["privacy-policy"];
-  return pageMetadata("/privacy-policy", page.title, page.description);
+  const base = await pageMetadata("/privacy-policy", page.title, page.description);
+
+  return {
+    ...base,
+    alternates: {
+      canonical: "/privacy-policy",
+    },
+  };
 }
 
 export default function PrivacyPolicyPage() {

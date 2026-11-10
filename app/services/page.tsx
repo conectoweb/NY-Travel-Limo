@@ -19,7 +19,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: isPublicSite ? { canonical: `${siteUrl}/services` } : undefined,
+    alternates: {
+      canonical: "/services",
+    },
     openGraph: {
       title,
       description,

@@ -5,7 +5,14 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["frequently-asked-questions"];
-  return pageMetadata("/frequently-asked-questions", page.title, page.description);
+  const base = await pageMetadata("/frequently-asked-questions", page.title, page.description);
+
+  return {
+    ...base,
+    alternates: {
+      canonical: "/frequently-asked-questions",
+    },
+  };
 }
 
 export default function FrequentlyAskedQuestionsPage() {

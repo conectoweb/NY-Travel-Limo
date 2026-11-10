@@ -309,6 +309,93 @@ export default function ServiceLanding({
         description="Compare our chauffeur-driven Sprinter vans, SUVs and limousines. Share passenger and luggage details to confirm vehicle fit and availability."
       />
 
+      {page.slug === "sprinter-van-rental-with-driver-new-york-nyc" && (
+        <section
+          aria-labelledby="sprinter-14-passenger-van-nyc"
+          className="section-pad border-t border-brand-text/10 bg-brand-soft"
+        >
+          <div className="mx-auto grid max-w-content gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+            <div>
+              <p className="eyebrow mb-3 text-brand-secondary">GROUP TRANSPORTATION</p>
+              <h2
+                className="section-heading text-3xl font-extrabold sm:text-4xl lg:text-[2.6rem] leading-[1.1] text-brand-dark"
+                id="sprinter-14-passenger-van-nyc"
+              >
+                14 Passenger Sprinter Van Rental With Driver in NYC
+              </h2>
+              <div className="mt-5 space-y-4 text-base leading-7 text-brand-muted">
+                <p>
+                  NY Travel Limo provides premier, chauffeur-driven Mercedes-Benz Sprinter van transportation across New York City and New Jersey for groups of up to 14 passengers, subject to the selected vehicle configuration and luggage requirements. Whether organizing airport transfers, corporate roadshows, wedding celebrations, family gatherings, nights out, or private special events, our high-roof passenger vans keep everyone traveling together comfortably on a synchronized schedule.
+                </p>
+                <p>
+                  Every ride is operated by an experienced, licensed professional chauffeur in a private, meticulously maintained vehicle. We provide full service coverage across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and New Jersey, with coordinated private pickups and transfers to John F. Kennedy International (JFK), LaGuardia (LGA), and Newark Liberty (EWR) airports.
+                </p>
+                <p className="text-sm font-medium text-brand-dark">
+                  Because passenger seating layouts and available cargo capacity vary, please share your passenger count, luggage volume, pickup location, destination, schedule, and any intermediate stops when requesting a quote so our reservation team can confirm the ideal vehicle setup.
+                </p>
+              </div>
+
+              <div className="mt-6 rounded-xl border border-brand-primary/15 bg-white p-5 shadow-sm sm:p-6">
+                <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-brand-secondary">
+                  Best for
+                </h3>
+                <ul className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-sm text-brand-dark">
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Airport transfers for groups</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Corporate meetings and roadshows</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Wedding guest transportation</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Family trips and celebrations</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Cruise terminal transportation</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span>Private NYC events</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <QuoteLink
+                  className="min-h-12 w-fit px-7 text-sm sm:text-base shadow-sm"
+                  label="Request a 14 Passenger Van Quote"
+                />
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-primary/10 bg-brand-dark shadow-[0_18px_45px_rgba(41,37,33,0.12)]">
+              <Image
+                alt="Mercedes-Benz 14-passenger Sprinter van with professional driver for private NYC group transportation"
+                className="object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                src="/images/services/sprinter-vans-rental.webp"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"
+              />
+              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-xl border border-white/20 bg-brand-dark/80 px-4 py-3 text-xs text-white backdrop-blur-sm">
+                <span className="font-semibold tracking-wide">Mercedes-Benz Sprinter Passenger Van</span>
+                <span className="font-bold text-brand-secondary">Up to 14 Passengers</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <MidPageCTA content={content} />
 
       <ServiceFAQs items={content.faqs} />
