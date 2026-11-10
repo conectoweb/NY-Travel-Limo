@@ -29,7 +29,9 @@ export async function generateMetadata({
   return {
     title: pageTitle,
     description: page.description,
-    alternates: isPublicSite ? { canonical: url } : undefined,
+    alternates: {
+      canonical: `/${page.slug}`,
+    },
     openGraph: {
       title: pageTitle,
       description: page.description,

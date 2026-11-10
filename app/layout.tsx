@@ -6,12 +6,17 @@ import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const isPublicSite = await isPublicSiteRequest();
+  const metadataBase = new URL("https://www.nytravellimo.com");
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase,
     robots: isPublicSite
       ? { index: true, follow: true }
-      : { index: false, follow: false, googleBot: { index: false, follow: false } },
+      : {
+          index: false,
+          follow: false,
+          googleBot: { index: false, follow: false },
+        },
   };
 }
 

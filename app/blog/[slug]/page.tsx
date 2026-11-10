@@ -30,7 +30,7 @@ export async function generateMetadata({
     title: pageTitle,
     description: article.description,
     alternates: {
-      canonical: url,
+      canonical: `/blog/${article.slug}`,
     },
     robots: {
       index: true,

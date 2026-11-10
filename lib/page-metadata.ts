@@ -8,7 +8,9 @@ export async function pageMetadata(path: string, title: string, description: str
   return {
     title,
     description,
-    alternates: isPublicSite ? { canonical: url } : undefined,
+    alternates: {
+      canonical: path,
+    },
     openGraph: {
       title,
       description,

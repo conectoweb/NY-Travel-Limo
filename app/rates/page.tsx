@@ -34,7 +34,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: isPublicSite ? { canonical: url } : undefined,
+    alternates: {
+      canonical: "/rates",
+    },
     openGraph: {
       title,
       description,

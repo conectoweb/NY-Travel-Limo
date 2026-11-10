@@ -13,7 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical: `${siteUrl}/blog` },
+    alternates: {
+      canonical: "/blog",
+    },
     robots: {
       index: true,
       follow: true,

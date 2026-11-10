@@ -7,11 +7,18 @@ import FinalCTA from "@/components/FinalCTA";
 import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(
+  const base = await pageMetadata(
     "/fleet",
     "NY Travel Limo Fleet | Sprinter Vans, SUVs & Limousines",
     "Explore the NY Travel Limo fleet in NYC, including Mercedes-Benz Sprinter vans, private SUVs and limousines for chauffeur-driven travel."
   );
+
+  return {
+    ...base,
+    alternates: {
+      canonical: "/fleet",
+    },
+  };
 }
 
 export default function FleetPage() {
