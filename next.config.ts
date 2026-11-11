@@ -222,6 +222,36 @@ const nextConfig: NextConfig = {
         source: "/airport-limousine-service-new-york",
         destination: "/lincoln-stretch-limo-rental-nyc",
         statusCode: 301 
+      },
+      {
+        // Legacy wine tours guide URL → current canonical wine tours article
+        source: "/blog/what-are-the-best-wine-tours-from-new-york",
+        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
+        statusCode: 301,
+      },
+      {
+        // Legacy post URL for wine tasting tours → current canonical blog article
+        source: "/post/the-10-best-wine-tasting-tours-in-new-york",
+        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
+        statusCode: 301,
+      },
+      {
+        // Legacy post URL for sprinter rental cost → current canonical blog article
+        source: "/post/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        destination: "/blog/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        statusCode: 301,
+      },
+      {
+        // Legacy airport transfer NYC landing → current airport service landing
+        source: "/airport-transfer-nyc",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+      {
+        // Legacy JFK airport transportation service landing → current airport service landing
+        source: "/jfk-airport-transportation-service",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301,
       }
     ];
   },

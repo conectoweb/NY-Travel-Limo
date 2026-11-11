@@ -140,6 +140,185 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        {/* What is Included Across All Services */}
+        <section aria-labelledby="services-included-heading" className="section-pad bg-white">
+          <div className="mx-auto max-w-content">
+            <div className="max-w-3xl">
+              <p className="eyebrow mb-3 text-brand-secondary">Service Standards &amp; Inclusions</p>
+              <h2 className="section-heading text-3xl sm:text-4xl" id="services-included-heading">
+                What Is Included in Every NY Travel Limo Chauffeur Service
+              </h2>
+              <p className="mt-4 text-base leading-7 text-brand-muted">
+                Whether booking a 30-minute airport transfer or a full-day multi-stop corporate roadshow, our clients receive consistent, premium executive standards from start to finish.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl border border-brand-primary/10 bg-brand-soft/40 p-6 shadow-sm">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white font-bold text-sm">
+                  01
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-brand-dark">Dedicated TLC Chauffeur</h3>
+                <p className="mt-2 text-sm leading-6 text-brand-muted">
+                  Fully licensed, vetted professional drivers in formal executive attire with intimate knowledge of NYC traffic, bridges, and expressways.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-brand-primary/10 bg-brand-soft/40 p-6 shadow-sm">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white font-bold text-sm">
+                  02
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-brand-dark">Automated Flight Tracking</h3>
+                <p className="mt-2 text-sm leading-6 text-brand-muted">
+                  Arrival monitoring for JFK, LGA, and EWR so chauffeur pickup timing adjusts dynamically if your flight is delayed or lands early.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-brand-primary/10 bg-brand-soft/40 p-6 shadow-sm">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white font-bold text-sm">
+                  03
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-brand-dark">Private Dedicated Vehicle</h3>
+                <p className="mt-2 text-sm leading-6 text-brand-muted">
+                  Exclusively reserved for your party with zero ride-sharing, sanitized cabins, climate control, and complimentary charging ports.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-brand-primary/10 bg-brand-soft/40 p-6 shadow-sm">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white font-bold text-sm">
+                  04
+                </div>
+                <h3 className="mt-4 text-lg font-bold text-brand-dark">Transparent Custom Quotes</h3>
+                <p className="mt-2 text-sm leading-6 text-brand-muted">
+                  Upfront, clearly outlined pricing without hidden billing surprises, tailored directly to your passenger count and schedule.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Vehicle & Luggage Matching Guide */}
+        <section aria-labelledby="matching-heading" className="section-pad bg-brand-soft">
+          <div className="mx-auto max-w-content">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <p className="eyebrow mb-3 text-brand-secondary">Fleet Matching Guide</p>
+                <h2 className="section-heading text-3xl sm:text-4xl" id="matching-heading">
+                  Matching Your Service to the Ideal Vehicle
+                </h2>
+                <div className="mt-6 space-y-4 text-sm leading-7 text-brand-muted">
+                  <p>
+                    <strong>Solo Travelers &amp; Small Groups (1–6 Passengers):</strong> Choose a <a className="text-link" href="/luxury-suv-rental-nyc">luxury executive SUV</a> (Cadillac Escalade) for swift airport transfers, meetings in Midtown or Wall Street, and private hotel transfers with up to 6 suitcases.
+                  </p>
+                  <p>
+                    <strong>Group Travel &amp; Teams (7–14 Passengers):</strong> Choose a <a className="text-link" href="/sprinter-van-rental-with-driver-new-york-nyc">Mercedes-Benz Sprinter van</a> with high-roof walk-in height, individual leather seats, and a dedicated rear luggage partition holding 10 to 14 large suitcases.
+                  </p>
+                  <p>
+                    <strong>Celebrations &amp; Weddings (Up to 10 Passengers):</strong> Choose a <a className="text-link" href="/lincoln-stretch-limo-rental-nyc">Lincoln stretch limousine</a> for formal arrivals, prom nights, milestone anniversaries, and evening galas.
+                  </p>
+                </div>
+                <div className="mt-6">
+                  <a
+                    className="inline-flex items-center gap-2 text-sm font-bold text-brand-accent underline decoration-brand-secondary decoration-2 underline-offset-4 hover:text-brand-primary"
+                    href="/fleet"
+                  >
+                    Compare full fleet capacity &amp; specifications <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-brand-primary/15 bg-white p-6 shadow-sm sm:p-8">
+                <h3 className="text-xl font-bold text-brand-dark">Advance Reservation Guidance</h3>
+                <ul className="mt-4 space-y-3 text-sm text-brand-muted">
+                  <li className="flex items-start gap-2.5">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span><strong>Standard Transfers:</strong> Book 48 to 72 hours in advance to guarantee your preferred vehicle category.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span><strong>Airport Pickups:</strong> Include airline, flight number, and terminal for real-time landing coordination.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span><strong>Multi-Stop Charters:</strong> List stops sequentially with estimated meeting durations for accurate quoting.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span aria-hidden="true" className="font-bold text-brand-primary">✓</span>
+                    <span><strong>Weddings &amp; Galas:</strong> Reserve 2 to 4 weeks early during peak spring and autumn event seasons.</span>
+                  </li>
+                </ul>
+                <div className="mt-6 pt-5 border-t border-brand-text/10 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    className="inline-flex min-h-11 items-center justify-center rounded-full bg-brand-secondary px-6 text-sm font-bold text-brand-accent transition hover:bg-brand-accent hover:text-brand-secondary"
+                    href="/contact-us"
+                  >
+                    Request a Service Quote
+                  </a>
+                  <a
+                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-brand-accent bg-transparent px-6 text-sm font-bold text-brand-accent transition hover:bg-brand-accent hover:text-white"
+                    href="tel:5162562892"
+                  >
+                    Call (516) 256-2892
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services FAQ */}
+        <section aria-labelledby="services-faq-title" className="section-pad bg-white" id="services-faq">
+          <div className="mx-auto grid max-w-content gap-9 lg:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="eyebrow mb-4 text-brand-secondary">Frequently Asked Questions</p>
+              <h2 className="section-heading text-3xl sm:text-4xl" id="services-faq-title">
+                NYC Chauffeur Service FAQs
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-brand-muted">
+                Answers to common client questions regarding our transportation services, airport pickups, and hourly reservations.
+              </p>
+            </div>
+            <div className="border-t border-brand-text/15">
+              <details className="group border-b border-brand-text/15 py-5">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                  What is the difference between point-to-point and hourly chauffeur service?
+                  <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                  Point-to-point transportation provides direct transport from one specific pickup address to a single destination (such as an airport transfer or hotel-to-venue ride). Hourly chauffeur service assigns a dedicated vehicle and driver on standby for a set block of time (typically 3+ hours), permitting unlimited stops, dynamic routing, and waiting between meetings or events.
+                </p>
+              </details>
+              <details className="group border-b border-brand-text/15 py-5">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                  How are airport pickups coordinated at JFK, LGA, and EWR?
+                  <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                  Clients provide their flight details during reservation. Our dispatch team tracks flight status in real time. Once your plane touches down, your chauffeur contacts you directly via SMS or phone call to coordinate curbside passenger pickup, or meets you inside the terminal with an executive greeting sign if meet-and-greet service was selected.
+                </p>
+              </details>
+              <details className="group border-b border-brand-text/15 py-5">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                  Can NY Travel Limo coordinate multi-vehicle corporate roadshows or large delegations?
+                  <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                  Yes. We frequently manage multi-vehicle fleets combining Mercedes-Benz Sprinter vans and luxury executive SUVs for corporate conferences, roadshows, board meetings, and large wedding parties across Manhattan, Brooklyn, Queens, and New Jersey. Dedicated dispatch coordination ensures synchronized arrivals.
+                </p>
+              </details>
+              <details className="group border-b border-brand-text/15 py-5">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                  What details do I need to provide when requesting a quote?
+                  <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                  To receive an accurate and timely quote, please share your travel date, pickup time, pickup and drop-off addresses, passenger count, luggage count, vehicle preference, and any intermediate stops or flight details.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
         <FleetOptions
           heading="Find the right ride for your plans."
           description="Sprinter vans are a featured option for groups. We also arrange private SUV transportation and limousines for special occasions."

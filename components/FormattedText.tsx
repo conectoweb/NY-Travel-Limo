@@ -25,11 +25,24 @@ export default function FormattedText({
       parts.push(text.slice(lastIndex, match.index));
     }
     const [, label, href] = match;
+    const isExternal =
+      /^https?:\/\//i.test(href) &&
+      !href.startsWith("https://www.nytravellimo.com") &&
+      !href.startsWith("http://www.nytravellimo.com") &&
+      !href.startsWith("https://nytravellimo.com") &&
+      !href.startsWith("http://nytravellimo.com");
+
     parts.push(
       <a
         key={`${href}-${match.index}`}
         href={href}
         className={className}
+        {...(isExternal
+          ? {
+              target: "_blank",
+              rel: "noopener noreferrer nofollow",
+            }
+          : {})}
       >
         {label}
       </a>

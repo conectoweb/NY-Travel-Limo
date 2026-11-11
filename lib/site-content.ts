@@ -84,42 +84,52 @@ export const fleetPages: DetailPage[] = [
       "A chauffeur-driven SUV is a comfortable option for private travel around New York. NY Travel Limo can help plan an airport pickup, a business ride or a direct trip across the city. Share your passenger and luggage needs so we can discuss the best fit.",
     sections: [
       {
-        heading: "SUV transportation for everyday plans and special trips",
+        heading: "Executive SUV specifications & passenger capacity",
         paragraphs: [
-          "Choose a private SUV when you want a dedicated ride for your itinerary, whether that means a direct transfer, a day of meetings or a pickup after a flight. Your chauffeur and pickup plan are arranged around the trip details you provide.",
-          "Traveling with a larger party or extra bags? Let us know before booking. We can help compare SUV transportation with a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) or [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc).",
+          "Our executive luxury SUV fleet features full-size Cadillac Escalade and Chevrolet Suburban models tailored for corporate executives, visiting dignitaries, and discerning private travelers. With seating for up to 6 passengers and cargo space for 4 to 6 standard checked suitcases, our SUVs balance spacious cabin luxury with nimble maneuverability through congested New York traffic.",
+          "Every SUV cabin is engineered for quiet productivity or serene relaxation, featuring tri-zone automatic climate control, acoustic sound-dampening glass, deep factory privacy tint, plush leather captain's chairs, and complimentary onboard Wi-Fi with high-speed device charging ports.",
         ],
         bullets: [
-          "[Airport pickups and drop-offs](/airport-transportation-services-in-nyc-with-professional-chauffeurs) at JFK, LGA, and EWR",
-          "[Corporate and executive transportation](/corporate-transportation-service-with-driver-in-new-york) across NYC",
-          "[Private point-to-point rides](/point-to-point-transportation-service-in-new-york) between hotels, offices, and venues",
-          "Family travel, [funeral transportation](/funeral-transportation-services-nyc-dignified-professional) and special occasions",
+          "Passenger capacity: 1 to 6 passengers comfortably seated",
+          "Luggage hold: 4 to 6 full-sized checked suitcases plus personal bags",
+          "Cabin amenities: Leather seating, tri-zone climate, USB-C/110V power",
+          "Privacy: Acoustic laminated glass and dark rear passenger tinting",
         ],
       },
       {
-        heading: "Tell us what your trip requires",
+        heading: "What is included with your private SUV charter",
         paragraphs: [
-          "Include the date and time, addresses, number of passengers, luggage and any timing considerations in your quote request. For an airport ride, provide your flight details and let us know whether you need pickup or drop-off service.",
-        ],
-      },
-      {
-        heading: "Plan for passengers, bags and the route",
-        paragraphs: [
-          "SUV passenger and luggage capacity depends on the specific vehicle and seating setup. Share the number of travelers and bags, including child seats or oversized luggage, so the team can discuss an appropriate option.",
-          "A direct airport transfer, business pickup and multi-stop day each require different timing. Include the pickup address, destination and any additional stops when you request a quote.",
+          "Every NY Travel Limo SUV rental includes an experienced, TLC-licensed professional chauffeur dedicated exclusively to your schedule. We provide comprehensive commercial passenger insurance, automated flight tracking for all airport transfers, complimentary chilled bottled water, and meticulous interior sanitation prior to every dispatch.",
+          "Traveling with a larger delegation or extra equipment? If your party exceeds 6 passengers or carries bulky luggage, compare our SUV service with our [14-passenger Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for unified group travel.",
         ],
         bullets: [
-          "Passenger count and approximate luggage",
-          "Flight or appointment timing where relevant",
-          "Return-trip details or intermediate stops",
-          "Any pickup notes that will help identify the location",
+          "[Airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs) to JFK, LaGuardia (LGA), and Newark (EWR)",
+          "[Corporate and executive roadshows](/corporate-transportation-service-with-driver-in-new-york) across Manhattan and Wall Street",
+          "[Hourly chauffeur standby service](/transportation-by-hours-in-new-york) for client meetings and dining itineraries",
+          "[Point-to-point transportation](/point-to-point-transportation-service-in-new-york) between NYC hotels, offices, and private residences",
         ],
       },
       {
-        heading: "Private SUV transportation for New York trips",
+        heading: "Service areas across NYC, New Jersey & Tri-State region",
         paragraphs: [
-          "An SUV may work for a private airport ride, a family trip or a smaller business itinerary. If your party or luggage needs more room, ask the team to compare SUV and Sprinter van options before finalizing the reservation.",
-          "Vehicle availability and configuration can change. Confirm the selected vehicle and the trip arrangements directly with NY Travel Limo.",
+          "We provide comprehensive door-to-door SUV transportation throughout Manhattan (Midtown, Financial District, Upper East Side, Chelsea), Brooklyn, Queens, the Bronx, and Staten Island. Service extends seamlessly across Northern New Jersey (Jersey City, Hoboken, Newark), Long Island (Nassau and the Hamptons), Westchester County, and Connecticut.",
+          "For commercial aviation and private charter travelers, we service all major regional airports including John F. Kennedy (JFK), LaGuardia (LGA), Newark Liberty (EWR), Teterboro Airport (TEB), and Westchester County Airport (HPN).",
+        ],
+      },
+      {
+        heading: "Booking process & advance reservation guidance",
+        paragraphs: [
+          "To secure your executive SUV, submit your date, pickup time, pickup address, destination, passenger count, and luggage expectations through our [online quote form](/contact-us). For airport arrivals, provide your airline name and flight number so our dispatch team can monitor your schedule in real time.",
+          "We recommend booking at least 24 to 48 hours in advance for standard transfers. For high-demand corporate events, UN General Assembly sessions, and peak holiday seasons, advance reservations of 1 to 2 weeks are strongly encouraged.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about SUV chauffeur service",
+        paragraphs: [
+          "**How much luggage fits when traveling with 6 passengers?** With all three rows of seating occupied, the rear cargo area holds approximately 4 to 5 standard checked suitcases. If your group carries oversized luggage, golf bags, or more than 6 bags, we recommend upgrading to a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc).",
+          "**Can we hire an executive SUV on an hourly basis?** Yes. We provide flexible [hourly chauffeur service](/transportation-by-hours-in-new-york) allowing your driver to remain on standby outside your meetings, client dinners, or shopping appointments with unlimited intermediate stops.",
+          "**Do you provide child safety seats?** Yes, infant, toddler, and booster seats can be arranged upon request. Please note your requirements in the comments of your quote request.",
+          "**How do airport meet-and-greet pickups work?** Your chauffeur will track your incoming flight and coordinate curbside pickup upon baggage retrieval, or meet you inside the terminal with a personalized greeting name-sign if requested.",
         ],
       },
     ],
@@ -136,42 +146,51 @@ export const fleetPages: DetailPage[] = [
       "Make the transportation part of your occasion. NY Travel Limo arranges private limousine service in New York for weddings, celebrations, evenings out and event travel. Tell us the schedule and stops you have in mind so we can help plan the ride.",
     sections: [
       {
-        heading: "A polished ride for your event",
+        heading: "Lincoln stretch limousine specifications & luxury features",
         paragraphs: [
-          "Whether you need transportation for a couple, a wedding party or guests moving between locations, start with the details that shape the day: pickup times, venue addresses, planned stops and the number of people traveling.",
-          "Vehicle availability and seating arrangements can vary. Please confirm the vehicle, passenger count and any special requests with our team before completing your reservation.",
+          "Our iconic Lincoln stretch limousines deliver timeless sophistication for formal events, milestones, and celebratory evenings across New York City. Engineered with classic elongated lines and an executive black or white exterior, our limousines accommodate up to 8 to 10 passengers with dedicated interior lounge styling.",
+          "Inside the private passenger compartment, guests enjoy wrap-around premium leather J-seating, a mirrored ceiling with customizable fiber-optic starlight illumination, multi-zone mood lighting, an integrated ice bar with champagne flutes and rock glasses, and a high-fidelity sound system with Bluetooth connectivity. A solid acoustic privacy partition isolates the passenger lounge from the chauffeur cabin.",
         ],
         bullets: [
-          "[Wedding-day and reception transportation](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
-          "Anniversaries, birthdays and milestone celebrations",
-          "Proms, formal galas and [hourly limousine rides](/transportation-by-hours-in-new-york)",
-          "[Private point-to-point transportation](/point-to-point-transportation-service-in-new-york) between NYC venues",
+          "Passenger capacity: Up to 8 to 10 guests in wrap-around lounge seating",
+          "Luggage space: Trunk accommodates 3 to 4 standard suitcases plus personal bags",
+          "Cabin features: Fiber-optic starlight ceiling, illuminated glassware console, ice bins",
+          "Privacy & tech: Dual privacy partitions (glass & solid divider), Bluetooth audio",
         ],
       },
       {
-        heading: "Coordinate the schedule in advance",
+        heading: "What is included with your limousine charter",
         paragraphs: [
-          "Share your event date, itinerary and timing when you request a quote. If your group is larger than 10 passengers, explore our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for unified travel.",
-        ],
-      },
-      {
-        heading: "Choose the limousine around the occasion",
-        paragraphs: [
-          "The right arrangement depends on how many people are traveling, the locations involved and the role transportation plays in your event. Tell the team whether you need a single arrival, transfers between venues or a planned return ride.",
-          "Confirm the available vehicle, passenger capacity, pickup times and any service terms before completing your reservation. Do not assume a particular vehicle configuration until it is confirmed.",
+          "Every stretch limousine booking includes a professionally trained, TLC-licensed chauffeur in formal black-tie executive attire. We provide full commercial livery insurance, spotless vehicle detailing, complimentary chilled bottled water and fresh ice, and dedicated dispatch tracking.",
+          "Need guest transportation for larger wedding parties? Pair your Lincoln stretch limousine with one or more of our [14-passenger Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) to move family members and bridal parties seamlessly.",
         ],
         bullets: [
-          "Event date and requested pickup window",
-          "Venue and return addresses",
-          "Number of passengers for each ride",
-          "Stops, waiting periods and special timing notes",
+          "[Luxury wedding day transportation](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans) between church, photo shoot, and reception",
+          "Milestone anniversaries, birthday dinners, and romantic NYC evenings",
+          "High school proms, winter formals, and collegiate galas with verified safety protocols",
+          "[Hourly limousine charters](/transportation-by-hours-in-new-york) for Broadway theater trips and NYC nightlife",
         ],
       },
       {
-        heading: "Make event transportation easier to coordinate",
+        heading: "Service areas across NYC, Long Island & New Jersey",
         paragraphs: [
-          "For a wedding or celebration, share one ordered schedule with the key addresses and the number of passengers at each pickup. Identify a contact person who can help clarify timing if the plan changes.",
-          "If several groups need rides, describe each group separately. The team can review the request and discuss vehicle availability and arrangements for the occasion.",
+          "Our limousine charters operate throughout Manhattan, Brooklyn, Queens, Staten Island, and the Bronx, as well as Long Island (Nassau and Suffolk wedding venues), Westchester County, and Northern New Jersey reception halls. We provide coordinated arrivals at premier NYC hotels, ballrooms, and banquet centers.",
+        ],
+      },
+      {
+        heading: "Limousine packages & advance reservation guidance",
+        paragraphs: [
+          "Wedding, prom, and special event limousine charters typically operate on structured 3-hour minimum packages, with clear hourly pricing for each additional hour requested. To receive an accurate quote, share your event date, pickup addresses, ceremony location, photo stop coordinates, and reception drop-off timing.",
+          "Because stretch limousines are in exceptionally high demand for weekend weddings and prom season (April through June), we advise securing your reservation 3 to 6 weeks in advance.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about limousine rentals",
+        paragraphs: [
+          "**How many passengers fit comfortably in a stretch limousine?** Our Lincoln limousines seat up to 10 passengers maximum. For adult parties desiring maximum relaxation and cocktail room, 8 passengers provides ideal comfort.",
+          "**Can we bring beverages or champagne into the limousine?** Yes, guests of legal drinking age (21+) are welcome to bring champagne, wine, and beverages. Glassware and fresh ice are provided in the bar consoles.",
+          "**Is there a minimum booking duration?** Most limousine charters within the New York metropolitan area require a 3-hour minimum. Specific package terms are detailed clearly in your personalized quote.",
+          "**What if our event runs late?** Additional time can be accommodated by notifying your chauffeur and dispatch, billed at the agreed hourly overtime rate detailed in your reservation agreement.",
         ],
       },
     ],
@@ -258,22 +277,50 @@ export const servicePages: DetailPage[] = [
       "NY Travel Limo arranges corporate transportation in New York for executives, employees, clients and visiting teams. Use a corporate car service in NYC for an airport transfer, executive transportation, a business meeting or a multi-stop company itinerary.",
     sections: [
       {
-        heading: "Transportation that follows your business itinerary",
+        heading: "Executive corporate chauffeur solutions in NYC",
         paragraphs: [
-          "Plan a direct transfer between the airport, hotel and office, or share a schedule with multiple meetings and event locations. Let us know whether you need a one-way ride, a return trip or a vehicle for a longer period.",
-          "For a team traveling together, consider a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc). [Executive luxury SUVs](/luxury-suv-rental-nyc) and [limousines](/lincoln-stretch-limo-rental-nyc) can suit client and leadership transportation needs.",
+          "NY Travel Limo provides high-touch corporate black car and executive van transportation engineered around the demanding schedules of corporate leadership, executive assistants, visiting delegations, and travel managers. We coordinate point-to-point transfers between Manhattan headquarters, Wall Street financial hubs, regional corporate campuses in New Jersey and Westchester, and NYC airports.",
+          "Every corporate ride is operated by a vetted, TLC-licensed professional chauffeur in formal executive attire committed to confidentiality, punctuality, and route precision.",
         ],
         bullets: [
-          "[Airport and hotel transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
-          "Meetings and executive client transportation",
-          "Corporate events and [group transportation](/group-transportation-in-new-york-near-me)",
+          "[Airport and hotel transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs) with automated flight tracking",
+          "Executive client hosting and leadership meeting transportation",
+          "Corporate summits, board meetings and [group transportation](/group-transportation-in-new-york-near-me)",
           "Multi-stop business itineraries and [financial roadshows](/roadshow-transportation-nyc)",
         ],
       },
       {
-        heading: "Make the request easy to coordinate",
+        heading: "Fleet capacity & executive cabin amenities",
         paragraphs: [
-          "Include dates, pickup times, addresses, passenger count and a contact person for the itinerary. If your schedule may change or includes several stops, provide as much detail as possible when requesting a quote.",
+          "For visiting leadership and C-suite executives, our [executive luxury SUVs](/luxury-suv-rental-nyc) (Cadillac Escalade) deliver a quiet acoustic workspace with tinted privacy glass, plush leather captain's seating, device charging ports, and Wi-Fi capability.",
+          "When traveling with corporate teams, investor delegations, or conference groups, our high-roof [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) provide walk-in cabin height, individual seating for 10 to 14 passengers, 110V/USB outlets at each seat, and a dedicated rear luggage compartment.",
+        ],
+        bullets: [
+          "1 to 6 Passengers: Executive SUVs with 4 to 6 full-sized suitcases",
+          "7 to 14 Passengers: Mercedes-Benz Sprinter vans with 10 to 14 luggage bags",
+          "Executive Amenities: High-speed charging, climate zones, and quiet mobile office cabins",
+        ],
+      },
+      {
+        heading: "Service areas across NYC, New Jersey & corporate hubs",
+        paragraphs: [
+          "We service corporate routes across Manhattan (Midtown financial corridors, Hudson Yards, Downtown Wall Street), Brooklyn Tech Triangle, Long Island City, Westchester corporate parks, and Northern New Jersey (Jersey City Exchange Place, Newark, Hoboken, and Morristown).",
+          "Airport transfers connect with John F. Kennedy (JFK), LaGuardia (LGA), Newark Liberty (EWR), and private aviation FBOs including Teterboro (TEB) and Westchester County (HPN).",
+        ],
+      },
+      {
+        heading: "Corporate billing, invoicing & advance reservation guidance",
+        paragraphs: [
+          "We offer direct corporate billing and consolidated monthly itemized invoicing for recurring accounts and financial institutions. Quotes are comprehensive and upfront, detailing vehicle charter, travel time, and applicable bridge/tunnel tolls.",
+          "We recommend reserving at least 48 hours in advance for standard corporate transfers, or 1 to 2 weeks ahead for major quarterly investor summits and multi-vehicle delegations.",
+        ],
+      },
+      {
+        heading: "Corporate transportation FAQs",
+        paragraphs: [
+          "**Can our company set up an ongoing corporate billing account?** Yes, approved corporate clients and financial firms can establish corporate accounts with consolidated monthly invoicing and detailed ride receipts for expense reporting.",
+          "**Can the chauffeur remain on standby between executive meetings?** Yes. Our [hourly chauffeur service](/transportation-by-hours-in-new-york) allows your driver to remain on call outside meeting locations, ready for immediate dispatch as schedules evolve.",
+          "**How do you handle airport arrivals for corporate guests?** Chauffeurs monitor incoming commercial or private flights in real time. We offer both convenient curbside dispatch and inside-terminal meet-and-greet with custom corporate name signage.",
         ],
       },
     ],
@@ -290,18 +337,51 @@ export const servicePages: DetailPage[] = [
       "Plan corporate roadshow transportation in NYC around investor meetings, addresses and arrival times. Share your full schedule to discuss executive roadshow transportation in New York and vehicle options for the traveling team.",
     sections: [
       {
-        heading: "Keep a multi-stop itinerary organized",
+        heading: "Precision coordination for multi-stop financial roadshows",
         paragraphs: [
-          "Share the full meeting schedule, including addresses, appointment times and expected wait periods. This gives the team a clear picture of the day, rather than only the first and last stop.",
-          "Choose a vehicle based on who is traveling and the shape of your schedule. Sprinter vans can accommodate group itineraries; SUVs and limousines offer additional private transportation options.",
+          "Financial roadshows, IPO presentations, and investor meetings in New York City involve tight schedules, high-stakes appointments, and zero tolerance for traffic delays. NY Travel Limo specializes in multi-stop executive roadshow coordination connecting Midtown investment banks, Wall Street firms, private equity offices, and regional airport FBOs.",
+          "Your dedicated chauffeur remains on standby outside each appointment location, adapting seamlessly if a meeting finishes early or runs late, and navigating Manhattan traffic using real-time route intelligence.",
+        ],
+        bullets: [
+          "Sequential multi-stop routing tailored to tight investor meeting timetables",
+          "Dedicated chauffeur standby throughout the full business day",
+          "Connecting Manhattan financial offices with JFK, LGA, EWR, and Teterboro FBOs",
+          "24/7 central dispatch monitoring road conditions, tunnel traffic, and bridge delays",
         ],
       },
       {
-        heading: "Roadshow details to have ready",
+        heading: "Roadshow fleet specifications & mobile office environment",
         paragraphs: [
-          "Before requesting a quote, gather the travel dates, passenger count, pickup location, meeting addresses and any timing requirements. If there is a preferred contact for day-of coordination, include those details in your reservation request.",
+          "For executive teams needing to prepare presentations, review financial models, or conduct confidential conference calls en route, our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) function as mobile executive suites. Cabins feature stand-up high-roof clearance, individual leather seats, 110V power outlets, USB ports, and privacy tinting.",
+          "For smaller executive delegations (1 to 6 passengers), our [luxury executive SUVs](/luxury-suv-rental-nyc) (Cadillac Escalade) offer nimble navigation through congested Midtown avenues while providing acoustic glass insulation and quiet comfort.",
         ],
-        bullets: ["Meeting locations in itinerary order", "Pickup time and anticipated duration", "Passenger and luggage details", "Any requested stops or schedule notes"],
+        bullets: [
+          "Mercedes Sprinter Vans: 10 to 14 passengers, presentation review space, generous baggage hold",
+          "Executive Luxury SUVs: Up to 6 passengers, discreet profile, rapid hotel turnaround access",
+          "Onboard Connectivity: USB charging, 110V power outlets, climate control, bottled water",
+        ],
+      },
+      {
+        heading: "Service coverage across NYC financial corridors & regional airports",
+        paragraphs: [
+          "We cover all primary financial and corporate hubs: Wall Street, Midtown Manhattan (Park Ave, Sixth Ave, Hudson Yards), Jersey City financial centers, Greenwich CT hedge fund corridors, and Westchester campuses.",
+          "We provide seamless coordination with private aviation terminals at Teterboro Airport (TEB), Westchester County Airport (HPN), and commercial terminals at JFK, LaGuardia, and Newark.",
+        ],
+      },
+      {
+        heading: "Roadshow planning checklist & booking process",
+        paragraphs: [
+          "To request a roadshow quote, provide your date, initial pickup location and time, ordered sequence of meeting addresses, estimated appointment durations, total passenger count, and day-of coordinator contact details.",
+          "Because financial roadshows require dedicated vehicle allocation and senior chauffeurs, we recommend submitting your itinerary 1 to 2 weeks in advance.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about NYC roadshows",
+        paragraphs: [
+          "**What happens if an investor meeting runs over the scheduled time?** Your chauffeur remains on standby at the venue. Any overtime beyond the reserved window is billed at the pre-agreed hourly charter rate detailed in your reservation.",
+          "**Can we modify our meeting sequence or add a dinner stop during the day?** Yes. You can communicate route adjustments directly to your chauffeur or our 24/7 dispatch desk, and your driver will adjust navigation accordingly.",
+          "**Can you coordinate multiple vehicles for simultaneous executive groups?** Yes, we frequently manage multi-vehicle fleets consisting of Sprinters and SUVs for synchronized group arrivals across Manhattan.",
+        ],
       },
     ],
     recommendedFleet: ["sprinter", "suv", "limousine"],
@@ -317,17 +397,50 @@ export const servicePages: DetailPage[] = [
       "Plan cruise terminal transportation in NYC between your home, hotel, airport and Manhattan Cruise Terminal. NY Travel Limo helps individuals, families and groups coordinate private cruise transportation in New York with the sailing, pickup and luggage details in one itinerary.",
     sections: [
       {
-        heading: "Connect your cruise plans",
+        heading: "Private cruise port transfers across Manhattan, Brooklyn & Bayonne",
         paragraphs: [
-          "Tell us your terminal, sailing date, preferred pickup time and where you are coming from or going next. If you are traveling with several people or multiple suitcases, include that information so we can discuss a suitable vehicle.",
-          "Sprinter vans are a featured option for groups. SUVs and limousines are also available to consider depending on your party and itinerary.",
+          "Embarking or disembarking on a cruise from the New York area should be effortless. NY Travel Limo provides direct, private chauffeur-driven transfers connecting Manhattan, Brooklyn, Queens, Long Island, and regional airports with all major regional cruise ports.",
+          "We eliminate the logistical headache of hailing multiple yellow cabs or coordinating rideshares with heavy luggage. Your chauffeur delivers prompt door-to-door service directly to passenger drop-off zones.",
         ],
-        bullets: ["Hotel-to-terminal transfers", "Airport-to-terminal transportation", "Terminal pickups after your cruise", "Group and family travel"],
+        bullets: [
+          "Manhattan Cruise Terminal (Piers 88, 90, 92 on West 55th Street)",
+          "Brooklyn Cruise Terminal (Pier 12 in Red Hook, Brooklyn)",
+          "Cape Liberty Cruise Port (Bayonne, New Jersey)",
+          "Direct transfers from JFK, LaGuardia (LGA), and Newark Liberty (EWR)",
+        ],
       },
       {
-        heading: "Plan for a smooth pickup",
+        heading: "Vehicle & luggage capacity guidance for cruise passengers",
         paragraphs: [
-          "Share your cruise line, terminal information, passenger count, luggage needs and any timing instructions in your quote request. Pickup arrangements can depend on terminal procedures, so confirm the meeting details with the team before travel day.",
+          "Cruise vacations typically involve large multi-week rolling suitcases, garment bags, and carry-ons. Standard taxis and rideshares frequently lack the cargo capacity needed for families or traveling couples.",
+          "Our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) seat 10 to 14 passengers with a dedicated rear cargo compartment engineered to hold 10 to 14 full-sized rolling suitcases with room to spare. For smaller parties of 1 to 6 passengers with 4 to 6 bags, our [luxury executive SUVs](/luxury-suv-rental-nyc) offer quiet, spacious transit.",
+        ],
+        bullets: [
+          "Groups of 7 to 14 Cruisers: Mercedes-Benz Sprinter with dedicated luggage compartment",
+          "Couples & Families (1 to 6 Cruisers): Executive Luxury SUV with ample cargo space",
+          "VIP Cruisers & Couples: Lincoln stretch limousines for celebratory sailing departures",
+        ],
+      },
+      {
+        heading: "Connecting airports, hotels & cruise ports",
+        paragraphs: [
+          "Arriving into JFK, LGA, or EWR on sailing day or the day prior? We coordinate airport pickups with flight monitoring and provide seamless transfers to your Manhattan or Brooklyn hotel, followed by synchronized terminal drop-off on embarkation morning.",
+          "For post-cruise return trips, your chauffeur monitors your ship's docking schedule and coordinates curbside pickup at the terminal ground transportation area once you clear customs.",
+        ],
+      },
+      {
+        heading: "Booking guidance & disembarkation pickup coordination",
+        paragraphs: [
+          "When requesting a cruise quote, include your ship name, cruise terminal, sailing date, boarding window, passenger count, total suitcase volume, and destination address.",
+          "We recommend booking your cruise transfer at least 1 to 2 weeks in advance to ensure preferred vehicle availability, especially during peak summer and autumn foliage sailing seasons.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about cruise transfers",
+        paragraphs: [
+          "**Where does the chauffeur meet us after disembarking from our cruise?** After collecting your luggage and clearing U.S. Customs, contact your chauffeur or dispatch via phone. Your driver will pull into the designated commercial passenger pickup lane right outside the terminal.",
+          "**Can you pick us up at JFK, LGA, or Newark and take us straight to our cruise ship?** Yes, we provide direct airport-to-terminal transfers with real-time flight tracking so your journey to the port is synchronized and prompt.",
+          "**What if our ship's disembarkation is delayed due to port congestion or customs?** Please notify your chauffeur or dispatch as soon as you are informed of delays. Your pickup time will be updated accordingly.",
         ],
       },
     ],
@@ -344,22 +457,50 @@ export const servicePages: DetailPage[] = [
       "Arrange a wedding transportation service in New York around the ceremony, photo locations, reception and hotel. NY Travel Limo helps couples and planners coordinate private wedding transportation in NYC, from a limousine arrival to Sprinter van transportation for groups.",
     sections: [
       {
-        heading: "Plan rides for the whole wedding day",
+        heading: "Comprehensive wedding day transportation logistics in NYC",
         paragraphs: [
-          "Start with a list of who needs transportation, when each group should be picked up and where they need to go. Include any gap between the ceremony and reception, photo stops or late-night return trips.",
-          "A [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) is ideal for moving a [wedding group](/group-transportation-in-new-york-near-me) together, while [private luxury SUVs](/luxury-suv-rental-nyc) and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) offer elegant options for couples, families and grand arrivals. Consider booking [hourly transportation](/transportation-by-hours-in-new-york) so your chauffeurs remain on standby.",
+          "A New York wedding day involves multiple moving parts: bridal party preparation, hair and makeup arrivals, church or chapel ceremonies, scenic photo sessions across Central Park or DUMBO, reception venue arrivals, and late-night guest hotel shuttles. NY Travel Limo delivers coordinated, punctual luxury transportation tailored to your exact wedding timeline.",
+          "Our professional chauffeurs arrive in formal executive black attire, familiarize themselves with your photographer's route, and coordinate seamless drop-offs and standby waiting at premier venues across Manhattan, Brooklyn, Queens, Long Island, and New Jersey.",
         ],
         bullets: [
-          "Couple and wedding party arrivals in a [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc)",
-          "Guest transfers and shuttles in [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc)",
-          "Hotel, photo shoot and venue [point-to-point transfers](/point-to-point-transportation-service-in-new-york)",
-          "Dedicated late-night return transportation for guests",
+          "Couple and bridal party arrivals in iconic [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc)",
+          "Guest and family shuttles in high-roof [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc)",
+          "Hotel, photo shoot, and reception venue [point-to-point transfers](/point-to-point-transportation-service-in-new-york)",
+          "Dedicated late-night return transportation and wedding weekend airport transfers",
         ],
       },
       {
-        heading: "Share the schedule before the big day",
+        heading: "Bridal party & guest shuttle fleet matching",
         paragraphs: [
-          "Send the wedding date, venue addresses, pickup list, estimated times and passenger counts when requesting a quote. A clear itinerary helps everyone understand the transportation plan.",
+          "To ensure every guest and wedding party member travels in comfort, we offer tailored vehicle pairings. Our 10- to 14-passenger [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are the gold standard for moving bridesmaids, groomsmen, and out-of-town wedding guests together, featuring stand-up ceiling height that protects formal gowns, dual-zone climate control, and rear luggage storage.",
+          "For the newlyweds and immediate family, our [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) provide romantic lounge seating, ambient fiber-optic lighting, and an interior champagne bar console, while [executive luxury SUVs](/luxury-suv-rental-nyc) accommodate parents and VIP guests.",
+        ],
+        bullets: [
+          "10–14 Passenger Sprinters: Spacious aisle access, gown-friendly high roof, quiet climate cabins",
+          "Lincoln Stretch Limousines: Traditional luxury for the couple with starlight ceiling and glassware",
+          "Executive Luxury SUVs: Refined, discreet transportation for parents and wedding VIPs",
+        ],
+      },
+      {
+        heading: "Wedding coverage across Five Boroughs, Long Island & NJ venues",
+        paragraphs: [
+          "We provide comprehensive wedding transportation across NYC's most iconic ceremony and reception destinations: Manhattan ballrooms, Brooklyn waterfront venues (The River Café, Liberty Warehouse), Queens banquet halls, Long Island Gold Coast estates (Oheka Castle, Glen Cove), and New Jersey country clubs.",
+          "We also provide coordinated airport pickups at JFK, LaGuardia, and Newark for out-of-town guests arriving for the wedding weekend.",
+        ],
+      },
+      {
+        heading: "Timeline coordination & advance wedding reservation guidance",
+        paragraphs: [
+          "When requesting a wedding quote, provide your ceremony start time, photo shoot destinations, reception schedule, and guest pickup locations. We recommend establishing realistic buffer windows of 30 to 45 minutes to account for NYC traffic, photography setups, and dress fluffing.",
+          "Because wedding dates in spring, early summer, and autumn fill months in advance, we strongly recommend reserving your wedding fleet 4 to 8 weeks ahead.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about wedding transportation",
+        paragraphs: [
+          "**How far in advance should we book our wedding transportation?** We recommend reserving your wedding Sprinters or limousines 4 to 8 weeks in advance, especially for Saturday evening weddings between May and October.",
+          "**Can the chauffeur remain on standby between the ceremony and reception?** Yes. We offer continuous hourly charter packages where your chauffeur remains on call during photo shoots, ceremony gaps, and reception transitions.",
+          "**Can we bring champagne or toast drinks into the wedding vehicles?** Yes, adult passengers (21+) are welcome to bring champagne, wine, and celebratory drinks. Fresh ice and glassware are provided in our stretch limousines.",
         ],
       },
     ],
@@ -376,16 +517,49 @@ export const servicePages: DetailPage[] = [
       "When your plans include several stops, hourly chauffeur service in New York can organize transportation around a broader itinerary. Share the start time, expected duration and destinations to discuss private transportation by the hour in NYC.",
     sections: [
       {
-        heading: "A flexible option for a day in the city",
+        heading: "Flexible as-directed hourly chauffeur service in NYC",
         paragraphs: [
-          "Hourly service may suit a day of business meetings, an event schedule, shopping or private sightseeing. Share the expected start time, trip duration and destinations so the team can review the plan with you.",
-          "Choose among Sprinter vans, SUVs and limousines according to your group size, occasion and preferences. Vehicle availability and booking terms should be confirmed as part of your quote.",
+          "Navigating New York City with multiple appointments, retail stops, private meetings, or evening dining can be unpredictable. NY Travel Limo’s as-directed hourly chauffeur service provides a dedicated luxury vehicle and licensed professional driver placed completely at your command for a set block of time.",
+          "Your chauffeur remains on standby directly outside your locations, ready to depart the moment you step out, eliminating parking worries, taxi hails, and transit delays.",
+        ],
+        bullets: [
+          "Corporate executive standby during investor meetings and conferences",
+          "Luxury personal shopping excursions along Fifth Avenue, SoHo, and Madison Avenue",
+          "Private multi-stop city dining, Broadway theater, and evening galas",
+          "Family sightseeing itineraries across Manhattan, Brooklyn, and Queens",
         ],
       },
       {
-        heading: "Build your itinerary",
+        heading: "Vehicle capacities & onboard standby amenities",
         paragraphs: [
-          "Include the pickup address, estimated hours, stops in order, passenger count and any return-time needs. If you are unsure how long the schedule will take, explain your plans when you request a quote.",
+          "Our hourly charter fleet includes high-roof [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for 10 to 14 passengers, [executive luxury SUVs](/luxury-suv-rental-nyc) for up to 6 passengers, and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) for up to 10 guests.",
+          "Cabins are equipped with multi-zone climate control, leather upholstery, mobile device charging ports, tinted privacy glass, and complimentary bottled water to keep you refreshed throughout your schedule.",
+        ],
+        bullets: [
+          "Mercedes Sprinter Vans: High roof, 10–14 individual seats, extensive shopping bag / luggage hold",
+          "Executive Luxury SUVs: Cadillac Escalade, 1–6 passengers, agile Midtown traffic handling",
+          "Lincoln Stretch Limousines: Formal luxury with wrap-around lounge seating and bar console",
+        ],
+      },
+      {
+        heading: "Five Borough & regional coverage with unlimited stops",
+        paragraphs: [
+          "Hourly charter service operates seamlessly throughout Manhattan, Brooklyn, Queens, Staten Island, and the Bronx, as well as Long Island, Westchester, and Northern New Jersey. You enjoy complete freedom to direct your driver to any address, change destinations spontaneously, or add unplanned intermediate stops.",
+        ],
+      },
+      {
+        heading: "Hourly charter terms, minimum durations & booking process",
+        paragraphs: [
+          "Hourly charters typically require a 3-hour minimum commitment. Base hourly rates include vehicle charter, licensed chauffeur service, and fuel. New York bridge/tunnel tolls or parking charges incurred during standby are itemized transparently.",
+          "To request an hourly quote, share your planned start time, starting address, estimated hours needed, destination areas, and passenger count.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about hourly chauffeur service",
+        paragraphs: [
+          "**What is the minimum hourly commitment for Sprinter vans or SUVs?** Most hourly reservations within New York City require a 3-hour minimum. Specific terms will be detailed in your personalized quote.",
+          "**What happens if my itinerary takes longer than originally booked?** Your chauffeur will remain with you as long as needed. Any time beyond your reserved duration is billed at the agreed hourly overtime rate detailed in your reservation.",
+          "**Can we make unplanned stops or change the route spontaneously?** Yes. As-directed hourly service gives you complete control over your itinerary—simply instruct your chauffeur where you want to go next.",
         ],
       },
     ],
@@ -490,23 +664,50 @@ export const servicePages: DetailPage[] = [
       "Plan private wine tour transportation from NYC to Long Island wineries or other destinations. Share your stops, travel date, passenger count and expected schedule to discuss winery transportation with a driver.",
     sections: [
       {
-        heading: "Plan the route before your wine tour",
+        heading: "Private chauffeured winery excursions to Long Island & Hudson Valley",
         paragraphs: [
-          "List the wineries or other destinations you plan to visit, along with pickup and return locations. If you are still building your itinerary, explore our curated guide to the [10 best wine tasting tours from New York City](/blog/the-10-best-wine-tasting-tours-in-new-york) for verified tasting room highlights, travel times and booking guidelines across Long Island and the Hudson Valley.",
-          "A Sprinter van is a featured option for group transportation. SUVs and limousines may also be considered depending on your party size and occasion; confirm availability and fit when requesting a quote.",
+          "Escape the bustle of New York City for an unhurried, scenic day in New York’s premier wine regions. NY Travel Limo arranges private chauffeur-driven round-trip transportation departing Manhattan, Brooklyn, Queens, and Long Island for the ocean-cooled vineyards of the North Fork and the historic river estates of the Hudson Valley.",
+          "Having a dedicated, professional designated driver ensures your group enjoys tastings, estate lunches, and countryside vineyard vistas with complete relaxation and absolute safety. Please note: NY Travel Limo provides luxury chauffeur transportation only; tasting room reservations, flight fees, and dining are arranged directly with each independent winery.",
         ],
         bullets: [
-          "Pickup and return to New York",
-          "A planned route with multiple stops",
-          "Group transportation for a private outing",
-          "Vehicle selection based on passengers and luggage",
-          "Travel guide: [10 Best Wine Tasting Tours from NYC](/blog/the-10-best-wine-tasting-tours-in-new-york)",
+          "North Fork of Long Island wine trail (Aquebogue, Mattituck, Cutchogue, Southold, Greenport)",
+          "Historic Hudson Valley estates and craft beverage trails (Brotherhood, Millbrook, Benmarl)",
+          "Curated travel guide: [10 Best Wine Tasting Tours from NYC](/blog/the-10-best-wine-tasting-tours-in-new-york)",
+          "Door-to-door round-trip chauffeur service with custom multi-stop routing",
         ],
       },
       {
-        heading: "Details to include in your request",
+        heading: "Fleet sizing & cargo space for wine purchases",
         paragraphs: [
-          "Provide the date, pickup address, destinations, estimated duration, passenger count and any timing requirements. Confirm all arrangements and the return plan with the reservation team before travel.",
+          "Our 10- to 14-passenger [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are the ideal vehicle for wine country day trips. The high-roof cabin permits walk-in ease, while individual leather seats, climate control, and USB power keep passengers comfortable during the 2 to 2.5-hour drive.",
+          "Importantly, our Sprinters feature a separate rear cargo partition with ample capacity to securely store purchased wine boxes, picnic baskets, and personal bags. For couples or intimate groups of up to 6, our [luxury executive SUVs](/luxury-suv-rental-nyc) offer quiet, refined countryside touring.",
+        ],
+        bullets: [
+          "Mercedes Sprinter Vans: 10 to 14 guests, leather captain seating, cargo hold for multiple wine cases",
+          "Executive Luxury SUVs: Up to 6 guests, Cadillac Escalade luxury for small group day trips",
+          "Lincoln Stretch Limousines: Formal celebratory wine tours for milestone birthdays and bachelorettes",
+        ],
+      },
+      {
+        heading: "Service areas, estimated travel times & route planning",
+        paragraphs: [
+          "We offer direct pickup from private homes, hotels, and corporate offices across all five NYC boroughs, Nassau County, and Northern New Jersey.",
+          "Estimated driving times from Manhattan are approximately 2 to 2.5 hours to Long Island's North Fork wineries (e.g., Paumanok, Macari, Bedell) and 1.25 to 2 hours to Hudson Valley destinations (e.g., Brotherhood, Millbrook). We recommend limiting your itinerary to 2 or 3 winery stops to ensure an unhurried, enjoyable tasting experience.",
+        ],
+      },
+      {
+        heading: "Winery policies, advance booking & transportation guidance",
+        paragraphs: [
+          "Many regional wineries—such as Paumanok Vineyards—enforce strict reservation policies for groups arriving in limousines, passenger vans, or commercial hired vehicles, and require advance booking regardless of group size.",
+          "We recommend booking your private wine tour transportation at least 2 to 4 weeks in advance, especially during the peak harvest season between August and November, and reserving winery tasting slots ahead of your travel date.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about wine tour transportation",
+        paragraphs: [
+          "**Are winery tasting fees or food included in the quote?** No. NY Travel Limo provides luxury private transportation with a professional chauffeur. All tasting flights, tour tickets, and food purchases are booked and paid directly with each individual winery.",
+          "**Can we bring picnic baskets or snacks in the vehicle?** Yes, sealed snacks, picnic provisions, and non-alcoholic refreshments can be enjoyed during the drive. Bottled water is provided complimentary in all vehicles.",
+          "**How many winery stops do you recommend in a day?** We strongly recommend selecting 2 to 3 wineries per day. Visiting 4 or more often results in rushed tastings, palate fatigue, and highway delays on the Long Island Expressway or I-87.",
         ],
       },
     ],
@@ -523,24 +724,51 @@ export const servicePages: DetailPage[] = [
       "Arrange private group transportation in NYC for airport trips, events, business schedules, tours or private outings. Share your itinerary and party details to discuss a Sprinter van, SUV or limousine for group travel in New York.",
     sections: [
       {
-        heading: "One transportation plan for your group",
+        heading: "Synchronized private group transportation across New York",
         paragraphs: [
-          "Group trips can include several pickups, luggage and fixed arrival times. Share the complete schedule and passenger count so the team can review the trip as a whole.",
-          "[Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) are our premier option for group transportation. If your plans require multiple stops across the day, ask about our [hourly chauffeur charter service](/transportation-by-hours-in-new-york).",
+          "Coordinating group travel in New York City can quickly become chaotic when relying on split cabs, subways, or rideshares that arrive at different times and get separated in traffic. NY Travel Limo provides unified, private group transportation that keeps your entire party together on one synchronized itinerary.",
+          "Whether you are planning family airport arrivals, corporate team outings, wedding guest shuttles, dinner celebrations, or sightseeing excursions, our licensed professional chauffeurs ensure your group travels safely, comfortably, and punctually.",
         ],
         bullets: [
-          "[Airport](/airport-transportation-services-in-nyc-with-professional-chauffeurs) and [cruise terminal transfers](/cruise-terminal-transportation-services-in-new-york-with-driver)",
-          "[Corporate meetings and business events](/corporate-transportation-service-with-driver-in-new-york)",
-          "[Wedding parties and celebration guest shuttles](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
-          "Dignified [funeral transportation services for families](/funeral-transportation-services-nyc-dignified-professional)",
-          "[Private NYC sightseeing tours](/new-york-city-tour-with-professional-chauffeurs) and group outings",
-          "Private [wine tours and tasting room excursions](/wine-tours-transportation-service-from-new-york) (see our guide to the [10 best wine tasting tours from NYC](/blog/the-10-best-wine-tasting-tours-in-new-york))",
+          "[Airport](/airport-transportation-services-in-nyc-with-professional-chauffeurs) and [cruise terminal transfers](/cruise-terminal-transportation-services-in-new-york-with-driver) for large traveling parties",
+          "[Corporate summits and business events](/corporate-transportation-service-with-driver-in-new-york) with multi-stop itineraries",
+          "[Wedding guest shuttles and bridal party transit](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
+          "Dignified [funeral family transportation](/funeral-transportation-services-nyc-dignified-professional) across all five NYC boroughs",
+          "[Private NYC sightseeing tours](/new-york-city-tour-with-professional-chauffeurs) and countryside [wine tours](/wine-tours-transportation-service-from-new-york)",
         ],
       },
       {
-        heading: "Share the details that shape the ride",
+        heading: "Group fleet capacities & passenger comfort",
         paragraphs: [
-          "Include the travel date, pickup and drop-off addresses, number of passengers, luggage needs, stops and timing. If your plans include multiple vehicles or pickup locations, describe each one in your request.",
+          "Our premier vehicle for group transportation is the executive [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc), accommodating 10 to 14 passengers with generous headroom, individual leather seats, climate control, and a dedicated rear luggage bay holding 10 to 14 suitcases.",
+          "For larger delegations of 20 to 50+ passengers, our dispatch team can coordinate synchronized multi-vehicle fleets consisting of multiple Sprinters and [executive luxury SUVs](/luxury-suv-rental-nyc) to move your entire group with effortless precision.",
+        ],
+        bullets: [
+          "10–14 Passengers: High-roof Mercedes Sprinter with dedicated luggage compartment",
+          "1–6 Passengers: Executive Luxury SUV (Cadillac Escalade) for smaller family or executive groups",
+          "Multi-Vehicle Charters: Coordinated fleets managed by central dispatch for large events",
+        ],
+      },
+      {
+        heading: "Full coverage across Five Boroughs, New Jersey & Tri-State",
+        paragraphs: [
+          "We provide point-to-point transfers and hourly charter service across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, Long Island, Westchester, and Northern New Jersey.",
+          "Airport transfers connect groups directly with JFK, LaGuardia (LGA), and Newark Liberty (EWR), with flight tracking and coordinated curbside passenger staging.",
+        ],
+      },
+      {
+        heading: "Group scheduling, multiple pickups & advance booking",
+        paragraphs: [
+          "Group itineraries often involve multiple hotel pickups, staggered schedules, or equipment loading. When submitting a quote request, please provide your date, ordered list of pickup addresses, passenger counts per stop, total luggage, and scheduled arrival targets.",
+          "For large group events, corporate summits, and weekend weddings, we recommend reserving your vehicles 2 to 4 weeks in advance.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about group transportation",
+        paragraphs: [
+          "**Can you pick up group members at different hotels in NYC?** Yes. We frequently coordinate multi-stop pickup itineraries across Manhattan, Brooklyn, and Queens hotels before heading to your meeting, event, or airport.",
+          "**How much luggage fits when all 14 seats are occupied in a Sprinter van?** Our 14-passenger executive Sprinters feature a partitioned rear cargo bay that comfortably holds 10 to 14 standard checked suitcases plus carry-ons.",
+          "**Can we book a Sprinter van by the hour with the driver on standby?** Yes. Our [hourly chauffeur service](/transportation-by-hours-in-new-york) allows your driver to remain on call outside your venues for as long as your schedule requires.",
         ],
       },
     ],
@@ -970,9 +1198,9 @@ export const blogArticles: BlogArticle[] = [
       { name: "Sparkling Pointe", url: "https://sparklingpointe.com/" },
       { name: "Kontokosta Winery", url: "https://www.kontokostawinery.com/visit-us" },
       { name: "Brotherhood, America's Oldest Winery", url: "https://brotherhood-winery.com/tours-and-tastings/" },
-      { name: "Millbrook Vineyards & Winery", url: "https://www.millbrookwine.com/visit-us/" },
-      { name: "Benmarl Winery", url: "https://benmarl.com/visit/" },
-      { name: "Shawangunk Wine Trail", url: "https://shawangunkwinetrail.com/" },
+      { name: "Millbrook Vineyards & Winery", url: "https://www.millbrookwine.com/winetastings/" },
+      { name: "Benmarl Winery", url: "https://benmarl.com/" },
+      { name: "Shawangunk Wine Trail", url: "https://www.shawangunkwinetrail.com/" },
       { name: "Seneca Lake Wine Trail", url: "https://senecalakewine.com/" },
     ],
     sections: [
@@ -997,9 +1225,9 @@ export const blogArticles: BlogArticle[] = [
             ["[Sparkling Pointe](https://sparklingpointe.com/)", "North Fork (~2–2.5 hrs)", "Dedicated sparkling tasting salon & tours", "Traditional méthode champenoise sparkling wines"],
             ["[Kontokosta Winery](https://www.kontokostawinery.com/visit-us)", "North Fork (~2–2.5 hrs)", "Waterfront tasting room & bluff meadow (walk-in)", "Long Island Sound views, coastal whites & estate reds"],
             ["[Brotherhood Winery](https://brotherhood-winery.com/tours-and-tastings/)", "Hudson Valley (~1.25 hrs)", "Guided underground cellar tour & tasting flight", "Historic 1839 cellars, seasonal hours & educational tastings"],
-            ["[Millbrook Vineyards](https://www.millbrookwine.com/visit-us/)", "Hudson Valley (~1.75–2 hrs)", "Bar tastings & seated outdoor terrace flights", "Dutchess County hillside views, Tocai Friulano & Pinot Noir"],
-            ["[Benmarl Winery](https://benmarl.com/visit/)", "Hudson Valley (~1.5 hrs)", "Hilltop patio & indoor tastings (booking via Tock)", "Hudson River views, heritage Baco Noir & seasonal wood-fired fare"],
-            ["[Shawangunk Wine Trail](https://shawangunkwinetrail.com/)", "Hudson Valley (~1.25–2 hrs)", "Self-guided 80-mile regional craft trail", "13 member wineries, distilleries & cideries across Orange & Ulster"],
+            ["[Millbrook Vineyards](https://www.millbrookwine.com/winetastings/)", "Hudson Valley (~1.75–2 hrs)", "Bar tastings & seated outdoor terrace flights", "Dutchess County hillside views, Tocai Friulano & Pinot Noir"],
+            ["[Benmarl Winery](https://benmarl.com/)", "Hudson Valley (~1.5 hrs)", "Hilltop patio & indoor tastings (booking via Tock)", "Hudson River views, heritage Baco Noir & seasonal wood-fired fare"],
+            ["[Shawangunk Wine Trail](https://www.shawangunkwinetrail.com/)", "Hudson Valley (~1.25–2 hrs)", "Self-guided 80-mile regional craft trail", "13 member wineries, distilleries & cideries across Orange & Ulster"],
             ["[Seneca Lake Wine Trail](https://senecalakewine.com/)", "Finger Lakes (~4.5–5 hrs each way)", "Self-guided regional trail (multi-day trip required)", "Cool-climate Dry Riesling & extensive lake-trail producers"],
           ],
         },
@@ -1064,7 +1292,7 @@ export const blogArticles: BlogArticle[] = [
           "Located on a 130-acre former dairy farm in Dutchess County, Millbrook Vineyards features a converted Dutch-style barn with views across rolling hills toward the Catskill Mountains, producing cool-climate Tocai Friulano, Chardonnay, Pinot Noir, and Cabernet Franc.",
           "Tasting formats: Bar tastings accommodate walk-in guests based on available space. Seated terrace tastings and group bookings of 7 to 50 guests require advance reservations.",
           "Best for: Scenic countryside day trips and visitors seeking relaxed terrace flights in Dutchess County.",
-          "Official source: Plan your visit on the [Millbrook Vineyards Visit page](https://www.millbrookwine.com/visit-us/).",
+          "Official source: Plan your visit on the [Millbrook Vineyards Wine Tastings page](https://www.millbrookwine.com/winetastings/).",
         ],
       },
       {
@@ -1073,7 +1301,7 @@ export const blogArticles: BlogArticle[] = [
           "Perched 500 feet above the Hudson River in Ulster County, Benmarl Winery holds New York Farm Winery License #1 on historical vineyard lands. It produces estate Baco Noir, Cabernet Franc, dry Riesling, and hard ciders.",
           "Booking and dining: Outdoor patio and indoor tastings should be reserved ahead of time via Tock. On seasonal weekends, an outdoor brick oven prepares wood-fired pizzas to accompany wine flights.",
           "Best for: Visitors looking for scenic river panoramas and regional hybrid red varietals.",
-          "Official source: Book your table on the [Benmarl Winery Visit page](https://www.benmarl.com/visit/).",
+          "Official source: Explore tastings and reservations on the [Benmarl Winery official website](https://benmarl.com/).",
         ],
       },
       {
@@ -1082,7 +1310,7 @@ export const blogArticles: BlogArticle[] = [
           "Spanning an 80-mile route across Orange and Ulster Counties, the Shawangunk Wine Trail connects 13 craft beverage members between the Shawangunk Mountains and the Hudson River. Members include estate wineries (such as Brotherhood, Benmarl, and Whitecliff Vineyard), craft cideries (including Angry Orchard), and distilleries.",
           "Self-guided trail format: Because the trail is self-guided, each independent member establishes its own tasting fees, operating days, and visitor guidelines. Travelers should verify individual websites before organizing their itinerary.",
           "Best for: Groups wanting to combine wineries, cideries, and craft distilleries within a single regional day trip.",
-          "Official source: Review trail maps and member directories on the [Shawangunk Wine Trail official website](https://shawangunkwinetrail.com/).",
+          "Official source: Review trail maps and member directories on the [Shawangunk Wine Trail official website](https://www.shawangunkwinetrail.com/).",
         ],
       },
       {

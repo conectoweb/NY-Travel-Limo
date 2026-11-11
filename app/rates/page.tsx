@@ -346,6 +346,93 @@ export default function RatesPage() {
                 </ul>
               </div>
             </section>
+
+            {/* Pricing Breakdown & Inclusions */}
+            <section aria-labelledby="pricing-factors-title" className="border-t border-brand-text/10 py-12 sm:py-16">
+              <div className="max-w-3xl">
+                <p className="eyebrow mb-3 text-brand-secondary">Transparent Billing</p>
+                <h2 className="font-display text-3xl font-bold text-brand-dark sm:text-4xl" id="pricing-factors-title">
+                  How NY Travel Limo Pricing Works
+                </h2>
+                <p className="mt-3 text-base leading-7 text-brand-muted">
+                  We believe in upfront, transparent pricing so our corporate and private clients can plan itineraries without surprises. Every custom quote reflects:
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-xl border border-brand-primary/10 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-brand-dark">Vehicle &amp; Chauffeur Charter</h3>
+                  <p className="mt-2 text-sm leading-6 text-brand-muted">
+                    Base rates cover the private vehicle exclusively for your party, professional TLC-licensed chauffeur, and fuel for the reserved itinerary.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-brand-primary/10 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-brand-dark">Tolls &amp; Port Authority Fees</h3>
+                  <p className="mt-2 text-sm leading-6 text-brand-muted">
+                    New York bridge, tunnel, and highway tolls or airport access fees are itemized transparently in your personalized quote.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-brand-primary/10 bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-brand-dark">Gratuity &amp; Overtime</h3>
+                  <p className="mt-2 text-sm leading-6 text-brand-muted">
+                    Industry-standard chauffeur gratuity (15–20%) can be included in your upfront invoice for seamless corporate expense accounting.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Rates FAQ */}
+            <section aria-labelledby="rates-faq-title" className="border-t border-brand-text/10 py-12 sm:py-16" id="rates-faq">
+              <div className="grid gap-9 lg:grid-cols-[0.7fr_1.3fr]">
+                <div>
+                  <p className="eyebrow mb-4 text-brand-secondary">Rates &amp; Payment</p>
+                  <h2 className="font-display text-3xl font-bold text-brand-dark sm:text-4xl" id="rates-faq-title">
+                    Pricing FAQs
+                  </h2>
+                  <p className="mt-4 text-sm leading-6 text-brand-muted">
+                    Common questions regarding payments, flight wait times, cancellations, and corporate accounts.
+                  </p>
+                </div>
+                <div className="border-t border-brand-text/15">
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      Are bridge and tunnel tolls included in the airport transfer rates?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      Base airport rates cover the vehicle and chauffeur service. Major NYC bridge and tunnel crossings (such as the Queens-Midtown Tunnel, Lincoln Tunnel, or Triborough Bridge) and airport parking access fees are calculated based on your exact route and included in your finalized quote.
+                    </p>
+                  </details>
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      What is the policy for delayed flights at JFK, LGA, or EWR?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      We track your flight in real time using automated flight telemetry. If your flight is delayed, your chauffeur’s arrival is automatically updated to correspond with your actual wheels-down time, minimizing unnecessary waiting fees.
+                    </p>
+                  </details>
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      What payment methods are accepted and can corporate clients be invoiced?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      We accept all major credit cards (Visa, MasterCard, American Express, Discover) through our secure booking portal. For recurring corporate accounts and financial institutions coordinating roadshows, direct corporate billing and consolidated itemized invoicing are available upon approval.
+                    </p>
+                  </details>
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      Is there a minimum hourly commitment for Sprinter or Limousine rentals?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      Yes. Sprinter van hourly charters within the five boroughs typically require a 3-hour minimum. Wedding and event packages also operate on 3-hour blocks with clear hourly rates for any additional time required.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 
