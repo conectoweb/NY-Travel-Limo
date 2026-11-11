@@ -29,20 +29,55 @@ export const marketingPages: Record<string, ContentPageData> = {
     seoTitle: "About NY Travel Limo | Private Transportation Company",
     description: "Get to know NY Travel Limo, with more than 26 years of transportation experience serving New York and surrounding areas.",
     eyebrow: "Over 26 years of transportation experience",
-    intro: "For more than 26 years, NY Travel Limo has helped people get where they need to go with private transportation and professional drivers. From airport transfers and business schedules to weddings, city tours and group outings, we plan each ride around the people, places and timing that matter to you.",
+    intro: "For more than 26 years, NY Travel Limo has provided private luxury transportation and professional chauffeur service throughout New York City, Long Island, Westchester, and New Jersey. From seamless airport transfers and executive corporate roadshows to elegant weddings and coordinated group charters, our mission is to deliver dependable, discreet, and stress-free travel planned around your itinerary.",
     sections: [
       {
-        heading: "Experience built around New York travel",
-        paragraphs: ["New York travel can mean airport pickups, tight business schedules, several stops in one day or coordinating a group across multiple locations. Our experience helps us understand the details that make a transportation plan practical: clear pickup information, realistic timing, passenger needs and the full route.", "We serve trips throughout New York City and surrounding areas, including Brooklyn, Manhattan, Queens, Long Island and New Jersey. Share your locations and schedule so we can review the request with you."],
+        heading: "26+ years of New York chauffeured transportation experience",
+        paragraphs: [
+          "Navigating New York travel requires more than just premium vehicles—it demands local street expertise, real-time traffic intelligence, and an uncompromising commitment to punctuality. Since our founding, NY Travel Limo has served corporate executives, global delegations, event coordinators, and private families navigating the complexities of NYC transit.",
+          "Our chauffeurs understand the intricacies of terminal layouts at JFK, LaGuardia, and Newark, the timing demands of Wall Street financial roadshows, and the logistics of moving wedding parties between Manhattan churches, photo locations, and reception ballrooms.",
+        ],
+        bullets: [
+          "TLC-licensed, background-checked professional chauffeurs in formal executive attire",
+          "Port Authority airport permits and commercial livery insurance coverage",
+          "Automated real-time flight tracking for all incoming domestic and international flights",
+          "24/7 reservation desk and live dispatch support for dynamic schedule changes",
+        ],
       },
       {
-        heading: "A vehicle for the way you travel",
-        paragraphs: ["Our fleet includes Mercedes-Benz Sprinter vans for group transportation, private SUVs and limousines for special occasions. The right choice depends on passenger count, luggage, itinerary and availability; our team can discuss the vehicle that best matches your plans.", "Whether you are arranging an airport transfer, cruise terminal ride, corporate trip, wedding, hourly service, city tour, wine tour or point-to-point journey, let us know what the day requires."],
-        bullets: ["Sprinter vans for group itineraries", "Private SUVs for airport and city travel", "Limousines for celebrations and events"],
+        heading: "A luxury fleet tailored to every passenger and luggage requirement",
+        paragraphs: [
+          "We operate a meticulously maintained, modern fleet including high-roof [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) (10 to 14 passengers with dedicated rear luggage hold), executive [luxury SUVs](/luxury-suv-rental-nyc) (up to 6 passengers with spacious luggage capacity), and elegant [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) for formal celebrations.",
+          "Every vehicle is fully detailed, sanitized, and inspected prior to dispatch, featuring climate control, leather upholstery, mobile device charging ports, and complimentary bottled water.",
+        ],
+        bullets: [
+          "14-Passenger Sprinters: High-roof walk-in height, individual seats, dedicated cargo compartment",
+          "Executive Luxury SUVs: Cadillac Escalade and Suburban models with tinted privacy glass",
+          "Lincoln Stretch Limousines: J-seating lounge, fiber-optic star ceiling, and interior bar console",
+        ],
       },
       {
-        heading: "Personal attention from the first request",
-        paragraphs: ["We believe a smoother ride starts with listening. Tell us your dates, pickup and drop-off locations, passenger and luggage count, stops and timing. We will review the details and help you understand the next steps for your quote and reservation."],
+        heading: "Service coverage across the New York Tri-State area",
+        paragraphs: [
+          "NY Travel Limo provides comprehensive door-to-door transportation across all five New York City boroughs (Manhattan, Brooklyn, Queens, the Bronx, and Staten Island), Long Island (Nassau and Suffolk counties, including the Hamptons and North Fork wine country), Westchester County, and Northern New Jersey (Jersey City, Hoboken, Newark, and corporate campuses).",
+          "We offer direct airport transfers to John F. Kennedy International (JFK), LaGuardia (LGA), Newark Liberty (EWR), Teterboro (TEB), and Westchester County (HPN), as well as cruise terminal transfers to the Manhattan Cruise Terminal, Brooklyn Cruise Terminal, and Cape Liberty in Bayonne.",
+        ],
+      },
+      {
+        heading: "Our transparent booking and reservation process",
+        paragraphs: [
+          "We believe in honest, upfront communication from your first inquiry. When you submit a quote request, our dispatch team analyzes your route, timing, and passenger requirements to deliver a transparent, all-inclusive quote without hidden fees.",
+          "For point-to-point and airport rides, we recommend reserving 48 to 72 hours in advance. For corporate roadshows, wedding weekends, and peak holiday seasons, we encourage booking 2 to 4 weeks early to guarantee your preferred vehicle configuration.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions about NY Travel Limo",
+        paragraphs: [
+          "**Are your drivers licensed and insured?** Yes, all chauffeurs hold valid licenses with the New York City Taxi & Limousine Commission (TLC) and undergo rigorous background checks and safety training. Every vehicle carries comprehensive commercial livery insurance.",
+          "**Do you offer self-drive rentals?** No. NY Travel Limo provides strictly chauffeur-driven private transportation. We do not offer bare rentals or self-drive vehicle leases.",
+          "**Can you handle multi-vehicle corporate roadshows or events?** Absolutely. Our dispatch team specializes in synchronizing multi-vehicle fleets consisting of Sprinter vans and luxury SUVs for corporate summits, financial roadshows, and large family weddings.",
+          "**How do I receive a quote or confirm a booking?** You can submit your trip details through our [online quote form](/contact-us) or call our 24/7 reservation specialists at +1 (516) 256-2892.",
+        ],
       },
     ],
     experienceYears: 26,
@@ -56,23 +91,74 @@ export const marketingPages: Record<string, ContentPageData> = {
     links: [
       { label: "Browse transportation services", href: "/services" },
       { label: "Explore the fleet", href: "/fleet" },
+      { label: "View transportation rates", href: "/rates" },
       { label: "Contact NY Travel Limo", href: "/contact-us" },
     ],
   },
   "frequently-asked-questions": {
     title: "Common Questions About Private Chauffeur Services in NYC",
     seoTitle: "Frequently Asked Questions | NY Travel Limo FAQ",
-    description: "Answers to common questions about private chauffeur transportation and quote requests in New York.",
+    description: "Answers to common questions about private chauffeur transportation, airport pickups, fleet capacities, and quote requests in New York.",
     eyebrow: "Helpful information",
-    intro: "Find general information about vehicle choices, trip planning and requesting a transportation quote. Confirm specific availability and arrangements directly with NY Travel Limo.",
+    intro: "Find comprehensive, verified answers to common client questions regarding vehicle selection, passenger and luggage capacities, airport transfer protocols, hourly charters, pricing, and reservation policies across New York City and New Jersey.",
     sections: [
-      { heading: "Which vehicle should I choose?", paragraphs: ["Consider passenger count, luggage, trip type and planned stops. Sprinter vans are featured for groups; SUVs and limousines are also listed. Vehicle seating and luggage configuration vary, so confirm details before booking."], bullets: ["Sprinter vans: group itineraries", "SUVs: private trips and airport transportation", "Limousines: weddings and special occasions"] },
-      { heading: "What information is needed for a quote?", paragraphs: ["Provide your travel date and time, pickup and destination, passenger count and itinerary. Include luggage and flight or terminal information where relevant."] },
-      { heading: "How can I reserve transportation?", paragraphs: ["Use a Reservation link to open the separate reservation platform. For a quote inquiry, submit the Contact Us form on this website."] },
-      { heading: "Can a vehicle wait or make multiple stops?", paragraphs: ["Include expected duration, stops and timing in your request. The reservation team can confirm the arrangements and terms for your itinerary."] },
+      {
+        heading: "1. Vehicle Selection, Passenger Count & Luggage Guidance",
+        paragraphs: [
+          "**How do I choose between a Sprinter van, an SUV, and a limousine?** Choose an [executive luxury SUV](/luxury-suv-rental-nyc) for up to 6 passengers with 4 to 6 suitcases—ideal for solo business travel, couples, and small family airport trips. Choose a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) for groups of 7 to 14 passengers traveling with substantial luggage (10 to 14 bags) or corporate teams. Choose a [Lincoln stretch limousine](/lincoln-stretch-limo-rental-nyc) for formal celebrations, weddings, and galas accommodating up to 8 to 10 guests.",
+          "**What happens if our group brings oversized luggage or golf bags?** Please specify any oversized baggage, golf clubs, musical instruments, or sports equipment when requesting your quote so our dispatch team can confirm a vehicle layout with sufficient cargo bay clearance.",
+        ],
+        bullets: [
+          "Mercedes Sprinter Vans: 10 to 14 passengers + 10 to 14 suitcases",
+          "Executive Luxury SUVs: 1 to 6 passengers + 4 to 6 suitcases",
+          "Lincoln Stretch Limousines: 8 to 10 passengers + 3 to 4 suitcases",
+        ],
+      },
+      {
+        heading: "2. Airport Pickups, Flight Tracking & Delay Policies",
+        paragraphs: [
+          "**How do airport transfers work at JFK, LaGuardia (LGA), and Newark (EWR)?** During booking, provide your airline name and flight number. Our dispatch team tracks your flight in real time using automated telemetry. If your flight arrives early or is delayed, your chauffeur's arrival time is adjusted accordingly.",
+          "**Where will my chauffeur meet me at the airport?** We offer both curbside pickup and inside terminal meet-and-greet service. For curbside, your chauffeur contacts you via text once your flight lands, coordinating pickup at the designated passenger pickup area once you collect your bags. For meet-and-greet, your chauffeur awaits you in the arrival hall holding an executive name board.",
+        ],
+      },
+      {
+        heading: "3. Service Areas, Hourly Charters & Standby Service",
+        paragraphs: [
+          "**What regions do you serve?** We provide comprehensive service throughout Manhattan, Brooklyn, Queens, the Bronx, Staten Island, Long Island, Westchester, and New Jersey. We also provide regional charters to Connecticut, Philadelphia, Atlantic City, and upstate New York.",
+          "**Can our chauffeur wait on standby during meetings or dinners?** Yes. Our [hourly chauffeur service](/transportation-by-hours-in-new-york) provides a dedicated vehicle and driver on call for your party, allowing unlimited stops, itinerary adjustments, and standby waiting outside offices, restaurants, or event venues.",
+        ],
+        bullets: [
+          "All five NYC boroughs: Manhattan, Brooklyn, Queens, Bronx, Staten Island",
+          "Regional airports: JFK, LGA, EWR, TEB, HPN",
+          "Tri-State destinations: Long Island, Hamptons, New Jersey, Westchester, Connecticut",
+        ],
+      },
+      {
+        heading: "4. Pricing, Tolls, Payments & Billing",
+        paragraphs: [
+          "**What is included in the quoted price?** Base quotes cover the private vehicle, TLC-licensed chauffeur, and fuel. Major NYC bridge and tunnel tolls, airport access fees, and chauffeur gratuity can be itemized in advance for transparent, all-inclusive corporate billing.",
+          "**What payment methods do you accept?** We accept all major credit cards (Visa, MasterCard, American Express, Discover) through our secure online payment system. Corporate accounts with consolidated monthly invoicing are available upon credit approval.",
+        ],
+      },
+      {
+        heading: "5. Booking Lead Times, Changes & Cancellation Policy",
+        paragraphs: [
+          "**How far in advance should I reserve?** For standard airport transfers and point-to-point rides, booking 48 to 72 hours ahead is recommended. For high-demand periods—such as corporate roadshow seasons, UN Week, major holidays, and weekend weddings—we recommend booking 2 to 4 weeks in advance.",
+          "**Can I modify my schedule or add stops after booking?** Yes. You can adjust your itinerary by contacting our 24/7 dispatch desk. Additional stops or extended hours will be billed according to standard hourly rates.",
+        ],
+      },
+      {
+        heading: "6. Safety Standards, Child Seats & Onboard Amenities",
+        paragraphs: [
+          "**Are child safety seats available?** Yes. Age-appropriate infant, toddler, and booster car seats can be installed prior to pickup upon request. Please specify the quantity and seat style in your quote request.",
+          "**Are drinks and refreshments allowed in vehicles?** Sealed beverages and light refreshments are permitted. For special celebrations in our stretch limousines, adult passengers (21+) may bring champagne or wine; complimentary glassware and fresh ice are provided in the console.",
+        ],
+      },
     ],
     links: [
       { label: "Request a quote", href: "/contact-us" },
+      { label: "View vehicle fleet", href: "/fleet" },
+      { label: "View transportation rates", href: "/rates" },
       { label: "Airport transportation", href: "/airport-transportation-services-in-nyc-with-professional-chauffeurs" },
       { label: "Group transportation", href: "/group-transportation-in-new-york-near-me" },
     ],
