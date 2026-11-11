@@ -25,12 +25,25 @@ export default function FormattedText({
       parts.push(text.slice(lastIndex, match.index));
     }
     const [, label, href] = match;
-    const isExternal =
-      /^https?:\/\//i.test(href) &&
-      !href.startsWith("https://www.nytravellimo.com") &&
-      !href.startsWith("http://www.nytravellimo.com") &&
-      !href.startsWith("https://nytravellimo.com") &&
-      !href.startsWith("http://nytravellimo.com");
+    const isAbsolute = /^https?:\/\//i.test(href);
+    const isInternalSite =
+      href.startsWith("https://www.nytravellimo.com") ||
+      href.startsWith("http://www.nytravellimo.com") ||
+      href.startsWith("https://nytravellimo.com") ||
+      href.startsWith("http://nytravellimo.com");
+
+    const isExternal = isAbsolute && !isInternalSite;
+
+    // Links belonging or related to NY Travel Limo (social profiles, Google Maps, reservation) maintain follow status
+    const lowerHref = href.toLowerCase();
+    const isBrandRelated =
+      lowerHref.includes("nytravellimo") ||
+      lowerHref.includes("newyorktravellimo") ||
+      lowerHref.includes("maps.app.goo.gl") ||
+      lowerHref.includes("goo.gl/maps") ||
+      lowerHref.includes("google.com/maps");
+
+    const shouldNofollow = isExternal && !isBrandRelated;
 
     parts.push(
       <a
@@ -40,7 +53,7 @@ export default function FormattedText({
         {...(isExternal
           ? {
               target: "_blank",
-              rel: "noopener noreferrer nofollow",
+              rel: shouldNofollow ? "noopener noreferrer nofollow" : "noopener noreferrer",
             }
           : {})}
       >
