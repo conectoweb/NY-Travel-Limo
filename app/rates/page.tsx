@@ -25,7 +25,7 @@ const vehicleImages = {
 } as const;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Sprinter Van Rental Rates in NYC | NY Travel Limo";
+  const title = "NYC Private Transportation Rates & Quotes | NY Travel Limo";
   const description =
     "Compare NY Travel Limo Sprinter van, airport, hourly and event rates in New York City, then request a quote for your itinerary.";
   const isPublicSite = await isPublicSiteRequest();
@@ -190,7 +190,7 @@ export default function RatesPage() {
             </nav>
             <p className="eyebrow mb-4 text-brand-secondary">NYC private transportation</p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-[-0.045em] sm:text-6xl" id="rates-hero-title">
-              Sprinter Van Rental Rates in NYC
+              Sprinter Van Rental Rates &amp; Charter Pricing in NYC
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               Pricing depends on duration, distance, season, event and the services requested. Explore the listed rates and share your itinerary for a personalized quote.

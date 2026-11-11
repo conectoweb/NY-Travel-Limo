@@ -2,7 +2,8 @@ import type { ContentPageData } from "@/components/ContentPage";
 
 export const marketingPages: Record<string, ContentPageData> = {
   rates: {
-    title: "Private Car Service Rates in New York",
+    title: "Sprinter Van Rental Rates & Charter Pricing in NYC",
+    seoTitle: "NYC Private Transportation Rates & Quotes | NY Travel Limo",
     description: "Request a tailored quote for NY Travel Limo private chauffeur transportation in New York.",
     eyebrow: "Rates and quote requests",
     intro: "Transportation costs depend on the trip details. Request a quote with your itinerary so the team can provide information for your specific ride. No fixed rates are published here.",
@@ -24,7 +25,8 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "about-us": {
-    title: "About NY Travel Limo",
+    title: "Over 26 Years of Dedicated Chauffeur Service in NYC",
+    seoTitle: "About NY Travel Limo | Private Transportation Company",
     description: "Get to know NY Travel Limo, with more than 26 years of transportation experience serving New York and surrounding areas.",
     eyebrow: "Over 26 years of transportation experience",
     intro: "For more than 26 years, NY Travel Limo has helped people get where they need to go with private transportation and professional drivers. From airport transfers and business schedules to weddings, city tours and group outings, we plan each ride around the people, places and timing that matter to you.",
@@ -58,7 +60,8 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "frequently-asked-questions": {
-    title: "Frequently Asked Questions",
+    title: "Common Questions About Private Chauffeur Services in NYC",
+    seoTitle: "Frequently Asked Questions | NY Travel Limo FAQ",
     description: "Answers to common questions about private chauffeur transportation and quote requests in New York.",
     eyebrow: "Helpful information",
     intro: "Find general information about vehicle choices, trip planning and requesting a transportation quote. Confirm specific availability and arrangements directly with NY Travel Limo.",
@@ -75,7 +78,8 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "privacy-policy": {
-    title: "Privacy Policy",
+    title: "Client Privacy Policy & Data Protection Practices",
+    seoTitle: "Privacy Policy | NY Travel Limo",
     description: "Privacy Policy for NY Travel Limo explaining how we collect, use, and protect your personal information when requesting private transportation services.",
     eyebrow: "Privacy policy",
     intro: "NY Travel Limo operates the https://www.nytravellimo.com/ website, which provides luxury private transportation services, including black car service, Sprinter van rentals, airport transfers, and group transportation in New York City and surrounding areas. This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decides to use our Service.",
@@ -186,7 +190,8 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "cookie-policy": {
-    title: "Cookie Policy",
+    title: "Cookie Notice & Website Browsing Preferences",
+    seoTitle: "Cookie Policy | NY Travel Limo",
     description: "Information about essential browser storage and optional cookie preferences on the NY Travel Limo website.",
     eyebrow: "Cookie information",
     intro: "The site stores your cookie choice in local browser storage so it can remember your preferences. No analytics or advertising tags are currently included in this project. The business should confirm this policy before publication.",
@@ -199,7 +204,8 @@ export const marketingPages: Record<string, ContentPageData> = {
     links: [{ label: "Privacy Policy", href: "/privacy-policy" }],
   },
   "terms-and-conditions": {
-    title: "Terms and Conditions",
+    title: "Client Service Agreement & Transportation Policies",
+    seoTitle: "Terms and Conditions | NY Travel Limo",
     description: "These terms and conditions outline the rules and regulations for using NY Travel Limo's website and private transportation services.",
     eyebrow: "Terms of use",
     intro: "Welcome to NY Travel Limo. These terms and conditions outline the rules and regulations for the use of NY Travel Limo's website, located at https://www.nytravellimo.com/. By accessing this website, we assume you accept these terms and conditions. Do not continue to use NY Travel Limo if you do not agree to take all of the terms and conditions stated on this page.",

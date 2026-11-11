@@ -40,7 +40,7 @@ export default function FleetPage() {
             <div className="max-w-2xl">
               <p className="eyebrow mb-5 text-brand-secondary">Vehicles for your itinerary</p>
               <h1 className="text-4xl font-extrabold leading-[1.05] tracking-[-0.045em] sm:text-6xl">
-                NY Travel Limo fleet
+                Explore Our Luxury Chauffeur Fleet in New York
               </h1>
               <br />
               <p className="max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">

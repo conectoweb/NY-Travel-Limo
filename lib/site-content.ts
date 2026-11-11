@@ -22,7 +22,8 @@ export type DetailPage = {
 export const fleetPages: DetailPage[] = [
   {
     slug: "sprinter-van-rental-with-driver-new-york-nyc",
-    title: "NYC Sprinter Van Rental with Chauffeur",
+    title: "Luxury Mercedes Sprinter Van Rental with Chauffeur in NYC",
+    seoTitle: "NYC Sprinter Van Rental with Driver | NY Travel Limo",
     description:
       "Rent a luxury Mercedes Sprinter van with a chauffeur in NYC. Ideal for corporate travel, executive meetings & private groups. Request a custom quote today!",
     eyebrow: "Featured group transportation",
@@ -74,7 +75,8 @@ export const fleetPages: DetailPage[] = [
   },
   {
     slug: "luxury-suv-rental-nyc",
-    title: "Private SUV Service with Chauffeur in NYC",
+    title: "Chauffeured Executive SUV Transportation in New York",
+    seoTitle: "Luxury SUV Rental with Driver NYC | NY Travel Limo",
     description:
       "Arrange private SUV transportation in New York for airport transfers, business travel, family trips and point-to-point rides.",
     eyebrow: "Private SUV transportation",
@@ -125,7 +127,8 @@ export const fleetPages: DetailPage[] = [
   },
   {
     slug: "lincoln-stretch-limo-rental-nyc",
-    title: "Chauffeur-Driven Limousine Service in NYC",
+    title: "Lincoln Stretch Limousine Service for NYC Events",
+    seoTitle: "NYC Stretch Limo Rental with Chauffeur | NY Travel Limo",
     description:
       "Plan limousine transportation in New York for weddings, celebrations, evenings out and other special occasions.",
     eyebrow: "Limousine service for special occasions",
@@ -179,7 +182,8 @@ export const fleetPages: DetailPage[] = [
 export const servicePages: DetailPage[] = [
   {
     slug: "contact-us",
-    title: "Contact NY Travel Limo",
+    title: "Get in Touch with NY Travel Limo Dispatch",
+    seoTitle: "Contact NY Travel Limo | Request a Quote",
     description:
       "Contact NY Travel Limo to discuss private chauffeur transportation, request a quote or plan your New York itinerary.",
     eyebrow: "We're here to help",
@@ -207,7 +211,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "airport-transportation-services-in-nyc-with-professional-chauffeurs",
-    title: "JFK & EWR Airport Limo & Car Service",
+    title: "Private Airport Car & Limo Transfers in New York",
+    seoTitle: "JFK, LGA & EWR Airport Chauffeur Service | NY Travel Limo",
     description:
       "Book private JFK, LGA & EWR airport transfers with professional chauffeurs. Luxury Sprinter vans, SUVs & limos. Call +1 516-256-2892 or request a quote!",
     eyebrow: "Airport chauffeur service",
@@ -244,7 +249,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "corporate-transportation-service-with-driver-in-new-york",
-    title: "Corporate Transportation NYC",
+    title: "Executive Chauffeur & Corporate Travel Solutions in NYC",
+    seoTitle: "NYC Corporate Transportation & Car Service | NY Travel Limo",
     description:
       "Plan corporate transportation in New York for executives, meetings, airport transfers, company events and visiting teams with a private chauffeur service.",
     eyebrow: "Business travel",
@@ -275,7 +281,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "roadshow-transportation-nyc",
-    title: "Roadshow Transportation NYC",
+    title: "Multi-Stop Executive Roadshow Chauffeur Services in NYC",
+    seoTitle: "NYC Corporate Roadshow Transportation | NY Travel Limo",
     description:
       "Coordinate roadshow transportation in New York for investor meetings and multi-stop business schedules with a private chauffeur and an itinerary-led request.",
     eyebrow: "Corporate roadshows",
@@ -301,7 +308,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "cruise-terminal-transportation-services-in-new-york-with-driver",
-    title: "Cruise Terminal Transportation NYC",
+    title: "Private Cruise Terminal Transfers in Manhattan & Brooklyn",
+    seoTitle: "NYC Cruise Port Transportation with Chauffeur | NY Travel Limo",
     description:
       "Arrange private cruise port transportation in NYC between Manhattan Cruise Terminal, airports, hotels and your destination. Share your sailing and luggage details.",
     eyebrow: "Cruise transfers",
@@ -327,7 +335,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans",
-    title: "Wedding Transportation NYC",
+    title: "Luxury Wedding Shuttles & Bridal Party Transit in NYC",
+    seoTitle: "NYC Wedding Transportation with Driver | NY Travel Limo",
     description:
       "Plan NYC wedding transportation for couples, wedding parties and guests between ceremony, reception, hotel and photo locations with chauffeur-driven vehicles.",
     eyebrow: "Weddings and celebrations",
@@ -358,7 +367,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "transportation-by-hours-in-new-york",
-    title: "Hourly Transportation NYC",
+    title: "Flexible As-Directed Hourly Chauffeur Service in New York",
+    seoTitle: "Hourly Transportation NYC with Private Driver | NY Travel Limo",
     description:
       "Request hourly car service in NYC for meetings, events, shopping, sightseeing and multi-stop plans with a chauffeur by the hour in New York.",
     eyebrow: "Hourly transportation",
@@ -445,7 +455,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "point-to-point-transportation-service-in-new-york",
-    title: "Point-to-Point Transportation NYC",
+    title: "Direct Point-to-Point Chauffeur Service Across New York & NJ",
+    seoTitle: "NYC Point-to-Point Transportation | NY Travel Limo",
     description:
       "Arrange point-to-point car service in NYC between your chosen pickup and destination, with a private chauffeur for direct New York trips.",
     eyebrow: "Direct private rides",
@@ -470,7 +481,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "wine-tours-transportation-service-from-new-york",
-    title: "Wine Tour Transportation from NYC",
+    title: "Chauffeured Wine Tasting Excursions from New York City",
+    seoTitle: "Long Island Wine Tour Transportation NYC | NY Travel Limo",
     description:
       "Plan private wine tour transportation from NYC to Long Island wineries, with your pickup, tasting stops, group size and return itinerary.",
     eyebrow: "Wine tour transportation",
@@ -502,7 +514,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "group-transportation-in-new-york-near-me",
-    title: "Group Transportation NYC",
+    title: "Synchronized Private Group Travel Services in New York",
+    seoTitle: "Group Transportation NYC with Driver | NY Travel Limo",
     description:
       "Plan private group transportation in NYC for airport trips, events, business schedules, cruise transfers and tours, with Sprinter vans featured for groups.",
     eyebrow: "Group transportation",
@@ -535,7 +548,8 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "funeral-transportation-services-nyc-dignified-professional",
-    title: "Funeral Transportation Services in NYC",
+    title: "Dignified Family & Funeral Transportation Across New York",
+    seoTitle: "Funeral Transportation Services NYC | NY Travel Limo",
     description:
       "Dignified, professional funeral transportation in NYC across all 5 boroughs. Chauffeur-driven Mercedes Sprinter vans, SUVs and limousines for family and friends.",
     eyebrow: "Dignified Family & Guest Chauffeur Service",
@@ -766,7 +780,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "planning-an-airport-transfer-in-new-york",
     title: "How to Plan a Private Airport Transfer in New York",
-    seoTitle: "How to Plan a Private Airport Transfer in NYC | NY Travel Limo",
+    seoTitle: "NYC Airport Transfer Guide: JFK, LGA & EWR | NY Travel Limo",
     description:
       "A complete guide to planning private airport transfers to JFK, LaGuardia, and Newark: traffic buffers, luggage rules, curbside pickups, and fleet choices.",
     category: "Airport travel",
@@ -847,7 +861,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "planning-group-transportation-in-nyc",
     title: "A Simple Guide to Planning Group Transportation in NYC",
-    seoTitle: "Guide to Planning Group Transportation in NYC | NY Travel Limo",
+    seoTitle: "NYC Group Travel Planning & Logistics Guide | NY Travel Limo",
     description:
       "How to organize private group transportation in New York City: passenger logistics, vehicle selection, hourly charters, and route planning for 10-14 passengers.",
     category: "Group travel",
@@ -938,7 +952,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "the-10-best-wine-tasting-tours-in-new-york",
     title: "10 Best Wine Tasting Experiences from New York City",
-    seoTitle: "10 Best Wine Tasting Experiences from NYC | NY Travel Limo",
+    seoTitle: "10 Best Wine Tasting Tours from NYC | NY Travel Limo",
     description:
       "Explore 10 verified wine tasting experiences from NYC across North Fork, Hudson Valley & Finger Lakes. Compare tasting styles & private chauffeur travel.",
     category: "Day trips & wine tours",
@@ -1116,7 +1130,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
     title: "How Much Does It Cost To Rent A Sprinter Van In New York?",
-    seoTitle: "How Much Does It Cost To Rent A Sprinter Van In New York? | NY Travel Limo",
+    seoTitle: "Sprinter Van Rental NYC Cost Guide | NY Travel Limo",
     description:
       "Explore the cost factors, group benefits, and pricing considerations for renting a chauffeur-driven Mercedes-Benz Sprinter van in New York City with NY Travel Limo.",
     category: "Vehicle pricing & rates",

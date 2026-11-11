@@ -8,6 +8,7 @@ type ContentPageFleetImages = Record<string, { src: string; alt: string }>;
 
 export type ContentPageData = {
   title: string;
+  seoTitle?: string;
   description: string;
   eyebrow: string;
   intro: string;

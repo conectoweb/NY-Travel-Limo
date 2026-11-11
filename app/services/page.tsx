@@ -12,7 +12,7 @@ import { serviceLandingContent } from "@/lib/service-landing-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Transportation Services NYC | NY Travel Limo";
+  const title = "NYC Private Chauffeur Services Directory | NY Travel Limo";
   const description = "Explore Transportation Services in NYC, Including Private Airport, Corporate, Cruise, Wedding, Hourly, City Tour & Group Transportation with a Chauffeur.";
   const isPublicSite = await isPublicSiteRequest();
 

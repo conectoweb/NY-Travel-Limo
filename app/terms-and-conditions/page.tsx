@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["terms-and-conditions"];
-  const base = await pageMetadata("/terms-and-conditions", page.title, page.description);
+  const base = await pageMetadata("/terms-and-conditions", page.seoTitle || "Terms and Conditions | NY Travel Limo", page.description);
 
   return {
     ...base,

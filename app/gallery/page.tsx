@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 export async function generateMetadata(): Promise<Metadata> {
   const base = await pageMetadata(
     "/gallery",
-    "NY Travel Limo Gallery",
+    "NY Travel Limo Photo Gallery | NYC Luxury Fleet",
     "Explore NY Travel Limo Sprinter vans, special event transportation, NYC and Brooklyn vehicles, and a featured van tour video."
   );
 
@@ -36,7 +36,7 @@ export default function GalleryPage() {
             </nav>
             <p className="eyebrow mb-5 text-brand-secondary">NY Travel Limo fleet and events</p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-tight sm:text-6xl" id="gallery-title">
-              NY Travel Limo Gallery
+              Luxury Vehicle Gallery: Sprinter Vans, SUVs &amp; Limousines
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               Explore Sprinter vans, group transportation and special event vehicles around New York. Choose a category or open a photo to see it larger.
