@@ -156,7 +156,12 @@ export async function POST(request: Request) {
     );
   }
 
-  if (containsSpam(instructions)) {
+  if (
+    containsSpam(instructions) ||
+    containsSpam(pickupPlace) ||
+    containsSpam(dropoffPlace) ||
+    containsSpam(name)
+  ) {
     return Response.json(
       { message: SPAM_ERROR_MESSAGE },
       { status: 422 },

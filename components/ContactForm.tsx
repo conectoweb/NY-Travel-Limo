@@ -147,11 +147,15 @@ function validateForm(form: HTMLFormElement): ValidationErrors {
   const pickupPlaceElement = form.elements.namedItem("pickupPlace") as HTMLInputElement | null;
   if (!pickupPlaceElement?.value || pickupPlaceElement.value.trim().length < 3) {
     errors.pickupPlace = "Enter the pickup address, airport, or hotel.";
+  } else if (containsSpam(pickupPlaceElement.value)) {
+    errors.pickupPlace = SPAM_ERROR_MESSAGE;
   }
 
   const dropoffPlaceElement = form.elements.namedItem("dropoffPlace") as HTMLInputElement | null;
   if (!dropoffPlaceElement?.value || dropoffPlaceElement.value.trim().length < 3) {
     errors.dropoffPlace = "Enter the destination address, airport, or venue.";
+  } else if (containsSpam(dropoffPlaceElement.value)) {
+    errors.dropoffPlace = SPAM_ERROR_MESSAGE;
   }
 
   const instructionsElement = form.elements.namedItem("instructions");
