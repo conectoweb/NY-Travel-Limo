@@ -52,7 +52,7 @@ export default function Reviews() {
             <a
               className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-brand-accent bg-brand-accent px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-brand-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary sm:w-auto"
               href={googleMapsProfileUrl}
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
             >
               <GoogleIcon className="h-4 w-4" />

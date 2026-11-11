@@ -108,7 +108,7 @@ export default function Footer() {
                 aria-label={`NY Travel Limo on ${link.label}`}
                 className="inline-flex h-8 w-8 items-center justify-center rounded-full transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-4 focus-visible:ring-offset-brand-dark"
                 href={link.href}
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 target="_blank"
               >
                 <SocialIcon name={link.icon} />
@@ -169,7 +169,7 @@ export default function Footer() {
               className="inline-block transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary"
               href="https://maps.app.goo.gl/DdHar5D8wdmmSgbZ8"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label="View NY Travel Limo location on Google Maps (opens in new tab)"
             >
               <span>358 W 56th St. Suite 4D</span>
