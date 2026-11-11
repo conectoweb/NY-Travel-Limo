@@ -14,7 +14,7 @@ export default function FeaturedVideo() {
           <a
             className="mt-7 inline-flex min-h-12 items-center gap-3 rounded-full border border-brand-secondary/70 px-6 py-3 text-sm font-bold text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-brand-dark focus-visible:outline-offset-4"
             href="https://www.youtube.com/watch?v=hc9LNuJKvmA&t=3s"
-            rel="noopener noreferrer nofollow"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Watch on YouTube
