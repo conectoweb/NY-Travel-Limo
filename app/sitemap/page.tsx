@@ -39,7 +39,7 @@ export default function SitemapPage() {
             </nav>
             <p className="eyebrow mb-5 text-brand-secondary">EXPLORE THE WEBSITE</p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-[-0.045em] sm:text-6xl">
-              Website Sitemap
+              Complete Directory of Pages, Fleet &amp; Services
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               A comprehensive and organized directory of all public pages, luxury fleet vehicles,

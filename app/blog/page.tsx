@@ -6,7 +6,7 @@ import { blogArticles } from "@/lib/site-content";
 import { siteUrl } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "New York Travel Guides | NY Travel Limo";
+  const title = "New York Travel Guides & Chauffeur Blog | NY Travel Limo";
   const description =
     "Practical guides to choosing a vehicle, planning airport transfers and arranging group transportation in New York.";
 
@@ -56,7 +56,7 @@ export default function BlogPage() {
             </nav>
             <p className="eyebrow mb-5 text-brand-secondary">NY Travel Limo journal</p>
             <h1 className="max-w-3xl text-4xl font-extrabold leading-tight tracking-[-0.045em] sm:text-6xl">
-              Helpful guides for getting around New York.
+              Helpful Guides &amp; Practical Tips for Getting Around New York
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               Straightforward advice for planning airport transportation, group travel and a ride

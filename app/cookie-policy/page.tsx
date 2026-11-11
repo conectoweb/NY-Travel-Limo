@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/page-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["cookie-policy"];
-  const base = await pageMetadata("/cookie-policy", page.title, page.description);
+  const base = await pageMetadata("/cookie-policy", page.seoTitle || "Cookie Policy | NY Travel Limo", page.description);
 
   return {
     ...base,
