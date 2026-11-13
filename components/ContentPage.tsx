@@ -12,7 +12,7 @@ export type ContentPageData = {
   description: string;
   eyebrow: string;
   intro: string;
-  sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+  sections: { heading: string; paragraphs: string[]; bullets?: string[]; postParagraphs?: string[] }[];
   links?: { label: string; href: string }[];
   experienceYears?: number;
   fleetImages?: ContentPageFleetImages;
@@ -76,6 +76,15 @@ export default function ContentPage({ page }: { page: ContentPageData }) {
                         </li>
                       ))}
                     </ul>
+                  )}
+                  {section.postParagraphs && (
+                    <div className="mt-4 space-y-4 text-base leading-7 text-brand-muted">
+                      {section.postParagraphs.map((paragraph) => (
+                        <p key={paragraph}>
+                          <FormattedText text={paragraph} />
+                        </p>
+                      ))}
+                    </div>
                   )}
                 </section>
               ))}
