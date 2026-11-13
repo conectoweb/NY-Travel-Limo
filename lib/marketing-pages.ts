@@ -290,133 +290,116 @@ export const marketingPages: Record<string, ContentPageData> = {
     links: [{ label: "Privacy Policy", href: "/privacy-policy" }],
   },
   "terms-and-conditions": {
-    title: "Client Service Agreement & Transportation Policies",
-    seoTitle: "Terms and Conditions | NY Travel Limo",
-    description: "These terms and conditions outline the rules and regulations for using NY Travel Limo's website and private transportation services.",
-    eyebrow: "Terms of use",
-    intro: "Welcome to NY Travel Limo. These terms and conditions outline the rules and regulations for the use of NY Travel Limo's website, located at https://www.nytravellimo.com/. By accessing this website, we assume you accept these terms and conditions. Do not continue to use NY Travel Limo if you do not agree to take all of the terms and conditions stated on this page.",
+    title: "Terms & Conditions and Credit Card Authorization",
+    seoTitle: "Terms & Conditions & Service Policies | NY Travel Limo",
+    description:
+      "Review NY Travel Limo Corp.'s terms and conditions, reservation deposit policies, cancellation terms, and credit card authorization details.",
+    eyebrow: "NY Travel Limo Corp.",
+    intro:
+      "Thank you for choosing NY Travel Limo Corp. We appreciate your business and look forward to providing you with safe, reliable, and professional transportation services. By making a reservation, submitting a booking form, or authorizing payment, you acknowledge that you have read, understood, and agreed to the following Terms & Conditions.",
     sections: [
       {
-        heading: "Terminology",
+        heading: "1. Reservation Deposit & Payment Policy",
         paragraphs: [
-          'The following terminology applies to these Terms and Conditions, Privacy Policy, Disclaimer Notice, and all Agreements: "Client", "You", and "Your" refers to you, the person accessing this website and using our services. "The Company", "We", "Our", and "Us" refers to NY Travel Limo. "Party", "Parties", or "Us" refers to both the Client and the Company.',
-          "All terms refer to the offer, acceptance, and consideration of payment necessary to undertake the process of providing our transportation services to the Client in the most appropriate manner, in accordance with and subject to applicable laws of the State of New York and the United States.",
+          "All reservations require a deposit equal to one-third (1/3) of the total quoted reservation amount to secure the booking.",
+          "All deposits are non-refundable, regardless of the reason for cancellation, unless otherwise required by applicable law.",
+          "The remaining balance must be paid in accordance with the payment arrangements established at the time of booking.",
+          "Accepted payment methods include credit card, cash, or check, subject to company approval and payment arrangements.",
         ],
       },
       {
-        heading: "Cookies",
+        heading: "2. Cancellation Policy",
         paragraphs: [
-          "We employ the use of cookies. By accessing [https://www.nytravellimo.com/](https://www.nytravellimo.com/), you agree to use cookies in accordance with NY Travel Limo's [Privacy Policy](/privacy-policy).",
-          "Cookies are used to enable functionality, improve user experience, and analyze website usage. Some of our partners or service providers may also use cookies.",
-        ],
-      },
-      {
-        heading: "License and Intellectual Property",
-        paragraphs: [
-          "Unless otherwise stated, NY Travel Limo and/or its licensors own the intellectual property rights for all material on [https://www.nytravellimo.com/](https://www.nytravellimo.com/). All intellectual property rights are reserved. You may access this website for your personal use subject to restrictions set in these terms and conditions.",
-          "You must not:",
+          "All cancellations must be communicated directly to NY Travel Limo Corp.",
         ],
         bullets: [
-          "Republish material from https://www.nytravellimo.com/",
-          "Sell, rent, or sub-license material from https://www.nytravellimo.com/",
-          "Reproduce, duplicate, or copy material from https://www.nytravellimo.com/",
-          "Redistribute content from https://www.nytravellimo.com/",
+          "Standard Reservations: Cancellations made within 72 hours of the scheduled service date and time will be subject to a cancellation fee equal to 100% of the total reservation amount.",
+          "Airport Transportation: Airport reservations are subject to a 6-hour cancellation policy. Cancellations made within 6 hours of the scheduled pickup time will be charged 100% of the total reservation amount.",
+          "Deposits: All reservation deposits are non-refundable.",
+        ],
+        postParagraphs: [
+          "Failure to provide proper cancellation notice will result in the applicable cancellation charges being applied to the payment method on file.",
         ],
       },
       {
-        heading: "User Comments and Submissions",
+        heading: "3. Credit Card Charge Authorization",
         paragraphs: [
-          "Parts of this website may offer users the opportunity to submit information, inquiries, or comments. NY Travel Limo does not pre-screen, edit, or review submissions prior to their presence on the website. Any submitted content reflects the views of the person who submits it and not necessarily the views of NY Travel Limo.",
-          "To the extent permitted by applicable law, NY Travel Limo shall not be liable for any content submitted by users or for any damages arising from such submissions. We reserve the right to remove any content that is inappropriate, offensive, or violates these Terms and Conditions.",
-          "You warrant that:",
+          "By submitting this form and providing your payment information, you authorize NY Travel Limo Corp. to charge the credit card provided for all expenses associated with reservations made by you or by another individual on your behalf.",
+          "Authorized charges may include, but are not limited to:",
         ],
         bullets: [
-          "You have the right to submit the content and have all necessary licenses and consents to do so.",
-          "The content does not infringe any intellectual property rights, including copyright, patent, or trademark of any third party.",
-          "The content does not contain unlawful, defamatory, libelous, offensive, or otherwise objectionable material.",
-          "The content will not be used for unlawful or commercial solicitation purposes.",
+          "Transportation and reservation charges.",
+          "Applicable tolls and bridge fees.",
+          "Airport parking fees.",
+          "Additional waiting time.",
+          "Additional stops or route changes.",
+          "A 20% gratuity on all reservations.",
+          "No-show fees.",
+          "Late cancellation fees.",
+          "Any additional services or expenses incurred during the reservation.",
+        ],
+        postParagraphs: [
+          "You acknowledge and agree that these charges may be applied to the credit card on file in accordance with these Terms & Conditions.",
         ],
       },
       {
-        heading: "License to User Submissions",
+        heading: "4. Driver Arrival & No-Show Policy",
         paragraphs: [
-          "You grant NY Travel Limo a non-exclusive license to use, reproduce, and edit your submitted content for business and service-related purposes. This Agreement shall begin on the date you access or use the website.",
+          "If you are unable to locate your assigned driver at the scheduled pickup location, you must immediately contact NY Travel Limo Corp. at [1-866-238-9145](tel:18662389145) for assistance.",
+          "Passengers must make reasonable efforts to contact the company before leaving the designated pickup location.",
+          "Failure to contact NY Travel Limo Corp. and leaving the pickup location may result in the reservation being classified as a no-show.",
+          "No-show charges may equal the full amount of the scheduled reservation and may be charged to the credit card on file.",
         ],
       },
       {
-        heading: "Hyperlinking to Our Website",
+        heading: "5. Waiting Time, Tolls & Additional Charges",
         paragraphs: [
-          "The following organizations may link to our Website without prior written approval:",
+          "Additional charges may apply for waiting time, airport parking, tolls, additional stops, route changes, and other services not included in the original quoted price.",
+          "Any applicable additional charges will be added to the final reservation total.",
+        ],
+      },
+      {
+        heading: "6. Hourly Service Policy",
+        paragraphs: [
+          "Hourly transportation rates are valid exclusively for trips within New York City, unless otherwise agreed upon in writing by NY Travel Limo Corp.",
+          "Additional charges may apply for services outside the designated service area.",
+        ],
+      },
+      {
+        heading: "7. Pricing & Quotations",
+        paragraphs: [
+          "All quoted prices are estimates and are subject to vehicle availability and confirmation at the time of booking.",
+          "NY Travel Limo Corp. reserves the right to modify its pricing without prior notice.",
+          "The final reservation amount may differ from the original quotation due to additional tolls, airport parking, waiting time, additional stops, route changes, or other applicable service-related expenses.",
+        ],
+      },
+      {
+        heading: "8. Prepayment & Credit Card Authorization",
+        paragraphs: [
+          "Reservations may be prepaid by credit card, cash, or check, subject to company approval.",
+          "For credit card prepayment requiring written authorization, the cardholder must provide a signed authorization form through the company's designated secure payment process.",
+          "The credit card holder must be the individual authorizing the transaction and must have the legal right to use the payment method provided.",
+          "Passengers may be required to present a valid credit card to the driver or arrange payment in cash, depending on the reservation's payment terms.",
+        ],
+      },
+      {
+        heading: "9. Acceptance of Terms & Conditions",
+        paragraphs: [
+          "By submitting a reservation request, signing the authorization form, or providing payment information, you acknowledge that you have read, understood, and voluntarily agreed to all the Terms & Conditions outlined above.",
+          "You further authorize NY Travel Limo Corp. to process applicable charges in accordance with the policies stated herein.",
+        ],
+      },
+      {
+        heading: "Thank You for Choosing NY Travel Limo Corp.",
+        paragraphs: [
+          "We appreciate your trust in our services and look forward to making your transportation experience comfortable, convenient, and enjoyable.",
         ],
         bullets: [
-          "Government agencies",
-          "Search engines",
-          "News organizations",
-          "Online directory distributors when linking in the same manner as they hyperlink to other listed businesses",
-        ],
-      },
-      {
-        heading: "Approval for Linking and Branding Restrictions",
-        paragraphs: [
-          "Other organizations may request approval to link to our website. Approval will be granted at our sole discretion.",
-          "No use of NY Travel Limo's logo or branding will be allowed for linking purposes without prior written consent.",
-        ],
-      },
-      {
-        heading: "iFrames",
-        paragraphs: [
-          "Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.",
-        ],
-      },
-      {
-        heading: "Content Liability",
-        paragraphs: [
-          "We shall not be held responsible for any content that appears on external websites linking to us. You agree to protect and defend us against all claims arising from your website. No link(s) should appear on any website that may be interpreted as libelous, obscene, or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third-party rights.",
-        ],
-      },
-      {
-        heading: "Reservation of Rights and Removal of Links",
-        paragraphs: [
-          "We reserve the right to request removal of any links or any particular link to our website. You agree to immediately remove all links to our website upon request. We also reserve the right to amend these Terms and Conditions at any time. By continuing to use or link to our website, you agree to be bound by the current version of these Terms and Conditions.",
-          "If you find any link on our website that you consider offensive, you may contact us. We will consider requests to remove links but are not obligated to do so or to respond to you directly.",
-        ],
-      },
-      {
-        heading: "Disclaimer and Limitation of Liability",
-        paragraphs: [
-          "To the maximum extent permitted by applicable law, NY Travel Limo excludes all representations, warranties, and conditions relating to the website and the use of this website.",
-          "Nothing in this disclaimer will:",
-        ],
-        bullets: [
-          "Limit or exclude liability for death or personal injury resulting from negligence",
-          "Limit or exclude liability for fraud or fraudulent misrepresentation",
-          "Limit liabilities not permitted under applicable law",
-          "Exclude liabilities that may not be excluded under applicable law",
-        ],
-      },
-      {
-        heading: "Free Information Provision",
-        paragraphs: [
-          "As long as the website and information on the website are provided free of charge, NY Travel Limo will not be liable for any loss or damage of any nature.",
-        ],
-      },
-      {
-        heading: "Governing Law",
-        paragraphs: [
-          "These Terms and Conditions shall be governed and interpreted in accordance with the laws of the State of New York and the United States, without regard to conflict of law principles.",
-        ],
-      },
-      {
-        heading: "Contact Information",
-        paragraphs: [
-          "If you have any questions about these Terms and Conditions, please contact us:",
-        ],
-        bullets: [
-          "Company: NY Travel Limo",
-          "Website: [https://www.nytravellimo.com/](https://www.nytravellimo.com/)",
-          "Email: [sales@nytravellimo.com](mailto:sales@nytravellimo.com)",
+          "Company: NY Travel Limo Corp.",
           "Phone: [+1 (516) 256-2892](tel:5162562892)",
-          "Location: 358 W 56th St. Suite 4D, New York, NY 10019",
+          "Fax: 516-256-2893",
+          "Toll-Free Dispatch: [1-866-238-9145](tel:18662389145)",
+          "Reservations & Quotes: [Request a Quote](/contact-us)",
         ],
       },
     ],
