@@ -252,6 +252,12 @@ const nextConfig: NextConfig = {
         source: "/jfk-airport-transportation-service",
         destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
         statusCode: 301,
+      },
+      {
+        // Legacy sprinter van rental in Brooklin → current sprinter van rental in NYC
+        source: "/sprinter-van-rental-with-driver-in-brooklin-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
       }
     ];
   },
