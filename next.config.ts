@@ -25,6 +25,18 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
+        // Direct root request for Sprinter van everything you need to know guide → canonical blog URL
+        source: "/rent-mercedes-benz-sprinter-van-in-new-york-everything-you-need-to-know",
+        destination: "/blog/rent-mercedes-benz-sprinter-van-in-new-york-everything-you-need-to-know",
+        statusCode: 301,
+      },
+      {
+        // Typo redirect for corporate transportation
+        source: "/corporate-transportation-service-whit-driver-in-new-york",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
         // Old WordPress URL (with /nylimo/ prefix) → equivalent fleet page.
         // Query strings are preserved automatically by Next.js.
         source: "/nylimo/sprinter-van-rental-with-driver-new-york-nyc",
