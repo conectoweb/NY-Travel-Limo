@@ -92,7 +92,7 @@ function RateFeature({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-24 border-b border-brand-text/10 py-12 last:border-b-0 sm:py-16">
+    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-32 border-b border-brand-text/10 py-12 last:border-b-0 sm:py-16">
       <div className={`grid min-w-0 items-center gap-8 lg:grid-cols-2 lg:gap-14 ${reverse ? "lg:[&>div:first-child]:order-2" : ""}`}>
         <RateImage images={images} />
         <div className="min-w-0">
@@ -219,7 +219,7 @@ export default function RatesPage() {
           </div>
         </section>
 
-        <section id="rates" aria-labelledby="rates-title" className="scroll-mt-16 bg-brand-soft px-5 py-10 sm:px-8 sm:py-14">
+        <section id="rates" aria-labelledby="rates-title" className="scroll-mt-32 bg-brand-soft px-5 py-10 sm:px-8 sm:py-14">
           <div className="mx-auto max-w-content">
             <div className="mb-4 max-w-3xl">
               <p className="eyebrow mb-3">Service pricing</p>

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { PhoneLinks } from "@/components/PhoneLinks";
 import MobileMenu from "@/components/MobileMenu";
@@ -73,8 +76,25 @@ export function ReservationLink({
 }
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrolled = window.scrollY > 8;
+      setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="relative z-30" id="top">
+    <header
+      id="top"
+      className={`sticky top-0 z-50 w-full bg-brand-light transition-shadow duration-300 ${
+        isScrolled ? "shadow-[0_4px_20px_-2px_rgba(41,37,33,0.12)]" : ""
+      }`}
+    >
       <div className="bg-brand-dark px-5 py-2 text-xs text-white sm:px-8">
         <div className="mx-auto flex max-w-content flex-col items-center justify-between gap-2 sm:flex-row">
           <p className="font-semibold text-white/85">
