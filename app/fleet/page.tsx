@@ -185,7 +185,7 @@ export default function FleetPage() {
         />
 
         {/* Detailed Vehicle Guidance & Specifications */}
-        <section id="specifications" aria-labelledby="specs-heading" className="section-pad scroll-mt-20 bg-white">
+        <section id="specifications" aria-labelledby="specs-heading" className="section-pad scroll-mt-32 bg-white">
           <div className="mx-auto max-w-content">
             <div className="max-w-3xl">
               <p className="eyebrow mb-3 text-brand-secondary">Vehicle Guidance & Capacity</p>

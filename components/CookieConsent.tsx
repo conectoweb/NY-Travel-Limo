@@ -58,7 +58,7 @@ export default function CookieConsent() {
     <aside
       aria-label="Cookie consent"
       aria-live="polite"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-4xl rounded-xl border border-brand-text/15 bg-white p-5 shadow-2xl sm:inset-x-6 sm:p-6"
+      className="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-4xl rounded-xl border border-brand-text/15 bg-white p-5 shadow-2xl sm:inset-x-6 sm:p-6"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="max-w-2xl">

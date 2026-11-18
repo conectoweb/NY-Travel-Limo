@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { fleetOptions, servicePages } from "@/lib/site-content";
 
@@ -30,17 +30,33 @@ const serviceLabels: Record<string, string> = {
 export default function NavigationLinks() {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setOpenMenu(null);
+  }, [pathname]);
 
   useEffect(() => {
     function closeOnEscape(event: KeyboardEvent) {
       if (event.key === "Escape") setOpenMenu(null);
     }
+    function closeOnOutsideClick(event: MouseEvent | TouchEvent) {
+      if (event.target instanceof Node && !navRef.current?.contains(event.target)) {
+        setOpenMenu(null);
+      }
+    }
     document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
+    document.addEventListener("mousedown", closeOnOutsideClick);
+    document.addEventListener("touchstart", closeOnOutsideClick);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("mousedown", closeOnOutsideClick);
+      document.removeEventListener("touchstart", closeOnOutsideClick);
+    };
   }, []);
 
   return (
-    <nav aria-label="Main navigation" className="hidden items-center gap-4 xl:gap-5 lg:flex">
+    <nav ref={navRef} aria-label="Main navigation" className="hidden items-center gap-4 xl:gap-5 lg:flex">
       {navigation.map((item) => {
         const active = pathname === item.href || (item.menu && item.menu.some((entry) => pathname === `/${entry.slug}`));
         return (

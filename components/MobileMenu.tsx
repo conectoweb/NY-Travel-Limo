@@ -19,6 +19,11 @@ export default function MobileMenu({ navigation }: { navigation: NavigationItem[
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    setOpen(false);
+    setOpenSubmenu(null);
+  }, [pathname]);
+
+  useEffect(() => {
     if (!open) return;
 
     function closeOnEscape(event: KeyboardEvent) {
@@ -68,7 +73,7 @@ export default function MobileMenu({ navigation }: { navigation: NavigationItem[
       <div
         id="mobile-navigation"
         hidden={!open}
-        className="absolute right-0 top-[calc(100%+0.75rem)] z-40 max-h-[calc(100svh-8rem)] w-[min(22rem,calc(100vw-2.5rem))] overflow-y-auto rounded-b-2xl border-t-[3px] border-brand-secondary bg-brand-accent p-5 text-white shadow-xl"
+        className="absolute right-0 top-[calc(100%+0.75rem)] z-50 max-h-[calc(100svh-8.5rem)] w-[min(22rem,calc(100vw-2.5rem))] overflow-y-auto rounded-b-2xl border-t-[3px] border-brand-secondary bg-brand-accent p-5 text-white shadow-xl"
         onClick={(event) => {
           if (event.target instanceof Element && event.target.closest("a")) setOpen(false);
         }}
