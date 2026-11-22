@@ -325,13 +325,13 @@ export default function ServiceLanding({
               </h2>
               <div className="mt-5 space-y-4 text-base leading-7 text-brand-muted">
                 <p>
-                  NY Travel Limo provides premier, chauffeur-driven Mercedes-Benz Sprinter van transportation across New York City and New Jersey for groups of up to 14 passengers, subject to the selected vehicle configuration and luggage requirements. Whether organizing airport transfers, corporate roadshows, wedding celebrations, family gatherings, nights out, or private special events, our high-roof passenger vans keep everyone traveling together comfortably on a synchronized schedule.
+                  NY Travel Limo provides premier, chauffeur-driven Mercedes-Benz Sprinter van transportation across New York City and New Jersey for groups of up to 14 passengers. We operate strictly as a professional chauffeur service—self-drive rentals are not offered. Whether organizing private [airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs), [corporate roadshows](/roadshow-transportation-nyc), [wedding guest shuttles](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans), or coordinated [group transportation](/group-transportation-in-new-york-near-me), our high-roof passenger vans keep everyone traveling together comfortably on a synchronized schedule.
                 </p>
                 <p>
                   Every ride is operated by an experienced, licensed professional chauffeur in a private, meticulously maintained vehicle. We provide full service coverage across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and New Jersey, with coordinated private pickups and transfers to John F. Kennedy International (JFK), LaGuardia (LGA), and Newark Liberty (EWR) airports.
                 </p>
                 <p className="text-sm font-medium text-brand-dark">
-                  Because passenger seating layouts and available cargo capacity vary, please share your passenger count, luggage volume, pickup location, destination, schedule, and any intermediate stops when requesting a quote so our reservation team can confirm the ideal vehicle setup.
+                  Seating configurations and rear cargo capacity depend on passenger headcount. For baseline pricing guidance, review our [NYC transportation rates](/rates), or share your schedule, passenger count, and luggage details in our [online quote form](/contact-us) to receive an all-inclusive quote.
                 </p>
               </div>
 
