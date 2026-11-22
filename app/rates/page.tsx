@@ -274,7 +274,7 @@ export default function RatesPage() {
                 headers={["Vehicle", "Rate", "Minimum"]}
                 rows={[
                     ["Sprinter (within five boroughs)", "$150 per hour", "3 hours"],
-                    ["Limousines & SUVs (1–6 passengers)", "$90 per hour", "Not specified"],
+                    ["Limousines & SUVs (1–6 passengers)", "$120 per hour", "Not specified"],
                 ]}
               />
               <p className="mt-3 text-sm leading-6 text-brand-muted">No minimum duration is listed for limousine or SUV hourly service.</p>
