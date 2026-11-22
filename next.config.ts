@@ -592,7 +592,7 @@ const nextConfig: NextConfig = {
       {
         // Legacy reservation page → current reservation page
         source: "/reservation",
-        destination: "/reservation.nytravelimo.com",
+        destination: "/https://reservation.nytravellimo.com/",
         statusCode: 301,
       },
       {
