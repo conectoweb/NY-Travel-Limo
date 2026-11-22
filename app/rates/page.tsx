@@ -169,7 +169,7 @@ export default function RatesPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <section aria-labelledby="rates-hero-title" className="relative isolate overflow-hidden bg-black text-white">
           <Image
             src={vanImage}

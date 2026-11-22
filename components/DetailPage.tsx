@@ -165,7 +165,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
-      <main>
+      <main id="main-content">
         <section
           aria-labelledby="detail-title"
           className={`services-hero-enter relative isolate overflow-hidden bg-brand-dark px-5 text-white sm:px-8 ${

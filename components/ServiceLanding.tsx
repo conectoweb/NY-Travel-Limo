@@ -118,7 +118,7 @@ export default function ServiceLanding({
   const serviceImage = `/images/${content.expectedImage}`;
 
   return (
-    <main>
+    <main id="main-content">
       <section aria-labelledby="detail-title" className="services-hero-enter relative isolate flex min-h-[39rem] overflow-hidden bg-brand-dark text-white sm:min-h-[43rem]">
         <Image
           alt={content.imageAlt}
