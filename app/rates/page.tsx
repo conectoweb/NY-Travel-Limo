@@ -188,12 +188,12 @@ export default function RatesPage() {
                 <li aria-current="page">Rates</li>
               </ol>
             </nav>
-            <p className="eyebrow mb-4 text-brand-secondary">NYC private transportation</p>
+            <p className="eyebrow mb-4 text-brand-secondary">NYC private chauffeur transportation</p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-[-0.045em] sm:text-6xl" id="rates-hero-title">
-              Sprinter Van Rental Rates &amp; Charter Pricing in NYC
+              Sprinter Van Rental Rates &amp; Chauffeur Charter Pricing in NYC
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-              Pricing depends on duration, distance, season, event and the services requested. Explore the listed rates and share your itinerary for a personalized quote.
+              All pricing reflects private, chauffeur-driven luxury transportation—we do not offer self-drive rentals. Review our published baseline rates for <a className="text-white underline underline-offset-4 hover:text-brand-secondary" href="/sprinter-van-rental-with-driver-new-york-nyc">Mercedes-Benz Sprinter vans</a>, executive SUVs, and limousines, then request a personalized quote for your exact itinerary.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand-secondary px-7 py-3 font-bold text-brand-accent transition hover:bg-white" href="#rates">
@@ -209,13 +209,21 @@ export default function RatesPage() {
             <div className="max-w-3xl">
               <p className="eyebrow mb-3">NY Travel Limo</p>
               <h2 className="font-display text-3xl font-bold leading-tight text-brand-dark sm:text-4xl" id="intro-title">
-                Private chauffeur transportation in NYC and Long Island
+                Private chauffeur transportation in NYC, New Jersey and Long Island
               </h2>
               <p className="mt-4 text-base leading-7 text-brand-muted">
-                NY Travel Limo provides private transportation with a chauffeur across New York City and Long Island. Choose a listed rate as a guide, then request a personalized quote for your dates, route and service needs.
+                NY Travel Limo provides 100% chauffeur-driven private transportation across New York City, Northern New Jersey, and Long Island. We specialize in executive travel with professional, licensed drivers—we do not provide self-drive vehicle rentals. Review our approved rates below as a baseline guide, then connect with our dispatch team to confirm your custom route, vehicle category, and schedule.
               </p>
             </div>
-            <QuoteLink label="Request a Custom Quote" />
+            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <QuoteLink label="Request a Custom Quote" />
+              <a
+                href="/sprinter-van-rental-with-driver-new-york-nyc"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-brand-primary bg-transparent px-6 py-2.5 text-sm font-bold text-brand-primary transition hover:bg-brand-primary hover:text-white"
+              >
+                View Sprinter Vans ↗
+              </a>
+            </div>
           </div>
         </section>
 
@@ -355,7 +363,7 @@ export default function RatesPage() {
                   How NY Travel Limo Pricing Works
                 </h2>
                 <p className="mt-3 text-base leading-7 text-brand-muted">
-                  We believe in upfront, transparent pricing so our corporate and private clients can plan itineraries without surprises. Every custom quote reflects:
+                  We believe in upfront, transparent pricing for all private chauffeur services. Because every trip is tailored to your schedule, final quotes vary based on your selected vehicle category, route distance, total charter duration, passenger headcount, luggage volume, intermediate stops, airport pickup coordination (including automated flight tracking), and driver wait time. Every custom quote reflects:
                 </p>
               </div>
 
@@ -390,10 +398,51 @@ export default function RatesPage() {
                     Pricing FAQs
                   </h2>
                   <p className="mt-4 text-sm leading-6 text-brand-muted">
-                    Common questions regarding payments, flight wait times, cancellations, and corporate accounts.
+                    Answers to common questions regarding Sprinter van charter pricing, airport transfers vs hourly service, billing, and reservations.
                   </p>
+                  <div className="mt-6 flex flex-col gap-2.5">
+                    <a
+                      href="/sprinter-van-rental-with-driver-new-york-nyc"
+                      className="text-sm font-bold text-brand-primary underline decoration-brand-secondary underline-offset-4 hover:text-brand-dark"
+                    >
+                      Explore Mercedes-Benz Sprinter Vans →
+                    </a>
+                    <a
+                      href="/contact-us"
+                      className="text-sm font-bold text-brand-primary underline decoration-brand-secondary underline-offset-4 hover:text-brand-dark"
+                    >
+                      Request a Confirmed Quote →
+                    </a>
+                  </div>
                 </div>
                 <div className="border-t border-brand-text/15">
+                  <details className="group border-b border-brand-text/15 py-5" open>
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      How much does it cost to rent a Sprinter van with a driver in NYC?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      Hourly charter service for a 10- to 14-passenger Mercedes-Benz Sprinter van with a professional chauffeur is $150 per hour with a 3-hour minimum within the five NYC boroughs ($450 base). Direct flat-rate airport transfers between NYC and major airports are $360 for LaGuardia (LGA) or JFK, and $400 for Newark Liberty (EWR). For weddings and events, 3-hour packages are available for $450 ($150 per additional hour). Review our <a className="text-link" href="/sprinter-van-rental-with-driver-new-york-nyc">Sprinter van rental page</a> and submit your itinerary via <a className="text-link" href="/contact-us">Contact Us</a> for a confirmed quote.
+                    </p>
+                  </details>
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      Can I book a multi-day or hourly charter?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      Yes. We provide flexible <a className="text-link" href="/transportation-by-hours-in-new-york">as-directed hourly charters</a> as well as multi-day corporate roadshows, conference schedules, and regional event transportation across New York, Long Island, and New Jersey. Your dedicated chauffeur remains on standby throughout your scheduled hours with unlimited intermediate stops. Multi-day and recurring business itineraries receive custom, consolidated billing.
+                    </p>
+                  </details>
+                  <details className="group border-b border-brand-text/15 py-5">
+                    <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
+                      Are airport transfers priced differently from hourly service?
+                      <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
+                      Yes. Airport transfers are structured as flat-rate, point-to-point private rides (such as $160 for an executive SUV or $360 for a 14-passenger Sprinter to JFK/LGA), which include real-time flight tracking and curbside baggage assistance. Hourly service is billed by the hour ($150/hr for Sprinters, $120/hr for limousines/SUVs, with a 3-hour minimum for Sprinters), placing the vehicle and chauffeur at your exclusive disposal for open-ended city travel.
+                    </p>
+                  </details>
                   <details className="group border-b border-brand-text/15 py-5">
                     <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-5 font-semibold text-brand-dark [&::-webkit-details-marker]:hidden">
                       Are bridge and tunnel tolls included in the airport transfer rates?
@@ -427,7 +476,7 @@ export default function RatesPage() {
                       <span aria-hidden="true" className="text-xl text-brand-primary transition-transform group-open:rotate-45">+</span>
                     </summary>
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-brand-muted">
-                      Yes. Sprinter van hourly charters within the five boroughs typically require a 3-hour minimum. Wedding and event packages also operate on 3-hour blocks with clear hourly rates for any additional time required.
+                      Yes. Sprinter van hourly charters within the five boroughs typically require a 3-hour minimum ($450 base). Wedding and event packages also operate on 3-hour blocks with clear hourly rates for any additional time required.
                     </p>
                   </details>
                 </div>

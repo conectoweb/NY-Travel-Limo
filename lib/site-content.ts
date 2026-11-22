@@ -26,48 +26,50 @@ export const fleetPages: DetailPage[] = [
     seoTitle: "NYC Sprinter Van Rental with Driver | NY Travel Limo",
     description:
       "Rent a luxury Mercedes Sprinter van with a chauffeur in NYC. Ideal for corporate travel, executive meetings & private groups. Request a custom quote today!",
-    eyebrow: "Featured group transportation",
+    eyebrow: "Chauffeur-Driven Group Travel",
     intro:
-      "Reserve a luxury Mercedes-Benz Sprinter van rental in NYC with a professional, licensed chauffeur. Ideal for corporate roadshows, executive delegations, airport transfers, and private celebrations across Manhattan, Brooklyn, Queens, Bronx, Staten Island, and New Jersey. Confirm 10- to 14-passenger layouts and luggage requirements with our team today.",
+      "NY Travel Limo provides premier Mercedes-Benz Sprinter van rental with driver in NYC. Every charter is operated exclusively by an experienced, licensed professional chauffeur—we do not offer self-drive rentals. Ideal for corporate roadshows, group airport transfers (JFK, LGA, EWR), weddings, and private VIP events across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and New Jersey. Explore our [transparent rates](/rates) or [request a custom quote](/contact-us) today.",
     sections: [
       {
-        heading: "Mercedes Sprinter rental for New York group travel",
+        heading: "Chauffeur-driven Mercedes Sprinter vans for NYC group travel",
         paragraphs: [
-          "Keep your travel plans together instead of coordinating several separate rides. Whether you are comparing a passenger van rental in NYC or a Mercedes Sprinter rental in NYC, share how many people are traveling, how much luggage you expect and where you need to go so we can discuss the right vehicle for your itinerary.",
-          "A 14-passenger van rental in NYC may suit a group that needs one coordinated pickup or shared trips between venues. Sprinter configurations vary, so confirm passenger and luggage fit when requesting your quote.",
+          "Eliminate the hassle of splitting your party across multiple cabs or rideshares. When you rent a Sprinter van with driver in NYC from NY Travel Limo, your entire group travels together in an executive high-roof cabin with a dedicated chauffeur managing NYC traffic, bridge crossings, and curbside logistics.",
+          "Our Mercedes-Benz passenger van rental in New York with driver accommodates groups of 10 to 14 passengers. Whether you require an executive Sprinter van chauffeur for financial roadshows, an elegant Sprinter limo NYC experience for evening galas, or reliable group shuttles between venues, we tailor every itinerary to your exact schedule.",
         ],
         bullets: [
-          "Airport transportation to and from [JFK, LaGuardia and Newark](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
-          "Corporate meetings, [roadshows](/roadshow-transportation-nyc) and [business events](/corporate-transportation-service-with-driver-in-new-york)",
-          "Wedding parties, [celebrations](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans) and private [group outings](/group-transportation-in-new-york-near-me)",
-          "Dignified [funeral family transportation](/funeral-transportation-services-nyc-dignified-professional) across all five NYC boroughs",
-          "Cruise terminal transfers to [Manhattan and Brooklyn ports](/cruise-terminal-transportation-services-in-new-york-with-driver)",
+          "Private airport transportation to and from [JFK, LaGuardia (LGA), and Newark (EWR)](/airport-transportation-services-in-nyc-with-professional-chauffeurs)",
+          "Executive meetings, [corporate transportation](/corporate-transportation-service-with-driver-in-new-york), and [Wall Street roadshows](/roadshow-transportation-nyc)",
+          "Elegant wedding guest shuttles and [luxury wedding transportation](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans)",
+          "Coordinated [private group transportation](/group-transportation-in-new-york-near-me) for conferences, dinners, and family milestones",
+          "Cruise terminal transfers to [Manhattan and Brooklyn cruise piers](/cruise-terminal-transportation-services-in-new-york-with-driver)",
+          "Flexible [as-directed hourly charter service](/transportation-by-hours-in-new-york) with dedicated chauffeur standby",
         ],
       },
       {
-        heading: "How to plan your Sprinter ride",
+        heading: "Passenger capacities & dedicated luggage planning",
         paragraphs: [
-          "Share your date, pickup and drop-off addresses, passenger count, luggage needs and any stops. For an [hourly transportation charter](/transportation-by-hours-in-new-york), include the time you expect to need the vehicle. Our team can use those details to help you request transportation that fits the trip.",
-        ],
-      },
-      {
-        heading: "Check passenger and luggage fit",
-        paragraphs: [
-          "Sprinter layouts vary, and the space available for luggage depends on the passenger configuration. Give the team a realistic passenger count and a rough bag count rather than relying on a general seat estimate.",
-          "For airport, cruise or event transportation, mention larger cases, equipment or items that need extra room. Confirm the exact vehicle configuration before completing a reservation.",
+          "Comfortable group travel depends on balancing passenger headcount with actual luggage volume. Our luxury Sprinter vans feature high-roof ceilings (over 6 feet of stand-up clearance) so passengers can walk easily to their individual leather captain seats without crouching.",
+          "For airport transfers and cruise departures where every guest carries full-size luggage, our 14-passenger executive Sprinters feature a separate rear cargo partition holding 10 to 14 standard checked bags plus carry-ons. If your group carries oversized golf bags, trade-show displays, or excessive luggage, inform our reservation team so we can recommend the ideal seating layout.",
         ],
         bullets: [
-          "Number of adults and children traveling",
-          "Suitcases, carry-ons and oversized items",
-          "Pickup order for groups coming from different locations",
-          "Any mobility or boarding considerations to discuss",
+          "10 to 14 adult passengers comfortably seated in individual leather seats",
+          "Dedicated rear luggage partition accommodating 10–14 large checked suitcases",
+          "Walk-in stand-up interior height for effortless boarding and formal attire preservation",
+          "Onboard amenities: Multi-zone climate control, USB/power charging ports, privacy tint, and Wi-Fi",
         ],
       },
       {
-        heading: "Popular Sprinter itineraries in New York",
+        heading: "Service areas: NYC Five Boroughs, New Jersey & Tri-State airports",
         paragraphs: [
-          "A van can help a group stay together for airport transfers, corporate schedules, wedding events, cruise terminal trips and private outings. Each itinerary has different timing and loading needs, so share the destinations in order and note any fixed arrival times.",
-          "If your day includes several locations, include expected waiting periods and the final drop-off. The reservation team can review the complete request and discuss the transportation plan.",
+          "NY Travel Limo provides comprehensive door-to-door coverage throughout all five boroughs of New York City: Manhattan (Midtown, Financial District, Hudson Yards), Brooklyn, Queens, the Bronx, and Staten Island. Service extends seamlessly across Northern New Jersey (Jersey City, Hoboken, Newark), Long Island, Westchester County, and Connecticut.",
+          "We coordinate private curbside pickups and arrivals at John F. Kennedy International Airport (JFK), LaGuardia Airport (LGA), Newark Liberty International Airport (EWR), and private aviation terminals including Teterboro Airport (TEB) and Westchester County (HPN).",
+        ],
+      },
+      {
+        heading: "How Sprinter van pricing works & requesting a quote",
+        paragraphs: [
+          "Because every itinerary is unique, pricing depends on your travel date, total duration, route distance, passenger count, luggage volume, and specific timing requirements. We offer flat-rate airport transfers as well as flexible hourly charters (with a standard 3-hour minimum in NYC).",
+          "Review our published baseline pricing on our [NYC transportation rates page](/rates), or submit your itinerary through our [online quote form](/contact-us) to receive an upfront, all-inclusive quote with no hidden surprises.",
         ],
       },
     ],
@@ -512,12 +514,12 @@ export const servicePages: DetailPage[] = [
     seoTitle: "Hourly Transportation NYC with Private Driver | NY Travel Limo",
     description:
       "Request hourly car service in NYC for meetings, events, shopping, sightseeing and multi-stop plans with a chauffeur by the hour in New York.",
-    eyebrow: "Hourly transportation",
+    eyebrow: "Hourly Chauffeur Service NYC",
     intro:
-      "When your plans include several stops, hourly chauffeur service in New York can organize transportation around a broader itinerary. Share the start time, expected duration and destinations to discuss private transportation by the hour in NYC.",
+      "Reserve flexible as-directed hourly chauffeur service in NYC with a dedicated luxury vehicle and professional driver on standby. Whether organizing an hourly Sprinter charter in NYC for executive roadshows, a multi-stop shopping day, or an evening gala, enjoy unlimited stops on your schedule. Review our baseline pricing on our [NYC transportation rates page](/rates) or explore our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) to plan your itinerary.",
     sections: [
       {
-        heading: "Flexible as-directed hourly chauffeur service in NYC",
+        heading: "As-directed hourly chauffeur service in NYC & dedicated standby",
         paragraphs: [
           "Navigating New York City with multiple appointments, retail stops, private meetings, or evening dining can be unpredictable. NY Travel Limo’s as-directed hourly chauffeur service provides a dedicated luxury vehicle and licensed professional driver placed completely at your command for a set block of time.",
           "Your chauffeur remains on standby directly outside your locations, ready to depart the moment you step out, eliminating parking worries, taxi hails, and transit delays.",
@@ -530,7 +532,7 @@ export const servicePages: DetailPage[] = [
         ],
       },
       {
-        heading: "Vehicle capacities & onboard standby amenities",
+        heading: "Hourly Sprinter charter NYC & luxury fleet options",
         paragraphs: [
           "Our hourly charter fleet includes high-roof [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) for 10 to 14 passengers, [executive luxury SUVs](/luxury-suv-rental-nyc) for up to 6 passengers, and [Lincoln stretch limousines](/lincoln-stretch-limo-rental-nyc) for up to 10 guests.",
           "Cabins are equipped with multi-zone climate control, leather upholstery, mobile device charging ports, tinted privacy glass, and complimentary bottled water to keep you refreshed throughout your schedule.",
@@ -548,18 +550,19 @@ export const servicePages: DetailPage[] = [
         ],
       },
       {
-        heading: "Hourly charter terms, minimum durations & booking process",
+        heading: "Hourly charter terms, 3-hour minimum & booking process",
         paragraphs: [
-          "Hourly charters typically require a 3-hour minimum commitment. Base hourly rates include vehicle charter, licensed chauffeur service, and fuel. New York bridge/tunnel tolls or parking charges incurred during standby are itemized transparently.",
-          "To request an hourly quote, share your planned start time, starting address, estimated hours needed, destination areas, and passenger count.",
+          "Sprinter van hourly charters within the five NYC boroughs typically require a 3-hour minimum booking commitment. Base hourly rates include the private vehicle charter, licensed chauffeur service, and fuel. New York bridge/tunnel tolls or parking charges incurred during standby are itemized transparently in your finalized quote.",
+          "For confirmed hourly rates, review our [NYC transportation rates page](/rates). To request an hourly quote, share your planned start time, starting address, estimated hours needed, destination areas, and passenger count via our [online quote form](/contact-us).",
         ],
       },
       {
         heading: "Frequently asked questions about hourly chauffeur service",
         paragraphs: [
-          "**What is the minimum hourly commitment for Sprinter vans or SUVs?** Most hourly reservations within New York City require a 3-hour minimum. Specific terms will be detailed in your personalized quote.",
+          "**What is the minimum hourly commitment for Sprinter vans or SUVs?** Most hourly Sprinter reservations within New York City require a 3-hour minimum. Specific terms will be detailed in your personalized quote.",
           "**What happens if my itinerary takes longer than originally booked?** Your chauffeur will remain with you as long as needed. Any time beyond your reserved duration is billed at the agreed hourly overtime rate detailed in your reservation.",
           "**Can we make unplanned stops or change the route spontaneously?** Yes. As-directed hourly service gives you complete control over your itinerary—simply instruct your chauffeur where you want to go next.",
+          "**Where can I review hourly pricing?** Approved baseline hourly rates are listed on our [rates page](/rates). For custom multi-day charters or Tri-State travel, request a personalized quote through [Contact Us](/contact-us).",
         ],
       },
     ],
@@ -1463,7 +1466,7 @@ export const blogArticles: BlogArticle[] = [
         heading: "Can You Rent a Mercedes Sprinter Van in New York?",
         paragraphs: [
           "Yes, you can absolutely rent a [Mercedes-Benz Sprinter van](/sprinter-van-rental-with-driver-new-york-nyc) for almost any occasion. These premium vans are a popular choice for those who need to transport large groups of people while ensuring maximum comfort, safety, and style.",
-          "Whether you’re planning an [airport transfer](/airport-transportation-services-in-nyc-with-professional-chauffeurs/), attending a wedding, organizing a [corporate event](/corporate-transportation-service-with-driver-in-new-york), or heading out on a sightseeing tour, a Sprinter van offers a spacious and luxurious ride. With features like high ceilings, comfortable seating, and ample storage space, they’re perfect for both short and long trips. Renting a Mercedes Sprinter van is a smart and convenient option for group travel of any kind.",
+          "Whether you’re planning an [airport transfer](/airport-transportation-services-in-nyc-with-professional-chauffeurs), attending a wedding, organizing a [corporate event](/corporate-transportation-service-with-driver-in-new-york), or heading out on a sightseeing tour, a Sprinter van offers a spacious and luxurious ride. With features like high ceilings, comfortable seating, and ample storage space, they’re perfect for both short and long trips. Renting a Mercedes Sprinter van is a smart and convenient option for group travel of any kind.",
         ],
       },
       {
@@ -1511,7 +1514,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Can You Rent a Mercedes Van with Driver?",
         paragraphs: [
-          "Yes, you can rent a Mercedes van — and not just any van. At NY Travel Limo, we offer premium [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) designed for comfort, safety, and efficiency. Our luxury Sprinter vans can accommodate between 10 to [14 passengers](/sprinter-van-rental-with-driver-new-york-nyc), making them ideal for [airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs/), [weddings](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans/), business events, [city tours](/new-york-city-tour-with-professional-chauffeurs/), and more.",
+          "Yes, you can rent a Mercedes van — and not just any van. At NY Travel Limo, we offer premium [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) designed for comfort, safety, and efficiency. Our luxury Sprinter vans can accommodate between 10 to [14 passengers](/sprinter-van-rental-with-driver-new-york-nyc), making them ideal for [airport transfers](/airport-transportation-services-in-nyc-with-professional-chauffeurs), [weddings](/luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans), business events, [city tours](/new-york-city-tour-with-professional-chauffeurs), and more.",
           "Each vehicle includes spacious seating, air conditioning, ample luggage space, and is operated by a professional, bilingual driver committed to providing a smooth and reliable travel experience. Whether you’re planning a short ride across town or a longer group trip, our Mercedes vans are an excellent choice.",
         ],
         table: {
