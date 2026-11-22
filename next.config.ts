@@ -343,7 +343,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/nylimo/best-plans-for-groups-in-new-york-and-how-to-get-there-easily",
-        destination: "/group-transportation-in-new-york-near-me",
+        destination: "/blog/best-plans-for-groups-in-new-york-and-how-to-get-there-easily",
         statusCode: 301,
       },
       {
