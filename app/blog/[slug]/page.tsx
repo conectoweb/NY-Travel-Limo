@@ -76,12 +76,8 @@ export default async function BlogArticlePage({
     description: article.description,
     datePublished: article.updated,
     dateModified: article.updated,
-    author: { "@type": "Organization", name: "NY Travel Limo" },
-    publisher: {
-      "@type": "Organization",
-      name: "NY Travel Limo",
-      url: "https://www.nytravellimo.com/",
-    },
+    author: { "@id": "https://www.nytravellimo.com/#organization" },
+    publisher: { "@id": "https://www.nytravellimo.com/#organization" },
     mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
   };
 

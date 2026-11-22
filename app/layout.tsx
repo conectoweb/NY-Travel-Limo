@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import CookieConsent from "@/components/CookieConsent";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { organizationSchema } from "@/lib/schema";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,6 +31,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         {/* Google Tag Manager (noscript) — must be immediately after <body> opens */}
         <noscript>
           <iframe

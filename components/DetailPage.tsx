@@ -9,6 +9,25 @@ import FinalCTA from "@/components/FinalCTA";
 import ServiceLanding from "@/components/ServiceLanding";
 import { serviceLandingContent } from "@/lib/service-landing-content";
 import FormattedText from "@/components/FormattedText";
+import { organizationSchema } from "@/lib/schema";
+
+function Phone({ className = "h-5 w-5", ...props }: React.ComponentProps<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      {...props}
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
 
 const relatedServiceSlugs: Record<string, string[]> = {
   "sprinter-van-rental-with-driver-new-york-nyc": [
@@ -97,39 +116,26 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
 
-  const areaServedList = [
-    { "@type": "AdministrativeArea", name: "Manhattan, New York" },
-    { "@type": "AdministrativeArea", name: "Brooklyn, New York" },
-    { "@type": "AdministrativeArea", name: "Queens, New York" },
-    { "@type": "AdministrativeArea", name: "Bronx, New York" },
-    { "@type": "AdministrativeArea", name: "Staten Island, New York" },
-    { "@type": "AdministrativeArea", name: "New Jersey" },
-    { "@type": "Place", name: "John F. Kennedy International Airport (JFK)" },
-    { "@type": "Place", name: "LaGuardia Airport (LGA)" },
-    { "@type": "Place", name: "Newark Liberty International Airport (EWR)" },
-  ];
-
   const structuredData = isContactPage
     ? {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "NY Travel Limo",
+        "@type": "ContactPage",
+        "@id": "https://www.nytravellimo.com/contact-us#webpage",
         url: "https://www.nytravellimo.com/contact-us",
-        telephone: "+1-516-256-2892",
-        areaServed: areaServedList,
+        name: page.title,
+        description: page.description,
+        publisher: { "@id": "https://www.nytravellimo.com/#organization" },
       }
     : {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": `https://www.nytravellimo.com/${page.slug}#service`,
         name: page.title,
         description: page.description,
         provider: {
-          "@type": "Organization",
-          name: "NY Travel Limo",
-          url: "https://www.nytravellimo.com/",
-          telephone: "+1-516-256-2892",
+          "@id": "https://www.nytravellimo.com/#organization",
         },
-        areaServed: areaServedList,
+        areaServed: organizationSchema.areaServed,
       };
 
   const serviceLanding = serviceLandingContent[page.slug];
@@ -162,7 +168,11 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
       <main>
         <section
           aria-labelledby="detail-title"
-          className={`services-hero-enter relative isolate overflow-hidden bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24 ${fleetHeroImage ? "min-h-[34rem]" : ""}`}
+          className={`services-hero-enter relative isolate overflow-hidden bg-brand-dark px-5 text-white sm:px-8 ${
+            isContactPage
+              ? "py-16 md:py-20 lg:py-24"
+              : `py-16 sm:py-24 ${fleetHeroImage ? "min-h-[34rem]" : ""}`
+          }`}
         >
           {fleetHeroImage && (
             <>
@@ -201,9 +211,11 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
             <p className="mt-6 max-w-3xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               {page.intro}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
-            </div>
+            {!isContactPage && (
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <QuoteLink className="min-h-14 px-8 text-base" label="Request a Quote" />
+              </div>
+            )}
           </div>
         </section>
 
@@ -246,7 +258,27 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                       </p>
                     ))}
                   </div>
-                  {section.bullets && (
+                  {isContactPage && section.heading === "Request a transportation quote" ? (
+                    <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                      <a
+                        href="tel:+15162562892"
+                        className="group inline-flex items-center gap-3 text-lg font-medium text-stone-900 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-4"
+                        aria-label="Call NY Travel Limo at 516-256-2892"
+                      >
+                        <Phone className="h-5 w-5 text-teal-700 transition-colors group-hover:text-brand-secondary" aria-hidden="true" />
+                        <span>516-256-2892</span>
+                      </a>
+
+                      <a
+                        href="tel:+17183971333"
+                        className="group inline-flex items-center gap-3 text-lg font-medium text-stone-900 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-4"
+                        aria-label="Call NY Travel Limo at 718-397-1333"
+                      >
+                        <Phone className="h-5 w-5 text-teal-700 transition-colors group-hover:text-brand-secondary" aria-hidden="true" />
+                        <span>718-397-1333</span>
+                      </a>
+                    </div>
+                  ) : section.bullets ? (
                     <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                       {section.bullets.map((item) => (
                         <li className="flex gap-3 text-sm leading-6 text-brand-dark" key={item}>
@@ -257,7 +289,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                         </li>
                       ))}
                     </ul>
-                  )}
+                  ) : null}
                 </section>
               ))}
             </div>
