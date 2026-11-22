@@ -60,7 +60,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="bg-brand-soft">
+      <main id="main-content" className="bg-brand-soft">
         {/* Hero Section */}
         <section
           aria-labelledby="not-found-title"

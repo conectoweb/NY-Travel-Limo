@@ -24,7 +24,7 @@ export default function GalleryPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <section aria-labelledby="gallery-title" className="services-hero-enter bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24">
           <div className="mx-auto max-w-content">
             <nav aria-label="Breadcrumb" className="mb-8 text-sm text-white/65">

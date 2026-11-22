@@ -43,7 +43,7 @@ export default function ServicesPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <section
           aria-labelledby="services-hero-title"
           className="services-hero-enter relative isolate flex min-h-[35rem] overflow-hidden bg-brand-dark text-white sm:min-h-[39rem]"

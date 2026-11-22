@@ -132,7 +132,7 @@ export default function FleetPage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section className="services-hero-enter relative isolate flex min-h-[26rem] sm:min-h-[50rem] overflow-hidden bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24">
           <Image

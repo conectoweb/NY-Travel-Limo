@@ -125,7 +125,7 @@ export default async function BlogArticlePage({
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
-      <main>
+      <main id="main-content">
         <article>
           <header className="bg-brand-dark px-5 py-16 text-white sm:px-8 sm:py-24">
             <div className="mx-auto max-w-4xl">
