@@ -588,7 +588,44 @@ const nextConfig: NextConfig = {
         source: "/sprinter-van-rental-with-driver-in-brooklin-new-york",
         destination: "/sprinter-van-rental-with-driver-new-york-nyc",
         statusCode: 301,
+      }, 
+      {
+        // Legacy reservation page → current reservation page
+        source: "/reservation",
+        destination: "/reservation.nytravelimo.com",
+        statusCode: 301,
+      },
+      {
+        // Legacy reservation page → current reservation page
+        source: "/thank-you",
+        destination: "/contact-us",
+        statusCode: 301,
+      },
+      {
+        // Legacy blog post → current blog page
+        source: "/2025/04/27",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        // Legacy blog category → current blog page
+        source: "/blog/categories/airport-limos",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        // Legacy blog post → current blog page
+        source: "/the-ultimate-guide-to-business-travel-in-new-york",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        // Legacy terms and conditions URL with typo → current terms and conditions page  
+        source: "/terms-and-conditionshttps",
+        destination: "/terms-and-conditions",
+        statusCode: 301,
       }
+
     ];
   },
 };
