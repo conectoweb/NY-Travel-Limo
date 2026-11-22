@@ -187,16 +187,346 @@ const nextConfig: NextConfig = {
         destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       },
+      // Legacy event, group and transportation pages
       {
-        // Legacy WordPress post URL structure (/post/:slug) to current blog guide path.
+        source: "/sports-events-nyc-transportation",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/luxury-prom-transportation-in-new-york",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/concert-transportation-nyc-nj-pa",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/concert-transportation-in-nyc-group-vip-event-travel",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/private-luxury-special-events-transportation-nyc",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/christmas-lights-tour-in-new-york-city",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/thanksgiving-parade-transportation-guide-2025",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/bus-rental-service-new-york-city",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/36-passenger-bus-rental-new-york-ny-near-me",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/36-passenger-bus-rental-nyc",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/washington-dc-transportation-service-in-new-york",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+
+      // Legacy airport pages
+      {
+        source: "/airport-transportation-ny",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+      {
+        source: "/airport-transportation-nyc",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+      {
+        source: "/airport-transportation-resources.html",
+        destination: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+
+      // Legacy Sprinter pages
+      {
+        source: "/sprinter-van-service-nyc",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/group-adventures-discover-our-sprinter-van-rental-service-in-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/sprinter-van-rental-service-for-funeral-transportation-by-ny-travel-limo",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+
+      // Legacy limousine, SUV and funeral pages
+      {
+        source: "/premium-car-service-rentals-new-york",
+        destination: "/luxury-suv-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/limousine-in-new-york.html",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/new-york-limousines.html",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/hummer-limousine-new-york.html",
+        destination: "/lincoln-stretch-limo-rental-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/funeral-transportation-brooklyn",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+        source: "/funeral-transportation-in-nyc-dignified-professional-services",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+
+      // Old NY Limo routes
+      {
+        source: "/nylimo/services",
+        destination: "/services",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/rates",
+        destination: "/rates",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/36-passenger-bus-rental-new-york-ny-near-me",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/book-sprinter-vans",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/sprinter-van-rental-in-new-york-near-me",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/mini-bus-rentals",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/best-plans-for-groups-in-new-york-and-how-to-get-there-easily",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/top-destinations-to-visit-in-a-sprinter-van-in-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/what-are-the-best-wine-tours-from-new-york",
+        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/cheap-and-expensive-hotels-to-stay-in-new-york-according-to-your-budget",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/exploring-art-and-culture-the-best-museums-to-visit-as-a-group-in-new-york",
+        destination: "/new-york-city-tour-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+
+      // Previous site prefix
+      {
+        source: "/ny-travel-limo",
+        destination: "/",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/14-passenger-van-rental-with-driver-in-new-york-nyc",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/blog",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/contact-us",
+        destination: "/contact-us",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/group-transportation-in-new-york-near-me",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/quote",
+        destination: "/contact-us",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/rates",
+        destination: "/rates",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/services",
+        destination: "/services",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/sprinter-van-rental-with-driver-new-york-nyc",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/ny-travel-limo/terms",
+        destination: "/terms-and-conditions",
+        statusCode: 301,
+      },
+
+      // Old blog URLs with no equivalent article
+      {
+        source: "/blog/discovering-what-to-do-in-new-york-in-a-unique-way-enhance-your-adventure-with-a-sprinter-van",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/how-to-plan-corporate-roadshow-new-york-city",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/how-wine-tour-month-unfolded-in-new-york-with-ny-travel-limo",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/september-2026-united-nations-new-york-key-global-events-luxury-transportation",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/the-ultimate-guide-to-business-travel-in-new-york",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/top-destinations-to-visit-in-a-sprinter-van-in-new-york",
+        destination: "/sprinter-van-rental-with-driver-new-york-nyc",
+        statusCode: 301,
+      },
+      {
+        source: "/what-are-the-best-wine-tours-from-new-york-2",
+        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
+        statusCode: 301,
+      },
+
+      // These specific /post URLs MUST be before /post/:slug
+      {
+        source: "/post/corporate-and-hotel-transfers-in-nyc-professional-airport-transportation-for-business-travelers-and",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/post/how-to-arrange-transportation-for-funeral-guests-in-new-york",
+        destination: "/funeral-transportation-services-nyc-dignified-professional",
+        statusCode: 301,
+      },
+      {
+        source: "/post/how-to-plan-corporate-roadshow-new-york-city",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/post/how-wine-tour-month-unfolded-in-new-york-with-ny-travel-limo",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/post/the-ultimate-guide-to-business-travel-in-new-york",
+        destination: "/corporate-transportation-service-with-driver-in-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/post/the-best-gastronomic-route-in-new-york-exploring-the-flavors-of-the-big-apple",
+        destination: "/new-york-city-tour-with-professional-chauffeurs",
+        statusCode: 301,
+      },
+      {
+        source: "/post/cheap-and-expensive-hotels-to-stay-in-new-york-according-to-your-budget",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        // Legacy post URL for wine tasting tours → current canonical blog article
+        source: "/post/the-10-best-wine-tasting-tours-in-new-york",
+        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
+        statusCode: 301,
+      },
+      {
+        // Legacy post URL for sprinter rental cost → current canonical blog article
+        source: "/post/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        destination: "/blog/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
+        statusCode: 301,
+      },
+
+      // Legacy WordPress post URL structure (/post/:slug) to current blog guide path.
+      {
         source: "/post/:slug",
         destination: "/blog/:slug",
+        statusCode: 301,
+      },
+
+      // Legacy language and malformed internal link
+      {
+        source: "/servicios",
+        destination: "/services",
+        statusCode: 301,
+      },
+      {
+        source: "/faqsvg",
+        destination: "/frequently-asked-questions",
         statusCode: 301,
       },
       {
         // Old airport limousine service page with .html extension.
         source: "/airport-limousine-service-new-york.html",
-        destination: "/airport-limousine-service-new-york",
+        destination: "/lincoln-stretch-limo-rental-nyc",
         statusCode: 301,
       },
       {
@@ -239,18 +569,6 @@ const nextConfig: NextConfig = {
         // Legacy wine tours guide URL → current canonical wine tours article
         source: "/blog/what-are-the-best-wine-tours-from-new-york",
         destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
-        statusCode: 301,
-      },
-      {
-        // Legacy post URL for wine tasting tours → current canonical blog article
-        source: "/post/the-10-best-wine-tasting-tours-in-new-york",
-        destination: "/blog/the-10-best-wine-tasting-tours-in-new-york",
-        statusCode: 301,
-      },
-      {
-        // Legacy post URL for sprinter rental cost → current canonical blog article
-        source: "/post/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
-        destination: "/blog/how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
         statusCode: 301,
       },
       {
