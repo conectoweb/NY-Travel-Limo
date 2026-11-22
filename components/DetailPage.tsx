@@ -9,6 +9,7 @@ import FinalCTA from "@/components/FinalCTA";
 import ServiceLanding from "@/components/ServiceLanding";
 import { serviceLandingContent } from "@/lib/service-landing-content";
 import FormattedText from "@/components/FormattedText";
+import { organizationSchema } from "@/lib/schema";
 
 const relatedServiceSlugs: Record<string, string[]> = {
   "sprinter-van-rental-with-driver-new-york-nyc": [
@@ -97,39 +98,26 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
 
-  const areaServedList = [
-    { "@type": "AdministrativeArea", name: "Manhattan, New York" },
-    { "@type": "AdministrativeArea", name: "Brooklyn, New York" },
-    { "@type": "AdministrativeArea", name: "Queens, New York" },
-    { "@type": "AdministrativeArea", name: "Bronx, New York" },
-    { "@type": "AdministrativeArea", name: "Staten Island, New York" },
-    { "@type": "AdministrativeArea", name: "New Jersey" },
-    { "@type": "Place", name: "John F. Kennedy International Airport (JFK)" },
-    { "@type": "Place", name: "LaGuardia Airport (LGA)" },
-    { "@type": "Place", name: "Newark Liberty International Airport (EWR)" },
-  ];
-
   const structuredData = isContactPage
     ? {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "NY Travel Limo",
+        "@type": "ContactPage",
+        "@id": "https://www.nytravellimo.com/contact-us#webpage",
         url: "https://www.nytravellimo.com/contact-us",
-        telephone: "+1-516-256-2892",
-        areaServed: areaServedList,
+        name: page.title,
+        description: page.description,
+        publisher: { "@id": "https://www.nytravellimo.com/#organization" },
       }
     : {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": `https://www.nytravellimo.com/${page.slug}#service`,
         name: page.title,
         description: page.description,
         provider: {
-          "@type": "Organization",
-          name: "NY Travel Limo",
-          url: "https://www.nytravellimo.com/",
-          telephone: "+1-516-256-2892",
+          "@id": "https://www.nytravellimo.com/#organization",
         },
-        areaServed: areaServedList,
+        areaServed: organizationSchema.areaServed,
       };
 
   const serviceLanding = serviceLandingContent[page.slug];

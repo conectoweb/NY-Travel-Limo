@@ -42,23 +42,13 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function HomePage() {
-  const businessStructuredData = {
+  const websiteStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "NY Travel Limo",
+    "@type": "WebSite",
+    "@id": "https://www.nytravellimo.com/#website",
     url: "https://www.nytravellimo.com/",
-    telephone: "+1-516-256-2892",
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Manhattan, New York" },
-      { "@type": "AdministrativeArea", name: "Brooklyn, New York" },
-      { "@type": "AdministrativeArea", name: "Queens, New York" },
-      { "@type": "AdministrativeArea", name: "Bronx, New York" },
-      { "@type": "AdministrativeArea", name: "Staten Island, New York" },
-      { "@type": "AdministrativeArea", name: "New Jersey" },
-      { "@type": "Place", name: "John F. Kennedy International Airport (JFK)" },
-      { "@type": "Place", name: "LaGuardia Airport (LGA)" },
-      { "@type": "Place", name: "Newark Liberty International Airport (EWR)" },
-    ],
+    name: "NY Travel Limo",
+    publisher: { "@id": "https://www.nytravellimo.com/#organization" },
   };
 
   return (
@@ -66,7 +56,7 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(businessStructuredData).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(websiteStructuredData).replace(/</g, "\\u003c"),
         }}
       />
       <Header />
