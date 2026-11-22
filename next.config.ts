@@ -140,6 +140,21 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
+        source: "/packages/wine-tour-–-10-hours",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/packages/wine-tour-%E2%80%93-10-hours",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
+        source: "/wine-tours-from-new-york",
+        destination: "/wine-tours-transportation-service-from-new-york",
+        statusCode: 301,
+      },
+      {
         // Old six-passenger SUV page.
         source: "/luxury-6-passenger-suv-rental-nyc",
         destination: "/luxury-suv-rental-nyc",
@@ -215,7 +230,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/christmas-lights-tour-in-new-york-city",
-        destination: "/group-transportation-in-new-york-near-me",
+        destination: "/blog/christmas-lights-tour-in-new-york-city",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/christmas-lights-tour-in-new-york-city-see-the-magic-from-a-sprinter-van",
+        destination: "/blog/christmas-lights-tour-in-new-york-city",
         statusCode: 301,
       },
       {
@@ -363,7 +383,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/nylimo/exploring-art-and-culture-the-best-museums-to-visit-as-a-group-in-new-york",
-        destination: "/new-york-city-tour-with-professional-chauffeurs",
+        destination: "/blog/best-museums-in-new-york-for-groups",
+        statusCode: 301,
+      },
+      {
+        source: "/exploring-art-and-culture-the-best-museums-to-visit-as-a-group-in-new-york",
+        destination: "/blog/best-museums-in-new-york-for-groups",
         statusCode: 301,
       },
 
@@ -620,12 +645,35 @@ const nextConfig: NextConfig = {
         statusCode: 301,
       },
       {
-        // Legacy terms and conditions URL with typo → current terms and conditions page  
-        source: "/terms-and-conditionshttps",
-        destination: "/terms-and-conditions",
+        source: "/exploring-the-heights-of-new-york-the-best-rooftops-and-stylish-arrivals",
+        destination: "/blog/best-rooftops-in-new-york-for-groups",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/exploring-the-heights-of-new-york-the-best-rooftops-and-stylish-arrivals",
+        destination: "/blog/best-rooftops-in-new-york-for-groups",
+        statusCode: 301,
+      },
+      {
+        source: "/best-october-events-sprinter-vans-new-york-city",
+        destination: "/blog/best-october-events-in-new-york-city",
+        statusCode: 301,
+      },
+      {
+        source: "/nylimo/best-october-events-sprinter-vans-new-york-city",
+        destination: "/blog/best-october-events-in-new-york-city",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/nyc-world-cup-transportation-guide",
+        destination: "/group-transportation-in-new-york-near-me",
+        statusCode: 301,
+      },
+      {
+        source: "/nyc-world-cup-transportation-guide",
+        destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
       }
-
     ];
   },
   async headers() {
