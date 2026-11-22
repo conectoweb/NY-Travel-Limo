@@ -266,7 +266,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                         aria-label="Call NY Travel Limo at 516-256-2892"
                       >
                         <Phone className="h-5 w-5 text-teal-700 transition-colors group-hover:text-brand-secondary" aria-hidden="true" />
-                        <span>516-256-2892</span>
+                        <span>+1516-256-2892</span>
                       </a>
 
                       <a
@@ -275,7 +275,7 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
                         aria-label="Call NY Travel Limo at 718-397-1333"
                       >
                         <Phone className="h-5 w-5 text-teal-700 transition-colors group-hover:text-brand-secondary" aria-hidden="true" />
-                        <span>718-397-1333</span>
+                        <span>+1718-397-1333</span>
                       </a>
                     </div>
                   ) : section.bullets ? (
