@@ -34,7 +34,7 @@ const companyLinks = [
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/NEWYORKTRAVELLIMO/", icon: "facebook" },
+  { label: "Facebook", href: "https://www.facebook.com/NYTravelLimoCorp/", icon: "facebook" },
   { label: "X", href: "https://x.com/i/jf/onboarding/web?mode=login&redirect_after_login=%2FNYTravelLimo", icon: "x" },
   { label: "Pinterest", href: "https://co.pinterest.com/NYTravellimoCorp/", icon: "pinterest" },
   { label: "Instagram", href: "https://www.instagram.com/nytravellimo/", icon: "instagram" },
