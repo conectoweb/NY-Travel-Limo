@@ -35,7 +35,7 @@ export const organizationSchema = {
     addressCountry: "US",
   },
   sameAs: [
-    "https://www.facebook.com/NEWYORKTRAVELLIMO/",
+    "https://www.facebook.com/NYTravelLimoCorp/",
     "https://www.instagram.com/nytravellimo/",
     "https://www.youtube.com/@NYTravelLimo",
   ],
