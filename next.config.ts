@@ -673,6 +673,21 @@ const nextConfig: NextConfig = {
         source: "/nyc-world-cup-transportation-guide",
         destination: "/group-transportation-in-new-york-near-me",
         statusCode: 301,
+      },
+      {
+        source: "/blog/10-reasons-why-you-should-choose-a-sprinter-van-for-your-next-trip-to-new-york",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/brewery-tours-transportation-from-new-york",
+        destination: "/blog",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/best-october-events-in-nyc-amp-how-to-get-there-in-a-mercedes-benz-sprinter-van",
+        destination: "/blog",
+        statusCode: 301,
       }
     ];
   },
