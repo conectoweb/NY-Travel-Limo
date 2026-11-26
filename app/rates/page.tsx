@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header, { QuoteLink, ReservationLink } from "@/components/Header";
 import Reviews from "@/components/Reviews";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { localBusinessSchema } from "@/lib/schema";
 
 const vanImage = "/images/nyc-sprinter-van-hero.avif";
 const vehicleImages = {
@@ -25,9 +26,9 @@ const vehicleImages = {
 } as const;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "NYC Private Transportation Rates & Quotes | NY Travel Limo";
+  const title = "NYC Sprinter Van & Chauffeur Rates | Get Instant Quote";
   const description =
-    "Compare NY Travel Limo Sprinter van, airport, hourly and event rates in New York City, then request a quote for your itinerary.";
+    "Compare transparent rates for NYC Mercedes Sprinter Vans, Luxury SUVs & Limousines. All-inclusive JFK, LGA & EWR airport & hourly pricing. Get a quote now.";
   const isPublicSite = await isPublicSiteRequest();
   const url = `${siteUrl}/rates`;
 
@@ -168,6 +169,12 @@ const relatedServices = [
 export default function RatesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
       <main id="main-content">
         <section aria-labelledby="rates-hero-title" className="relative isolate overflow-hidden bg-black text-white">
@@ -190,7 +197,7 @@ export default function RatesPage() {
             </nav>
             <p className="eyebrow mb-4 text-brand-secondary">NYC private chauffeur transportation</p>
             <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-[-0.045em] sm:text-6xl" id="rates-hero-title">
-              Sprinter Van Rental Rates &amp; Chauffeur Charter Pricing in NYC
+              NYC Sprinter Van Rental Rates &amp; Private Chauffeur Pricing
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               All pricing reflects private, chauffeur-driven luxury transportation—we do not offer self-drive rentals. Review our published baseline rates for <a className="text-white underline underline-offset-4 hover:text-brand-secondary" href="/sprinter-van-rental-with-driver-new-york-nyc">Mercedes-Benz Sprinter vans</a>, executive SUVs, and limousines, then request a personalized quote for your exact itinerary.

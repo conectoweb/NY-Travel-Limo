@@ -1,47 +1,54 @@
+import { buildFaqPageSchema } from "@/lib/schema";
+
 const questions = [
   {
-    question: "What can I use a Sprinter Van for?",
+    question: "How are NY Travel Limo rates calculated for NYC and airport transfers?",
     answer:
-      "Mercedes-Benz Sprinter Vans are a featured option for private group transportation, including airport transfers, corporate travel, tours, cruise transfers and events. Visit the Sprinter page for vehicle information.",
+      "Rates depend on vehicle type (Mercedes Sprinter Van, Luxury SUV, or Stretch Limousine), pickup and drop-off locations (including JFK, LGA, and EWR), trip duration or hourly charter schedule, and passenger count. Request an instant quote online for exact all-inclusive pricing.",
+    link: "/rates",
+    linkLabel: "View Rates & Pricing",
+  },
+  {
+    question: "Do you track flights and include airport wait time at JFK, LGA, and EWR?",
+    answer:
+      "Yes. Our 24/7 dispatch monitors commercial flight arrivals in real time at JFK, LaGuardia (LGA), and Newark (EWR) so your chauffeur adjusts automatically for flight delays and greets you once you land.",
+    link: "/airport-transportation-services-in-nyc-with-professional-chauffeurs",
+    linkLabel: "Explore Airport Transfers",
+  },
+  {
+    question: "How many passengers and suitcases fit in a Mercedes Sprinter Van vs. a Luxury SUV?",
+    answer:
+      "Our Mercedes-Benz Sprinter Vans seat 10 to 14 passengers with space for 10 to 14 standard suitcases. Executive Luxury SUVs accommodate up to 6 passengers with 4 to 6 suitcases, and Lincoln Stretch Limousines seat 8 to 10 guests.",
     link: "/sprinter-van-rental-with-driver-new-york-nyc",
     linkLabel: "Explore Sprinter Vans",
   },
   {
-    question: "When should I consider an SUV?",
+    question: "Are all NY Travel Limo vehicles chauffeur-driven?",
     answer:
-      "A private SUV can suit airport trips, business travel, family transportation or a direct ride around New York. Share passenger and luggage details to discuss whether it fits your trip.",
-    link: "/luxury-suv-rental-nyc",
-    linkLabel: "Explore SUVs",
+      "Yes. Every reservation includes a licensed, experienced private chauffeur. We do not offer self-drive vehicle rentals.",
+    link: "/fleet",
+    linkLabel: "Explore Our Fleet",
   },
   {
-    question: "Can I book a limousine for a wedding or event?",
+    question: "Can I arrange corporate transportation, weddings, or hourly charters?",
     answer:
-      "NY Travel Limo arranges limousine transportation for weddings, celebrations, evenings out and special occasions. Include your schedule and passenger count when requesting a quote.",
-    link: "/lincoln-stretch-limo-rental-nyc",
-    linkLabel: "Explore Limousines",
-  },
-  {
-    question: "Do you provide transportation to New York airports?",
-    answer:
-      "Airport transportation is listed for JFK, LaGuardia and Newark. Include your airport, pickup details and destination when you request a quote.",
-  },
-  {
-    question: "Can I arrange corporate transportation or a roadshow?",
-    answer:
-      "Corporate transportation and roadshow transportation are available service categories. Share your itinerary and trip requirements to request a quote.",
-  },
-  {
-    question: "How do I request a quote?",
-    answer:
-      "Use the Contact Us quote form and provide your trip date, pickup and drop-off locations, passenger count and transportation needs.",
+      "Yes. We provide private chauffeur service for corporate roadshows, weddings, group tours, cruise terminals, and hourly as-directed charters across NYC and New Jersey.",
     link: "/contact-us",
     linkLabel: "Request a Quote",
   },
 ];
 
 export default function FAQ() {
+  const faqSchema = buildFaqPageSchema(questions);
+
   return (
     <section aria-labelledby="faq-title" className="section-pad bg-brand-soft" id="faq">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="mx-auto grid max-w-content gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="eyebrow mb-4">Frequently asked questions</p>

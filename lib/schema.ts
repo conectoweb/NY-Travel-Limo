@@ -87,3 +87,69 @@ export const organizationSchema = {
     },
   ],
 };
+
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "LimousineBus"],
+  "@id": `${SITE_URL}/#localbusiness`,
+  name: "NY Travel Limo",
+  url: `${SITE_URL}/`,
+  image: `${SITE_URL}/images/nyc-sprinter-van-hero.avif`,
+  telephone: "+1-516-256-2892",
+  priceRange: "$$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "358 W 56th St Suite 4D",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10019",
+    addressCountry: "US",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  areaServed: [
+    "Manhattan, NY",
+    "Brooklyn, NY",
+    "Queens, NY",
+    "Bronx, NY",
+    "Staten Island, NY",
+    "New Jersey",
+    "JFK Airport",
+    "LaGuardia Airport (LGA)",
+    "Newark Liberty Airport (EWR)",
+  ],
+  parentOrganization: {
+    "@id": `${SITE_URL}/#organization`,
+  },
+};
+
+export function stripMarkdownLinks(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").trim();
+}
+
+export function buildFaqPageSchema(items: ReadonlyArray<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: stripMarkdownLinks(item.answer),
+      },
+    })),
+  };
+}

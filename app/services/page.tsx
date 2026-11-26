@@ -10,10 +10,11 @@ import Steps from "@/components/Steps";
 import { servicePages } from "@/lib/site-content";
 import { serviceLandingContent } from "@/lib/service-landing-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { localBusinessSchema } from "@/lib/schema";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "NYC Private Chauffeur Services Directory | NY Travel Limo";
-  const description = "Explore Transportation Services in NYC, Including Private Airport, Corporate, Cruise, Wedding, Hourly, City Tour & Group Transportation with a Chauffeur.";
+  const title = "NYC Private Chauffeur Services | 24/7 Airport & Group";
+  const description = "Discover 24/7 private chauffeur services in NYC: JFK, LGA & EWR airport transfers, corporate travel & events in Sprinter Vans, SUVs & Limos. Book online now.";
   const isPublicSite = await isPublicSiteRequest();
 
   return {
@@ -42,6 +43,12 @@ const services = servicePages.filter((service) => service.slug !== "contact-us")
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
       <main id="main-content">
         <section
@@ -68,7 +75,7 @@ export default function ServicesPage() {
               className="max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl"
               id="services-hero-title"
             >
-              Transportation Services in NYC, Planned Around You
+              Private Chauffeur &amp; Transportation Services in NYC
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               Explore private transportation services in NYC for airport transfers, business

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
+import { localBusinessSchema } from "@/lib/schema";
 import BlogPreview from "@/components/BlogPreview";
 import FAQ from "@/components/FAQ";
 import FeaturedVideo from "@/components/FeaturedVideo";
@@ -15,9 +16,9 @@ import Steps from "@/components/Steps";
 import WeddingEventSpotlight from "@/components/WeddingEventSpotlight";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Book Private Transportation in NYC | NY Travel Limo";
+  const title = "NYC Private Chauffeur & Sprinter Van Rental | 24/7 Service";
   const description =
-    "Private Transportation in NY With a Chauffeur Service for Airport Transfers, Business Schedules, Group Travel & Events. Compare Sprinter Vans, SUVs & Limousines";
+    "Book 24/7 NYC private chauffeur service. Luxury Mercedes Sprinter Vans, SUVs & Limousines for JFK, LGA & EWR airport transfers & events. Get an instant quote.";
   const isPublicSite = await isPublicSiteRequest();
 
   return {
@@ -43,7 +44,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function HomePage() {
   const websiteStructuredData = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://www.nytravellimo.com/#website",
     url: "https://www.nytravellimo.com/",
@@ -51,12 +51,20 @@ export default function HomePage() {
     publisher: { "@id": "https://www.nytravellimo.com/#organization" },
   };
 
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      websiteStructuredData,
+      Object.fromEntries(Object.entries(localBusinessSchema).filter(([k]) => k !== "@context")),
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteStructuredData).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(homeStructuredData).replace(/</g, "\\u003c"),
         }}
       />
       <Header />

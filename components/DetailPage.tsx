@@ -9,7 +9,7 @@ import FinalCTA from "@/components/FinalCTA";
 import ServiceLanding from "@/components/ServiceLanding";
 import { serviceLandingContent } from "@/lib/service-landing-content";
 import FormattedText from "@/components/FormattedText";
-import { organizationSchema } from "@/lib/schema";
+import { buildFaqPageSchema, organizationSchema } from "@/lib/schema";
 
 function Phone({ className = "h-5 w-5", ...props }: React.ComponentProps<"svg">) {
   return (
@@ -116,7 +116,9 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
   const sectionHref = isContactPage ? "/contact-us" : isFleetPage ? "/#fleet" : "/services";
   const sectionLabel = isContactPage ? "Contact" : isFleetPage ? "Our Fleet" : "Services";
 
-  const structuredData = isContactPage
+  const serviceLanding = serviceLandingContent[page.slug];
+
+  const baseStructuredData = isContactPage
     ? {
         "@context": "https://schema.org",
         "@type": "ContactPage",
@@ -138,7 +140,21 @@ export default function DetailPage({ page }: { page: DetailPageContent }) {
         areaServed: organizationSchema.areaServed,
       };
 
-  const serviceLanding = serviceLandingContent[page.slug];
+  const faqSchema =
+    serviceLanding && serviceLanding.faqs.length > 0
+      ? buildFaqPageSchema(serviceLanding.faqs)
+      : null;
+
+  const structuredData = faqSchema
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [
+          Object.fromEntries(Object.entries(baseStructuredData).filter(([k]) => k !== "@context")),
+          Object.fromEntries(Object.entries(faqSchema).filter(([k]) => k !== "@context")),
+        ],
+      }
+    : baseStructuredData;
+
   if (serviceLanding) {
     return (
       <>
