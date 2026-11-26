@@ -2,9 +2,9 @@ import type { ContentPageData } from "@/components/ContentPage";
 
 export const marketingPages: Record<string, ContentPageData> = {
   rates: {
-    title: "Sprinter Van Rental Rates & Charter Pricing in NYC",
-    seoTitle: "NYC Private Transportation Rates & Quotes | NY Travel Limo",
-    description: "Request a tailored quote for NY Travel Limo private chauffeur transportation in New York.",
+    title: "NYC Sprinter Van Rental Rates & Private Chauffeur Pricing",
+    seoTitle: "NYC Sprinter Van & Chauffeur Rates | Get Instant Quote",
+    description: "Compare transparent rates for NYC Mercedes Sprinter Vans, Luxury SUVs & Limousines. All-inclusive JFK, LGA & EWR airport & hourly pricing. Get a quote now.",
     eyebrow: "Rates and quote requests",
     intro: "Transportation costs depend on the trip details. Request a quote with your itinerary so the team can provide information for your specific ride. No fixed rates are published here.",
     sections: [
@@ -25,9 +25,9 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "about-us": {
-    title: "Over 26 Years of Dedicated Chauffeur Service in NYC",
-    seoTitle: "About NY Travel Limo | Private Transportation Company",
-    description: "Get to know NY Travel Limo, with more than 26 years of transportation experience serving New York and surrounding areas.",
+    title: "26+ Years of Private Chauffeur Transportation in NYC",
+    seoTitle: "About NY Travel Limo | 26+ Years NYC Chauffeur Service",
+    description: "Trusted since 1998 for private NYC chauffeur service. Licensed Mercedes Sprinter Vans, Luxury SUVs & Limousines for JFK, LGA & EWR transfers. Book online.",
     eyebrow: "Over 26 years of transportation experience",
     intro: "For more than 26 years, NY Travel Limo has provided private luxury transportation and professional chauffeur service throughout New York City, Long Island, Westchester, and New Jersey. From seamless airport transfers and executive corporate roadshows to elegant weddings and coordinated group charters, our mission is to deliver dependable, discreet, and stress-free travel planned around your itinerary.",
     sections: [
@@ -96,9 +96,9 @@ export const marketingPages: Record<string, ContentPageData> = {
     ],
   },
   "frequently-asked-questions": {
-    title: "Common Questions About Private Chauffeur Services in NYC",
-    seoTitle: "Frequently Asked Questions | NY Travel Limo FAQ",
-    description: "Answers to common questions about private chauffeur transportation, airport pickups, fleet capacities, and quote requests in New York.",
+    title: "NYC Private Chauffeur & Sprinter Van FAQ",
+    seoTitle: "NYC Chauffeur & Sprinter Van FAQ | 24/7 Booking Guide",
+    description: "Answers on NYC Sprinter Van, Luxury SUV & Limousine rates, luggage capacity & JFK, LGA, EWR airport wait times. Ready to travel? Request an instant quote.",
     eyebrow: "Helpful information",
     intro: "Find comprehensive, verified answers to common client questions regarding vehicle selection, passenger and luggage capacities, airport transfer protocols, hourly charters, pricing, and reservation policies across New York City and New Jersey.",
     sections: [

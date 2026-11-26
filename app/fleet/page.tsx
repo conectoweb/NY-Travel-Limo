@@ -6,12 +6,13 @@ import Header, { QuoteLink, ReservationLink } from "@/components/Header";
 import FinalCTA from "@/components/FinalCTA";
 import ServiceAreas from "@/components/ServiceAreas";
 import { pageMetadata } from "@/lib/page-metadata";
+import { localBusinessSchema } from "@/lib/schema";
 
 export async function generateMetadata(): Promise<Metadata> {
   const base = await pageMetadata(
     "/fleet",
-    "NY Travel Limo Fleet | Sprinter Vans, SUVs & Limousines",
-    "Explore the NY Travel Limo fleet in NYC, including Mercedes-Benz Sprinter vans, private SUVs and limousines for chauffeur-driven travel."
+    "Luxury Chauffeur Fleet NYC | Sprinter Vans, SUVs & Limos",
+    "Explore our NYC private fleet: 10-14 passenger Mercedes Sprinter Vans, 6-passenger Luxury SUVs & Limousines for JFK, LGA & EWR travel. Get an instant quote."
   );
 
   return {
@@ -131,6 +132,12 @@ const fleetFaqs = [
 export default function FleetPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
       <main id="main-content">
         {/* Hero Section */}
@@ -155,7 +162,7 @@ export default function FleetPage() {
               </nav>
               <p className="eyebrow mb-5 text-brand-secondary">Vehicles for your itinerary</p>
               <h1 className="text-4xl font-extrabold leading-[1.05] tracking-[-0.045em] sm:text-6xl">
-                Explore Our Luxury Chauffeur Fleet in New York
+                Luxury NYC Chauffeur Fleet: Sprinter Vans, SUVs &amp; Limos
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
                 Compare Mercedes-Benz Sprinter vans, executive private SUVs, and stretch limousines. Every vehicle in our fleet is maintained to executive standards and chauffeured by TLC-licensed professionals across New York City and New Jersey.

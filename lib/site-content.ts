@@ -22,10 +22,10 @@ export type DetailPage = {
 export const fleetPages: DetailPage[] = [
   {
     slug: "sprinter-van-rental-with-driver-new-york-nyc",
-    title: "Luxury Mercedes Sprinter Van Rental with Chauffeur in NYC",
-    seoTitle: "NYC Sprinter Van Rental with Driver | NY Travel Limo",
+    title: "Mercedes-Benz Sprinter Van Rental with Driver in NYC",
+    seoTitle: "Sprinter Van Rental with Driver NYC | Instant Quote 24/7",
     description:
-      "Rent a luxury Mercedes Sprinter van with a chauffeur in NYC. Ideal for corporate travel, executive meetings & private groups. Request a custom quote today!",
+      "Rent a 10-14 passenger Mercedes Sprinter Van with private chauffeur in NYC. Ideal for JFK, LGA & EWR transfers, corporate travel & groups. Book online today.",
     eyebrow: "Chauffeur-Driven Group Travel",
     intro:
       "NY Travel Limo provides premier Mercedes-Benz Sprinter van rental with driver in NYC. Every charter is operated exclusively by an experienced, licensed professional chauffeur—we do not offer self-drive rentals. Ideal for corporate roadshows, group airport transfers (JFK, LGA, EWR), weddings, and private VIP events across Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and New Jersey. Explore our [transparent rates](/rates) or [request a custom quote](/contact-us) today.",
@@ -77,10 +77,10 @@ export const fleetPages: DetailPage[] = [
   },
   {
     slug: "luxury-suv-rental-nyc",
-    title: "Chauffeured Executive SUV Transportation in New York",
-    seoTitle: "Luxury SUV Rental with Driver NYC | NY Travel Limo",
+    title: "Luxury SUV Rental with Private Chauffeur in NYC",
+    seoTitle: "Luxury SUV Rental with Driver NYC | 24/7 Private Chauffeur",
     description:
-      "Arrange private SUV transportation in New York for airport transfers, business travel, family trips and point-to-point rides.",
+      "Book a 6-passenger Luxury SUV with private chauffeur in NYC. Also offering Sprinter Vans & Limos for JFK, LGA & EWR airport transfers. Get an instant quote.",
     eyebrow: "Private SUV transportation",
     intro:
       "A chauffeur-driven SUV is a comfortable option for private travel around New York. NY Travel Limo can help plan an airport pickup, a business ride or a direct trip across the city. Share your passenger and luggage needs so we can discuss the best fit.",
@@ -139,10 +139,10 @@ export const fleetPages: DetailPage[] = [
   },
   {
     slug: "lincoln-stretch-limo-rental-nyc",
-    title: "Lincoln Stretch Limousine Service for NYC Events",
-    seoTitle: "NYC Stretch Limo Rental with Chauffeur | NY Travel Limo",
+    title: "Lincoln Stretch Limousine Rental with Chauffeur in NYC",
+    seoTitle: "Stretch Limo Rental NYC with Chauffeur | Instant Quote",
     description:
-      "Plan limousine transportation in New York for weddings, celebrations, evenings out and other special occasions.",
+      "Reserve a Lincoln Stretch Limousine with private chauffeur in NYC. Also offering Mercedes Sprinter Vans & Luxury SUVs for weddings & galas. Book online today.",
     eyebrow: "Limousine service for special occasions",
     intro:
       "Make the transportation part of your occasion. NY Travel Limo arranges private limousine service in New York for weddings, celebrations, evenings out and event travel. Tell us the schedule and stops you have in mind so we can help plan the ride.",
@@ -203,10 +203,10 @@ export const fleetPages: DetailPage[] = [
 export const servicePages: DetailPage[] = [
   {
     slug: "contact-us",
-    title: "Get in Touch with NY Travel Limo Dispatch",
-    seoTitle: "Contact NY Travel Limo | Request a Quote",
+    title: "Contact NY Travel Limo 24/7 Dispatch & Quote Request",
+    seoTitle: "Contact NY Travel Limo NYC | 24/7 Instant Quote & Dispatch",
     description:
-      "Contact NY Travel Limo to discuss private chauffeur transportation, request a quote or plan your New York itinerary.",
+      "Contact our 24/7 NYC dispatch to book Mercedes Sprinter Vans, Luxury SUVs & Limousines for JFK, LGA & EWR transfers or events. Request an instant quote now.",
     eyebrow: "We're here to help",
     intro:
       "Have a question about your transportation plans? Contact NY Travel Limo to discuss your itinerary, vehicle options or quote request. Sharing your date, locations, passenger count and travel needs helps our team understand how to assist.",
@@ -232,10 +232,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "airport-transportation-services-in-nyc-with-professional-chauffeurs",
-    title: "Private Airport Car & Limo Transfers in New York",
-    seoTitle: "JFK, LGA & EWR Airport Chauffeur Service | NY Travel Limo",
+    title: "Private JFK, LGA & EWR Airport Chauffeur Service in NYC",
+    seoTitle: "JFK, LGA & EWR Airport Car Service NYC | 24/7 Chauffeur",
     description:
-      "Book private JFK, LGA & EWR airport transfers with professional chauffeurs. Luxury Sprinter vans, SUVs & limos. Call +1 516-256-2892 or request a quote!",
+      "Book 24/7 private JFK, LGA & EWR airport transfers with flight tracking. Luxury Mercedes Sprinter Vans, SUVs & Limousines in NYC. Get an instant quote now.",
     eyebrow: "Airport chauffeur service",
     intro:
       "Reserve private airport limo and car service in NYC for JFK, LaGuardia (LGA), and Newark Liberty (EWR). NY Travel Limo coordinates punctual curbside pickups and airport transfers with professional, licensed chauffeurs operating luxury Mercedes-Benz Sprinter vans, private SUVs, and stretch limousines. Provide your flight details to request your personalized airport quote.",
@@ -270,10 +270,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "corporate-transportation-service-with-driver-in-new-york",
-    title: "Executive Chauffeur & Corporate Travel Solutions in NYC",
-    seoTitle: "NYC Corporate Transportation & Car Service | NY Travel Limo",
+    title: "Executive Corporate Transportation & Chauffeur Service NYC",
+    seoTitle: "Corporate Chauffeur & Car Service NYC | 24/7 Executive",
     description:
-      "Plan corporate transportation in New York for executives, meetings, airport transfers, company events and visiting teams with a private chauffeur service.",
+      "Executive corporate transportation in NYC with 24/7 private chauffeurs. Mercedes Sprinter Vans, Luxury SUVs & Limos for JFK, LGA & EWR pickups. Book online.",
     eyebrow: "Business travel",
     intro:
       "NY Travel Limo arranges corporate transportation in New York for executives, employees, clients and visiting teams. Use a corporate car service in NYC for an airport transfer, executive transportation, a business meeting or a multi-stop company itinerary.",
@@ -330,10 +330,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "roadshow-transportation-nyc",
-    title: "Multi-Stop Executive Roadshow Chauffeur Services in NYC",
-    seoTitle: "NYC Corporate Roadshow Transportation | NY Travel Limo",
+    title: "Multi-Stop Corporate Roadshow Chauffeur Service in NYC",
+    seoTitle: "NYC Corporate Roadshow Chauffeur | Private Vans & SUVs",
     description:
-      "Coordinate roadshow transportation in New York for investor meetings and multi-stop business schedules with a private chauffeur and an itinerary-led request.",
+      "Coordinate multi-stop NYC financial roadshows with 24/7 private chauffeurs. Mercedes Sprinter Vans, Luxury SUVs & JFK, LGA, EWR transfers. Request a quote.",
     eyebrow: "Corporate roadshows",
     intro:
       "Plan corporate roadshow transportation in NYC around investor meetings, addresses and arrival times. Share your full schedule to discuss executive roadshow transportation in New York and vehicle options for the traveling team.",
@@ -390,10 +390,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "cruise-terminal-transportation-services-in-new-york-with-driver",
-    title: "Private Cruise Terminal Transfers in Manhattan & Brooklyn",
-    seoTitle: "NYC Cruise Port Transportation with Chauffeur | NY Travel Limo",
+    title: "Private Cruise Terminal Transportation in NYC & Brooklyn",
+    seoTitle: "NYC Cruise Terminal Chauffeur Service | Instant Quote",
     description:
-      "Arrange private cruise port transportation in NYC between Manhattan Cruise Terminal, airports, hotels and your destination. Share your sailing and luggage details.",
+      "Private cruise transfers to Manhattan & Brooklyn terminals and JFK, LGA & EWR airports. Spacious Mercedes Sprinter Vans, SUVs & Limousines. Book online today.",
     eyebrow: "Cruise transfers",
     intro:
       "Plan cruise terminal transportation in NYC between your home, hotel, airport and Manhattan Cruise Terminal. NY Travel Limo helps individuals, families and groups coordinate private cruise transportation in New York with the sailing, pickup and luggage details in one itinerary.",
@@ -450,10 +450,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "luxury-wedding-transportation-in-nyc-with-chauffeur-driven-sprinter-vans",
-    title: "Luxury Wedding Shuttles & Bridal Party Transit in NYC",
-    seoTitle: "NYC Wedding Transportation with Driver | NY Travel Limo",
+    title: "Luxury Wedding Transportation & Sprinter Vans in NYC",
+    seoTitle: "NYC Wedding Chauffeur & Sprinter Vans | Private Service",
     description:
-      "Plan NYC wedding transportation for couples, wedding parties and guests between ceremony, reception, hotel and photo locations with chauffeur-driven vehicles.",
+      "Luxury NYC wedding transportation for couples & guests. Book Stretch Limousines, Mercedes Sprinter Vans & SUVs with private chauffeurs. Get an instant quote.",
     eyebrow: "Weddings and celebrations",
     intro:
       "Arrange a wedding transportation service in New York around the ceremony, photo locations, reception and hotel. NY Travel Limo helps couples and planners coordinate private wedding transportation in NYC, from a limousine arrival to Sprinter van transportation for groups.",
@@ -510,10 +510,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "transportation-by-hours-in-new-york",
-    title: "Flexible As-Directed Hourly Chauffeur Service in New York",
-    seoTitle: "Hourly Transportation NYC with Private Driver | NY Travel Limo",
+    title: "Hourly Private Chauffeur & Car Service in New York City",
+    seoTitle: "Hourly Chauffeur & Car Service NYC | 24/7 Private Driver",
     description:
-      "Request hourly car service in NYC for meetings, events, shopping, sightseeing and multi-stop plans with a chauffeur by the hour in New York.",
+      "Hire an hourly private chauffeur in NYC for meetings, shopping & events. Choose Mercedes Sprinter Vans, Luxury SUVs or Limos with JFK, LGA & EWR access. Book.",
     eyebrow: "Hourly Chauffeur Service NYC",
     intro:
       "Reserve flexible as-directed hourly chauffeur service in NYC with a dedicated luxury vehicle and professional driver on standby. Whether organizing an hourly Sprinter charter in NYC for executive roadshows, a multi-stop shopping day, or an evening gala, enjoy unlimited stops on your schedule. Review our baseline pricing on our [NYC transportation rates page](/rates) or explore our [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc) to plan your itinerary.",
@@ -570,10 +570,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "new-york-city-tour-with-professional-chauffeurs",
-    title: "Private Holiday Transportation in New York City",
-    seoTitle: "NYC Holiday Transportation | NY Travel Limo",
+    title: "Private NYC Sightseeing & Holiday Chauffeur Tours",
+    seoTitle: "Private NYC Sightseeing & Holiday Tours | Chauffeur Service",
     description:
-      "Plan holiday travel in NYC with a private chauffeur for airport transfers, Christmas lights, corporate events and New Year’s Eve. Request a quote.",
+      "Explore New York City landmarks & holiday lights with a private chauffeur. Book Mercedes Sprinter Vans, Luxury SUVs or Limousines for your group. Get a quote.",
     eyebrow: "NYC Holiday Chauffeur Service",
     intro:
       "Private holiday transportation in New York City with professional, licensed chauffeurs. Plan seamless travel from November 2026 through January 2027 for Thanksgiving airport transfers, Christmas lights tours, corporate holiday parties, New Year’s Eve celebrations, and winter family itineraries. Choose from luxury [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [private SUVs](/luxury-suv-rental-nyc), and [stretch limousines](/lincoln-stretch-limo-rental-nyc).",
@@ -632,10 +632,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "point-to-point-transportation-service-in-new-york",
-    title: "Direct Point-to-Point Chauffeur Service Across New York & NJ",
-    seoTitle: "NYC Point-to-Point Transportation | NY Travel Limo",
+    title: "Point-to-Point Private Chauffeur Service in NYC & NJ",
+    seoTitle: "Point-to-Point Car Service NYC | 24/7 Private Chauffeur",
     description:
-      "Arrange point-to-point car service in NYC between your chosen pickup and destination, with a private chauffeur for direct New York trips.",
+      "Direct point-to-point transportation across NYC, NJ & JFK, LGA, EWR airports. Travel in Mercedes Sprinter Vans, Luxury SUVs & Limousines. Book online today.",
     eyebrow: "Direct private rides",
     intro:
       "For a direct trip from one address to another, request private point-to-point transportation in New York. Share your pickup and destination to discuss a point-to-point chauffeur ride in NYC.",
@@ -658,10 +658,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "wine-tours-transportation-service-from-new-york",
-    title: "Chauffeured Wine Tasting Excursions from New York City",
-    seoTitle: "Long Island Wine Tour Transportation NYC | NY Travel Limo",
+    title: "Private Long Island Wine Tour Transportation from NYC",
+    seoTitle: "Long Island Wine Tour Chauffeur from NYC | Instant Quote",
     description:
-      "Plan private wine tour transportation from NYC to Long Island wineries, with your pickup, tasting stops, group size and return itinerary.",
+      "Book private Long Island & Hudson Valley wine tour transportation from NYC. Luxury Mercedes Sprinter Vans, SUVs & Limousines with driver. Request a quote.",
     eyebrow: "Wine tour transportation",
     intro:
       "Plan private wine tour transportation from NYC to Long Island wineries or other destinations. Share your stops, travel date, passenger count and expected schedule to discuss winery transportation with a driver.",
@@ -718,10 +718,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "group-transportation-in-new-york-near-me",
-    title: "Synchronized Private Group Travel Services in New York",
-    seoTitle: "Group Transportation NYC with Driver | NY Travel Limo",
+    title: "Private Group Transportation with Sprinter Vans in NYC",
+    seoTitle: "Group Transportation NYC with Chauffeur | Sprinter Vans",
     description:
-      "Plan private group transportation in NYC for airport trips, events, business schedules, cruise transfers and tours, with Sprinter vans featured for groups.",
+      "Private NYC group transportation for corporate events, tours & JFK, LGA, EWR transfers. 10-14 passenger Mercedes Sprinter Vans, SUVs & Limos. Book online now.",
     eyebrow: "Group transportation",
     intro:
       "Arrange private group transportation in NYC for airport trips, events, business schedules, tours or private outings. Share your itinerary and party details to discuss a Sprinter van, SUV or limousine for group travel in New York.",
@@ -779,10 +779,10 @@ export const servicePages: DetailPage[] = [
   },
   {
     slug: "funeral-transportation-services-nyc-dignified-professional",
-    title: "Dignified Family & Funeral Transportation Across New York",
-    seoTitle: "Funeral Transportation Services NYC | NY Travel Limo",
+    title: "Dignified Private Funeral Transportation Services in NYC",
+    seoTitle: "Funeral Chauffeur & Limo Service NYC | 24/7 Private Fleet",
     description:
-      "Dignified, professional funeral transportation in NYC across all 5 boroughs. Chauffeur-driven Mercedes Sprinter vans, SUVs and limousines for family and friends.",
+      "Dignified private funeral transportation across NYC & NJ. Reserve Mercedes Sprinter Vans, Luxury SUVs & Limousines with compassionate chauffeurs. Book now.",
     eyebrow: "Dignified Family & Guest Chauffeur Service",
     intro:
       "Compassionate, punctual and respectful chauffeur-driven transportation for families, relatives and friends during times of remembrance. NY Travel Limo provides luxury [Mercedes-Benz Sprinter vans](/sprinter-van-rental-with-driver-new-york-nyc), [private SUVs](/luxury-suv-rental-nyc) and [elegant limousines](/lincoln-stretch-limo-rental-nyc) across Manhattan, Brooklyn, Queens, The Bronx and Staten Island. Every vehicle is rented strictly with a dedicated, professional chauffeur to ensure your family travels together in comfort, privacy and peace of mind.",
@@ -908,9 +908,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "choosing-between-a-sprinter-van-suv-and-limousine",
     title: "Sprinter Van, SUV or Limousine: Which Ride Fits Your NYC Trip?",
-    seoTitle: "Sprinter Van vs SUV vs Limousine: NYC Fleet Guide | NY Travel Limo",
+    seoTitle: "Sprinter Van vs SUV vs Limo NYC Guide | Private Chauffeur",
     description:
-      "Compare Mercedes-Benz Sprinter vans, luxury SUVs, and stretch limousines for NYC airport trips, corporate schedules, wedding celebrations, and group events.",
+      "Compare Mercedes Sprinter Vans, Luxury SUVs & Limousines in NYC for JFK, LGA & EWR transfers, corporate travel & group events. Request an instant quote.",
     category: "Choosing a vehicle",
     updated: "2026-11-04",
     image: {
@@ -1092,9 +1092,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "planning-group-transportation-in-nyc",
     title: "A Simple Guide to Planning Group Transportation in NYC",
-    seoTitle: "NYC Group Travel Planning & Logistics Guide | NY Travel Limo",
+    seoTitle: "NYC Group Travel Planning & Chauffeur Guide | Sprinter Van",
     description:
-      "How to organize private group transportation in New York City: passenger logistics, vehicle selection, hourly charters, and route planning for 10-14 passengers.",
+      "Plan group transportation in NYC with 10-14 passenger Mercedes Sprinter Vans, Luxury SUVs & Limos for JFK, LGA & EWR transfers. Request an instant quote.",
     category: "Group travel",
     updated: "2026-11-04",
     image: {
@@ -1361,9 +1361,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "how-much-does-it-cost-to-rent-a-sprinter-van-in-new-york",
     title: "How Much Does It Cost To Rent A Sprinter Van In New York?",
-    seoTitle: "Sprinter Van Rental NYC Cost Guide | NY Travel Limo",
+    seoTitle: "Sprinter Van Rental Cost in NYC | 24/7 Chauffeur Pricing",
     description:
-      "Explore the cost factors, group benefits, and pricing considerations for renting a chauffeur-driven Mercedes-Benz Sprinter van in New York City with NY Travel Limo.",
+      "Learn NYC pricing for chauffeur-driven Mercedes Sprinter Vans, Luxury SUVs & Limousines across JFK, LGA & EWR airports and hourly charters. Get a quote.",
     category: "Vehicle pricing & rates",
     updated: "2026-11-10",
     image: {
@@ -1450,9 +1450,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "rent-mercedes-benz-sprinter-van-in-new-york-everything-you-need-to-know",
     title: "Rent Mercedes-Benz Sprinter Van in New York: Everything You Need to Know",
-    seoTitle: "Rent Mercedes Sprinter Van in NYC: Complete Guide | NY Travel Limo",
+    seoTitle: "Rent Mercedes Sprinter Van NYC | Private Chauffeur Guide",
     description:
-      "Everything you need to know about renting a luxury Mercedes-Benz Sprinter van in NYC with NY Travel Limo. Seating capacities, amenities, rates, and booking tips.",
+      "Book a 10-14 passenger Mercedes Sprinter Van with chauffeur in NYC. Compare seating, luggage space & JFK, LGA, EWR airport rates. Request an instant quote.",
     category: "Vehicle guides & rental tips",
     updated: "2026-11-15",
     image: {
@@ -1790,9 +1790,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "best-museums-in-new-york-for-groups",
     title: "Best Museums in New York for Groups: Planning, Tickets, and Logistics",
-    seoTitle: "Best NYC Museums for Groups: Tours & Transit Guide | NY Travel Limo",
+    seoTitle: "Best NYC Museums for Groups | Private Chauffeur Guide",
     description:
-      "Discover the best museums in New York for group visits. Practical advice on group admission, timed entry, meeting spots, and private group transportation.",
+      "Plan group visits to The Met, MoMA & AMNH in NYC. Travel together in Mercedes Sprinter Vans, Luxury SUVs & Limos with JFK/LGA/EWR access. Book online.",
     category: "Cultural itineraries",
     updated: "2026-11-22",
     image: {
@@ -1821,7 +1821,7 @@ export const blogArticles: BlogArticle[] = [
         heading: "Group Ticketing, Timed Admissions & Guided Tours",
         paragraphs: [
           "Most major NYC cultural institutions require organized parties of 10 to 15 or more to register through dedicated group sales departments rather than purchasing standard general admission tickets at the door.",
-          "Booking as an official group unlocks substantial benefits, including discounted admission rates, dedicated group entrance lanes, and the option to reserve certified museum docents for private private gallery tours. Docent-led tours provide headsets and microphones so everyone can hear commentary clearly without crowding the artwork.",
+          "Booking as an official group unlocks substantial benefits, including discounted admission rates, dedicated group entrance lanes, and the option to reserve certified museum docents for private gallery tours. Docent-led tours provide headsets and microphones so everyone can hear commentary clearly without crowding the artwork.",
           "Nearly all museums enforce strict timed-entry arrival slots. Plan to arrive at the museum entrance 20 to 30 minutes before your scheduled entry time to allow your entire group to pass through security screenings and check in at the group services desk.",
         ],
         bullets: [
@@ -1878,9 +1878,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "best-rooftops-in-new-york-for-groups",
     title: "Best Rooftops in New York for Groups: Skyline Views & Arrival Tips",
-    seoTitle: "Top NYC Rooftops for Groups: Skyline Bars & Event Guide | NY Travel Limo",
+    seoTitle: "Best NYC Rooftops for Groups | Private Chauffeur Arrivals",
     description:
-      "Explore the best rooftop venues and lounges in New York for groups. Practical tips on table reservations, dress codes, sunset timing, and private transit.",
+      "Explore top NYC rooftops for groups with dress codes & sunset timing. Arrive in Mercedes Sprinter Vans, Luxury SUVs & Limos from JFK/LGA/EWR. Get a quote.",
     category: "Dining & nightlife",
     updated: "2026-11-22",
     image: {
@@ -1966,9 +1966,9 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "best-october-events-in-new-york-city",
     title: "Best October Events in New York City: Fall Foliage, Parades, and Festivals",
-    seoTitle: "Top NYC October Events & Fall Guide for Groups | NY Travel Limo",
+    seoTitle: "Best October Events in NYC | Fall Group Chauffeur Guide",
     description:
-      "Plan your October group trip to NYC. Discover fall foliage in Central Park, Comic Con at Javits, Open House NY, Village Halloween Parade, and travel tips.",
+      "Plan October NYC trips for foliage, Comic Con & parades. Book Mercedes Sprinter Vans, Luxury SUVs & Limos with JFK, LGA & EWR transfers. Request a quote.",
     category: "Seasonal itineraries",
     updated: "2026-11-22",
     image: {

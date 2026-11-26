@@ -30,7 +30,7 @@ export default function Hero() {
             className="max-w-[52rem] text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-[4.7rem]"
             id="hero-title"
           >
-            Private Transportation &amp; Chauffeur Service in New York City
+            Private Chauffeur Service &amp; Sprinter Van Rental in NYC
           </h1>
           <p className="mt-7 max-w-[43rem] text-base leading-7 text-white/85 sm:text-lg sm:leading-[2.1rem]">
             Arrange a private transportation service in NYC around your itinerary, whether you need
