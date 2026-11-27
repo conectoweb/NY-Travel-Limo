@@ -35,7 +35,7 @@ export default function FleetOptions({
         <ul className="grid gap-5 md:grid-cols-3">
           {options.map((option) => (
             <li
-              className={`service-card group relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] sm:p-8 ${option.key === "sprinter"
+              className={`service-card group relative flex flex-col overflow-hidden rounded-2xl border-t-4 p-6 shadow-[0_12px_35px_rgba(41,37,33,0.06)] transition-shadow focus-within:ring-2 focus-within:ring-brand-secondary sm:p-8 ${option.key === "sprinter"
                 ? "border-brand-secondary border-x border-b border-x-brand-accent border-b-brand-accent bg-brand-accent text-white"
                 : "border-brand-primary border-x-brand-text/10 border-b-brand-text/10 bg-white text-brand-dark"
                 }`}
@@ -67,9 +67,11 @@ export default function FleetOptions({
                 {option.description}
               </p>
               <a
-                className={
-                  option.key === "sprinter" ? "text-white" : "text-brand-accent"
-                }
+                className={`mt-6 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors after:absolute after:inset-0 focus-visible:outline-none ${
+                  option.key === "sprinter"
+                    ? "text-white group-hover:text-brand-secondary"
+                    : "text-brand-accent group-hover:text-brand-primary"
+                }`}
                 href={option.href}
               >
                 {option.key === "sprinter"
@@ -77,7 +79,7 @@ export default function FleetOptions({
                   : option.key === "suv"
                     ? "Explore Private Luxury SUVs"
                     : "Explore Lincoln Stretch Limousines"}
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
               </a>
             </li>
           ))}
