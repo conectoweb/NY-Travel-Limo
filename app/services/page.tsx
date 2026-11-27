@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: isPublicSite ? `${siteUrl}/services` : undefined,
       images: [
         {
-          url: "/images/mercedes-sprinter-jet-van-nyc-rental.avif",
+          url: "/images/services/mercedes-sprinter-jet-van-nyc-rental.avif",
           alt: "A black Mercedes-Benz Sprinter van on a New York City street",
         },
       ],
@@ -61,7 +61,7 @@ export default function ServicesPage() {
             fill
             priority
             sizes="100vw"
-            src="/images/mercedes-sprinter-jet-van-nyc-rental.avif"
+            src="/images/services/mercedes-sprinter-jet-van-nyc-rental.avif"
           />
           <div
             aria-hidden="true"
