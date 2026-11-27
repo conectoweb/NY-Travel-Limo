@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import { blogArticles } from "@/lib/site-content";
 import { siteUrl } from "@/lib/seo";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "NYC Chauffeur & Group Travel Guides | NY Travel Limo";
   const description =

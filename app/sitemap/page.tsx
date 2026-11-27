@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { sitemapCategories } from "@/app/sitemap-page-data";
 import { pageMetadata } from "@/lib/page-metadata";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const base = await pageMetadata(
     "/sitemap",

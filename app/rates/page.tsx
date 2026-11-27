@@ -6,6 +6,8 @@ import Reviews from "@/components/Reviews";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 import { localBusinessSchema } from "@/lib/schema";
 
+export const revalidate = 86400;
+
 const vanImage = "/images/nyc-sprinter-van-hero.avif";
 const vehicleImages = {
   sprinter: {

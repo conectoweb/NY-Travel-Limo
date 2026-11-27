@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
+  },
   async redirects() {
     return [
       {
@@ -719,9 +723,43 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Enforce noindex on preview/staging hosts without forcing dynamic SSR on public pages.
+        source: "/:path*",
+        missing: [
+          { type: "host", value: "(?:www\\.)?nytravellimo\\.com" },
+        ],
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
         // Safe public HTML caching for homepage (CDN and shared edge caches)
-        // Does not apply to /api/*, /contact-us, /reservations or dynamic form requests
+        // Does not apply to /api/*, /contact-us, /reservations, or preview hosts.
         source: "/",
+        has: [
+          { type: "host", value: "(?:www\\.)?nytravellimo\\.com" },
+        ],
         headers: [
           {
             key: "Cache-Control",

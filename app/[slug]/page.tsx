@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import { findDetailPage, detailPages } from "@/lib/site-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return detailPages.map((page) => ({ slug: page.slug }));
 }
