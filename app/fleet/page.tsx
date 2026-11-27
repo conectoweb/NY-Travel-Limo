@@ -8,6 +8,8 @@ import ServiceAreas from "@/components/ServiceAreas";
 import { pageMetadata } from "@/lib/page-metadata";
 import { localBusinessSchema } from "@/lib/schema";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const base = await pageMetadata(
     "/fleet",

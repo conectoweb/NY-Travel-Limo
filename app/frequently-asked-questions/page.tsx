@@ -4,6 +4,8 @@ import { marketingPages } from "@/lib/marketing-pages";
 import { pageMetadata } from "@/lib/page-metadata";
 import { buildFaqPageSchema } from "@/lib/schema";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["frequently-asked-questions"];
   const base = await pageMetadata("/frequently-asked-questions", page.seoTitle || "NYC Chauffeur & Sprinter Van FAQ | 24/7 Booking Guide", page.description);

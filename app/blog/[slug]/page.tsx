@@ -7,6 +7,8 @@ import { blogArticles, findBlogArticle } from "@/lib/site-content";
 import { siteUrl } from "@/lib/seo";
 import FormattedText from "@/components/FormattedText";
 
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return blogArticles.map((article) => ({ slug: article.slug }));
 }

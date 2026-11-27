@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 import { localBusinessSchema } from "@/lib/schema";
+
+export const revalidate = 86400;
 import BlogPreview from "@/components/BlogPreview";
 import FAQ from "@/components/FAQ";
 import FeaturedVideo from "@/components/FeaturedVideo";

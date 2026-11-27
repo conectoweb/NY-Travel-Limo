@@ -12,6 +12,8 @@ import { serviceLandingContent } from "@/lib/service-landing-content";
 import { isPublicSiteRequest, siteUrl } from "@/lib/seo";
 import { localBusinessSchema } from "@/lib/schema";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "NYC Private Chauffeur Services | 24/7 Airport & Group";
   const description = "Discover 24/7 private chauffeur services in NYC: JFK, LGA & EWR airport transfers, corporate travel & events in Sprinter Vans, SUVs & Limos. Book online now.";

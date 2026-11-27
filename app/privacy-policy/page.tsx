@@ -3,6 +3,8 @@ import ContentPage from "@/components/ContentPage";
 import { marketingPages } from "@/lib/marketing-pages";
 import { pageMetadata } from "@/lib/page-metadata";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const page = marketingPages["privacy-policy"];
   const base = await pageMetadata("/privacy-policy", page.seoTitle || "Privacy Policy | NY Travel Limo", page.description);

@@ -5,6 +5,8 @@ import FinalCTA from "@/components/FinalCTA";
 import GalleryExperience from "@/components/GalleryExperience";
 import { pageMetadata } from "@/lib/page-metadata";
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const base = await pageMetadata(
     "/gallery",

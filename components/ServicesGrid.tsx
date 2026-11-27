@@ -54,7 +54,7 @@ export default function ServicesGrid() {
                   alt={featuredServiceImages[service.slug]?.alt ?? service.title}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   src={featuredServiceImages[service.slug]?.src ?? "/images/services/private-transportation.webp"}
                 />
                 <span className="absolute bottom-4 left-4 rounded-full border border-white/30 bg-brand-accent/90 px-4 py-2 text-xs font-semibold text-white">

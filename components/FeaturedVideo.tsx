@@ -1,3 +1,5 @@
+import YouTubeFacade from "@/components/YouTubeFacade";
+
 export default function FeaturedVideo() {
   return (
     <section aria-labelledby="featured-video-title" className="section-pad bg-brand-dark text-white">
@@ -22,13 +24,10 @@ export default function FeaturedVideo() {
           </a>
         </div>
         <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black shadow-[0_24px_60px_rgba(0,0,0,0.28)]">
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="h-full w-full border-0"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            src="https://www.youtube-nocookie.com/embed/hc9LNuJKvmA?start=3&rel=0"
+          <YouTubeFacade
+            embedUrl="https://www.youtube-nocookie.com/embed/hc9LNuJKvmA?start=3&rel=0"
+            posterAlt="NY Travel Limo Mercedes-Benz Sprinter van tour preview"
+            posterSrc="/images/gallery/sprinter-van-rental-with-driver-in-new-york-nyc-video-poster.jpg"
             title="NY Travel Limo private transportation in New York"
           />
         </div>
