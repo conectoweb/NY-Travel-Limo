@@ -8,26 +8,31 @@ export default function YouTubeFacade({
   title,
   posterSrc,
   posterAlt,
+  loading = "eager",
 }: {
   embedUrl: string;
   title: string;
-  posterSrc: string;
-  posterAlt: string;
+  posterSrc?: string;
+  posterAlt?: string;
+  loading?: "lazy" | "eager";
 }) {
-  const [activated, setActivated] = useState(false);
+  const shouldUsePosterFacade = Boolean(posterSrc);
+  const [activated, setActivated] = useState(!shouldUsePosterFacade);
 
   if (activated) {
     const separator = embedUrl.includes("?") ? "&" : "?";
-    const activeUrl = embedUrl.includes("autoplay=")
-      ? embedUrl.replace(/autoplay=[01]/, "autoplay=1")
-      : `${embedUrl}${separator}autoplay=1`;
+    const activeUrl = shouldUsePosterFacade
+      ? embedUrl.includes("autoplay=")
+        ? embedUrl.replace(/autoplay=[01]/, "autoplay=1")
+        : `${embedUrl}${separator}autoplay=1`
+      : embedUrl;
 
     return (
       <iframe
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         className="h-full w-full border-0"
-        loading="lazy"
+        loading={loading}
         referrerPolicy="strict-origin-when-cross-origin"
         src={activeUrl}
         title={title}
@@ -42,14 +47,16 @@ export default function YouTubeFacade({
       onClick={() => setActivated(true)}
       type="button"
     >
-      <Image
-        alt={posterAlt}
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-        fill
-        loading="lazy"
-        sizes="(max-width: 1023px) 100vw, 55vw"
-        src={posterSrc}
-      />
+      {posterSrc && (
+        <Image
+          alt={posterAlt ?? title}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          loading="lazy"
+          sizes="(max-width: 1023px) 100vw, 55vw"
+          src={posterSrc}
+        />
+      )}
       <span
         aria-hidden="true"
         className="absolute inset-0 bg-black/25 transition-colors group-hover:bg-black/15"
